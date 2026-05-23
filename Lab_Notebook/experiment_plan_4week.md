@@ -53,7 +53,7 @@
 - [x] Reconstructor produces valid SMILES for all 400 blocks ✓ 400/400 validated
 - [x] Prompt templates reviewed and token-counted ✓ ResToken ~11K, SMILES ~8.7K, HELM ~6.8K
 - [x] Random baseline generates 1000 valid sequences ✓ 4 profiles × 1000 sequences
-- [ ] All code committed to project folder
+- [x] All code committed to project folder ✓ commit 8938304
 
 ---
 
