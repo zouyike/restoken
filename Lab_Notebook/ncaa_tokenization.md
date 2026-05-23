@@ -311,6 +311,6 @@ Frozen compliance = 20% across ALL 5 functional models. This is a universal LLM 
 7. **TxGemma confirms negative result**: chemistry domain specialization alone is insufficient; format-specific instruction following is what matters
 8. **Uniqueness varies wildly**: Pro/Flash/Qwen produce diverse sequences (93-100%), while GPT-4o/Gemma3 show mode collapse (56-61%)
 
-#### Still Running
-- Gemma3-12b: SLURM job 225234 still running (1h23m) — all 3 experiments appear complete, may be finishing final batches
-- Claude Sonnet 4.6: rate-limited (0 results so far). Two empty summary files created (restoken, smiles). Will complete when rate limit frees up.
+#### Completed Jobs
+- Gemma3-12b: SLURM job 225234 finished after ~1.5h. All 3 experiments complete. Additional HELM charged_binder: 62.2% valid (84/135), 100% unique.
+- Claude Sonnet 4.6: Benchmark script **completed at 00:07** but with **0 valid results** across ALL experiments. Every API response was ~148 chars (rate-limited/error responses, not actual sequences). **Needs re-run** when rate limit is free (after Claude Code session ends and quota recovers).
