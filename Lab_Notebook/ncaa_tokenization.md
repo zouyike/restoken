@@ -214,7 +214,7 @@ GPT-4o substantially worse than Gemini Pro across all tasks. 0% charged binder, 
 
 **Fix history:** txgemma and Qwen initially submitted to gpu partition (24GB GPUs) — OOM'd (9B bf16 ≈ 18GB + KV > 24GB). Moved to gpu_cpu (48GB). Fixed torch/torchvision mismatch.
 
-**Qwen3.5-9B (9B bf16, general-purpose) — MOSTLY COMPLETE:**
+**Qwen3.5-9B (9B bf16, general-purpose) — COMPLETE:**
 
 | Exp | Representation | Valid | Unique | Notes |
 |---|---|---|---|---|
@@ -222,19 +222,25 @@ GPT-4o substantially worse than Gemini Pro across all tasks. 0% charged binder, 
 | Exp1 | SMILES | **98.4%** (123/125) | 29.3% | has_macrocycle = 0%; valid but not cyclic |
 | Exp1 | HELM | **92.5%** (49/53) | 93.9% | Low parse count (53 of 200) |
 | Exp2 | — | Edit 41%, Frozen 20% | — | ID valid 100% |
-| Exp3 | Permeable | 100% valid | **0%** constraint sat. | 89.4% uniqueness |
-| Exp3 | Charged | 100% valid | **0%** constraint sat. | — |
+| Exp3/RT | Permeable | 0% constraint sat. | 89.4% unique | |
+| Exp3/RT | Charged | 0% constraint sat. | 100% unique | |
+| Exp3/RT | Rigid | 0% constraint sat. | 100% unique | 70 valid |
+| Exp3/HELM | All profiles | 1 parsed each | — | Effectively failed |
+| Exp3/SMILES | Permeable | 100% valid, 1.9% unique | 0% macrocycle | 53 valid but one repeated molecule |
 
-Missing: exp3 rigid_scaffold (job still running).
+Qwen generates valid ResToken sequences but completely ignores property constraints (0% across all profiles). HELM constrained generation essentially failed (only 1 sequence parsed per profile).
 
-**Gemma-3-12b-it-bnb-4bit (4-bit quant, ~7GB VRAM) — PARTIAL:**
+**Gemma-3-12b-it-bnb-4bit (4-bit quant, ~7GB VRAM) — MOSTLY COMPLETE:**
 
 | Exp | Representation | Valid | Unique | Notes |
 |---|---|---|---|---|
 | Exp1 | ResToken | **98.2%** (164/167) | 56.1% | Good validity, low uniqueness |
 | Exp1 | SMILES | **92.2%** (236/256) | 31.4% | has_macrocycle = 0%; avg_amide = 5 |
+| Exp1 | HELM | **72.8%** (174/239) | 73.6% | Monomer validity issues |
+| Exp2 | — | Edit 80%, Frozen 20% | — | ID valid 100% |
+| Exp3 | Permeable (RT) | 94.8% valid | **0%** constraint sat. | 73 valid, 100% unique |
 
-Missing: exp1 HELM, exp2, exp3 (job still running on gpu1).
+Missing: exp3 charged_binder + rigid_scaffold (job still running on gpu1, ~53 min in).
 
 **TxGemma-9b-chat (chemistry-specialized) — COMPLETE: Total failure.**
 
@@ -255,7 +261,7 @@ Launched 2026-05-23 23:02. Rate-limited (sharing quota with active Claude Code s
 | Gemini-2.5-Flash | 94.0% | 100% | 37.0% | 0.8% | 76.6% | 68.9% |
 | GPT-4o | 99.4% | 57.2% | 45.2% | 17.7% | 80.5% | 60.5% |
 | Qwen3.5-9B | 77.3% | 97.5% | 98.4%† | 0% | 92.5% | 93.9% |
-| Gemma3-12b-4bit | 98.2% | 56.1% | 92.2%† | 0% | — | — |
+| Gemma3-12b-4bit | 98.2% | 56.1% | 92.2%† | 0% | 72.8% | 73.6% |
 | TxGemma-9b | 0% | — | 0% | — | 0% | — |
 | Random baseline | 100% | 100% | N/A | N/A | N/A | N/A |
 
@@ -267,11 +273,12 @@ Launched 2026-05-23 23:02. Rate-limited (sharing quota with active Claude Code s
 |---|---|---|
 | **Gemini-2.5-Pro** | **100%** | 20% |
 | Gemini-2.5-Flash | **100%** | 19.9% |
+| Gemma3-12b-4bit | 80% | 20% |
 | GPT-4o | 71% | 20% |
 | Qwen3.5-9B | 41% | 20% |
 | TxGemma-9b | 0% | 0% |
 
-Frozen compliance = 20% across ALL functional models. This is a universal LLM limitation, not model-specific.
+Frozen compliance = 20% across ALL 5 functional models. This is a universal LLM limitation, not model-specific. Edit compliance scales with model capability (100% → 80% → 71% → 41%).
 
 **Exp3 — Property-Constrained (ResToken, constraint satisfaction %):**
 
@@ -280,7 +287,8 @@ Frozen compliance = 20% across ALL functional models. This is a universal LLM li
 | **Gemini-2.5-Pro** | **100%** | **80%** | **100%** |
 | Gemini-2.5-Flash | 86.1% | 0% | 0% |
 | GPT-4o | 30.4% | 0% | 70%‡ |
-| Qwen3.5-9B | 0% | 0% | — |
+| Qwen3.5-9B | 0% | 0% | 0% |
+| Gemma3-12b-4bit | 0% | — | — |
 | TxGemma-9b | 0% | 0% | 0% |
 | Random baseline | 2.1% | 1.8% | 0.8% |
 
@@ -297,6 +305,5 @@ Frozen compliance = 20% across ALL functional models. This is a universal LLM li
 8. **Uniqueness varies wildly**: Pro/Flash/Qwen produce diverse sequences (93-100%), while GPT-4o/Gemma3 show mode collapse (56-61%)
 
 #### Still Running
-- Gemma3-12b: exp1 HELM + exp2 + exp3 (SLURM job 225234 on gpu1)
-- Qwen3.5-9B: exp3 rigid_scaffold (SLURM job 225239 on gpu4)
+- Gemma3-12b: exp3 charged_binder + rigid_scaffold (SLURM job 225234 on gpu1, ~53 min)
 - Claude Sonnet 4.6: all experiments (rate-limited, will complete after session ends)
