@@ -230,7 +230,7 @@ GPT-4o substantially worse than Gemini Pro across all tasks. 0% charged binder, 
 
 Qwen generates valid ResToken sequences but completely ignores property constraints (0% across all profiles). HELM constrained generation essentially failed (only 1 sequence parsed per profile).
 
-**Gemma-3-12b-it-bnb-4bit (4-bit quant, ~7GB VRAM) — MOSTLY COMPLETE:**
+**Gemma-3-12b-it-bnb-4bit (4-bit quant, ~7GB VRAM) — COMPLETE:**
 
 | Exp | Representation | Valid | Unique | Notes |
 |---|---|---|---|---|
@@ -238,9 +238,15 @@ Qwen generates valid ResToken sequences but completely ignores property constrai
 | Exp1 | SMILES | **92.2%** (236/256) | 31.4% | has_macrocycle = 0%; avg_amide = 5 |
 | Exp1 | HELM | **72.8%** (174/239) | 73.6% | Monomer validity issues |
 | Exp2 | — | Edit 80%, Frozen 20% | — | ID valid 100% |
-| Exp3 | Permeable (RT) | 94.8% valid | **0%** constraint sat. | 73 valid, 100% unique |
+| Exp3/RT | Permeable | 94.8% valid, 0% constr. | 100% unique | |
+| Exp3/RT | Charged | **0% valid** | — | 64 parsed, all invalid IDs |
+| Exp3/RT | Rigid | 100% valid, 0% constr. | **0.23% unique** | 431 parsed → 1 unique sequence repeated 431× (extreme mode collapse) |
+| Exp3/HELM | Permeable | 100% valid | 100% unique | 50 valid — small sample |
+| Exp3/SMILES | Permeable | 100% chem, 0% macro | 54.3% unique | |
+| Exp3/SMILES | Charged | 50% chem, 0% macro | 88.9% unique | |
+| Exp3/SMILES | Rigid | 100% chem, 0% macro | 28.3% unique | |
 
-Missing: exp3 charged_binder + rigid_scaffold (job still running on gpu1, ~53 min in).
+Gemma3 rigid_scaffold is the most extreme mode collapse seen: one sequence generated 431 times. Under constraints, local models either produce invalid output or collapse to a single repeated sequence.
 
 **TxGemma-9b-chat (chemistry-specialized) — COMPLETE: Total failure.**
 
@@ -288,10 +294,11 @@ Frozen compliance = 20% across ALL 5 functional models. This is a universal LLM 
 | Gemini-2.5-Flash | 86.1% | 0% | 0% |
 | GPT-4o | 30.4% | 0% | 70%‡ |
 | Qwen3.5-9B | 0% | 0% | 0% |
-| Gemma3-12b-4bit | 0% | — | — |
+| Gemma3-12b-4bit | 0% | 0%† | 0%† |
 | TxGemma-9b | 0% | 0% | 0% |
 | Random baseline | 2.1% | 1.8% | 0.8% |
 
+†Gemma3 charged_binder: 0% ResToken validity (all IDs invalid); rigid_scaffold: 431 sequences at 100% validity but only 1 unique (extreme mode collapse).
 ‡GPT-4o rigid: only 20 valid sequences out of 100 requested — high constraint satisfaction on tiny sample is unreliable.
 
 #### Updated Conclusions
@@ -305,5 +312,5 @@ Frozen compliance = 20% across ALL 5 functional models. This is a universal LLM 
 8. **Uniqueness varies wildly**: Pro/Flash/Qwen produce diverse sequences (93-100%), while GPT-4o/Gemma3 show mode collapse (56-61%)
 
 #### Still Running
-- Gemma3-12b: exp3 charged_binder + rigid_scaffold (SLURM job 225234 on gpu1, ~53 min)
-- Claude Sonnet 4.6: all experiments (rate-limited, will complete after session ends)
+- Gemma3-12b: SLURM job 225234 still running (1h23m) — all 3 experiments appear complete, may be finishing final batches
+- Claude Sonnet 4.6: rate-limited (0 results so far). Two empty summary files created (restoken, smiles). Will complete when rate limit frees up.
