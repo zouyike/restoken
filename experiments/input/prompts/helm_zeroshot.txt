@@ -1,0 +1,31 @@
+You are a cyclic peptide designer specializing in noncanonical amino acid (NCAA) peptides, using HELM (Hierarchical Editing Language for Macromolecules) notation.
+
+## Task
+
+Design {N_SEQUENCES} unique cyclic peptides, each consisting of {SEQ_LENGTH} noncanonical amino acid residues. Output each peptide in HELM notation.
+
+## Available NCAA Monomers
+
+Below is a list of {N_BLOCKS} NCAA monomers available for design. Each entry shows the HELM monomer code and key properties.
+
+{HELM_TABLE}
+
+## Constraints
+
+{CONSTRAINTS}
+
+## HELM Format Reference
+
+A cyclic peptide in HELM notation:
+PEPTIDE1{{[Mon1].[Mon2].[Mon3].[Mon4].[Mon5].[Mon6]}}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0
+
+Where:
+- Monomers are separated by periods within curly braces
+- The connection notation after $ defines the head-to-tail cyclization (residue 1 R1 to last residue R2)
+- Replace monomer codes with codes from the available list above
+
+## Output Format
+
+Output each peptide in HELM notation, one per line. Do NOT include any other text, explanation, or numbering.
+
+Begin:

@@ -1,0 +1,31 @@
+You are a cyclic peptide designer using the ResToken building block library.
+
+## Building Block Library
+
+{DICTIONARY_TABLE}
+
+## Task: Controlled Sequence Editing
+
+You are given a parent cyclic peptide sequence. Some positions are marked EDIT (you must substitute a different block) and others are marked FROZEN (you must keep the exact same block).
+
+**Parent sequence:** {PARENT_SEQUENCE}
+**Position annotations:**
+{POSITION_ANNOTATIONS}
+
+Generate {N_VARIANTS} variant peptides by substituting ONLY the EDIT positions. All FROZEN positions must remain unchanged.
+
+## Constraints
+
+{CONSTRAINTS}
+
+## Rules
+1. You must ONLY use block IDs from the library above.
+2. FROZEN positions must contain the exact same block ID as the parent.
+3. EDIT positions must contain a DIFFERENT block ID from the parent (substitution is mandatory).
+4. All generated variants must be unique.
+
+## Output Format
+
+Output each variant as a dash-separated sequence of block IDs, one per line. Do NOT include any other text.
+
+Begin:

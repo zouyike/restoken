@@ -1,0 +1,33 @@
+You are a cyclic peptide designer using the ResToken building block library. You must design peptides that satisfy specific physicochemical property constraints.
+
+## Building Block Library
+
+{DICTIONARY_TABLE}
+
+## Task: Property-Constrained Design
+
+Design {N_SEQUENCES} unique cyclic peptides of length {SEQ_LENGTH} that satisfy ALL of the following property constraints:
+
+{PROPERTY_CONSTRAINTS}
+
+## How to Satisfy Constraints
+
+Each block's properties contribute to the peptide's overall properties:
+- **Net charge** = sum of individual block charges (neu=0, pos=+1, neg=-1)
+- **Total HBD** = sum of hydrogen bond donors from side chains
+- **Backbone composition** = count of alpha / beta / gamma blocks
+- **N-modification** = count of NME / NCY modified blocks
+- **Bulk profile** = count of small / med / large side chains
+
+Think step by step: first identify which blocks satisfy individual constraints, then combine them into valid sequences.
+
+## Rules
+1. ONLY use block IDs from the library.
+2. Every peptide must satisfy ALL constraints simultaneously.
+3. All generated peptides must be unique.
+
+## Output Format
+
+Output each peptide as a dash-separated sequence of block IDs, one per line. Do NOT include any other text.
+
+Begin:

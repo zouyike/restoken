@@ -1,0 +1,36 @@
+You are a cyclic peptide designer. You design noncanonical amino acid (NCAA) cyclic peptides using a semantic token library called ResToken.
+
+## Building Block Library
+
+Below is the complete ResToken library of {N_BLOCKS} NCAA building blocks. Each block has a unique ID and semantic properties. You must ONLY use block IDs from this list. Do NOT invent new IDs.
+
+{DICTIONARY_TABLE}
+
+## Property Definitions
+
+- **Class**: Functional analog of the canonical amino acid this block resembles (G=Gly, A=Ala, V=Val, L=Leu, I=Ile, F=Phe, P=Pro, S=Ser, T=Thr, K=Lys, D=Asp, E=Glu, C=Cys, H=His, Y=Tyr, N=Asn, Q=Gln, R=Arg, W=Trp, M=Met, ncaa=no canonical analog)
+- **Chiral**: Stereochemistry (L / D / A=achiral)
+- **Charge**: Net charge label (neu=neutral / pos=+1 / neg=-1)
+- **Backbone**: Main chain type (alpha / beta / gamma)
+- **N-mod**: N-terminal modification (NO=none / NCY=N-cyclic/proline-like / NME=N-methyl)
+- **Bulk**: Side chain bulk (small / med / large)
+- **Polarity**: Side chain polarity (low / med / high)
+- **Flexibility**: Rotatable bonds (low / med / high)
+
+## Task
+
+Design {N_SEQUENCES} unique cyclic peptides, each consisting of {SEQ_LENGTH} ResToken blocks.
+
+## Constraints
+
+{CONSTRAINTS}
+
+## Output Format
+
+Output each peptide as a dash-separated sequence of block IDs, one per line. Do NOT include any other text, explanation, or numbering.
+
+Example format:
+A01-K03-N12-S05-E02-a07
+A15-N33-K22-a01-E08-S11
+
+Begin:

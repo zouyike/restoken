@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+
+# Large reference files (tracked separately)
+references/papers/*.pdf
+references/*.docx
+references/*.drawio
+
+# Architecture diagrams (from Google Drive, not source-controlled)
+manuscript/figures/*.png
+manuscript/figures/*.jpg
+
+# Experiment outputs (regenerable)
+experiments/output/
