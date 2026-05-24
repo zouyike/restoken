@@ -81,25 +81,6 @@
       ]
     },
     {
-      "id": "I01",
-      "helm": "[I01]",
-      "class": "A",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "A05",
       "helm": "[A05]",
       "class": "I",
@@ -135,25 +116,6 @@
         "pol_low",
         "flex_med",
         "bulk_med"
-      ]
-    },
-    {
-      "id": "I02",
-      "helm": "[I02]",
-      "class": "G",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
       ]
     },
     {
@@ -215,25 +177,6 @@
       ]
     },
     {
-      "id": "a01",
-      "helm": "[a01]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "A10",
       "helm": "[A10]",
       "class": "F",
@@ -254,48 +197,170 @@
       ]
     },
     {
-      "id": "a02",
-      "helm": "[a02]",
-      "class": "P",
+      "id": "A100",
+      "helm": "[A100]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A101",
+      "helm": "[A101]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A102",
+      "helm": "[A102]",
+      "class": "S",
       "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
-      "mc_nmod": "NCY",
+      "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "small",
       "polarity_bin": "low",
-      "flex_bin": "low",
+      "flex_bin": "med",
       "tags": [
         "neutral",
+        "metal_binding_risk",
         "pol_low",
-        "flex_low",
+        "flex_med",
         "bulk_small"
       ]
     },
     {
-      "id": "I03",
-      "helm": "[I03]",
-      "class": "I",
-      "chirality": "A",
+      "id": "A103",
+      "helm": "[A103]",
+      "class": "T",
+      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "med",
       "polarity_bin": "low",
-      "flex_bin": "low",
+      "flex_bin": "med",
       "tags": [
         "neutral",
+        "metal_binding_risk",
         "pol_low",
-        "flex_low",
+        "flex_med",
         "bulk_med"
       ]
     },
     {
-      "id": "I04",
-      "helm": "[I04]",
-      "class": "V",
-      "chirality": "A",
+      "id": "A104",
+      "helm": "[A104]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A105",
+      "helm": "[A105]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A106",
+      "helm": "[A106]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A107",
+      "helm": "[A107]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A108",
+      "helm": "[A108]",
+      "class": "A",
+      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
@@ -305,47 +370,30 @@
       "flex_bin": "low",
       "tags": [
         "neutral",
+        "metal_binding_risk",
         "pol_low",
         "flex_low",
         "bulk_small"
       ]
     },
     {
-      "id": "I05",
-      "helm": "[I05]",
-      "class": "I",
-      "chirality": "A",
+      "id": "A109",
+      "helm": "[A109]",
+      "class": "A",
+      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
-      "sc_bulk": "large",
+      "sc_bulk": "small",
       "polarity_bin": "low",
-      "flex_bin": "low",
+      "flex_bin": "med",
       "tags": [
         "neutral",
+        "metal_binding_risk",
         "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "I06",
-      "helm": "[I06]",
-      "class": "I",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
+        "flex_med",
+        "bulk_small"
       ]
     },
     {
@@ -368,6 +416,212 @@
       ]
     },
     {
+      "id": "A110",
+      "helm": "[A110]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A111",
+      "helm": "[A111]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A112",
+      "helm": "[A112]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A113",
+      "helm": "[A113]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "zwi",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "zwitterion",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A114",
+      "helm": "[A114]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A115",
+      "helm": "[A115]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A116",
+      "helm": "[A116]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A117",
+      "helm": "[A117]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A118",
+      "helm": "[A118]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A119",
+      "helm": "[A119]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
       "id": "A12",
       "helm": "[A12]",
       "class": "I",
@@ -387,6 +641,212 @@
       ]
     },
     {
+      "id": "A120",
+      "helm": "[A120]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A121",
+      "helm": "[A121]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A122",
+      "helm": "[A122]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A123",
+      "helm": "[A123]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A124",
+      "helm": "[A124]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A125",
+      "helm": "[A125]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A126",
+      "helm": "[A126]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A127",
+      "helm": "[A127]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A128",
+      "helm": "[A128]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A129",
+      "helm": "[A129]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
       "id": "A13",
       "helm": "[A13]",
       "class": "I",
@@ -402,6 +862,208 @@
         "neutral",
         "pol_low",
         "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A130",
+      "helm": "[A130]",
+      "class": "H",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A131",
+      "helm": "[A131]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A132",
+      "helm": "[A132]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A133",
+      "helm": "[A133]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A134",
+      "helm": "[A134]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A135",
+      "helm": "[A135]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A136",
+      "helm": "[A136]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A137",
+      "helm": "[A137]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A138",
+      "helm": "[A138]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A139",
+      "helm": "[A139]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
         "bulk_large"
       ]
     },
@@ -425,6 +1087,208 @@
       ]
     },
     {
+      "id": "A140",
+      "helm": "[A140]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A141",
+      "helm": "[A141]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "halogenated",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A142",
+      "helm": "[A142]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A143",
+      "helm": "[A143]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A144",
+      "helm": "[A144]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A145",
+      "helm": "[A145]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A146",
+      "helm": "[A146]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A147",
+      "helm": "[A147]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A148",
+      "helm": "[A148]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A149",
+      "helm": "[A149]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
       "id": "A15",
       "helm": "[A15]",
       "class": "I",
@@ -444,6 +1308,206 @@
       ]
     },
     {
+      "id": "A150",
+      "helm": "[A150]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A151",
+      "helm": "[A151]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A152",
+      "helm": "[A152]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A153",
+      "helm": "[A153]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A154",
+      "helm": "[A154]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A155",
+      "helm": "[A155]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A156",
+      "helm": "[A156]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A157",
+      "helm": "[A157]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A158",
+      "helm": "[A158]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A159",
+      "helm": "[A159]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
       "id": "A16",
       "helm": "[A16]",
       "class": "I",
@@ -458,6 +1522,208 @@
       "tags": [
         "neutral",
         "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A160",
+      "helm": "[A160]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A161",
+      "helm": "[A161]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A162",
+      "helm": "[A162]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A163",
+      "helm": "[A163]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A164",
+      "helm": "[A164]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A165",
+      "helm": "[A165]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A166",
+      "helm": "[A166]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A167",
+      "helm": "[A167]",
+      "class": "ncaa",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A168",
+      "helm": "[A168]",
+      "class": "Y",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A169",
+      "helm": "[A169]",
+      "class": "Y",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
         "flex_high",
         "bulk_large"
       ]
@@ -482,6 +1748,206 @@
       ]
     },
     {
+      "id": "A170",
+      "helm": "[A170]",
+      "class": "Y",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A171",
+      "helm": "[A171]",
+      "class": "G",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "A172",
+      "helm": "[A172]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A173",
+      "helm": "[A173]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A174",
+      "helm": "[A174]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A175",
+      "helm": "[A175]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A176",
+      "helm": "[A176]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A177",
+      "helm": "[A177]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A178",
+      "helm": "[A178]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A179",
+      "helm": "[A179]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
       "id": "A18",
       "helm": "[A18]",
       "class": "I",
@@ -495,6 +1961,189 @@
       "flex_bin": "med",
       "tags": [
         "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "A180",
+      "helm": "[A180]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A181",
+      "helm": "[A181]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A182",
+      "helm": "[A182]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A183",
+      "helm": "[A183]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A184",
+      "helm": "[A184]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A185",
+      "helm": "[A185]",
+      "class": "ncaa",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A186",
+      "helm": "[A186]",
+      "class": "ncaa",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "halogenated",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A187",
+      "helm": "[A187]",
+      "class": "E",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "A188",
+      "helm": "[A188]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
         "pol_low",
         "flex_med",
         "bulk_med"
@@ -1432,44 +3081,6 @@
       ]
     },
     {
-      "id": "a03",
-      "helm": "[a03]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "a04",
-      "helm": "[a04]",
-      "class": "G",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "A68",
       "helm": "[A68]",
       "class": "F",
@@ -1790,122 +3401,6 @@
       ]
     },
     {
-      "id": "a05",
-      "helm": "[a05]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a06",
-      "helm": "[a06]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a07",
-      "helm": "[a07]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a08",
-      "helm": "[a08]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a09",
-      "helm": "[a09]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a10",
-      "helm": "[a10]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
       "id": "A84",
       "helm": "[A84]",
       "class": "F",
@@ -1966,82 +3461,6 @@
       ]
     },
     {
-      "id": "a11",
-      "helm": "[a11]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a12",
-      "helm": "[a12]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a13",
-      "helm": "[a13]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a14",
-      "helm": "[a14]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
       "id": "A87",
       "helm": "[A87]",
       "class": "I",
@@ -2096,25 +3515,6 @@
         "pol_low",
         "flex_low",
         "bulk_med"
-      ]
-    },
-    {
-      "id": "I07",
-      "helm": "[I07]",
-      "class": "F",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
       ]
     },
     {
@@ -2257,26 +3657,6 @@
       ]
     },
     {
-      "id": "E01",
-      "helm": "[E01]",
-      "class": "ncaa",
-      "chirality": "D",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "A97",
       "helm": "[A97]",
       "class": "A",
@@ -2337,152 +3717,13 @@
       ]
     },
     {
-      "id": "A100",
-      "helm": "[A100]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A101",
-      "helm": "[A101]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a15",
-      "helm": "[a15]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "e01",
-      "helm": "[e01]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a16",
-      "helm": "[a16]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "a17",
-      "helm": "[a17]",
-      "class": "G",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a18",
-      "helm": "[a18]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "e02",
-      "helm": "[e02]",
-      "class": "P",
+      "id": "E01",
+      "helm": "[E01]",
+      "class": "ncaa",
       "chirality": "D",
       "charge_label": "pos",
       "mc_type": "alpha",
-      "mc_nmod": "NCY",
+      "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "small",
       "polarity_bin": "med",
@@ -2492,205 +3733,6 @@
         "metal_binding_risk",
         "pol_med",
         "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a19",
-      "helm": "[a19]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "a20",
-      "helm": "[a20]",
-      "class": "G",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "charged",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A102",
-      "helm": "[A102]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A103",
-      "helm": "[A103]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A104",
-      "helm": "[A104]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A105",
-      "helm": "[A105]",
-      "class": "D",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A106",
-      "helm": "[A106]",
-      "class": "D",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A107",
-      "helm": "[A107]",
-      "class": "D",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A108",
-      "helm": "[A108]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A109",
-      "helm": "[A109]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
         "bulk_small"
       ]
     },
@@ -2711,66 +3753,6 @@
         "metal_binding_risk",
         "pol_low",
         "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A110",
-      "helm": "[A110]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A111",
-      "helm": "[A111]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A112",
-      "helm": "[A112]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
         "bulk_small"
       ]
     },
@@ -2837,662 +3819,6 @@
       ]
     },
     {
-      "id": "A113",
-      "helm": "[A113]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "zwi",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "zwitterion",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A114",
-      "helm": "[A114]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A115",
-      "helm": "[A115]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A116",
-      "helm": "[A116]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A117",
-      "helm": "[A117]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A118",
-      "helm": "[A118]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A119",
-      "helm": "[A119]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A120",
-      "helm": "[A120]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A121",
-      "helm": "[A121]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A122",
-      "helm": "[A122]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A123",
-      "helm": "[A123]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A124",
-      "helm": "[A124]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A125",
-      "helm": "[A125]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A126",
-      "helm": "[A126]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A127",
-      "helm": "[A127]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A128",
-      "helm": "[A128]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A129",
-      "helm": "[A129]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A130",
-      "helm": "[A130]",
-      "class": "H",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A131",
-      "helm": "[A131]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A132",
-      "helm": "[A132]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "A133",
-      "helm": "[A133]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A134",
-      "helm": "[A134]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A135",
-      "helm": "[A135]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A136",
-      "helm": "[A136]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A137",
-      "helm": "[A137]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A138",
-      "helm": "[A138]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A139",
-      "helm": "[A139]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A140",
-      "helm": "[A140]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A141",
-      "helm": "[A141]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "halogenated",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A142",
-      "helm": "[A142]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A143",
-      "helm": "[A143]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A144",
-      "helm": "[A144]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "E06",
       "helm": "[E06]",
       "class": "S",
@@ -3513,30 +3839,87 @@
       ]
     },
     {
-      "id": "A145",
-      "helm": "[A145]",
-      "class": "T",
-      "chirality": "L",
+      "id": "E07",
+      "helm": "[E07]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "E08",
+      "helm": "[E08]",
+      "class": "L",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "E09",
+      "helm": "[E09]",
+      "class": "I",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "E10",
+      "helm": "[E10]",
+      "class": "A",
+      "chirality": "D",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "small",
       "polarity_bin": "low",
-      "flex_bin": "med",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
-        "flex_med",
+        "flex_low",
         "bulk_small"
       ]
     },
     {
-      "id": "A146",
-      "helm": "[A146]",
-      "class": "T",
-      "chirality": "L",
+      "id": "E11",
+      "helm": "[E11]",
+      "class": "I",
+      "chirality": "D",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
@@ -3546,149 +3929,141 @@
       "flex_bin": "med",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
         "flex_med",
         "bulk_med"
       ]
     },
     {
-      "id": "A147",
-      "helm": "[A147]",
-      "class": "T",
-      "chirality": "L",
+      "id": "I01",
+      "helm": "[I01]",
+      "class": "A",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
+        "pol_low",
+        "flex_low",
+        "bulk_small"
       ]
     },
     {
-      "id": "A148",
-      "helm": "[A148]",
-      "class": "T",
-      "chirality": "L",
+      "id": "I02",
+      "helm": "[I02]",
+      "class": "G",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "I03",
+      "helm": "[I03]",
+      "class": "I",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "med",
       "polarity_bin": "low",
-      "flex_bin": "med",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
-        "flex_med",
+        "flex_low",
         "bulk_med"
       ]
     },
     {
-      "id": "A149",
-      "helm": "[A149]",
-      "class": "T",
-      "chirality": "L",
+      "id": "I04",
+      "helm": "[I04]",
+      "class": "V",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NO",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "I05",
+      "helm": "[I05]",
+      "class": "I",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "large",
       "polarity_bin": "low",
-      "flex_bin": "med",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
-        "flex_med",
+        "flex_low",
         "bulk_large"
       ]
     },
     {
-      "id": "A150",
-      "helm": "[A150]",
-      "class": "T",
-      "chirality": "L",
+      "id": "I06",
+      "helm": "[I06]",
+      "class": "I",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
+      "polarity_bin": "low",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
+        "pol_low",
+        "flex_low",
         "bulk_large"
       ]
     },
     {
-      "id": "A151",
-      "helm": "[A151]",
-      "class": "T",
-      "chirality": "L",
+      "id": "I07",
+      "helm": "[I07]",
+      "class": "F",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
       "mc_len": "std",
       "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
+      "polarity_bin": "low",
+      "flex_bin": "low",
       "tags": [
         "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A152",
-      "helm": "[A152]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A153",
-      "helm": "[A153]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
+        "pol_low",
+        "flex_low",
         "bulk_large"
       ]
     },
@@ -3717,86 +4092,6 @@
       "helm": "[I09]",
       "class": "T",
       "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A154",
-      "helm": "[A154]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A155",
-      "helm": "[A155]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A156",
-      "helm": "[A156]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A157",
-      "helm": "[A157]",
-      "class": "T",
-      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
       "mc_nmod": "NO",
@@ -3853,119 +4148,58 @@
       ]
     },
     {
-      "id": "A158",
-      "helm": "[A158]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A159",
-      "helm": "[A159]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A160",
-      "helm": "[A160]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A161",
-      "helm": "[A161]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A162",
-      "helm": "[A162]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A163",
-      "helm": "[A163]",
+      "id": "K01",
+      "helm": "[K01]",
       "class": "A",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "alpha",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "std",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K02",
+      "helm": "[K02]",
+      "class": "N",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K03",
+      "helm": "[K03]",
+      "class": "E",
+      "chirality": "L",
+      "charge_label": "neg",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "med",
       "flex_bin": "med",
       "tags": [
-        "neutral",
+        "charged",
         "metal_binding_risk",
         "pol_med",
         "flex_med",
@@ -3973,752 +4207,34 @@
       ]
     },
     {
-      "id": "A164",
-      "helm": "[A164]",
-      "class": "V",
+      "id": "K04",
+      "helm": "[K04]",
+      "class": "Q",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "alpha",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "std",
+      "mc_len": "mid",
       "sc_bulk": "large",
-      "polarity_bin": "med",
+      "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
         "metal_binding_risk",
-        "pol_med",
+        "pol_low",
         "flex_med",
         "bulk_large"
       ]
     },
     {
-      "id": "A165",
-      "helm": "[A165]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A166",
-      "helm": "[A166]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A167",
-      "helm": "[A167]",
+      "id": "K05",
+      "helm": "[K05]",
       "class": "ncaa",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "alpha",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A168",
-      "helm": "[A168]",
-      "class": "Y",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A169",
-      "helm": "[A169]",
-      "class": "Y",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A170",
-      "helm": "[A170]",
-      "class": "Y",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "e03",
-      "helm": "[e03]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a21",
-      "helm": "[a21]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a22",
-      "helm": "[a22]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "e04",
-      "helm": "[e04]",
-      "class": "G",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a23",
-      "helm": "[a23]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "a24",
-      "helm": "[a24]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a25",
-      "helm": "[a25]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A171",
-      "helm": "[A171]",
-      "class": "G",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A172",
-      "helm": "[A172]",
-      "class": "V",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A173",
-      "helm": "[A173]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A174",
-      "helm": "[A174]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A175",
-      "helm": "[A175]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A176",
-      "helm": "[A176]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A177",
-      "helm": "[A177]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A178",
-      "helm": "[A178]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A179",
-      "helm": "[A179]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A180",
-      "helm": "[A180]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A181",
-      "helm": "[A181]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "e05",
-      "helm": "[e05]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "e06",
-      "helm": "[e06]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "e07",
-      "helm": "[e07]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "e08",
-      "helm": "[e08]",
-      "class": "G",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "a26",
-      "helm": "[a26]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a27",
-      "helm": "[a27]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a28",
-      "helm": "[a28]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NCY",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "high",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_high",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a29",
-      "helm": "[a29]",
-      "class": "G",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NXX",
-      "mc_len": "std",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "A182",
-      "helm": "[A182]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A183",
-      "helm": "[A183]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A184",
-      "helm": "[A184]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "S01",
-      "helm": "[S01]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U01",
-      "helm": "[U01]",
-      "class": "F",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -4726,173 +4242,79 @@
         "neutral",
         "metal_binding_risk",
         "aromatic",
-        "halogenated",
         "pol_low",
         "flex_med",
         "bulk_large"
       ]
     },
     {
-      "id": "S02",
-      "helm": "[S02]",
+      "id": "K06",
+      "helm": "[K06]",
+      "class": "R",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K07",
+      "helm": "[K07]",
       "class": "L",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "med",
       "polarity_bin": "low",
-      "flex_bin": "high",
+      "flex_bin": "med",
       "tags": [
         "neutral",
         "pol_low",
-        "flex_high",
+        "flex_med",
         "bulk_med"
       ]
     },
     {
-      "id": "W01",
-      "helm": "[W01]",
-      "class": "I",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "gamma",
+      "id": "K08",
+      "helm": "[K08]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
+      "polarity_bin": "med",
+      "flex_bin": "high",
       "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_high",
         "bulk_large"
       ]
     },
     {
-      "id": "W02",
-      "helm": "[W02]",
-      "class": "G",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "W03",
-      "helm": "[W03]",
-      "class": "G",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S03",
-      "helm": "[S03]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U02",
-      "helm": "[U02]",
-      "class": "A",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S04",
-      "helm": "[S04]",
-      "class": "V",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U03",
-      "helm": "[U03]",
-      "class": "V",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U04",
-      "helm": "[U04]",
+      "id": "K09",
+      "helm": "[K09]",
       "class": "F",
-      "chirality": "D",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -4905,19 +4327,20 @@
       ]
     },
     {
-      "id": "U05",
-      "helm": "[U05]",
-      "class": "F",
-      "chirality": "D",
+      "id": "K10",
+      "helm": "[K10]",
+      "class": "Y",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
+        "metal_binding_risk",
         "aromatic",
         "pol_low",
         "flex_med",
@@ -4925,281 +4348,35 @@
       ]
     },
     {
-      "id": "U06",
-      "helm": "[U06]",
-      "class": "F",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "S05",
-      "helm": "[S05]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U07",
-      "helm": "[U07]",
-      "class": "I",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S06",
-      "helm": "[S06]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U08",
-      "helm": "[U08]",
-      "class": "I",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S07",
-      "helm": "[S07]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S08",
-      "helm": "[S08]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U09",
-      "helm": "[U09]",
-      "class": "I",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S09",
-      "helm": "[S09]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S10",
-      "helm": "[S10]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S11",
-      "helm": "[S11]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "s01",
-      "helm": "[s01]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NCY",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "u01",
-      "helm": "[u01]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NCY",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S12",
-      "helm": "[S12]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U10",
-      "helm": "[U10]",
+      "id": "K11",
+      "helm": "[K11]",
       "class": "ncaa",
-      "chirality": "D",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K12",
+      "helm": "[K12]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
       "sc_bulk": "small",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -5212,94 +4389,408 @@
       ]
     },
     {
-      "id": "S13",
-      "helm": "[S13]",
+      "id": "K13",
+      "helm": "[K13]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K14",
+      "helm": "[K14]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neg",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K15",
+      "helm": "[K15]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K16",
+      "helm": "[K16]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K17",
+      "helm": "[K17]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K18",
+      "helm": "[K18]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K19",
+      "helm": "[K19]",
+      "class": "S",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K20",
+      "helm": "[K20]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K21",
+      "helm": "[K21]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K22",
+      "helm": "[K22]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K23",
+      "helm": "[K23]",
+      "class": "D",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K24",
+      "helm": "[K24]",
+      "class": "N",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K25",
+      "helm": "[K25]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K26",
+      "helm": "[K26]",
+      "class": "C",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K27",
+      "helm": "[K27]",
+      "class": "E",
+      "chirality": "L",
+      "charge_label": "neg",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K28",
+      "helm": "[K28]",
+      "class": "Q",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K29",
+      "helm": "[K29]",
       "class": "L",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
+      "mc_len": "mid",
+      "sc_bulk": "med",
       "polarity_bin": "low",
-      "flex_bin": "high",
+      "flex_bin": "med",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K30",
+      "helm": "[K30]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "K31",
+      "helm": "[K31]",
+      "class": "K",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "high",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
         "flex_high",
         "bulk_large"
       ]
     },
     {
-      "id": "S14",
-      "helm": "[S14]",
-      "class": "V",
+      "id": "K32",
+      "helm": "[K32]",
+      "class": "F",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_high",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "S15",
-      "helm": "[S15]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
-        "metal_binding_risk",
+        "aromatic",
         "pol_low",
         "flex_med",
         "bulk_large"
       ]
     },
     {
-      "id": "S16",
-      "helm": "[S16]",
-      "class": "I",
+      "id": "K33",
+      "helm": "[K33]",
+      "class": "Y",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "U11",
-      "helm": "[U11]",
-      "class": "F",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -5313,34 +4804,76 @@
       ]
     },
     {
-      "id": "U12",
-      "helm": "[U12]",
+      "id": "K34",
+      "helm": "[K34]",
       "class": "ncaa",
-      "chirality": "D",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
+      "mc_len": "mid",
+      "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
         "metal_binding_risk",
+        "aromatic",
         "pol_low",
         "flex_med",
-        "bulk_small"
+        "bulk_large"
       ]
     },
     {
-      "id": "U13",
-      "helm": "[U13]",
-      "class": "F",
-      "chirality": "D",
+      "id": "K35",
+      "helm": "[K35]",
+      "class": "ncaa",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K36",
+      "helm": "[K36]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K37",
+      "helm": "[K37]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -5353,216 +4886,101 @@
       ]
     },
     {
-      "id": "W04",
-      "helm": "[W04]",
-      "class": "I",
-      "chirality": "A",
+      "id": "K38",
+      "helm": "[K38]",
+      "class": "F",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
+      "mc_len": "mid",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "K39",
+      "helm": "[K39]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
+        "aromatic",
         "pol_low",
         "flex_med",
         "bulk_large"
       ]
     },
     {
-      "id": "S17",
-      "helm": "[S17]",
-      "class": "T",
+      "id": "K40",
+      "helm": "[K40]",
+      "class": "F",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "gamma",
+      "mc_type": "beta",
       "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S18",
-      "helm": "[S18]",
-      "class": "V",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S19",
-      "helm": "[S19]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "U14",
-      "helm": "[U14]",
-      "class": "I",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S20",
-      "helm": "[S20]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S21",
-      "helm": "[S21]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "S22",
-      "helm": "[S22]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S23",
-      "helm": "[S23]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "S24",
-      "helm": "[S24]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "s02",
-      "helm": "[s02]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NCY",
-      "mc_len": "long",
+      "mc_len": "mid",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
-        "metal_binding_risk",
+        "aromatic",
         "pol_low",
         "flex_med",
         "bulk_large"
+      ]
+    },
+    {
+      "id": "K41",
+      "helm": "[K41]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "K42",
+      "helm": "[K42]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
       ]
     },
     {
@@ -5703,141 +5121,6 @@
       ]
     },
     {
-      "id": "Q01",
-      "helm": "[Q01]",
-      "class": "A",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "Q02",
-      "helm": "[Q02]",
-      "class": "A",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "Q03",
-      "helm": "[Q03]",
-      "class": "A",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "Q04",
-      "helm": "[Q04]",
-      "class": "ncaa",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "Q05",
-      "helm": "[Q05]",
-      "class": "A",
-      "chirality": "A",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "S25",
-      "helm": "[S25]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K01",
-      "helm": "[K01]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "N08",
       "helm": "[N08]",
       "class": "S",
@@ -5893,26 +5176,6 @@
         "charged",
         "metal_binding_risk",
         "pol_med",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "K02",
-      "helm": "[K02]",
-      "class": "N",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
         "flex_med",
         "bulk_med"
       ]
@@ -5977,106 +5240,6 @@
       ]
     },
     {
-      "id": "K03",
-      "helm": "[K03]",
-      "class": "E",
-      "chirality": "L",
-      "charge_label": "neg",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K04",
-      "helm": "[K04]",
-      "class": "Q",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K05",
-      "helm": "[K05]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K06",
-      "helm": "[K06]",
-      "class": "R",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K07",
-      "helm": "[K07]",
-      "class": "L",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
       "id": "N14",
       "helm": "[N14]",
       "class": "I",
@@ -6093,107 +5256,6 @@
         "pol_low",
         "flex_med",
         "bulk_med"
-      ]
-    },
-    {
-      "id": "K08",
-      "helm": "[K08]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K09",
-      "helm": "[K09]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K10",
-      "helm": "[K10]",
-      "class": "Y",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K11",
-      "helm": "[K11]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "k01",
-      "helm": "[k01]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NCY",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
       ]
     },
     {
@@ -6216,66 +5278,6 @@
       ]
     },
     {
-      "id": "K12",
-      "helm": "[K12]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K13",
-      "helm": "[K13]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K14",
-      "helm": "[K14]",
-      "class": "D",
-      "chirality": "L",
-      "charge_label": "neg",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
       "id": "N16",
       "helm": "[N16]",
       "class": "N",
@@ -6293,65 +5295,6 @@
         "pol_low",
         "flex_med",
         "bulk_med"
-      ]
-    },
-    {
-      "id": "K15",
-      "helm": "[K15]",
-      "class": "V",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K16",
-      "helm": "[K16]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K17",
-      "helm": "[K17]",
-      "class": "T",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
       ]
     },
     {
@@ -6455,25 +5398,6 @@
       ]
     },
     {
-      "id": "K18",
-      "helm": "[K18]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
       "id": "N22",
       "helm": "[N22]",
       "class": "K",
@@ -6556,25 +5480,6 @@
       ]
     },
     {
-      "id": "n01",
-      "helm": "[n01]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NCY",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "N26",
       "helm": "[N26]",
       "class": "A",
@@ -6588,26 +5493,6 @@
       "flex_bin": "med",
       "tags": [
         "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K19",
-      "helm": "[K19]",
-      "class": "S",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
         "pol_low",
         "flex_med",
         "bulk_small"
@@ -6677,26 +5562,6 @@
       "helm": "[N30]",
       "class": "C",
       "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K20",
-      "helm": "[K20]",
-      "class": "T",
-      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "beta",
       "mc_nmod": "NO",
@@ -6893,25 +5758,6 @@
       ]
     },
     {
-      "id": "n02",
-      "helm": "[n02]",
-      "class": "P",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NCY",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "N40",
       "helm": "[N40]",
       "class": "ncaa",
@@ -6933,128 +5779,10 @@
       ]
     },
     {
-      "id": "K21",
-      "helm": "[K21]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "N41",
       "helm": "[N41]",
       "class": "S",
       "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K22",
-      "helm": "[K22]",
-      "class": "C",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K23",
-      "helm": "[K23]",
-      "class": "D",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "K24",
-      "helm": "[K24]",
-      "class": "N",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "K25",
-      "helm": "[K25]",
-      "class": "V",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K26",
-      "helm": "[K26]",
-      "class": "C",
-      "chirality": "L",
       "charge_label": "neu",
       "mc_type": "beta",
       "mc_nmod": "NO",
@@ -7091,329 +5819,6 @@
       ]
     },
     {
-      "id": "K27",
-      "helm": "[K27]",
-      "class": "E",
-      "chirality": "L",
-      "charge_label": "neg",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "med",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K28",
-      "helm": "[K28]",
-      "class": "Q",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K29",
-      "helm": "[K29]",
-      "class": "L",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "K30",
-      "helm": "[K30]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "K31",
-      "helm": "[K31]",
-      "class": "K",
-      "chirality": "L",
-      "charge_label": "pos",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "med",
-      "flex_bin": "high",
-      "tags": [
-        "charged",
-        "metal_binding_risk",
-        "pol_med",
-        "flex_high",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K32",
-      "helm": "[K32]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K33",
-      "helm": "[K33]",
-      "class": "Y",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K34",
-      "helm": "[K34]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "k02",
-      "helm": "[k02]",
-      "class": "P",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NCY",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_low",
-        "bulk_small"
-      ]
-    },
-    {
-      "id": "K35",
-      "helm": "[K35]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K36",
-      "helm": "[K36]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "low",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_low",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A185",
-      "helm": "[A185]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A186",
-      "helm": "[A186]",
-      "class": "ncaa",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "halogenated",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "A187",
-      "helm": "[A187]",
-      "class": "E",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "a30",
-      "helm": "[a30]",
-      "class": "I",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NME",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "S26",
-      "helm": "[S26]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "metal_binding_risk",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
       "id": "N43",
       "helm": "[N43]",
       "class": "F",
@@ -7430,46 +5835,6 @@
         "aromatic",
         "pol_low",
         "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K37",
-      "helm": "[K37]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K38",
-      "helm": "[K38]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_high",
         "bulk_large"
       ]
     },
@@ -7537,104 +5902,6 @@
       ]
     },
     {
-      "id": "E07",
-      "helm": "[E07]",
-      "class": "F",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K39",
-      "helm": "[K39]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "K40",
-      "helm": "[K40]",
-      "class": "F",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "large",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "aromatic",
-        "pol_low",
-        "flex_med",
-        "bulk_large"
-      ]
-    },
-    {
-      "id": "U15",
-      "helm": "[U15]",
-      "class": "L",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "gamma",
-      "mc_nmod": "NO",
-      "mc_len": "long",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "high",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_high",
-        "bulk_med"
-      ]
-    },
-    {
-      "id": "E08",
-      "helm": "[E08]",
-      "class": "L",
-      "chirality": "D",
-      "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_med"
-      ]
-    },
-    {
       "id": "N47",
       "helm": "[N47]",
       "class": "C",
@@ -7674,25 +5941,6 @@
       ]
     },
     {
-      "id": "K41",
-      "helm": "[K41]",
-      "class": "A",
-      "chirality": "L",
-      "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
-      "sc_bulk": "small",
-      "polarity_bin": "low",
-      "flex_bin": "med",
-      "tags": [
-        "neutral",
-        "pol_low",
-        "flex_med",
-        "bulk_small"
-      ]
-    },
-    {
       "id": "N49",
       "helm": "[N49]",
       "class": "A",
@@ -7712,10 +5960,29 @@
       ]
     },
     {
-      "id": "K42",
-      "helm": "[K42]",
+      "id": "Q01",
+      "helm": "[Q01]",
       "class": "A",
-      "chirality": "L",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "Q02",
+      "helm": "[Q02]",
+      "class": "A",
+      "chirality": "A",
       "charge_label": "neu",
       "mc_type": "beta",
       "mc_nmod": "NO",
@@ -7728,6 +5995,587 @@
         "pol_low",
         "flex_med",
         "bulk_small"
+      ]
+    },
+    {
+      "id": "Q03",
+      "helm": "[Q03]",
+      "class": "A",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "Q04",
+      "helm": "[Q04]",
+      "class": "ncaa",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "Q05",
+      "helm": "[Q05]",
+      "class": "A",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "Q06",
+      "helm": "[Q06]",
+      "class": "G",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NO",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S01",
+      "helm": "[S01]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S02",
+      "helm": "[S02]",
+      "class": "L",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_high",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "S03",
+      "helm": "[S03]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S04",
+      "helm": "[S04]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S05",
+      "helm": "[S05]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S06",
+      "helm": "[S06]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S07",
+      "helm": "[S07]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S08",
+      "helm": "[S08]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S09",
+      "helm": "[S09]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S10",
+      "helm": "[S10]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S11",
+      "helm": "[S11]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S12",
+      "helm": "[S12]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S13",
+      "helm": "[S13]",
+      "class": "L",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "S14",
+      "helm": "[S14]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_high",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "S15",
+      "helm": "[S15]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "S16",
+      "helm": "[S16]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "S17",
+      "helm": "[S17]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S18",
+      "helm": "[S18]",
+      "class": "V",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S19",
+      "helm": "[S19]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S20",
+      "helm": "[S20]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S21",
+      "helm": "[S21]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "S22",
+      "helm": "[S22]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S23",
+      "helm": "[S23]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "S24",
+      "helm": "[S24]",
+      "class": "T",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "S25",
+      "helm": "[S25]",
+      "class": "A",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "S26",
+      "helm": "[S26]",
+      "class": "F",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
       ]
     },
     {
@@ -7750,14 +6598,310 @@
       ]
     },
     {
-      "id": "E09",
-      "helm": "[E09]",
+      "id": "U01",
+      "helm": "[U01]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "halogenated",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U02",
+      "helm": "[U02]",
+      "class": "A",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U03",
+      "helm": "[U03]",
+      "class": "V",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U04",
+      "helm": "[U04]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U05",
+      "helm": "[U05]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U06",
+      "helm": "[U06]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U07",
+      "helm": "[U07]",
       "class": "I",
       "chirality": "D",
       "charge_label": "neu",
-      "mc_type": "alpha",
+      "mc_type": "gamma",
       "mc_nmod": "NO",
-      "mc_len": "std",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U08",
+      "helm": "[U08]",
+      "class": "I",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U09",
+      "helm": "[U09]",
+      "class": "I",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U10",
+      "helm": "[U10]",
+      "class": "ncaa",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U11",
+      "helm": "[U11]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U12",
+      "helm": "[U12]",
+      "class": "ncaa",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_med",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U13",
+      "helm": "[U13]",
+      "class": "F",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "U14",
+      "helm": "[U14]",
+      "class": "I",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "U15",
+      "helm": "[U15]",
+      "class": "L",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_high",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "W01",
+      "helm": "[W01]",
+      "class": "I",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
@@ -7769,34 +6913,813 @@
       ]
     },
     {
-      "id": "A188",
-      "helm": "[A188]",
-      "class": "D",
+      "id": "W02",
+      "helm": "[W02]",
+      "class": "G",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "W03",
+      "helm": "[W03]",
+      "class": "G",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "W04",
+      "helm": "[W04]",
+      "class": "I",
+      "chirality": "A",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NO",
+      "mc_len": "long",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a01",
+      "helm": "[a01]",
+      "class": "P",
       "chirality": "L",
       "charge_label": "neu",
       "mc_type": "alpha",
-      "mc_nmod": "NO",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a02",
+      "helm": "[a02]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a03",
+      "helm": "[a03]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "a04",
+      "helm": "[a04]",
+      "class": "G",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a05",
+      "helm": "[a05]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a06",
+      "helm": "[a06]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a07",
+      "helm": "[a07]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a08",
+      "helm": "[a08]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a09",
+      "helm": "[a09]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a10",
+      "helm": "[a10]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "aromatic",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a11",
+      "helm": "[a11]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a12",
+      "helm": "[a12]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a13",
+      "helm": "[a13]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a14",
+      "helm": "[a14]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a15",
+      "helm": "[a15]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a16",
+      "helm": "[a16]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "a17",
+      "helm": "[a17]",
+      "class": "G",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a18",
+      "helm": "[a18]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a19",
+      "helm": "[a19]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "a20",
+      "helm": "[a20]",
+      "class": "G",
+      "chirality": "L",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "charged",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a21",
+      "helm": "[a21]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a22",
+      "helm": "[a22]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "a23",
+      "helm": "[a23]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "a24",
+      "helm": "[a24]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a25",
+      "helm": "[a25]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a26",
+      "helm": "[a26]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a27",
+      "helm": "[a27]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "med",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_med",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a28",
+      "helm": "[a28]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "large",
+      "polarity_bin": "high",
+      "flex_bin": "high",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_high",
+        "flex_high",
+        "bulk_large"
+      ]
+    },
+    {
+      "id": "a29",
+      "helm": "[a29]",
+      "class": "G",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "a30",
+      "helm": "[a30]",
+      "class": "I",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NME",
       "mc_len": "std",
       "sc_bulk": "med",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
-        "metal_binding_risk",
         "pol_low",
         "flex_med",
         "bulk_med"
       ]
     },
     {
-      "id": "Q06",
-      "helm": "[Q06]",
-      "class": "G",
-      "chirality": "A",
+      "id": "a31",
+      "helm": "[a31]",
+      "class": "I",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "beta",
-      "mc_nmod": "NO",
-      "mc_len": "mid",
+      "mc_type": "alpha",
+      "mc_nmod": "NME",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "low",
+      "flex_bin": "med",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_med",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "e01",
+      "helm": "[e01]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e02",
+      "helm": "[e02]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "pos",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "charged",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e03",
+      "helm": "[e03]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e04",
+      "helm": "[e04]",
+      "class": "G",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e05",
+      "helm": "[e05]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e06",
+      "helm": "[e06]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "e07",
+      "helm": "[e07]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NCY",
+      "mc_len": "std",
+      "sc_bulk": "med",
+      "polarity_bin": "med",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "metal_binding_risk",
+        "pol_med",
+        "flex_low",
+        "bulk_med"
+      ]
+    },
+    {
+      "id": "e08",
+      "helm": "[e08]",
+      "class": "G",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "alpha",
+      "mc_nmod": "NXX",
+      "mc_len": "std",
       "sc_bulk": "small",
       "polarity_bin": "low",
       "flex_bin": "low",
@@ -7827,14 +7750,14 @@
       ]
     },
     {
-      "id": "E10",
-      "helm": "[E10]",
-      "class": "A",
-      "chirality": "D",
+      "id": "k01",
+      "helm": "[k01]",
+      "class": "P",
+      "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
+      "mc_type": "beta",
+      "mc_nmod": "NCY",
+      "mc_len": "mid",
       "sc_bulk": "small",
       "polarity_bin": "low",
       "flex_bin": "low",
@@ -7846,43 +7769,118 @@
       ]
     },
     {
-      "id": "A189",
-      "helm": "[A189]",
-      "class": "ncaa",
+      "id": "k02",
+      "helm": "[k02]",
+      "class": "P",
       "chirality": "L",
       "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
+      "mc_type": "beta",
+      "mc_nmod": "NCY",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "n01",
+      "helm": "[n01]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NCY",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "n02",
+      "helm": "[n02]",
+      "class": "P",
+      "chirality": "D",
+      "charge_label": "neu",
+      "mc_type": "beta",
+      "mc_nmod": "NCY",
+      "mc_len": "mid",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "s01",
+      "helm": "[s01]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NCY",
+      "mc_len": "long",
+      "sc_bulk": "small",
+      "polarity_bin": "low",
+      "flex_bin": "low",
+      "tags": [
+        "neutral",
+        "pol_low",
+        "flex_low",
+        "bulk_small"
+      ]
+    },
+    {
+      "id": "s02",
+      "helm": "[s02]",
+      "class": "P",
+      "chirality": "L",
+      "charge_label": "neu",
+      "mc_type": "gamma",
+      "mc_nmod": "NCY",
+      "mc_len": "long",
       "sc_bulk": "large",
       "polarity_bin": "low",
       "flex_bin": "med",
       "tags": [
         "neutral",
         "metal_binding_risk",
-        "aromatic",
         "pol_low",
         "flex_med",
         "bulk_large"
       ]
     },
     {
-      "id": "E11",
-      "helm": "[E11]",
-      "class": "I",
+      "id": "u01",
+      "helm": "[u01]",
+      "class": "P",
       "chirality": "D",
       "charge_label": "neu",
-      "mc_type": "alpha",
-      "mc_nmod": "NO",
-      "mc_len": "std",
-      "sc_bulk": "med",
+      "mc_type": "gamma",
+      "mc_nmod": "NCY",
+      "mc_len": "long",
+      "sc_bulk": "small",
       "polarity_bin": "low",
-      "flex_bin": "med",
+      "flex_bin": "low",
       "tags": [
         "neutral",
         "pol_low",
-        "flex_med",
-        "bulk_med"
+        "flex_low",
+        "bulk_small"
       ]
     }
   ]
