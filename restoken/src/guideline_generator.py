@@ -38,7 +38,7 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Optional
 
-from restoken.src.library import BlockLibrary, Block, compute_all_exotic_flags
+from restoken.src.library import BlockLibrary, Block, compute_all_exotic_flags, SYNTHESIS_EXOTIC_FLAGS
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 _GUIDELINES_DIR = Path(__file__).resolve().parent.parent / "guidelines"
@@ -303,7 +303,8 @@ class GuidelineGenerator:
         return "\n".join(lines)
 
     def generate(self, n=50, mode="cpp_like", ring_size=None, seed=None,
-                 exclude_exotic=False, max_exotic_per_seq=None):
+                 exclude_exotic=False, max_exotic_per_seq=None,
+                 exotic_flag_filter=None):
         """Generate candidate sequences via constrained sampling.
 
         Args:
@@ -311,8 +312,12 @@ class GuidelineGenerator:
             mode: design mode name
             ring_size: fixed ring size, or None to sample from mode range
             seed: random seed for reproducibility
-            exclude_exotic: if True, never sample blocks with any exotic flag
+            exclude_exotic: if True, exclude blocks with synthesis-relevant
+                exotic flags (SYNTHESIS_EXOTIC_FLAGS). Blocks flagged only
+                with informational flags like high_flex are kept.
             max_exotic_per_seq: if set, reject sequences with more exotic blocks
+            exotic_flag_filter: optional set of flag names to filter on.
+                Overrides the default SYNTHESIS_EXOTIC_FLAGS when given.
 
         Returns:
             list of dicts sorted by score (descending)
@@ -328,14 +333,18 @@ class GuidelineGenerator:
 
         excluded_ids = set()
         if exclude_exotic:
-            excluded_ids = {bid for bid, flags in self.exotic_flags.items() if flags}
+            target_flags = exotic_flag_filter or SYNTHESIS_EXOTIC_FLAGS
+            excluded_ids = {bid for bid, flags in self.exotic_flags.items()
+                           if flags & target_flags}
 
         for _ in range(n * 100):
             seq = self._generate_one(config, ring_size, excluded_ids)
             if seq is None:
                 continue
             if max_exotic_per_seq is not None:
-                n_exotic = sum(1 for bid in seq if self.exotic_flags.get(bid))
+                check_flags = exotic_flag_filter or SYNTHESIS_EXOTIC_FLAGS
+                n_exotic = sum(1 for bid in seq
+                               if self.exotic_flags.get(bid, set()) & check_flags)
                 if n_exotic > max_exotic_per_seq:
                     continue
             key = tuple(sorted(seq))

@@ -144,6 +144,13 @@ _EXOTIC_THRESHOLDS = {
     "high_flex": 8,
 }
 
+# Flags indicating synthesis difficulty (used for exclude_exotic filtering).
+# high_flex is informational only — flexibility doesn't make synthesis harder.
+SYNTHESIS_EXOTIC_FLAGS = frozenset({
+    "halogenated", "multi_charge", "high_mw", "poly_ring",
+    "high_heteroatom", "many_oxygens", "many_nitrogens", "has_phosphorus",
+})
+
 
 def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     """Compute exotic flags for a block from SMILES structure.
