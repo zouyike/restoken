@@ -264,7 +264,8 @@ class CyclicPeptideAssembler:
         best_energy = float("inf")
 
         if optimize:
-            results = AllChem.MMFFOptimizeMoleculeConfs(mol, numThreads=0)
+            results = AllChem.MMFFOptimizeMoleculeConfs(
+                mol, numThreads=0, maxIters=2000)
             for cid, (converged, energy) in enumerate(results):
                 if energy < best_energy:
                     best_energy = energy
