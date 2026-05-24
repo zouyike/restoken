@@ -410,6 +410,7 @@ def validate_smiles(sequences):
             r["mw"] = 0
             r["n_atoms"] = 0
         r["overall_valid"] = r["chemical_valid"]
+        r["task_valid"] = r["chemical_valid"] and r["has_macrocycle"]
         results.append(r)
     return results
 
@@ -496,6 +497,7 @@ def summarize_results(results, representation):
     elif representation == "smiles":
         s["chemical_valid"] = sum(1 for r in results if r.get("chemical_valid")) / n
         s["has_macrocycle"] = sum(1 for r in results if r.get("has_macrocycle")) / n
+        s["task_valid"] = sum(1 for r in results if r.get("task_valid")) / n
         avg_amide = sum(r.get("n_amide", 0) for r in results) / n
         s["avg_amide_bonds"] = round(avg_amide, 1)
     elif representation == "helm":
@@ -761,6 +763,9 @@ def _check_profile_constraints(ids, props, lib, profile, length):
             return False
         beta_count = sum(1 for s in ids if lib[s].mc_type == "beta")
         if beta_count < 3:
+            return False
+        low_flex_count = sum(1 for s in ids if lib[s].flex_bin == "low")
+        if low_flex_count < len(ids) // 2:
             return False
         return True
     return True

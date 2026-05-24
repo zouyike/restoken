@@ -27,6 +27,8 @@ class Block:
     rot_total: int
     aa_smiles: str
     sc_smiles: str
+    polarity_bin: str = "?"
+    flex_bin: str = "?"
 
 
 class BlockLibrary:
@@ -49,7 +51,9 @@ class BlockLibrary:
         self._build_index()
 
     def _build_index(self):
+        llm_lookup = {e["id"]: e for e in self._llm["blocks"]}
         for b in self._backend["blocks"]:
+            llm_entry = llm_lookup.get(b["id"], {})
             block = Block(
                 id=b["id"],
                 helm=b["helm"],
@@ -66,6 +70,8 @@ class BlockLibrary:
                 rot_total=b["rot_total"],
                 aa_smiles=b["structure"]["aa_smiles"],
                 sc_smiles=b["sc"]["smiles"],
+                polarity_bin=llm_entry.get("polarity_bin", "?"),
+                flex_bin=llm_entry.get("flex_bin", "?"),
             )
             self._blocks[block.id] = block
 
