@@ -59,9 +59,60 @@ Zero-shot generation across 5 LLMs (Gemini 2.5 Pro/Flash, GPT-4o, Qwen 3.5 9B, G
 
 - **Validity:** ResToken 90.4% vs SMILES 69.0% vs HELM 84.5%
 - **Frozen compliance:** 100% across all models
-- **Constraint satisfaction:** up to 123x enrichment over random baseline
+- **Constraint satisfaction:** up to 141x enrichment over random baseline
 
 See `experiments/` for the full benchmark suite.
+
+## Cyclic Peptide Assembly
+
+Convert any ResToken sequence to a macrocyclic peptide SMILES and render 2D structures:
+
+```python
+from restoken.src.cyclic_assembler import CyclicPeptideAssembler
+
+asm = CyclicPeptideAssembler()
+
+# Assemble to SMILES
+smiles = asm.assemble("A09-a31-N03-a01-A05-A06")
+
+# Render 2D structure
+asm.render("A09-a31-N03-a01-A05-A06", "peptide.png")
+
+# Render multiple peptides in a grid
+sequences = ["A01-A09-A03-A07-A05-A06", "A09-a31-N03-a01-A05-A06"]
+asm.render_grid(sequences, "grid.png", cols=2)
+
+# Get aggregate properties
+props = asm.get_properties("A09-a31-N03-a01-A05-A06")
+# {'n_residues': 6, 'net_charge': 0, 'total_hbd': 0, ...}
+```
+
+CLI usage:
+```bash
+# Render 2D structure
+python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 -o output.png
+
+# SMILES only
+python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --smiles-only
+```
+
+Supports all 400 block types: alpha/beta/gamma backbones, L/D/achiral chirality, N-methylation (NME), and N-cyclic rings (NCY, proline-like).
+
+## LLM-to-Molecule Design Pipeline
+
+ResToken serves as an interface between LLMs and real chemistry. See `restoken/examples/alogp_design_demo.py` for an end-to-end example:
+
+```bash
+export GEMINI_API_KEY=your_key
+python restoken/examples/alogp_design_demo.py --alogp_min 1.5 --alogp_max 3.25
+```
+
+Pipeline:
+1. **Prompt** an LLM with the ResToken dictionary + property constraints (e.g., AlogP 1.5–3.25)
+2. **Validate** — block IDs checked against the 400-block library (no hallucinated monomers)
+3. **Assemble** — sequences converted to macrocyclic SMILES via RDKit molecular graph operations
+4. **Filter** — compute AlogP/MW/TPSA from the SMILES, select hits
+5. **Render** — 2D ChemDraw-style structures of the final candidates
 
 ## Citation
 
