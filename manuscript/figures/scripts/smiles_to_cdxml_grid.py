@@ -241,7 +241,7 @@ def build_grid_cdxml(entries, output_path, cols=2, cell_w=200, cell_h=180,
 
         if label:
             label_y = 20 + row * cell_h + 8
-            nid = add_label(page, label, cx, label_y, nid, size="16")
+            nid = add_label(page, label, cx, label_y, nid, size="8")
 
     write_cdxml(root, output_path)
     print(f"Saved CDXML: {output_path} ({n} structures, {rows}x{cols} grid)")
