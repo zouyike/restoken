@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Zero-shot sequence validity across models and representations (Experiment~1, $n=200$ requested per condition). Validity = fraction of parsed sequences passing all seven constraint checks. TxGemma~9B failed to produce any parseable output and is omitted.}
+\label{tab:w2-exp1-validity}
+\small
+\begin{tabular}{l *{3}{r} *{3}{r}}
+\toprule
+& \multicolumn{3}{c}{\textbf{Parsed ($n$)}} & \multicolumn{3}{c}{\textbf{Validity (\%)}} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Model & ResToken & SMILES & HELM & ResToken & SMILES & HELM \\
+\midrule
+Gemini 2.5 Pro & 200 & 197 & 200 & \textbf{98.5} & 72.1 & \textbf{100.0} \\
+Gemini 2.5 Flash & 215 & 395 & 214 & 92.6 & 37.0 & 76.6 \\
+GPT-4o & 160 & 186 & 195 & 98.1 & 45.2 & 80.5 \\
+Qwen 3.5 9B & 256 & 125 & 53 & 77.3 & \textbf{98.4} & 92.5 \\
+Gemma 3 12B & 167 & 256 & 239 & 85.6 & 92.2 & 72.8 \\
+\bottomrule
+\end{tabular}
+\end{table}

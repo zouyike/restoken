@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{EDIT/FROZEN controllability (Experiment~2, ResToken only, 10~parent sequences $\times$ 20~variants each). Length = fraction matching parent length; Frozen = fraction of FROZEN positions unchanged; Edit = fraction of EDIT positions changed; ID~Valid = fraction with all IDs in library.}
+\label{tab:w2-exp2-controllability}
+\small
+\begin{tabular}{l r rrrr}
+\toprule
+Model & $n$ & Length (\%) & Frozen (\%) & Edit (\%) & ID Valid (\%) \\
+\midrule
+Gemini 2.5 Pro & 200 & 100.0 & 20.0 & 100.0 & 100.0 \\
+Gemini 2.5 Flash & 201 & 100.0 & 19.9 & 100.0 & 100.0 \\
+GPT-4o & 200 & 100.0 & 20.0 & 71.0 & 95.0 \\
+Qwen 3.5 9B & 200 & 100.0 & 20.0 & 41.0 & 100.0 \\
+Gemma 3 12B & 200 & 100.0 & 20.0 & 80.0 & 100.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

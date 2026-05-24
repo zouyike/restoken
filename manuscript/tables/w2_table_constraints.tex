@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Property-constrained generation (Experiment~3, ResToken, $n=100$ requested per condition). Constraint satisfaction = fraction of valid sequences meeting all profile constraints. Random baseline acceptance rates: permeable 2.07\%, charged 1.82\%, rigid 0.81\%.}
+\label{tab:w2-exp3-constraints}
+\small
+\begin{tabular}{l l rrr}
+\toprule
+Model & Profile & Parsed & Valid & Constr.\ Sat.\ (\%) \\
+\midrule
+Gemini 2.5 Pro & Permeable & 98 & 98 & \textbf{100.0} \\
+ & Charged binder & 100 & 100 & \textbf{80.0} \\
+ & Rigid scaffold & 101 & 101 & \textbf{100.0} \\
+\addlinespace
+Gemini 2.5 Flash & Permeable & 101 & 101 & \textbf{86.1} \\
+ & Charged binder & 99 & 99 & 0.0 \\
+ & Rigid scaffold & 107 & 107 & 0.0 \\
+\addlinespace
+GPT-4o & Permeable & 92 & 92 & 30.4 \\
+ & Charged binder & 88 & 88 & 0.0 \\
+ & Rigid scaffold & 24 & 20 & 70.0 \\
+\addlinespace
+Qwen 3.5 9B & Permeable & 104 & 104 & 0.0 \\
+ & Charged binder & 78 & 78 & 0.0 \\
+ & Rigid scaffold & 70 & 70 & 0.0 \\
+\addlinespace
+Gemma 3 12B & Permeable & 77 & 73 & 0.0 \\
+ & Charged binder & 64 & 0 & 0.0 \\
+ & Rigid scaffold & 431 & 431 & 0.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
