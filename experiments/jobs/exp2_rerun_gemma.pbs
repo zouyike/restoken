@@ -1,0 +1,44 @@
+#!/bin/bash
+#SBATCH --job-name=w2_2
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=48G
+#SBATCH --time=06:00:00
+#SBATCH --output=/scratch/genesis/NCAA_tokenization/experiments/jobs/exp2_rerun_gemma.out
+#SBATCH --error=/scratch/genesis/NCAA_tokenization/experiments/jobs/exp2_rerun_gemma.err
+
+source ~/.bashrc
+conda activate ai
+
+export PYTHONPATH=/scratch/genesis/NCAA_tokenization
+export HF_HOME=/public/home/genesis/.cache/huggingface
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export TOKENIZERS_PARALLELISM=false
+
+echo "Job started: $(date)"
+echo "Node: $(hostname)"
+echo "GPUs: $(nvidia-smi -L 2>/dev/null | wc -l)"
+
+# Back up old results before overwriting
+OUTDIR=/scratch/genesis/NCAA_tokenization/experiments/output/exp2_controllability
+for f in gemma-3-12b-it-bnb-4bit_exp2_controllability_raw.json gemma-3-12b-it-bnb-4bit_exp2_controllability_results.json gemma-3-12b-it-bnb-4bit_exp2_controllability_summary.json; do
+    if [ -f "$OUTDIR/$f" ]; then
+        cp "$OUTDIR/$f" "$OUTDIR/${f%.json}_old.json"
+    fi
+done
+
+echo ">>> Exp2: controllability (gemma-3-12b-it-bnb-4bit)"
+/public/home/genesis/miniconda3/envs/ai/bin/python \
+    /scratch/genesis/NCAA_tokenization/experiments/script/run_benchmark.py \
+    --experiment exp2 --backend hf \
+    --model unsloth/gemma-3-12b-it-bnb-4bit \
+    --representation restoken \
+    --n_parents 10 \
+    --n_variants 20 \
+    --load_in_4bit
+
+echo "Job finished: $(date)"
