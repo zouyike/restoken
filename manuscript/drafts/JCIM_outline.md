@@ -32,7 +32,7 @@ Recommendation: #1 — concise, names the tool, states what it does.
 - Availability: GitHub + pip install
 
 ### 1. Introduction (~500 words)
-- Cyclic peptides as therapeutics (cell permeability challenge, NCAAs as solution — cite CycPeptMP, Evo-R, PepThink-R1)
+- Cyclic peptides as therapeutics (cell permeability challenge, NCAAs as solution — cite CycPeptMP, Evo 2, PepThink-R1)
 - LLMs for molecular design (PeptideCLM, ChemGPT, etc.) — success on canonical AAs, failure on NCAAs
 - Why existing representations fail for NCAA design:
   - SMILES: combinatorial explosion, hallucination, no property reasoning
@@ -180,7 +180,7 @@ Building block library statistics: rows = backbone type (alpha/beta/gamma), colu
 
 2. **Do NOT mention the active learning loop.** That's the big paper. This paper is: "here's the building block set + representation that makes NCAA design with LLMs possible."
 
-3. **Competitor framing:** Not "we beat X." Instead: "Existing representations weren't designed for LLM-based NCAA design. We fill that gap." Cite PeptideCLM, HELM, Evo-R, PepThink-R1 as complementary, not competing.
+3. **Competitor framing:** Not "we beat X." Instead: "Existing representations weren't designed for LLM-based NCAA design. We fill that gap." Cite PeptideCLM, HELM, Evo 2, PepThink-R1 as complementary, not competing.
 
 4. **The validator is as important as the tokens.** JCIM reviewers will want to know: "how do you prevent garbage?" The validator + rejection rate analysis is the answer.
 
