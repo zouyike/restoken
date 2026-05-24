@@ -1,22 +1,29 @@
 """
 Guideline-based cyclic peptide generator.
 
-Reads design guidelines from Markdown files and generates cyclic peptide
-sequences using constrained sampling or LLM-assisted generation.
+Reads design guidelines from Markdown files (with JSON config blocks)
+or accepts parameters directly. Generates cyclic peptide sequences via
+constrained sampling with scoring, filtering, and annotation.
 
 Usage:
     from restoken.src.guideline_generator import GuidelineGenerator
+
+    # From guideline file (JSON config block in markdown)
     gen = GuidelineGenerator("restoken/guidelines/cell_penetrating_cyclic_peptide.md")
 
-    # Constrained sampling
+    # From explicit parameters (no file needed)
+    gen = GuidelineGenerator.from_params({
+        "my_mode": {
+            "ring_sizes": [6, 7, 8],
+            "charge_range": [0, 2],
+            "recipes": {7: {"all_cationic": [2, 3], "aromatic_hydrophobe": [2, 3]}},
+            "filler_bins": ["neutral_polar"],
+        }
+    })
+
+    # Generate, score, annotate
     candidates = gen.generate(n=50, mode="cpp_like")
-    for c in candidates[:5]:
-        print(f"{c['sequence']}  score={c['score']:.1f}  charge={c['net_charge']}")
-
-    # Score an existing sequence
-    ann = gen.annotate("K06-A09-K06-A09-K06-A09-A05")
-
-    # Build LLM prompt (for use with any LLM API)
+    ann = gen.annotate("K06-A09-N20-A10-K08-A05-A97")
     prompt = gen.build_llm_prompt(mode="cpp_like", n=20)
 """
 
@@ -36,55 +43,85 @@ _GUIDELINES_DIR = Path(__file__).resolve().parent.parent / "guidelines"
 
 
 # ── Default mode configurations ──────────────────────────────────────
+# These serve as fallbacks when the guideline file omits fields.
 
-_DEFAULT_CPP = {
-    "display_name": "CPP-like Cell-Penetrating",
-    "ring_sizes": [6, 7, 8, 9],
-    "charge_range": (2, 5),
-    "recipes": {
-        6: {"all_cationic": (3, 3), "aromatic_hydrophobe": (1, 2)},
-        7: {"all_cationic": (3, 4), "aromatic_hydrophobe": (1, 2)},
-        8: {"all_cationic": (3, 4), "aromatic_hydrophobe": (2, 2)},
-        9: {"all_cationic": (4, 4), "aromatic_hydrophobe": (2, 2)},
+_MODE_DEFAULTS = {
+    "cpp_like": {
+        "display_name": "CPP-like Cell-Penetrating",
+        "ring_sizes": [6, 7, 8, 9],
+        "charge_range": [2, 5],
+        "recipes": {
+            6: {"all_cationic": [3, 3], "aromatic_hydrophobe": [1, 2]},
+            7: {"all_cationic": [3, 4], "aromatic_hydrophobe": [1, 2]},
+            8: {"all_cationic": [3, 4], "aromatic_hydrophobe": [2, 2]},
+            9: {"all_cationic": [4, 4], "aromatic_hydrophobe": [2, 2]},
+        },
+        "filler_bins": ["neutral_polar", "turn_inducer", "neutral_hydrophobic"],
+        "hard_filters": {
+            "max_ring_size": 11,
+            "min_cationic": 3,
+            "min_aromatic": 1,
+            "min_charge": 2,
+            "max_acidic": 2,
+        },
+        "priority_thresholds": [10, 7],
     },
-    "filler_bins": ["neutral_polar", "turn_inducer", "neutral_hydrophobic"],
+    "passive_permeable": {
+        "display_name": "Passive Permeable",
+        "ring_sizes": [5, 6, 7, 8, 9],
+        "charge_range": [-1, 1],
+        "recipes": {
+            5: {"all_hydrophobic": [2, 3], "backbone_modifier": [1, 2]},
+            6: {"all_hydrophobic": [3, 4], "backbone_modifier": [1, 2]},
+            7: {"all_hydrophobic": [3, 4], "backbone_modifier": [2, 3]},
+            8: {"all_hydrophobic": [3, 5], "backbone_modifier": [2, 3]},
+            9: {"all_hydrophobic": [3, 5], "backbone_modifier": [2, 3]},
+        },
+        "filler_bins": ["turn_inducer", "neutral_hydrophobic"],
+        "hard_filters": {
+            "max_ring_size": 11,
+            "max_abs_charge": 2,
+        },
+        "priority_thresholds": [9, 6],
+    },
 }
 
-_DEFAULT_PASSIVE = {
-    "display_name": "Passive Permeable",
-    "ring_sizes": [5, 6, 7, 8, 9],
-    "charge_range": (-1, 1),
-    "recipes": {
-        5: {"all_hydrophobic": (2, 3), "backbone_modifier": (1, 2)},
-        6: {"all_hydrophobic": (3, 4), "backbone_modifier": (1, 2)},
-        7: {"all_hydrophobic": (3, 4), "backbone_modifier": (2, 3)},
-        8: {"all_hydrophobic": (3, 5), "backbone_modifier": (2, 3)},
-        9: {"all_hydrophobic": (3, 5), "backbone_modifier": (2, 3)},
-    },
-    "filler_bins": ["turn_inducer", "neutral_hydrophobic"],
-}
+
+def _deep_merge(base, override):
+    """Deep merge override dict into base, returning a new dict."""
+    result = copy.deepcopy(base)
+    for k, v in override.items():
+        if k in result and isinstance(result[k], dict) and isinstance(v, dict):
+            result[k] = _deep_merge(result[k], v)
+        else:
+            result[k] = copy.deepcopy(v)
+    return result
+
+
+def _normalize_config(cfg):
+    """Convert JSON-parsed config to internal format (int keys, tuples)."""
+    if "recipes" in cfg:
+        cfg["recipes"] = {
+            int(k): {bn: tuple(v) for bn, v in recipe.items()}
+            for k, recipe in cfg["recipes"].items()
+        }
+    if "charge_range" in cfg and isinstance(cfg["charge_range"], list):
+        cfg["charge_range"] = tuple(cfg["charge_range"])
+    if "priority_thresholds" in cfg and isinstance(cfg["priority_thresholds"], list):
+        cfg["priority_thresholds"] = tuple(cfg["priority_thresholds"])
+    return cfg
 
 
 # ── Block classification ─────────────────────────────────────────────
 
 def classify_blocks(library, raw_blocks):
-    """Classify all blocks into functional bins for guideline-based generation.
+    """Classify all blocks into functional bins.
 
-    Bin categories:
-      Charge:        guanidinium_cation, primary_amine_cation, all_cationic,
-                     acidic_anion, neutral_polar, neutral_hydrophobic
-      Hydrophobicity: aromatic_hydrophobe, bulky_aliphatic, all_hydrophobic
-      Backbone:      D_residue, N_methyl, proline_like, backbone_modifier,
-                     beta_amino_acid, gamma_amino_acid, turn_inducer
-      Other:         halogenated
-
-    Args:
-        library: BlockLibrary instance
-        raw_blocks: dict of block_id -> raw backend dict entry
-
-    Returns:
-        (bins, block_to_bins): bins maps bin_name -> [block_ids],
-        block_to_bins maps block_id -> {bin_names}
+    Bins: guanidinium_cation, primary_amine_cation, all_cationic,
+    acidic_anion, neutral_polar, neutral_hydrophobic, aromatic_hydrophobe,
+    bulky_aliphatic, all_hydrophobic, D_residue, N_methyl, proline_like,
+    backbone_modifier, beta_amino_acid, gamma_amino_acid, turn_inducer,
+    halogenated.
     """
     bins = defaultdict(list)
     block_to_bins = defaultdict(set)
@@ -94,7 +131,6 @@ def classify_blocks(library, raw_blocks):
         raw = raw_blocks.get(block_id, {})
         aro = raw.get("aromatic_level", 0)
 
-        # Charge
         if b.charge > 0:
             if b.aa_class == "R":
                 bins["guanidinium_cation"].append(b.id)
@@ -114,7 +150,6 @@ def classify_blocks(library, raw_blocks):
             bins["neutral_hydrophobic"].append(b.id)
             block_to_bins[b.id].add("neutral_hydrophobic")
 
-        # Hydrophobicity
         if aro > 0 and b.charge == 0:
             bins["aromatic_hydrophobe"].append(b.id)
             block_to_bins[b.id].add("aromatic_hydrophobe")
@@ -126,36 +161,27 @@ def classify_blocks(library, raw_blocks):
             bins["all_hydrophobic"].append(b.id)
             block_to_bins[b.id].add("all_hydrophobic")
 
-        # Backbone features
         if b.chirality == "D":
             bins["D_residue"].append(b.id)
             block_to_bins[b.id].add("D_residue")
-
         if b.mc_nmod == "NME":
             bins["N_methyl"].append(b.id)
             block_to_bins[b.id].add("N_methyl")
-
         if b.mc_nmod == "NCY":
             bins["proline_like"].append(b.id)
             block_to_bins[b.id].add("proline_like")
-
         if b.mc_nmod in ("NME", "NCY"):
             bins["backbone_modifier"].append(b.id)
             block_to_bins[b.id].add("backbone_modifier")
-
         if b.mc_type == "beta":
             bins["beta_amino_acid"].append(b.id)
             block_to_bins[b.id].add("beta_amino_acid")
-
         if b.mc_type == "gamma":
             bins["gamma_amino_acid"].append(b.id)
             block_to_bins[b.id].add("gamma_amino_acid")
-
-        # Turn inducers: D-residues, proline-like, and glycine
         if b.chirality == "D" or b.mc_nmod == "NCY" or b.aa_class == "G":
             bins["turn_inducer"].append(b.id)
             block_to_bins[b.id].add("turn_inducer")
-
         if raw.get("halogen", 0) > 0:
             bins["halogenated"].append(b.id)
             block_to_bins[b.id].add("halogenated")
@@ -166,81 +192,96 @@ def classify_blocks(library, raw_blocks):
 # ── Generator ────────────────────────────────────────────────────────
 
 class GuidelineGenerator:
-    """Generate cyclic peptides following design guideline rules.
-
-    Reads a Markdown guideline file, classifies the 400 building blocks
-    into functional bins, and generates candidate sequences via constrained
-    random sampling. Also provides scoring, annotation, filtering, and
-    LLM prompt building.
-    """
+    """Generate cyclic peptides from guideline configs or direct parameters."""
 
     def __init__(self, guideline_path, backend_path=None):
+        """Load from a guideline markdown file with a JSON config block.
+
+        The file should contain a fenced ```json ... ``` block defining
+        modes with ring_sizes, charge_range, recipes, filler_bins,
+        hard_filters, and priority_thresholds. Any prose after the JSON
+        block is stored as context for LLM prompt building.
+        """
         self.guideline_path = Path(guideline_path)
         self.guideline_text = self.guideline_path.read_text()
-        self.library = BlockLibrary(backend_path=backend_path)
+        self._init_library(backend_path)
+        self.modes = self._parse_guideline()
 
+    @classmethod
+    def from_params(cls, modes=None, backend_path=None):
+        """Create generator from explicit parameters, no guideline file.
+
+        Args:
+            modes: dict of mode_name -> config dict. Each config can have:
+                display_name, ring_sizes, charge_range, recipes, filler_bins,
+                hard_filters, priority_thresholds. Missing fields use defaults.
+                If None, uses cpp_like + passive_permeable defaults.
+            backend_path: path to backend dict JSON
+
+        Example:
+            gen = GuidelineGenerator.from_params({
+                "custom": {
+                    "ring_sizes": [6, 7, 8],
+                    "charge_range": [0, 3],
+                    "recipes": {7: {"all_cationic": [2,3], "aromatic_hydrophobe": [1,2]}},
+                    "filler_bins": ["neutral_polar"],
+                }
+            })
+        """
+        gen = cls.__new__(cls)
+        gen.guideline_path = None
+        gen.guideline_text = ""
+        gen._init_library(backend_path)
+
+        if modes is None:
+            gen.modes = {
+                k: _normalize_config(copy.deepcopy(v))
+                for k, v in _MODE_DEFAULTS.items()
+            }
+        else:
+            gen.modes = {}
+            for name, user_cfg in modes.items():
+                defaults = _MODE_DEFAULTS.get(name, _MODE_DEFAULTS["cpp_like"])
+                merged = _deep_merge(defaults, user_cfg)
+                gen.modes[name] = _normalize_config(merged)
+
+        return gen
+
+    def _init_library(self, backend_path):
+        self.library = BlockLibrary(backend_path=backend_path)
         bp = Path(backend_path) if backend_path else _DATA_DIR / "bb_dict_backend_v11.json"
         with open(bp) as f:
             raw = json.load(f)
         self._raw_blocks = {b["id"]: b for b in raw["blocks"]}
-
         self.bins, self.block_to_bins = classify_blocks(self.library, self._raw_blocks)
-        self.modes = self._parse_guideline()
-
-    # ── Guideline parsing ────────────────────────────────────────────
 
     def _parse_guideline(self):
-        """Detect design modes from guideline and build configurations.
+        """Parse JSON config block from guideline markdown.
 
-        Looks for CPP-like and passive-permeable keywords. Extracts ring
-        size ranges where possible, falls back to defaults.
+        Looks for a fenced ```json ... ``` block containing a "modes" dict.
+        Merges with defaults so users only need to specify overrides.
+        Falls back to default modes if no JSON block found.
         """
-        text = self.guideline_text
+        m = re.search(r"```json\s*\n(.*?)\n```", self.guideline_text, re.DOTALL)
+        if not m:
+            return {k: _normalize_config(copy.deepcopy(v))
+                    for k, v in _MODE_DEFAULTS.items()}
+
+        try:
+            config = json.loads(m.group(1))
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Invalid JSON in guideline: {e}")
+
         modes = {}
+        for name, user_cfg in config.get("modes", {}).items():
+            defaults = _MODE_DEFAULTS.get(name, _MODE_DEFAULTS["cpp_like"])
+            merged = _deep_merge(defaults, user_cfg)
+            modes[name] = _normalize_config(merged)
 
-        if re.search(r"(?i)CPP|cell[- ]penetrat", text):
-            cfg = copy.deepcopy(_DEFAULT_CPP)
-            sizes = self._extract_ring_sizes(text, r"(?i)CPP.*ring\s*size|2\.1.*[Rr]ing")
-            if sizes:
-                cfg["ring_sizes"] = sizes
-            modes["cpp_like"] = cfg
-
-        if re.search(r"(?i)passive[- ](?:permea|diffus)", text):
-            cfg = copy.deepcopy(_DEFAULT_PASSIVE)
-            sizes = self._extract_ring_sizes(text, r"(?i)passive.*ring\s*size|3\.1.*[Rr]ing")
-            if sizes:
-                cfg["ring_sizes"] = sizes
-            modes["passive_permeable"] = cfg
-
-        if not modes:
-            modes["default"] = copy.deepcopy(_DEFAULT_CPP)
-
-        return modes
-
-    def _extract_ring_sizes(self, text, section_pattern):
-        """Extract ring sizes from the section matching the pattern."""
-        lines = text.split("\n")
-        section_lines = []
-        capturing = False
-        for line in lines:
-            if re.search(section_pattern, line):
-                capturing = True
-                continue
-            elif capturing:
-                if re.match(r"^#{1,3}\s", line):
-                    break
-                section_lines.append(line)
-
-        if not section_lines:
-            return None
-
-        section_text = "\n".join(section_lines)
-        sizes = set()
-        for m in re.finditer(r"(\d+)[–\-](\d+)\s*residues?", section_text):
-            lo, hi = int(m.group(1)), int(m.group(2))
-            for s in range(lo, min(hi + 1, 16)):
-                sizes.add(s)
-        return sorted(sizes) if sizes else None
+        return modes if modes else {
+            k: _normalize_config(copy.deepcopy(v))
+            for k, v in _MODE_DEFAULTS.items()
+        }
 
     # ── Public API ───────────────────────────────────────────────────
 
@@ -263,17 +304,15 @@ class GuidelineGenerator:
 
         Args:
             n: number of candidates to produce
-            mode: design mode ("cpp_like", "passive_permeable")
+            mode: design mode name
             ring_size: fixed ring size, or None to sample from mode range
             seed: random seed for reproducibility
 
         Returns:
-            list of dicts sorted by score (descending), each containing:
-            sequence, score, and annotation fields
+            list of dicts sorted by score (descending)
         """
         if seed is not None:
             random.seed(seed)
-
         if mode not in self.modes:
             raise ValueError(f"Unknown mode '{mode}'. Available: {list(self.modes.keys())}")
 
@@ -285,7 +324,6 @@ class GuidelineGenerator:
             seq = self._generate_one(config, ring_size)
             if seq is None:
                 continue
-
             key = tuple(sorted(seq))
             if key in seen:
                 continue
@@ -295,7 +333,6 @@ class GuidelineGenerator:
             score = self._score_sequence(seq, mode)
             ann = self._annotate_sequence(seq, mode)
             candidates.append({"sequence": seq_str, "blocks": seq, "score": score, **ann})
-
             if len(candidates) >= n:
                 break
 
@@ -311,77 +348,54 @@ class GuidelineGenerator:
         return self._score_sequence(ids, mode)
 
     def annotate(self, sequence_str, mode="cpp_like"):
-        """Produce full annotation for a sequence.
-
-        Returns a dict matching the output format in guideline section 9.
-        """
+        """Produce full annotation for a sequence."""
         ids = [s.strip() for s in sequence_str.split("-")]
         for bid in ids:
             if bid not in self.library:
                 raise ValueError(f"Unknown block ID: {bid}")
-
         score = self._score_sequence(ids, mode)
         ann = self._annotate_sequence(ids, mode)
         return {"sequence": sequence_str, "score": score, **ann}
 
     def filter(self, candidates, mode="cpp_like", min_score=None):
-        """Apply hard filters from the guideline.
+        """Apply hard filters from the mode config.
 
-        Args:
-            candidates: list of annotation dicts (from generate or annotate)
-            mode: design mode
-            min_score: score cutoff (default: 7 for CPP, 6 for passive)
-
-        Returns:
-            filtered list
+        Filter thresholds are read from the config's hard_filters dict.
+        Score cutoff defaults to the mode's medium priority threshold.
         """
+        config = self.modes.get(mode, {})
+        hf = config.get("hard_filters", {})
+        thresholds = config.get("priority_thresholds", (10, 7))
+
         if min_score is None:
-            min_score = 7.0 if mode in ("cpp_like", "default") else 6.0
+            min_score = thresholds[1]
 
         out = []
         for c in candidates:
             if c["score"] < min_score:
                 continue
             rs = c["ring_size"]
-
-            if mode in ("cpp_like", "default"):
-                if rs > 11:
-                    continue
-                if c["cationic_count"] < 3:
-                    continue
-                if c["aromatic_hydrophobe_count"] < 1:
-                    continue
-                if c["net_charge"] < 2:
-                    continue
-                if c["acidic_count"] > 2:
-                    continue
-                if c["aromatic_hydrophobe_count"] > 4 and rs <= 8:
-                    continue
-            elif mode == "passive_permeable":
-                if rs > 11:
-                    continue
-                if abs(c["net_charge"]) > 2:
-                    continue
-
+            if hf.get("max_ring_size") and rs > hf["max_ring_size"]:
+                continue
+            if hf.get("min_cationic") and c["cationic_count"] < hf["min_cationic"]:
+                continue
+            if hf.get("min_aromatic") and c["aromatic_hydrophobe_count"] < hf["min_aromatic"]:
+                continue
+            if hf.get("min_charge") and c["net_charge"] < hf["min_charge"]:
+                continue
+            if hf.get("max_acidic") and c["acidic_count"] > hf["max_acidic"]:
+                continue
+            if hf.get("max_abs_charge") and abs(c["net_charge"]) > hf["max_abs_charge"]:
+                continue
+            if hf.get("max_aromatic") and c["aromatic_hydrophobe_count"] > hf["max_aromatic"]:
+                continue
             out.append(c)
         return out
 
     def build_llm_prompt(self, mode="cpp_like", n=20, extra_constraints=None):
-        """Build an LLM prompt combining the guideline with classified blocks.
-
-        The returned prompt can be sent to any LLM API (Gemini, GPT, Claude).
-
-        Args:
-            mode: design mode
-            n: number of sequences to request
-            extra_constraints: optional additional instruction string
-
-        Returns:
-            str: ready-to-use prompt
-        """
+        """Build an LLM prompt combining guideline context with classified blocks."""
         if mode not in self.modes:
             raise ValueError(f"Unknown mode: {mode}")
-
         config = self.modes[mode]
 
         relevant_bins = set()
@@ -409,13 +423,15 @@ class GuidelineGenerator:
         charge_str = f"{lo:+d} to {hi:+d}" if lo != hi else f"{lo:+d}"
         extra = f"\nAdditional constraints: {extra_constraints}" if extra_constraints else ""
 
+        context = self.guideline_text or f"Mode: {config.get('display_name', mode)}"
+
         return (
             f"Design cyclic peptides following these guidelines:\n\n"
-            f"{self.guideline_text}\n\n---\n\n"
+            f"{context}\n\n---\n\n"
             f"AVAILABLE BUILDING BLOCKS (classified by functional role):\n\n"
             f"{block_table}\n\n"
             f"GENERATION TASK:\n"
-            f"- Mode: {config['display_name']}\n"
+            f"- Mode: {config.get('display_name', mode)}\n"
             f"- Ring size: {ring_str} residues\n"
             f"- Net charge: {charge_str}\n"
             f"- Use ONLY the block IDs listed above\n"
@@ -429,7 +445,6 @@ class GuidelineGenerator:
 
     def _generate_one(self, config, target_ring_size=None):
         rs = target_ring_size or random.choice(config["ring_sizes"])
-
         recipe = config["recipes"].get(rs)
         if recipe is None:
             closest = min(config["recipes"].keys(), key=lambda k: abs(k - rs))
@@ -463,12 +478,10 @@ class GuidelineGenerator:
         for bin_name, (mn, _mx) in recipe.items():
             comp[bin_name] = mn
             total += mn
-
         if total > ring_size:
             return None
 
         remaining = ring_size - total
-
         expandable = [(bn, mx - comp[bn]) for bn, (_mn, mx) in recipe.items() if mx > comp[bn]]
         random.shuffle(expandable)
         for bn, headroom in expandable:
@@ -481,87 +494,61 @@ class GuidelineGenerator:
         if remaining > 0 and filler_bins:
             filler = random.choice(filler_bins)
             comp[filler] = comp.get(filler, 0) + remaining
-
         return comp
 
     # ── Internal: scoring ────────────────────────────────────────────
 
     def _score_sequence(self, block_ids, mode):
         blocks = [self.library[bid] for bid in block_ids]
-        if mode in ("cpp_like", "default"):
-            return self._score_cpp(block_ids, blocks)
-        elif mode == "passive_permeable":
+        if "passive" in mode:
             return self._score_passive(block_ids, blocks)
-        return 0.0
+        return self._score_cpp(block_ids, blocks)
 
     def _score_cpp(self, block_ids, blocks):
-        """CPP-like permeability score (guideline section 6.1)."""
         score = 0.0
         rs = len(blocks)
-
         n_cationic = sum(1 for b in blocks if b.charge > 0)
         score += 2.0 * min(n_cationic, 4)
-
         n_aro = sum(1 for bid in block_ids if "aromatic_hydrophobe" in self.block_to_bins.get(bid, set()))
         score += 2.0 * min(n_aro, 2)
-
         if n_cationic >= 3 and n_aro >= 1:
             score += 1.5
-
         if 6 <= rs <= 8:
             score += 1.0
         elif rs == 9:
             score += 0.5
-
         n_d = sum(1 for b in blocks if b.chirality == "D")
         n_ncy = sum(1 for b in blocks if b.mc_nmod == "NCY")
         score += 1.0 * min(n_d + n_ncy, 2)
-
-        n_acidic = sum(1 for b in blocks if b.charge < 0)
-        score -= 2.0 * n_acidic
-
+        score -= 2.0 * sum(1 for b in blocks if b.charge < 0)
         if n_aro > 4:
             score -= 2.0
-
-        total_rot = sum(b.rot_total for b in blocks)
-        if total_rot > rs * 5:
+        if sum(b.rot_total for b in blocks) > rs * 5:
             score -= 2.0
-
         return score
 
     def _score_passive(self, block_ids, blocks):
-        """Passive permeability score (guideline section 6.2)."""
         score = 0.0
         rs = len(blocks)
-
         n_mod = sum(1 for bid in block_ids if "backbone_modifier" in self.block_to_bins.get(bid, set()))
         score += 2.0 * min(n_mod, 3)
-
         n_hydro = sum(1 for bid in block_ids if "all_hydrophobic" in self.block_to_bins.get(bid, set()))
         frac = n_hydro / rs if rs else 0
         if 0.4 <= frac <= 0.7:
             score += 2.0
         elif frac > 0.3:
             score += 1.0
-
         n_bulky = sum(1 for bid in block_ids if "bulky_aliphatic" in self.block_to_bins.get(bid, set()))
         score += 1.5 * min(n_bulky / max(rs, 1), 1.0)
-
         n_turn = sum(1 for bid in block_ids if "turn_inducer" in self.block_to_bins.get(bid, set()))
         score += 1.0 * min(n_turn, 2)
-
         n_hbond = sum(1 for b in blocks if b.sc_hbd > 0 and b.sc_hba > 0)
         score += 1.0 * min(n_hbond, 2)
-
         n_exposed = sum(1 for b in blocks if b.mc_nmod == "NO")
         score -= 0.5 * max(n_exposed - 4, 0)
-
-        net_charge = sum(b.charge for b in blocks)
-        score -= 2.0 * abs(net_charge)
-
+        score -= 2.0 * abs(sum(b.charge for b in blocks))
         if rs > 9:
             score -= 2.0
-
         return score
 
     # ── Internal: annotation ─────────────────────────────────────────
@@ -569,6 +556,8 @@ class GuidelineGenerator:
     def _annotate_sequence(self, block_ids, mode="cpp_like"):
         blocks = [self.library[bid] for bid in block_ids]
         rs = len(blocks)
+        config = self.modes.get(mode, {})
+        thresholds = config.get("priority_thresholds", (10, 7))
 
         n_cationic = sum(1 for b in blocks if b.charge > 0)
         n_arg = sum(1 for bid in block_ids if "guanidinium_cation" in self.block_to_bins.get(bid, set()))
@@ -584,9 +573,6 @@ class GuidelineGenerator:
         n_turn = sum(1 for bid in block_ids if "turn_inducer" in self.block_to_bins.get(bid, set()))
         n_acidic = sum(1 for b in blocks if b.charge < 0)
         net_charge = sum(b.charge for b in blocks)
-        total_hbd = sum(b.sc_hbd for b in blocks)
-        total_hba = sum(b.sc_hba for b in blocks)
-        total_rot = sum(b.rot_total for b in blocks)
 
         if net_charge >= 2 and n_cationic >= 3:
             mode_label = "CPP_like_endocytic"
@@ -596,10 +582,12 @@ class GuidelineGenerator:
             mode_label = mode
 
         score = self._score_sequence(block_ids, mode)
-        if mode in ("cpp_like", "default"):
-            priority = "high" if score >= 10 else ("medium" if score >= 7 else "low")
+        if score >= thresholds[0]:
+            priority = "high"
+        elif score >= thresholds[1]:
+            priority = "medium"
         else:
-            priority = "high" if score >= 9 else ("medium" if score >= 6 else "low")
+            priority = "low"
 
         return {
             "ring_size": rs,
@@ -614,9 +602,9 @@ class GuidelineGenerator:
             "D_residue_count": n_d,
             "turn_residue_count": n_turn,
             "acidic_count": n_acidic,
-            "total_hbd": total_hbd,
-            "total_hba": total_hba,
-            "total_rotatable_bonds": total_rot,
+            "total_hbd": sum(b.sc_hbd for b in blocks),
+            "total_hba": sum(b.sc_hba for b in blocks),
+            "total_rotatable_bonds": sum(b.rot_total for b in blocks),
             "backbone_types": [b.mc_type for b in blocks],
             "mode_label": mode_label,
             "priority": priority,
@@ -633,8 +621,9 @@ def main():
         description="Generate cyclic peptides from design guidelines")
     sub = parser.add_subparsers(dest="command")
 
-    p_gen = sub.add_parser("generate", help="Generate candidates via constrained sampling")
-    p_gen.add_argument("guideline", help="Path to guideline MD file")
+    p_gen = sub.add_parser("generate", help="Generate candidates")
+    p_gen.add_argument("guideline", nargs="?", default=None,
+                       help="Path to guideline MD file (omit for defaults)")
     p_gen.add_argument("-n", type=int, default=50, help="Number of candidates")
     p_gen.add_argument("--mode", default="cpp_like", help="Design mode")
     p_gen.add_argument("--ring-size", type=int, default=None)
@@ -643,35 +632,38 @@ def main():
     p_gen.add_argument("-o", "--output", default=None, help="CSV output path")
     p_gen.add_argument("--backend", default=None)
 
-    p_cls = sub.add_parser("classify", help="Show block classification summary")
-    p_cls.add_argument("guideline", help="Path to guideline MD file")
+    p_cls = sub.add_parser("classify", help="Show block classification")
     p_cls.add_argument("--backend", default=None)
 
     p_sc = sub.add_parser("score", help="Score a sequence")
-    p_sc.add_argument("guideline", help="Path to guideline MD file")
     p_sc.add_argument("sequence", help="Dash-separated block IDs")
+    p_sc.add_argument("--guideline", default=None)
     p_sc.add_argument("--mode", default="cpp_like")
     p_sc.add_argument("--backend", default=None)
 
-    p_pr = sub.add_parser("prompt", help="Build LLM prompt from guideline")
+    p_pr = sub.add_parser("prompt", help="Build LLM prompt")
     p_pr.add_argument("guideline", help="Path to guideline MD file")
     p_pr.add_argument("--mode", default="cpp_like")
     p_pr.add_argument("-n", type=int, default=20)
     p_pr.add_argument("--backend", default=None)
 
     args = parser.parse_args()
-
     if not args.command:
         parser.print_help()
         sys.exit(1)
 
-    gen = GuidelineGenerator(args.guideline, backend_path=getattr(args, "backend", None))
+    backend = getattr(args, "backend", None)
 
     if args.command == "classify":
+        gen = GuidelineGenerator.from_params(backend_path=backend)
         print(gen.block_summary())
-        print(f"\nAvailable modes: {gen.list_modes()}")
 
     elif args.command == "generate":
+        if args.guideline:
+            gen = GuidelineGenerator(args.guideline, backend_path=backend)
+        else:
+            gen = GuidelineGenerator.from_params(backend_path=backend)
+
         candidates = gen.generate(
             n=args.n, mode=args.mode, ring_size=args.ring_size, seed=args.seed
         )
@@ -697,6 +689,10 @@ def main():
             print(f"\nSaved {len(filtered)} candidates to {args.output}")
 
     elif args.command == "score":
+        if args.guideline:
+            gen = GuidelineGenerator(args.guideline, backend_path=backend)
+        else:
+            gen = GuidelineGenerator.from_params(backend_path=backend)
         ann = gen.annotate(args.sequence, mode=args.mode)
         print(f"Sequence: {ann['sequence']}")
         print(f"Score: {ann['score']:.1f} ({ann['priority']})")
@@ -707,6 +703,7 @@ def main():
             print(f"  {k}: {ann[k]}")
 
     elif args.command == "prompt":
+        gen = GuidelineGenerator(args.guideline, backend_path=backend)
         print(gen.build_llm_prompt(mode=args.mode, n=args.n))
 
 
