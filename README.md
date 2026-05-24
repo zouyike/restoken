@@ -150,15 +150,25 @@ python -m restoken.src.guideline_generator prompt restoken/guidelines/cell_penet
     --mode cpp_like -n 20
 ```
 
-Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included example. The generator auto-detects CPP-like and passive-permeable modes from keywords.
+Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included example. Or skip the file entirely with `GuidelineGenerator.from_params()`.
 
-## LLM-to-Molecule Design Pipeline
+## Design Demos
 
-ResToken serves as an interface between LLMs and real chemistry. See `restoken/examples/alogp_design_demo.py` for an end-to-end example:
+### Demo 1: LLM-guided AlogP design
+
+Uses an LLM (Gemini) to generate lipophilic cyclic peptides. See `restoken/examples/alogp_design_demo.py`:
 
 ```bash
 export GEMINI_API_KEY=your_key
 python restoken/examples/alogp_design_demo.py --alogp_min 1.5 --alogp_max 3.25
+```
+
+### Demo 2: Guideline-based CPP design
+
+Generates cell-penetrating cyclic peptides via constrained sampling (no API key needed). See `restoken/examples/cpp_design_demo.py`:
+
+```bash
+python restoken/examples/cpp_design_demo.py --ring-size 7 -n 100 --top 6
 ```
 
 Pipeline:
