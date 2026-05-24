@@ -5,13 +5,20 @@ Reads design guidelines from Markdown files (with JSON config blocks)
 or accepts parameters directly. Generates cyclic peptide sequences via
 constrained sampling with scoring, filtering, and annotation.
 
+Built-in guidelines:
+    cell_penetrating_cyclic_peptide.md  — CPP-like (Arg-rich, cationic)
+    cell_permeable_cyclic_peptide.md    — Passive permeable (hydrophobic, low polarity)
+    antibiotic_cyclic_peptide.md        — Antimicrobial (cationic amphipathic)
+
 Usage:
     from restoken.src.guideline_generator import GuidelineGenerator
 
-    # From guideline file (JSON config block in markdown)
     gen = GuidelineGenerator("restoken/guidelines/cell_penetrating_cyclic_peptide.md")
+    candidates = gen.generate(n=50, mode="cpp_like")
+    ann = gen.annotate("K06-A09-N20-A10-K08-A05-A97")
+    prompt = gen.build_llm_prompt(mode="cpp_like", n=20)
 
-    # From explicit parameters (no file needed)
+    # Or from explicit parameters (no file needed)
     gen = GuidelineGenerator.from_params({
         "my_mode": {
             "ring_sizes": [6, 7, 8],
@@ -20,11 +27,6 @@ Usage:
             "filler_bins": ["neutral_polar"],
         }
     })
-
-    # Generate, score, annotate
-    candidates = gen.generate(n=50, mode="cpp_like")
-    ann = gen.annotate("K06-A09-N20-A10-K08-A05-A97")
-    prompt = gen.build_llm_prompt(mode="cpp_like", n=20)
 """
 
 import copy

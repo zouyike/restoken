@@ -113,23 +113,28 @@ Supports all 400 block types: alpha/beta/gamma backbones, L/D/achiral chirality,
 
 ## Guideline-Based Generation
 
-Generate cyclic peptides from design guideline files (Markdown). Guidelines specify composition rules, scoring criteria, and hard filters for different permeability modes (CPP-like, passive-permeable).
+Generate cyclic peptides from design guideline files (Markdown with JSON config). Three built-in guidelines cover distinct therapeutic modalities:
+
+| Guideline file | Mode(s) | Design goal |
+|---|---|---|
+| `cell_penetrating_cyclic_peptide.md` | `cpp_like` | Arg-rich CPP for endosomal escape |
+| `cell_permeable_cyclic_peptide.md` | `passive_permeable` | Hydrophobic/chameleonic, oral bioavailability |
+| `antibiotic_cyclic_peptide.md` | `cationic_amphipathic`, `broad_spectrum` | Membrane-disrupting antimicrobials |
 
 ```python
 from restoken.src.guideline_generator import GuidelineGenerator
 
+# Cell-penetrating (Arg-rich, cationic)
 gen = GuidelineGenerator("restoken/guidelines/cell_penetrating_cyclic_peptide.md")
-
-# Constrained sampling — CPP-like 8-residue rings
 candidates = gen.generate(n=50, mode="cpp_like", ring_size=8, seed=42)
-for c in candidates[:3]:
-    print(f"{c['sequence']}  score={c['score']:.1f}  charge={c['net_charge']:+d}")
 
-# Score and annotate an existing sequence
-ann = gen.annotate("K06-A09-N20-A10-K08-A05-A97", mode="cpp_like")
+# Cell-permeable (passive, low polarity)
+gen = GuidelineGenerator("restoken/guidelines/cell_permeable_cyclic_peptide.md")
+candidates = gen.generate(n=50, mode="passive_permeable", ring_size=7, seed=42)
 
-# Build LLM prompt with guideline + classified blocks
-prompt = gen.build_llm_prompt(mode="cpp_like", n=20)
+# Antibiotic (cationic amphipathic)
+gen = GuidelineGenerator("restoken/guidelines/antibiotic_cyclic_peptide.md")
+candidates = gen.generate(n=50, mode="cationic_amphipathic", ring_size=9, seed=42)
 ```
 
 CLI usage:
@@ -150,7 +155,7 @@ python -m restoken.src.guideline_generator prompt restoken/guidelines/cell_penet
     --mode cpp_like -n 20
 ```
 
-Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included example. Or skip the file entirely with `GuidelineGenerator.from_params()`.
+Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included examples. Or skip the file entirely with `GuidelineGenerator.from_params()`.
 
 ## Design Demos
 
