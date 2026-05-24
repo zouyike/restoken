@@ -6,14 +6,9 @@ __pycache__/
 dist/
 build/
 
-# Large reference files (tracked separately)
-references/papers/*.pdf
-references/*.docx
-references/*.drawio
-
-# Architecture diagrams (from Google Drive, not source-controlled)
-manuscript/figures/*.png
-manuscript/figures/*.jpg
-
-# Experiment outputs (regenerable)
+# Internal work (not part of the public package)
+manuscript/
+Lab_Notebook/
+references/
 experiments/output/
+experiments/jobs/
