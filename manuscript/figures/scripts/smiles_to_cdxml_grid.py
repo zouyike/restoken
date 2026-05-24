@@ -74,6 +74,7 @@ def make_root():
 
 def prep_mol(mol):
     mol = Chem.RemoveHs(mol)
+    Chem.Kekulize(mol, clearAromaticFlags=True)
     rdDepictor.Compute2DCoords(mol)
     Chem.AssignStereochemistry(mol, cleanIt=True, force=True)
     try:
@@ -148,7 +149,7 @@ def add_fragment(page, mol, cx, cy, scale, nid):
         elif bt == Chem.BondType.TRIPLE:
             b_elem.set('Order', '3')
         elif bt == Chem.BondType.AROMATIC:
-            b_elem.set('Order', '1.5')
+            b_elem.set('Order', '2')
 
         bd = bond.GetBondDir()
         if bd == Chem.BondDir.BEGINWEDGE:
