@@ -154,6 +154,10 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
         high_mw — molecular weight > 300
         high_flex — rotatable bonds > 7
         halogenated — contains F/Cl/Br/I
+        many_oxygens — more than 3 oxygen atoms
+        many_nitrogens — more than 3 nitrogen atoms
+        has_phosphorus — any phosphorus atom
+        multi_charge — |charge| >= 2
     """
     flags = set()
 
@@ -162,6 +166,9 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
 
     if block.rot_total > 7:
         flags.add("high_flex")
+
+    if abs(block.charge) >= 2:
+        flags.add("multi_charge")
 
     smi = block.aa_smiles
     if not smi:
@@ -189,6 +196,16 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     n_hetero = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() not in (1, 6))
     if n_heavy > 0 and (n_hetero / n_heavy) > _EXOTIC_THRESHOLDS["high_heteroatom"]:
         flags.add("high_heteroatom")
+
+    n_O = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 8)
+    n_N = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 7)
+    n_P = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 15)
+    if n_O > 3:
+        flags.add("many_oxygens")
+    if n_N > 3:
+        flags.add("many_nitrogens")
+    if n_P > 0:
+        flags.add("has_phosphorus")
 
     return flags
 
