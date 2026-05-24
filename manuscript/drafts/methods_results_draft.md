@@ -109,3 +109,17 @@ The `restoken` Python package is freely available under the MIT license. The pac
 ## Associated Content
 
 **Supporting Information:** Per-model detailed results tables (Tables S1–S5), bootstrap confidence intervals and chi-square test results (Tables S6–S7), enrichment analysis (Table S8), library coverage visualization (Figure S1), property fingerprint analysis (Figure S2), generated peptide property distributions (Figure S3), and complete prompt templates used in all experiments (Section S1). This material is available free of charge via the Internet at http://pubs.acs.org.
+
+---
+
+## Author Information
+
+**Corresponding Author**
+
+Yike Zou — School of Pharmaceutical Sciences, Shanghai Jiao Tong University, Shanghai 200240, P. R. China; Zhangjiang Institute for Advanced Study, Shanghai Jiao Tong University, Shanghai 200240, P. R. China; orcid.org/0000-0003-4380-7827; Email: zouyike@sjtu.edu.cn
+
+---
+
+## Acknowledgments
+
+We acknowledge start-up funding from the School of Pharmaceutical Sciences and the Zhangjiang Institute for Advanced Study at Shanghai Jiao Tong University. Financial support was also provided by the Shanghai Municipal Science and Technology Major Project, the Artificial Intelligence Biological Macromolecule Research Platform (Y.Z.), and the National Key Research and Development Program of China (2024YFA0917603 to Y.Z.).
