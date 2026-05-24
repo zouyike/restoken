@@ -102,7 +102,7 @@ However, the sharp capability gradient in property-constrained generation (Exp3)
 
 The `restoken` Python package is freely available under the MIT license. The package includes: (1) the 400-block building block library in CSV and JSON formats, with separate backend (full chemistry) and LLM-safe (semantic properties only) versions; (2) `SequenceValidator` implementing seven configurable hard constraints; (3) `SMILESReconstructor` for converting token sequences to full molecular SMILES, validated via RDKit[13] for all 400 blocks; (4) prompt templates for ResToken, SMILES, and HELM generation across major LLM providers; (5) a random baseline generator with configurable constraint profiles for benchmarking; and (6) the complete benchmark suite used in this work, enabling reproduction of all reported results.
 
-**GitHub:** [URL] | **License:** MIT | **Python:** ≥3.10
+**GitHub:** https://github.com/zouyike/restoken | **License:** MIT | **Python:** ≥3.10
 
 ---
 
