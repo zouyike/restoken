@@ -61,8 +61,11 @@ def render_2d(smiles, output_path, width=800, height=600):
 
 def write_pymol_script(workdir, n_mols, ray_width=800, ray_height=600):
     script = f"""
+import sys
+sys.path.insert(0, '/public/home/genesis/agent_exchange/shared_scripts/research_tools')
 import pymol
 from pymol import cmd
+import pymol_style
 import os
 import numpy as np
 from PIL import Image
@@ -72,32 +75,7 @@ tmpdir = {workdir!r}
 for i in range({n_mols}):
     cmd.delete("all")
     cmd.load(os.path.join(tmpdir, f"mol_{{i}}.sdf"), f"mol_{{i}}", format="sdf")
-    cmd.set("connect_mode", 1)
-    cmd.set("connect_cutoff", 0.1)
-
-    # Global style — match user's PyMOL settings
-    cmd.bg_color("white")
-    cmd.set("ray_opaque_background", 1)
-    cmd.set("ray_trace_mode", 1)
-    cmd.set("ray_trace_gain", 0.05)
-    cmd.set("antialias", 1)
-    cmd.set("ray_shadows", 0)
-    cmd.set("valence", 0)
-    cmd.set("mesh_width", 1)
-    cmd.set("cartoon_side_chain_helper", 0)
-    cmd.set("label_size", -0.9)
-    cmd.set("label_color", "black")
-
-    cmd.hide("everything")
-    cmd.show("sticks", f"mol_{{i}}")
-    cmd.set("stick_radius", 0.15)
-
-    # Hide non-polar H (H bonded to C), keep polar H on N/O/S
-    cmd.hide("(h. and (e. c extend 1))")
-
-    # Gray carbon + standard atomic coloring for heteroatoms
-    cmd.color("gray80", f"mol_{{i}} and elem C")
-    cmd.color("atomic", f"(mol_{{i}} and not elem C)")
+    pymol_style.apply_style(f"mol_{{i}}")
 
     best_img = None
     best_score = -1
@@ -166,7 +144,7 @@ def autocrop(img, padding=10):
 
 
 def composite_grid(workdir, peptides, output_path, cols=2,
-                   cell_width=600, cell_height=500, label_height=30):
+                   cell_width=600, cell_height=500, label_height=50):
     from PIL import Image, ImageDraw, ImageFont
 
     n = len(peptides)
@@ -178,10 +156,10 @@ def composite_grid(workdir, peptides, output_path, cols=2,
     draw = ImageDraw.Draw(canvas)
 
     try:
-        font = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans.ttf", 16)
+        font = ImageFont.truetype("/usr/share/fonts/dejavu/DejaVuSans.ttf", 32)
     except (OSError, IOError):
         try:
-            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 16)
+            font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 32)
         except (OSError, IOError):
             font = ImageFont.load_default()
 
