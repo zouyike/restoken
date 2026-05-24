@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "restoken"
+version = "0.1.0"
+description = "Residue-semantic tokenization for LLM-based noncanonical cyclic peptide design"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Zou Research Group, SJTU"},
+]
+dependencies = []
+
+[project.optional-dependencies]
+rdkit = ["rdkit"]
+benchmark = ["openai", "google-generativeai", "anthropic", "transformers", "torch"]
+
+[tool.setuptools.packages.find]
+include = ["restoken*"]
+
+[tool.setuptools.package-data]
+"restoken.data" = ["*.json", "*.csv"]
