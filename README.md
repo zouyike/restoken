@@ -87,10 +87,23 @@ props = asm.get_properties("A09-a31-N03-a01-A05-A06")
 # {'n_residues': 6, 'net_charge': 0, 'total_hbd': 0, ...}
 ```
 
+3D conformer generation (ETKDG with macrocycle torsion sampling + MMFF optimization):
+
+```python
+# Generate 3D structure (SDF, PDB, or MOL)
+result = asm.generate_3d("A09-a31-N03-a01-A05-A06", "peptide.sdf")
+# {'smiles': '...', 'energy': 94.4, 'n_heavy_atoms': 50, ...}
+
+result = asm.generate_3d("A09-a31-N03-a01-A05-A06", "peptide.pdb", n_confs=100)
+```
+
 CLI usage:
 ```bash
 # Render 2D structure
 python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 -o output.png
+
+# Generate 3D conformer
+python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --mode-3d -o output.sdf
 
 # SMILES only
 python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --smiles-only

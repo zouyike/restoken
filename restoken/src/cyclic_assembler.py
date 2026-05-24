@@ -12,7 +12,7 @@ import json, io
 from pathlib import Path
 
 from rdkit import Chem
-from rdkit.Chem import rdDepictor, Draw
+from rdkit.Chem import AllChem, rdDepictor, Draw, Descriptors
 from rdkit.Chem.Draw import rdMolDraw2D
 
 rdDepictor.SetPreferCoordGen(True)
@@ -221,16 +221,103 @@ class CyclicPeptideAssembler:
                 props["n_beta"] += 1
         return props
 
+    def generate_3d(self, sequence_str, output_path, n_confs=50,
+                    optimize=True, energy_window=50.0):
+        """
+        Generate 3D conformer for a cyclic peptide and save to file.
+
+        Uses RDKit's ETKDG with macrocycle sampling to produce a
+        low-energy 3D structure. Supports SDF, MOL, PDB output formats.
+
+        Args:
+            sequence_str: dash-separated block IDs
+            output_path: path to save (extension determines format: .sdf, .mol, .pdb)
+            n_confs: number of conformers to generate (best is kept)
+            optimize: if True, run MMFF force field minimization
+            energy_window: kcal/mol window for conformer pruning
+
+        Returns:
+            dict with 'smiles', 'mol', 'energy', 'n_atoms', or None on failure
+        """
+        smi = self.assemble(sequence_str)
+        if smi is None:
+            raise ValueError(f"Failed to assemble: {sequence_str}")
+
+        mol = Chem.MolFromSmiles(smi)
+        mol = Chem.AddHs(mol)
+
+        params = AllChem.ETKDGv3()
+        params.useSmallRingTorsions = True
+        params.useMacrocycleTorsions = True
+        params.numThreads = 0
+        params.randomSeed = 42
+        params.pruneRmsThresh = 0.5
+
+        cids = AllChem.EmbedMultipleConfs(mol, numConfs=n_confs, params=params)
+        if not cids:
+            params.useRandomCoords = True
+            cids = AllChem.EmbedMultipleConfs(mol, numConfs=n_confs, params=params)
+        if not cids:
+            return None
+
+        best_cid = 0
+        best_energy = float("inf")
+
+        if optimize:
+            results = AllChem.MMFFOptimizeMoleculeConfs(mol, numThreads=0)
+            for cid, (converged, energy) in enumerate(results):
+                if energy < best_energy:
+                    best_energy = energy
+                    best_cid = cid
+        else:
+            ff_props = AllChem.MMFFGetMoleculeProperties(mol)
+            if ff_props:
+                for cid in cids:
+                    ff = AllChem.MMFFGetMoleculeForceField(mol, ff_props, confId=cid)
+                    if ff:
+                        energy = ff.CalcEnergy()
+                        if energy < best_energy:
+                            best_energy = energy
+                            best_cid = cid
+
+        output_path = str(output_path)
+        ext = output_path.rsplit(".", 1)[-1].lower()
+
+        if ext == "pdb":
+            Chem.MolToPDBFile(mol, output_path, confId=best_cid)
+        elif ext in ("sdf", "mol"):
+            writer = Chem.SDWriter(output_path)
+            writer.write(mol, confId=best_cid)
+            writer.close()
+        else:
+            Chem.MolToMolFile(mol, output_path, confId=best_cid)
+
+        mol_noh = Chem.RemoveHs(mol)
+        return {
+            "smiles": Chem.MolToSmiles(mol_noh),
+            "mol": mol,
+            "conf_id": best_cid,
+            "energy": best_energy,
+            "n_atoms": mol.GetNumAtoms(),
+            "n_heavy_atoms": mol_noh.GetNumAtoms(),
+            "output_path": output_path,
+        }
+
 
 def main():
     import argparse
     parser = argparse.ArgumentParser(
-        description="Assemble ResToken block IDs into cyclic peptide 2D structure")
+        description="Assemble ResToken block IDs into cyclic peptide structure")
     parser.add_argument("sequence", help="Dash-separated block IDs, e.g. A01-K03-N15-S14-E02-B07")
-    parser.add_argument("-o", "--output", default="cyclic_peptide.png", help="Output PNG path")
+    parser.add_argument("-o", "--output", default="cyclic_peptide.png",
+                        help="Output path (.png for 2D, .sdf/.pdb/.mol for 3D)")
     parser.add_argument("--width", type=int, default=1600)
     parser.add_argument("--height", type=int, default=1200)
     parser.add_argument("--smiles-only", action="store_true", help="Print SMILES only, no image")
+    parser.add_argument("--mode-3d", action="store_true",
+                        help="Generate 3D conformer (output as .sdf/.pdb/.mol)")
+    parser.add_argument("--n-confs", type=int, default=50,
+                        help="Number of conformers for 3D generation")
     parser.add_argument("--backend", default=None, help="Path to backend dict JSON")
     args = parser.parse_args()
 
@@ -242,6 +329,19 @@ def main():
             print(smi)
         else:
             print("ERROR: Assembly failed", file=__import__("sys").stderr)
+            raise SystemExit(1)
+    elif args.mode_3d:
+        ext = args.output.rsplit(".", 1)[-1].lower()
+        if ext == "png":
+            args.output = args.output.replace(".png", ".sdf")
+        result = asm.generate_3d(args.sequence, args.output, n_confs=args.n_confs)
+        if result:
+            print(f"SMILES: {result['smiles']}")
+            print(f"Energy: {result['energy']:.1f} kcal/mol")
+            print(f"Atoms: {result['n_heavy_atoms']} heavy, {result['n_atoms']} total")
+            print(f"Saved: {result['output_path']}")
+        else:
+            print("ERROR: 3D generation failed", file=__import__("sys").stderr)
             raise SystemExit(1)
     else:
         smi = asm.render(args.sequence, args.output, width=args.width, height=args.height)
