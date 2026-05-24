@@ -1,6 +1,24 @@
-# Methods and Results — Draft v1
+# ResToken: A Residue-Semantic Token Library Enabling LLM-Based Design of Noncanonical Cyclic Peptides
 
-**Status:** First draft with real W2 data (minus Sonnet). Fill Sonnet numbers after midnight run completes.
+**Status:** Draft v2 — full manuscript with real W2 data (5 models). Sonnet placeholder for 6th model after midnight run.
+
+---
+
+## Abstract
+
+Cyclic peptides incorporating noncanonical amino acids (NCAAs) are an expanding therapeutic modality, yet existing molecular representations are poorly suited for LLM-based NCAA design. SMILES strings expose structural details that induce hallucination of nonexistent monomers; HELM provides structure but lacks semantic property encoding for design reasoning. We present ResToken, a curated library of 400 NCAA building blocks encoded as semantic tokens spanning three backbone types (alpha, beta, gamma), 21 functional classes, and L/D/achiral stereochemistry. Each token encodes eight designable properties — chirality, charge, backbone type, N-modification, bulk, polarity, and flexibility — while hiding structural details from the LLM. A constraint validator guarantees all generated sequences are chemically legal. In zero-shot benchmarks across five LLMs, ResToken achieves 90.4% mean validity versus 69.0% (SMILES) and 84.5% (HELM), with 100% frozen-position compliance in controllable editing and up to 123-fold enrichment over random baselines in property-constrained design. The library, validator, and benchmark suite are freely available as an open-source Python package.
+
+---
+
+## 1. Introduction
+
+Cyclic peptides occupy a therapeutic sweet spot between small molecules and biologics, offering the target selectivity of protein interfaces with the bioavailability advantages of small molecules. The incorporation of noncanonical amino acids (NCAAs) — residues with non-standard backbones, side chains, or stereochemistry — dramatically expands the accessible chemical space, enabling improved membrane permeability through N-methylation and backbone rigidification, enhanced protease resistance via D-amino acids and beta-backbone substitution, and tunable physicochemical properties through designer side chains. Clinical successes such as cyclosporine and recent mRNA-display-derived candidates have validated NCAA-containing cyclic peptides as a viable drug modality.
+
+Large language models (LLMs) have emerged as powerful tools for molecular design, demonstrating success in generating valid small molecules, predicting protein sequences, and optimizing canonical peptides. Recent work on peptide-specific models — including PeptideCLM for antimicrobial peptide generation, PepThink-R1 for reasoning-guided design, and Evo-R for evolutionary protein generation — has shown that LLMs can learn the grammar of biological sequences and generate functional variants. However, these approaches operate almost exclusively on canonical amino acids represented as single-letter codes, leaving NCAA-containing cyclic peptide design as an open challenge.
+
+The bottleneck is representation, not model capability. When prompted to generate NCAA structures as SMILES strings, even frontier LLMs hallucinate nonexistent monomers, produce invalid ring closures, and cannot reason about physicochemical properties encrypted within the notation. HELM (Hierarchical Editing Language for Macromolecules) provides better structural organization but offers limited NCAA monomer coverage and no mechanism for property-aware reasoning — the LLM sees monomer codes but cannot determine which codes satisfy a charge or bulk constraint without external lookup. One-hot or learned embeddings sacrifice interpretability entirely, preventing users from expressing design constraints in natural language.
+
+Here we present ResToken, a residue-semantic tokenization scheme that decouples what the LLM sees from what the chemistry requires. Each of the 400 NCAA building blocks is encoded as a compact token carrying eight designable properties (chirality, charge, backbone type, N-modification, side-chain bulk, polarity, flexibility, and functional class), while full chemical structures (SMILES, SELFIES, InChIKey) are stored in a separate backend dictionary invisible to the LLM. This dual-dictionary architecture enforces a closed-set vocabulary that eliminates monomer hallucination while enabling property-level reasoning directly from the token metadata. We benchmark ResToken against SMILES and HELM across five LLMs on three tasks — unconstrained generation, controllable editing, and property-constrained design — demonstrating that the representation, not the model, is the primary determinant of generation quality.
 
 ---
 
@@ -64,10 +82,34 @@ These results highlight a critical design principle: ResToken encodes the proper
 
 ---
 
-*Word count: Methods ~650, Results ~600. Total ~1250. Target was ~1600 (800+800). Can expand with Sonnet data and additional analysis.*
+## 4. Discussion
 
-*TODO after Sonnet benchmark completes:*
-- *Add Sonnet row to all tables*
-- *Update aggregate statistics*
-- *Revise Figure 2 to include 6th model*
-- *Update chi-square tests with additional comparisons*
+The central finding of this work is that representation design, rather than model scale, is the primary bottleneck for LLM-based NCAA peptide generation. ResToken's closed-set vocabulary eliminates monomer hallucination — the dominant failure mode for SMILES-based approaches — while its semantic property encoding enables constraint-aware reasoning that neither SMILES nor HELM supports. The 100% frozen-position compliance across all tested models, including 9B-parameter open-weight models, confirms that discrete, position-indexed tokens make positional control trivial compared to the non-local edit dependencies inherent in SMILES notation.
+
+The sharp capability gradient in property-constrained generation (Exp3) reveals an important design consideration: ResToken makes constraint satisfaction *possible* by encoding the relevant properties in the prompt, but *achieving* it requires strong instruction-following and in-context reasoning. Gemini 2.5 Pro achieved 80–100% constraint satisfaction with up to 123× enrichment over random baselines; local 9–12B models achieved 0% despite generating valid sequences. This suggests that ResToken is most immediately useful as a representation layer for frontier API models, while fine-tuned specialist models may be needed to bring constraint reasoning to smaller architectures.
+
+**Limitations.** The current library of 400 blocks is curated, not exhaustive; new NCAAs require manual addition with property annotation. Gamma backbone coverage is thin (49 blocks spanning only 10 of 21 functional classes), and N-methylation — a critical permeability lever — is represented by only 2 blocks. Semantic property binning (small/medium/large for bulk, low/medium/high for polarity) deliberately trades quantitative resolution for LLM usability; applications requiring precise physicochemical values should query the backend dictionary directly. ResToken is a representation, not a property predictor — it enables LLMs to generate chemically legal sequences satisfying user-specified constraints but makes no claims about the biological activity of generated peptides.
+
+**Future directions.** Integration with permeability predictors (e.g., CycPeptMP) and structure prediction tools (AlphaFold3) would close the loop from generation to evaluation, enabling active learning workflows. The library can be expanded through community contributions of validated NCAA blocks, and the tokenization scheme generalizes naturally to stapled peptides and peptide–drug conjugates.
+
+---
+
+## 5. Software and Availability
+
+The `restoken` Python package is freely available under the MIT license. The package includes: (1) the 400-block building block library in CSV and JSON formats, with separate backend (full chemistry) and LLM-safe (semantic properties only) versions; (2) `SequenceValidator` implementing seven configurable hard constraints; (3) `SMILESReconstructor` for converting token sequences to full molecular SMILES, validated via RDKit for all 400 blocks; (4) prompt templates for ResToken, SMILES, and HELM generation across major LLM providers; (5) a random baseline generator with configurable constraint profiles for benchmarking; and (6) the complete benchmark suite used in this work, enabling reproduction of all reported results.
+
+**GitHub:** [URL] | **License:** MIT | **Python:** ≥3.10
+
+---
+
+## Associated Content
+
+**Supporting Information:** Per-model detailed results tables, additional statistical analyses, and library coverage visualizations.
+
+---
+
+*Draft notes (remove before submission):*
+- *Total word count: ~2,800 (target: ~3,000 for JCIM Application Note)*
+- *TODO: Add Claude Sonnet 4.6 as 6th model after midnight benchmark run — update Abstract numbers, Figure 2, Tables, and aggregate statistics*
+- *TODO: Finalize reference list (CycPeptMP, PeptideCLM, PepThink-R1, Evo-R, HELM spec, RDKit)*
+- *TODO: GitHub URL once repo is public*
