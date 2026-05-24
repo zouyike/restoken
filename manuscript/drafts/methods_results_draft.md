@@ -1,6 +1,6 @@
 # ResToken: A Residue-Semantic Token Library Enabling LLM-Based Design of Noncanonical Cyclic Peptides
 
-**Status:** Draft v2 — full manuscript with real W2 data (5 models). Sonnet placeholder for 6th model after midnight run.
+**Status:** Draft v3 — full manuscript, finalized with 5 models (no Sonnet).
 
 ---
 
@@ -110,6 +110,5 @@ The `restoken` Python package is freely available under the MIT license. The pac
 
 *Draft notes (remove before submission):*
 - *Total word count: ~2,800 (target: ~3,000 for JCIM Application Note)*
-- *TODO: Add Claude Sonnet 4.6 as 6th model after midnight benchmark run — update Abstract numbers, Figure 2, Tables, and aggregate statistics*
 - *TODO: Finalize reference list (CycPeptMP, PeptideCLM, PepThink-R1, Evo-R, HELM spec, RDKit)*
 - *TODO: GitHub URL once repo is public*
