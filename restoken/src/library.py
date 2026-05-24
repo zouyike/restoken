@@ -197,12 +197,13 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     if n_heavy > 0 and (n_hetero / n_heavy) > _EXOTIC_THRESHOLDS["high_heteroatom"]:
         flags.add("high_heteroatom")
 
-    n_O = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 8)
-    n_N = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 7)
+    # Side-chain atom counts (subtract 2N + 2O backbone contribution)
+    sc_O = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 8) - 2
+    sc_N = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 7) - 2
     n_P = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 15)
-    if n_O > 3:
+    if sc_O > 3:
         flags.add("many_oxygens")
-    if n_N > 3:
+    if sc_N > 3:
         flags.add("many_nitrogens")
     if n_P > 0:
         flags.add("has_phosphorus")
