@@ -111,6 +111,47 @@ python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --smiles-only
 
 Supports all 400 block types: alpha/beta/gamma backbones, L/D/achiral chirality, N-methylation (NME), and N-cyclic rings (NCY, proline-like).
 
+## Guideline-Based Generation
+
+Generate cyclic peptides from design guideline files (Markdown). Guidelines specify composition rules, scoring criteria, and hard filters for different permeability modes (CPP-like, passive-permeable).
+
+```python
+from restoken.src.guideline_generator import GuidelineGenerator
+
+gen = GuidelineGenerator("restoken/guidelines/cell_penetrating_cyclic_peptide.md")
+
+# Constrained sampling — CPP-like 8-residue rings
+candidates = gen.generate(n=50, mode="cpp_like", ring_size=8, seed=42)
+for c in candidates[:3]:
+    print(f"{c['sequence']}  score={c['score']:.1f}  charge={c['net_charge']:+d}")
+
+# Score and annotate an existing sequence
+ann = gen.annotate("K06-A09-N20-A10-K08-A05-A97", mode="cpp_like")
+
+# Build LLM prompt with guideline + classified blocks
+prompt = gen.build_llm_prompt(mode="cpp_like", n=20)
+```
+
+CLI usage:
+```bash
+# Generate candidates
+python -m restoken.src.guideline_generator generate restoken/guidelines/cell_penetrating_cyclic_peptide.md \
+    -n 50 --mode cpp_like --ring-size 8 -o candidates.csv
+
+# Score a sequence
+python -m restoken.src.guideline_generator score restoken/guidelines/cell_penetrating_cyclic_peptide.md \
+    "K06-A09-N20-A10-K08-A05-A97" --mode cpp_like
+
+# Show block classification
+python -m restoken.src.guideline_generator classify restoken/guidelines/cell_penetrating_cyclic_peptide.md
+
+# Build LLM prompt
+python -m restoken.src.guideline_generator prompt restoken/guidelines/cell_penetrating_cyclic_peptide.md \
+    --mode cpp_like -n 20
+```
+
+Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included example. The generator auto-detects CPP-like and passive-permeable modes from keywords.
+
 ## LLM-to-Molecule Design Pipeline
 
 ResToken serves as an interface between LLMs and real chemistry. See `restoken/examples/alogp_design_demo.py` for an end-to-end example:
