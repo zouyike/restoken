@@ -46,6 +46,10 @@ def main():
     parser.add_argument("--csv-out", default=None, help="CSV output path")
     parser.add_argument("--guideline", default=None,
                         help="Custom guideline file (default: built-in CPP guideline)")
+    parser.add_argument("--exclude-exotic", action="store_true",
+                        help="Exclude blocks with exotic flags (high MW, poly-ring, etc.)")
+    parser.add_argument("--max-exotic", type=int, default=None,
+                        help="Max exotic blocks per sequence")
     args = parser.parse_args()
 
     guideline = args.guideline or str(_GUIDELINE)
@@ -56,7 +60,9 @@ def main():
 
     print(f"Generating {args.n} CPP-like candidates (ring_size={args.ring_size})...")
     candidates = gen.generate(n=args.n, mode="cpp_like",
-                              ring_size=args.ring_size, seed=args.seed)
+                              ring_size=args.ring_size, seed=args.seed,
+                              exclude_exotic=args.exclude_exotic,
+                              max_exotic_per_seq=args.max_exotic)
     filtered = gen.filter(candidates, mode="cpp_like")
     print(f"  {len(candidates)} generated, {len(filtered)} passed hard filters")
 
