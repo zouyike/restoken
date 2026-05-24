@@ -38,7 +38,7 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Optional
 
-from restoken.src.library import BlockLibrary, Block
+from restoken.src.library import BlockLibrary, Block, compute_all_exotic_flags
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 _GUIDELINES_DIR = Path(__file__).resolve().parent.parent / "guidelines"
@@ -256,6 +256,7 @@ class GuidelineGenerator:
             raw = json.load(f)
         self._raw_blocks = {b["id"]: b for b in raw["blocks"]}
         self.bins, self.block_to_bins = classify_blocks(self.library, self._raw_blocks)
+        self.exotic_flags = compute_all_exotic_flags(self.library, self._raw_blocks)
 
     def _parse_guideline(self):
         """Parse JSON config block from guideline markdown.
@@ -301,7 +302,8 @@ class GuidelineGenerator:
                 lines.append(f"    [{', '.join(ids)}]")
         return "\n".join(lines)
 
-    def generate(self, n=50, mode="cpp_like", ring_size=None, seed=None):
+    def generate(self, n=50, mode="cpp_like", ring_size=None, seed=None,
+                 exclude_exotic=False, max_exotic_per_seq=None):
         """Generate candidate sequences via constrained sampling.
 
         Args:
@@ -309,6 +311,8 @@ class GuidelineGenerator:
             mode: design mode name
             ring_size: fixed ring size, or None to sample from mode range
             seed: random seed for reproducibility
+            exclude_exotic: if True, never sample blocks with any exotic flag
+            max_exotic_per_seq: if set, reject sequences with more exotic blocks
 
         Returns:
             list of dicts sorted by score (descending)
@@ -322,10 +326,18 @@ class GuidelineGenerator:
         candidates = []
         seen = set()
 
+        excluded_ids = set()
+        if exclude_exotic:
+            excluded_ids = {bid for bid, flags in self.exotic_flags.items() if flags}
+
         for _ in range(n * 100):
-            seq = self._generate_one(config, ring_size)
+            seq = self._generate_one(config, ring_size, excluded_ids)
             if seq is None:
                 continue
+            if max_exotic_per_seq is not None:
+                n_exotic = sum(1 for bid in seq if self.exotic_flags.get(bid))
+                if n_exotic > max_exotic_per_seq:
+                    continue
             key = tuple(sorted(seq))
             if key in seen:
                 continue
@@ -445,7 +457,7 @@ class GuidelineGenerator:
 
     # ── Internal: generation ─────────────────────────────────────────
 
-    def _generate_one(self, config, target_ring_size=None):
+    def _generate_one(self, config, target_ring_size=None, excluded_ids=None):
         rs = target_ring_size or random.choice(config["ring_sizes"])
         recipe = config["recipes"].get(rs)
         if recipe is None:
@@ -456,10 +468,12 @@ class GuidelineGenerator:
         if comp is None:
             return None
 
+        excluded = excluded_ids or set()
         blocks = []
         used = set()
         for bin_name, count in comp.items():
-            pool = [bid for bid in self.bins.get(bin_name, []) if bid not in used]
+            pool = [bid for bid in self.bins.get(bin_name, [])
+                    if bid not in used and bid not in excluded]
             if len(pool) < count:
                 return None
             selected = random.sample(pool, count)
@@ -653,6 +667,9 @@ class GuidelineGenerator:
             "total_hba": sum(b.sc_hba for b in blocks),
             "total_rotatable_bonds": sum(b.rot_total for b in blocks),
             "backbone_types": [b.mc_type for b in blocks],
+            "exotic_count": sum(1 for bid in block_ids if self.exotic_flags.get(bid)),
+            "exotic_flags": {bid: sorted(self.exotic_flags[bid])
+                             for bid in block_ids if self.exotic_flags.get(bid)},
             "mode_label": mode_label,
             "priority": priority,
         }
@@ -676,11 +693,18 @@ def main():
     p_gen.add_argument("--ring-size", type=int, default=None)
     p_gen.add_argument("--seed", type=int, default=None)
     p_gen.add_argument("--min-score", type=float, default=None)
+    p_gen.add_argument("--exclude-exotic", action="store_true",
+                       help="Exclude all blocks with exotic flags")
+    p_gen.add_argument("--max-exotic", type=int, default=None,
+                       help="Max exotic blocks per sequence")
     p_gen.add_argument("-o", "--output", default=None, help="CSV output path")
     p_gen.add_argument("--backend", default=None)
 
     p_cls = sub.add_parser("classify", help="Show block classification")
     p_cls.add_argument("--backend", default=None)
+
+    p_exo = sub.add_parser("exotic", help="Show exotic flag statistics")
+    p_exo.add_argument("--backend", default=None)
 
     p_sc = sub.add_parser("score", help="Score a sequence")
     p_sc.add_argument("sequence", help="Dash-separated block IDs")
@@ -705,6 +729,20 @@ def main():
         gen = GuidelineGenerator.from_params(backend_path=backend)
         print(gen.block_summary())
 
+    elif args.command == "exotic":
+        from collections import Counter
+        gen = GuidelineGenerator.from_params(backend_path=backend)
+        n_exotic = sum(1 for f in gen.exotic_flags.values() if f)
+        print(f"Exotic blocks: {n_exotic} / {len(gen.exotic_flags)}")
+        flag_counts = Counter()
+        for flags in gen.exotic_flags.values():
+            for f in flags:
+                flag_counts[f] += 1
+        print("\nFlag breakdown:")
+        for flag, count in flag_counts.most_common():
+            print(f"  {flag}: {count}")
+        print(f"\nNon-exotic pool: {len(gen.exotic_flags) - n_exotic} blocks")
+
     elif args.command == "generate":
         if args.guideline:
             gen = GuidelineGenerator(args.guideline, backend_path=backend)
@@ -712,7 +750,8 @@ def main():
             gen = GuidelineGenerator.from_params(backend_path=backend)
 
         candidates = gen.generate(
-            n=args.n, mode=args.mode, ring_size=args.ring_size, seed=args.seed
+            n=args.n, mode=args.mode, ring_size=args.ring_size, seed=args.seed,
+            exclude_exotic=args.exclude_exotic, max_exotic_per_seq=args.max_exotic,
         )
         filtered = gen.filter(candidates, mode=args.mode, min_score=args.min_score)
 
@@ -746,8 +785,10 @@ def main():
         for k in ["ring_size", "net_charge", "cationic_count", "arg_like_count",
                    "aromatic_hydrophobe_count", "hydrophobic_fraction", "N_methyl_count",
                    "D_residue_count", "turn_residue_count", "acidic_count",
-                   "total_hbd", "total_hba", "mode_label"]:
+                   "total_hbd", "total_hba", "exotic_count", "mode_label"]:
             print(f"  {k}: {ann[k]}")
+        if ann.get("exotic_flags"):
+            print(f"  exotic_blocks: {ann['exotic_flags']}")
 
     elif args.command == "prompt":
         gen = GuidelineGenerator(args.guideline, backend_path=backend)

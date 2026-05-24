@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional
+from functools import lru_cache
 
 _DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 _LLM_DICT = _DATA_DIR / "bb_dict_llm_v11.json"
@@ -132,3 +133,75 @@ class BlockLibrary:
         header = "ID | Class | Chiral | Charge | Backbone | N-mod | Bulk | Polarity | Flexibility | Tags"
         sep = "-" * len(header)
         return f"{header}\n{sep}\n" + "\n".join(lines)
+
+
+# ── Exotic flag computation ────────────────────────────────────────────
+
+_EXOTIC_THRESHOLDS = {
+    "high_heteroatom": 0.5,
+    "poly_ring": 3,
+    "high_mw": 300,
+    "high_flex": 8,
+}
+
+
+def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
+    """Compute exotic flags for a block from SMILES structure.
+
+    Flags (any triggered = exotic):
+        high_heteroatom — heteroatom/heavy ratio > 0.5
+        poly_ring — 3+ ring systems in the monomer
+        high_mw — molecular weight > 300
+        high_flex — rotatable bonds > 7
+        halogenated — contains F/Cl/Br/I
+    """
+    flags = set()
+
+    if raw_entry.get("halogen", 0) > 0:
+        flags.add("halogenated")
+
+    if block.rot_total > 7:
+        flags.add("high_flex")
+
+    smi = block.aa_smiles
+    if not smi:
+        return flags
+
+    try:
+        from rdkit import Chem
+        from rdkit.Chem import Descriptors, rdMolDescriptors
+    except ImportError:
+        return flags
+
+    mol = Chem.MolFromSmiles(smi)
+    if mol is None:
+        return flags
+
+    mw = Descriptors.ExactMolWt(mol)
+    if mw > _EXOTIC_THRESHOLDS["high_mw"]:
+        flags.add("high_mw")
+
+    n_rings = rdMolDescriptors.CalcNumRings(mol)
+    if n_rings >= _EXOTIC_THRESHOLDS["poly_ring"]:
+        flags.add("poly_ring")
+
+    n_heavy = mol.GetNumHeavyAtoms()
+    n_hetero = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() not in (1, 6))
+    if n_heavy > 0 and (n_hetero / n_heavy) > _EXOTIC_THRESHOLDS["high_heteroatom"]:
+        flags.add("high_heteroatom")
+
+    return flags
+
+
+def compute_all_exotic_flags(library: "BlockLibrary", raw_blocks: dict) -> dict[str, set[str]]:
+    """Compute exotic flags for all blocks in the library.
+
+    Returns:
+        dict mapping block_id -> set of exotic flag strings (empty = not exotic)
+    """
+    result = {}
+    for block_id in library.all_ids:
+        block = library[block_id]
+        raw = raw_blocks.get(block_id, {})
+        result[block_id] = compute_exotic_flags(block, raw)
+    return result
