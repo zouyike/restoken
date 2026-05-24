@@ -502,6 +502,8 @@ class GuidelineGenerator:
         blocks = [self.library[bid] for bid in block_ids]
         if "passive" in mode:
             return self._score_passive(block_ids, blocks)
+        if "antibiotic" in mode or "amphipathic" in mode or "broad" in mode or "cationic_amphipathic" in mode:
+            return self._score_antibiotic(block_ids, blocks)
         return self._score_cpp(block_ids, blocks)
 
     def _score_cpp(self, block_ids, blocks):
@@ -525,6 +527,39 @@ class GuidelineGenerator:
             score -= 2.0
         if sum(b.rot_total for b in blocks) > rs * 5:
             score -= 2.0
+        return score
+
+    def _score_antibiotic(self, block_ids, blocks):
+        score = 0.0
+        rs = len(blocks)
+        n_primary = sum(1 for bid in block_ids if "primary_amine_cation" in self.block_to_bins.get(bid, set()))
+        n_cationic = sum(1 for b in blocks if b.charge > 0)
+        n_arg = sum(1 for bid in block_ids if "guanidinium_cation" in self.block_to_bins.get(bid, set()))
+        score += 2.0 * min(n_primary, 4)
+        score += 1.0 * min(n_arg, 1)
+        if n_arg > 2:
+            score -= 1.5
+        n_bulky = sum(1 for bid in block_ids if "bulky_aliphatic" in self.block_to_bins.get(bid, set()))
+        n_hydro = sum(1 for bid in block_ids if "all_hydrophobic" in self.block_to_bins.get(bid, set()))
+        frac = n_hydro / rs if rs else 0
+        if 0.35 <= frac <= 0.6:
+            score += 2.0
+        elif 0.25 <= frac < 0.35:
+            score += 1.0
+        if frac > 0.7:
+            score -= 2.0
+        score += 1.5 * min(n_bulky, 3)
+        n_aro = sum(1 for bid in block_ids if "aromatic_hydrophobe" in self.block_to_bins.get(bid, set()))
+        score += 1.0 * min(n_aro, 2)
+        n_d = sum(1 for b in blocks if b.chirality == "D")
+        score += 1.0 * min(n_d, 3)
+        n_turn = sum(1 for bid in block_ids if "turn_inducer" in self.block_to_bins.get(bid, set()))
+        score += 0.5 * min(n_turn, 2)
+        if n_cationic >= 3 and n_bulky >= 2:
+            score += 1.5
+        score -= 2.0 * sum(1 for b in blocks if b.charge < 0)
+        if rs > 10:
+            score -= 1.0
         return score
 
     def _score_passive(self, block_ids, blocks):
@@ -574,7 +609,17 @@ class GuidelineGenerator:
         n_acidic = sum(1 for b in blocks if b.charge < 0)
         net_charge = sum(b.charge for b in blocks)
 
-        if net_charge >= 2 and n_cationic >= 3:
+        n_primary = sum(1 for bid in block_ids if "primary_amine_cation" in self.block_to_bins.get(bid, set()))
+        n_bulky = sum(1 for bid in block_ids if "bulky_aliphatic" in self.block_to_bins.get(bid, set()))
+
+        if "antibiotic" in mode or "amphipathic" in mode or "broad" in mode or "cationic_amphipathic" in mode:
+            if n_primary >= 3 and n_bulky >= 2:
+                mode_label = "cationic_membrane_disruptor"
+            elif net_charge >= 2 and n_cationic >= 2:
+                mode_label = "amphipathic_antimicrobial"
+            else:
+                mode_label = mode
+        elif net_charge >= 2 and n_cationic >= 3:
             mode_label = "CPP_like_endocytic"
         elif abs(net_charge) <= 1:
             mode_label = "passive_diffusion"
