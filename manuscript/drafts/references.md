@@ -14,7 +14,7 @@
 
 7. Feller, A. L.; Wilke, C. O. Peptide-Aware Chemical Language Model Successfully Predicts Membrane Diffusion of Cyclic Peptides. *J. Chem. Inf. Model.* **2025**, *65* (2), 571–579. DOI: 10.1021/acs.jcim.4c01441
 
-8. Wang, R.; Zhang, H.; Nguyen, T.; Feng, S.; Pang, H.-W.; Yu, X.; Xiao, L.; Zhang, P. Z. PepThink-R1: LLM for Interpretable Cyclic Peptide Optimization with CoT SFT and Reinforcement Learning. *arXiv preprint* **2025**, arXiv:2508.14765.
+8. Wang, R.; Zhang, H.; Nguyen, T.; Feng, S.; Pang, H.-W.; Yu, X.; Xiao, L.; Zhang, P. Z. PepThink-R1: LLM for Interpretable Cyclic Peptide Optimization with CoT SFT and Reinforcement Learning. In *Advances in Neural Information Processing Systems (NeurIPS)*; **2025**. arXiv:2508.14765.
 
 9. Brixi, G.; Durrant, M. G.; Nguyen, E. et al. Genome Modelling and Design across All Domains of Life with Evo 2. *Nature* **2026**, *652*, 1349–1361. DOI: 10.1038/s41586-026-10176-5
 
