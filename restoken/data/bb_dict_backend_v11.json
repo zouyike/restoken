@@ -4314,7 +4314,7 @@
       "helm": "[a15]",
       "aa_class": "P",
       "chirality": "L",
-      "charge": -1,
+      "charge": 0,
       "charge_label": "neg",
       "aromatic_level": 0,
       "halogen": 0,
@@ -4328,17 +4328,17 @@
         "rot": 1
       },
       "sc": {
-        "smiles": "C1CNC[N-]1",
+        "smiles": "C1CNCN1",
         "selfies": "[C][C][N][C][N-1][Ring1][Branch1]",
         "bulk": "small",
         "stereo": 0,
         "rot": 0,
         "metal": 1,
-        "hbd": 0,
-        "hba": 1
+        "hbd": 2,
+        "hba": 2
       },
       "structure": {
-        "aa_smiles": "CNC(=O)[C@@H]1C[N-]CN1C(C)=O",
+        "aa_smiles": "CNC(=O)[C@@H]1CNCN1C(C)=O",
         "aa_selfies": "[C][N][C][=Branch1][C][=O][C@@H1][C][N-1][C][N][Ring1][Branch1][C][Branch1][C][C][=O]"
       },
       "rot_total": 1
@@ -4349,7 +4349,7 @@
       "helm": "[e01]",
       "aa_class": "P",
       "chirality": "D",
-      "charge": -1,
+      "charge": 0,
       "charge_label": "neg",
       "aromatic_level": 0,
       "halogen": 0,
@@ -4363,17 +4363,17 @@
         "rot": 1
       },
       "sc": {
-        "smiles": "C1[N-]CN1",
+        "smiles": "C1NCN1",
         "selfies": "[C][N-1][C][N][Ring1][Ring2]",
         "bulk": "small",
         "stereo": 0,
         "rot": 0,
         "metal": 1,
-        "hbd": 0,
-        "hba": 1
+        "hbd": 2,
+        "hba": 2
       },
       "structure": {
-        "aa_smiles": "CNC(=O)[C@@H]1[N-]CN1C(C)=O",
+        "aa_smiles": "CNC(=O)[C@@H]1NCN1C(C)=O",
         "aa_selfies": "[C][N][C][=Branch1][C][=O][C@@H1][N-1][C][N][Ring1][Ring2][C][Branch1][C][C][=O]"
       },
       "rot_total": 1
@@ -4384,7 +4384,7 @@
       "helm": "[a16]",
       "aa_class": "P",
       "chirality": "L",
-      "charge": -1,
+      "charge": 0,
       "charge_label": "neg",
       "aromatic_level": 0,
       "halogen": 0,
@@ -4398,17 +4398,17 @@
         "rot": 1
       },
       "sc": {
-        "smiles": "C1C[N-]CNC1",
+        "smiles": "C1CNCNC1",
         "selfies": "[C][C][N-1][C][N][C][Ring1][=Branch1]",
         "bulk": "med",
         "stereo": 0,
         "rot": 0,
         "metal": 1,
-        "hbd": 0,
-        "hba": 1
+        "hbd": 2,
+        "hba": 2
       },
       "structure": {
-        "aa_smiles": "CNC(=O)[C@@H]1CC[N-]CN1C(C)=O",
+        "aa_smiles": "CNC(=O)[C@@H]1CCNCN1C(C)=O",
         "aa_selfies": "[C][N][C][=Branch1][C][=O][C@@H1][C][C][N-1][C][N][Ring1][=Branch1][C][Branch1][C][C][=O]"
       },
       "rot_total": 1
@@ -4419,7 +4419,7 @@
       "helm": "[a17]",
       "aa_class": "P",
       "chirality": "L",
-      "charge": -1,
+      "charge": 0,
       "charge_label": "neg",
       "aromatic_level": 0,
       "halogen": 0,
@@ -4433,17 +4433,17 @@
         "rot": 1
       },
       "sc": {
-        "smiles": "C1CCNC[N-]C1",
+        "smiles": "C1CCNCNC1",
         "selfies": "[C][C][C][N][C][N-1][C][Ring1][#Branch1]",
         "bulk": "large",
         "stereo": 0,
         "rot": 0,
         "metal": 1,
-        "hbd": 0,
-        "hba": 1
+        "hbd": 2,
+        "hba": 2
       },
       "structure": {
-        "aa_smiles": "CNC(=O)[C@@H]1CCC[N-]CN1C(C)=O",
+        "aa_smiles": "CNC(=O)[C@@H]1CCCNCN1C(C)=O",
         "aa_selfies": "[C][N][C][=Branch1][C][=O][C@@H1][C][C][C][N-1][C][N][Ring1][#Branch1][C][Branch1][C][C][=O]"
       },
       "rot_total": 1
