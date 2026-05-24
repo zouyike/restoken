@@ -74,18 +74,30 @@ for i in range({n_mols}):
     cmd.load(os.path.join(tmpdir, f"mol_{{i}}.sdf"), f"mol_{{i}}", format="sdf")
     cmd.set("connect_mode", 1)
     cmd.set("connect_cutoff", 0.1)
+
+    # Global style — match user's PyMOL settings
+    cmd.bg_color("white")
+    cmd.set("ray_opaque_background", 1)
+    cmd.set("ray_trace_mode", 1)
+    cmd.set("ray_trace_gain", 0.05)
+    cmd.set("antialias", 1)
+    cmd.set("ray_shadows", 0)
+    cmd.set("valence", 0)
+    cmd.set("mesh_width", 1)
+    cmd.set("cartoon_side_chain_helper", 0)
+    cmd.set("label_size", -0.9)
+    cmd.set("label_color", "black")
+
     cmd.hide("everything")
     cmd.show("sticks", f"mol_{{i}}")
     cmd.set("stick_radius", 0.15)
-    cmd.color("gray50", f"mol_{{i}} and elem C")
-    cmd.color("red", f"mol_{{i}} and elem O")
-    cmd.color("blue", f"mol_{{i}} and elem N")
-    cmd.color("tv_yellow", f"mol_{{i}} and elem S")
-    cmd.set("stick_color", "gray20")
-    cmd.bg_color("white")
-    cmd.set("ray_opaque_background", 1)
-    cmd.set("antialias", 2)
-    cmd.set("ray_trace_mode", 0)
+
+    # Hide non-polar H (H bonded to C), keep polar H on N/O/S
+    cmd.hide("(h. and (e. c extend 1))")
+
+    # Gray carbon + standard atomic coloring for heteroatoms
+    cmd.color("gray80", f"mol_{{i}} and elem C")
+    cmd.color("atomic", f"(mol_{{i}} and not elem C)")
 
     best_img = None
     best_score = -1
