@@ -145,6 +145,29 @@ def main():
               f"{target['rings']-recon_env['rings']:.0f} ring deficit is the "
               f"bicyclic crosslink bridge ResToken cannot represent.")
 
+    # 4. Can the crosslink primitive (assemble_advanced) close that deficit?
+    # It re-forms a bridge as a single bond between two *side-chain* atoms of
+    # otherwise head-to-tail residues. That only works when each detected
+    # crosslink is atom-disjoint from the backbone. Report the verdict honestly.
+    print("\n=== crosslink-primitive re-encodability ===")
+    rep = dec.crosslink_reencodability(ENLICITIDE_SMILES)
+    print(f"  detected side-chain crosslinks : {rep['n_crosslinks']}")
+    print(f"  disjoint (re-encodable)        : {rep['n_disjoint']}")
+    print(f"  fused with backbone (cannot)   : {rep['n_fused']}")
+    for d in rep["detail"]:
+        kind = "FUSED (shares backbone atom %s)" % d["shared_atoms"] if d["fused"] \
+            else "disjoint side-chain staple"
+        print(f"   bond {d['bond'][0]}-{d['bond'][1]}: {kind}")
+    if rep["reencodable"]:
+        print("  => bridges are disjoint staples; assemble_advanced can re-close them.")
+    else:
+        print("  => MK-0616's bridges emanate from backbone-amide carbons, so the\n"
+              "     macrocycle and bridge share atoms (a fused polycycle). This is\n"
+              "     outside the head-to-tail + disjoint-staple model even with the\n"
+              "     crosslink primitive: it is a measured representational limit,\n"
+              "     not an assembler bug. (The primitive itself is proven on a clean\n"
+              "     designed staple in tests/test_crosslink_assembler.py.)")
+
     # CSV.
     with open(args.csv, "w", newline="") as f:
         w = csv.writer(f)

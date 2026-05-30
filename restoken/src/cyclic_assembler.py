@@ -119,6 +119,115 @@ class CyclicPeptideAssembler:
 
         return smi
 
+    def assemble_advanced(self, residues, crosslinks=None, validate=True):
+        """Assemble arbitrary capped residues head-to-tail, then close crosslinks.
+
+        Generalizes ``assemble`` beyond the head-to-tail block vocabulary so a
+        *bicyclic* peptide (a macrocycle plus one or more side-chain bridges,
+        like MK-0616) can be reconstructed.
+
+        Args:
+            residues: ordered list of capped SMILES. Each is either a library
+                block's aa_smiles or a literal Ac-/NHMe-capped residue fragment
+                (e.g. a bridge-bearing residue kept verbatim from a decomposition).
+                Atoms that participate in a crosslink must carry an atom-map
+                number; map numbers survive cap stripping and atom renumbering.
+            crosslinks: list of (mapnum_a, mapnum_b) pairs. After the head-to-tail
+                macrocycle is closed, a single bond is added between the atoms
+                bearing those two map numbers, re-forming a side-chain bridge.
+            validate: verify the product parses to a single connected molecule.
+
+        Returns:
+            str SMILES, or None on failure.
+        """
+        mols, cap_infos = [], []
+        for smi in residues:
+            mol = Chem.MolFromSmiles(smi)
+            if mol is None:
+                return None
+            ac = mol.GetSubstructMatch(_AC_SMARTS)
+            nme = mol.GetSubstructMatch(_NME_SMARTS)
+            if not ac or not nme:
+                return None
+            mols.append(mol)
+            cap_infos.append({
+                "ac_ch3": ac[0], "ac_co": ac[1], "ac_o": ac[2], "backbone_n": ac[3],
+                "nme_co": nme[0], "nme_o": nme[1], "nme_n": nme[2], "nme_ch3": nme[3],
+            })
+
+        combined = mols[0]
+        offsets = [0]
+        for m in mols[1:]:
+            offsets.append(combined.GetNumAtoms())
+            combined = Chem.CombineMols(combined, m)
+
+        rw = Chem.RWMol(combined)
+        n = len(residues)
+
+        for i in range(n):
+            o = offsets[i]
+            ci = cap_infos[i]
+            rw.RemoveBond(o + ci["nme_co"], o + ci["nme_n"])
+            rw.RemoveBond(o + ci["ac_co"], o + ci["backbone_n"])
+
+        for i in range(n):
+            next_i = (i + 1) % n
+            co_idx = offsets[i] + cap_infos[i]["nme_co"]
+            n_idx = offsets[next_i] + cap_infos[next_i]["backbone_n"]
+            rw.AddBond(co_idx, n_idx, Chem.BondType.SINGLE)
+
+        atoms_to_remove = set()
+        for i in range(n):
+            o = offsets[i]
+            ci = cap_infos[i]
+            atoms_to_remove.update([
+                o + ci["ac_ch3"], o + ci["ac_co"], o + ci["ac_o"],
+                o + ci["nme_n"], o + ci["nme_ch3"],
+            ])
+        for idx in sorted(atoms_to_remove, reverse=True):
+            rw.RemoveAtom(idx)
+
+        # Re-form side-chain crosslinks by atom-map number (indices have shifted
+        # after atom removal, but map numbers are carried on the surviving atoms).
+        if crosslinks:
+            mapnum_to_idx = {}
+            for atom in rw.GetAtoms():
+                mn = atom.GetAtomMapNum()
+                if mn:
+                    mapnum_to_idx[mn] = atom.GetIdx()
+            for ma, mb in crosslinks:
+                ia, ib = mapnum_to_idx.get(ma), mapnum_to_idx.get(mb)
+                if ia is None or ib is None:
+                    return None
+                if rw.GetBondBetweenAtoms(ia, ib) is None:
+                    rw.AddBond(ia, ib, Chem.BondType.SINGLE)
+                    # The two endpoints each give up one hydrogen to form the
+                    # bridge bond. Clearing explicit Hs and re-enabling implicit
+                    # valence lets RDKit recompute the correct H count for the
+                    # now higher-degree atoms (a tagged CH3 -> CH2, etc.).
+                    for idx in (ia, ib):
+                        a = rw.GetAtomWithIdx(idx)
+                        a.SetNumExplicitHs(0)
+                        a.SetNoImplicit(False)
+            # strip the tagging map numbers so they don't pollute the output
+            for atom in rw.GetAtoms():
+                atom.SetAtomMapNum(0)
+
+        try:
+            Chem.SanitizeMol(rw)
+            smi = Chem.MolToSmiles(rw)
+        except Exception:
+            return None
+
+        if validate:
+            mol = Chem.MolFromSmiles(smi)
+            if mol is None:
+                return None
+            if len(Chem.GetMolFrags(mol)) != 1:
+                return None
+
+        return smi
+
     def render(self, sequence_str, output_path, width=1600, height=1200,
                label=True, bond_width=2.0):
         """

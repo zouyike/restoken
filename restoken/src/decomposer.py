@@ -303,6 +303,44 @@ class PeptideDecomposer:
                 sum(r["tanimoto"] for r in residues) / max(len(residues), 1), 3),
         }
 
+    def crosslink_reencodability(self, smiles):
+        """Report whether a molecule's side-chain bridges can be re-encoded by the
+        assembler's crosslink primitive (assemble_advanced).
+
+        The primitive re-forms a bridge as a single bond between two *side-chain*
+        atoms of otherwise head-to-tail residues. That model holds only when each
+        detected crosslink is atom-disjoint from the backbone amides: a bridge
+        endpoint that is itself a backbone-amide atom means the macrocycle and the
+        bridge share atoms (a fused polycycle, e.g. MK-0616), which cannot be
+        expressed as head-to-tail residues + a disjoint staple.
+
+        Returns dict: n_crosslinks, n_disjoint (re-encodable), n_fused (sharing a
+        backbone atom), per-crosslink detail, and a boolean ``reencodable``.
+        """
+        mol = Chem.MolFromSmiles(smiles)
+        if mol is None:
+            raise ValueError("Could not parse SMILES")
+        backbone = self._backbone_amides(mol)
+        crosslinks = self._detect_crosslinks(mol, backbone)
+        bb_atoms = set()
+        for co, n, _c in backbone:
+            bb_atoms.add(co)
+            bb_atoms.add(n)
+        detail, n_fused = [], 0
+        for u, v in crosslinks:
+            shared = [a for a in (u, v) if a in bb_atoms]
+            fused = bool(shared)
+            n_fused += int(fused)
+            detail.append({"bond": (u, v), "fused": fused, "shared_atoms": shared})
+        n_disjoint = len(crosslinks) - n_fused
+        return {
+            "n_crosslinks": len(crosslinks),
+            "n_disjoint": n_disjoint,
+            "n_fused": n_fused,
+            "detail": detail,
+            "reencodable": len(crosslinks) > 0 and n_fused == 0,
+        }
+
     def roundtrip(self, sequence_str, assembler=None):
         """Assemble a ResToken sequence, decompose it, report block recovery."""
         from collections import Counter
