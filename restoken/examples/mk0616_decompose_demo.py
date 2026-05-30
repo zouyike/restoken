@@ -178,24 +178,40 @@ def main():
         img.save(args.png)
         print(f"Saved PNG: {args.png}")
 
-    # CDXML (borrowed cdxml-generation skill).
+    # CDXML (borrowed cdxml-generation skill). One grid: the two whole
+    # molecules followed by every recovered residue block, labelled with its
+    # block id, Tanimoto, and clean/bridge-bearing call. Uses the helper's
+    # JSON --input mode so labels never collide with comma splitting.
     if args.cdxml and recon:
-        smiles = ",".join([ENLICITIDE_SMILES, recon])
-        names = ",".join([
-            f"MK-0616 (MW {target['mw']:.0f} q{target['charge']:+d})",
-            f"ResToken recon (MW {recon_env['mw']:.0f} q{recon_env['charge']:+d})",
-        ])
+        import json
+        import tempfile
+        entries = [
+            {"smiles": ENLICITIDE_SMILES,
+             "label": f"MK-0616  (MW {target['mw']:.0f}  q{target['charge']:+d})"},
+            {"smiles": recon,
+             "label": f"ResToken recon  (MW {recon_env['mw']:.0f}  q{recon_env['charge']:+d})"},
+        ]
+        for i, r in enumerate(res["residues"], 1):
+            flag = "bridge" if r["tanimoto"] < args.bridge_tol else "clean"
+            entries.append({"smiles": r["capped"],
+                            "label": f"{i}. {r['block']}  T={r['tanimoto']:.2f}  ({flag})"})
+        tmpdir = Path("/public/home/genesis/.local/tmp")
+        tmpdir.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile("w", suffix=".json", dir=tmpdir,
+                                         delete=False) as jf:
+            json.dump(entries, jf)
+            json_path = jf.name
         cmd = [sys.executable, str(CDXML_HELPER),
-               "--smiles", smiles, "--names", names,
-               "--restoken", seq, "--cols", "2",
-               "--output", args.cdxml]
+               "--input", json_path, "--cols", "3", "--output", args.cdxml]
         if args.backend:
             cmd += ["--backend", args.backend]
         try:
             subprocess.run(cmd, check=True)
-            print(f"Saved CDXML: {args.cdxml}")
+            print(f"Saved CDXML: {args.cdxml}  ({len(entries)} structures)")
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
             print(f"CDXML generation skipped ({e})", file=sys.stderr)
+        finally:
+            Path(json_path).unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

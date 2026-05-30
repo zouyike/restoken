@@ -42,8 +42,10 @@ class PeptideDecomposer:
         self.radius = radius
         self.nbits = nbits
         self.max_backbone_len = max_backbone_len
+        # Sorted iteration makes tie-breaking among equal-Tanimoto blocks
+        # (near-duplicate isomers) deterministic across runs.
         self._block_fp = {}
-        for bid in self.lib.all_ids:
+        for bid in sorted(self.lib.all_ids):
             m = Chem.MolFromSmiles(self.lib[bid].aa_smiles)
             if m is not None:
                 self._block_fp[bid] = AllChem.GetMorganFingerprintAsBitVect(
