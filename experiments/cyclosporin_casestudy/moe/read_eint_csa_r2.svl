@@ -1,0 +1,12 @@
+#svl
+mdb = db_Open ['/scratch/genesis/NCAA_tokenization/experiments/cyclosporin_casestudy/moe/output/csa_batch_r2.mdb', 'read'];
+ents = db_Entries mdb;
+fh = fopenw '/scratch/genesis/NCAA_tokenization/experiments/cyclosporin_casestudy/moe/output/eint_r2.csv';
+fwrite [fh, 'name,Eint,Etot,Elig\n'];
+for e in ents loop
+    [lig, eint, etot, elig] = db_ReadFields [mdb, e, ['Ligand','Eint','Etot','Elig']];
+    nm = lig(1)(MOL_NAME);
+    fwrite [fh, '{},{},{},{}\n', nm, eint, etot, elig];
+endloop
+fclose fh;
+db_Close mdb;

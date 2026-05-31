@@ -1,0 +1,5 @@
+analogue,side_chain,freeAA_SMILES,freeAA_MW,dMW_vs_Abu,cLogP,dcLogP,dEint_MOE_kcal,ddG_Rosetta_REU,verdict
+Abu-2 (native),ethyl,CCC(N)C(=O)O,103.1,0.0,-0.19,0.0,0.00,0.00,native ref
+allylglycine,allyl (–CH2CH=CH2),C=CCC(N)C(=O)O,115.1,12.0,-0.03,0.17,-13.52,+0.56,"MOE++, Rosetta neutral"
+methionine,–CH2CH2SCH3,CSCCC(N)C(=O)O,149.2,46.1,0.15,0.34,-4.87,+0.45,"MOE+, Rosetta neutral"
+norleucine,n-butyl,CCCCC(N)C(=O)O,131.2,28.1,0.59,0.78,-3.53,-0.21,both engines improve

@@ -1,0 +1,30 @@
+parent rep0: dG=-31.34 closure=1.331
+parent rep1: dG=-29.46 closure=1.331
+parent rep2: dG=-29.96 closure=1.331
+csa_native rep0: dG=-29.73 closure=1.331
+csa_native rep1: dG=-29.73 closure=1.331
+csa_native rep2: dG=-30.16 closure=1.330
+nva rep0: dG=-30.85 closure=1.331
+nva rep1: dG=-30.85 closure=1.331
+nva rep2: dG=-26.92 closure=1.330
+nle rep0: dG=-32.23 closure=1.330
+nle rep1: dG=-30.01 closure=1.330
+nle rep2: dG=-29.16 closure=1.331
+tle rep0: dG=-27.66 closure=1.330
+tle rep1: dG=-29.82 closure=1.329
+tle rep2: dG=-28.14 closure=1.331
+cpg rep0: dG=-26.74 closure=1.330
+cpg rep1: dG=-25.15 closure=1.330
+cpg rep2: dG=-27.17 closure=1.330
+chg rep0: dG=-25.30 closure=1.331
+chg rep1: dG=-28.82 closure=1.330
+chg rep2: dG=-27.24 closure=1.329
+
+=== SUMMARY (mean dG, REU) ===
+parent     dG=  -30.25 +/- 0.80   ddG_vs_parent=  +0.00
+csa_native dG=  -29.87 +/- 0.20   ddG_vs_parent=  +0.38
+nva        dG=  -29.54 +/- 1.85   ddG_vs_parent=  +0.71
+nle        dG=  -30.47 +/- 1.30   ddG_vs_parent=  -0.21
+tle        dG=  -28.54 +/- 0.93   ddG_vs_parent=  +1.71
+cpg        dG=  -26.35 +/- 0.87   ddG_vs_parent=  +3.90
+chg        dG=  -27.12 +/- 1.44   ddG_vs_parent=  +3.14

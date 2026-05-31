@@ -1,0 +1,4 @@
+parent	input/parent_complex_rosetta.pdb	
+cpr	input/analogue_cpr_rosetta.pdb	--params params_analogue/CPR.params
+cbu	input/analogue_cbu_rosetta.pdb	--params params_analogue/CBU.params
+aly	input/analogue_aly_rosetta.pdb	--params params_analogue/ALG.params

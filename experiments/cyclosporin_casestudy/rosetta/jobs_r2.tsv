@@ -1,0 +1,5 @@
+parent	input/parent_complex_rosetta.pdb	
+ahp	input/analogue_ahp_rosetta.pdb	--params params_analogue/AHP.params
+lez	input/analogue_lez_rosetta.pdb	--params params_analogue/LEZ.params
+mez	input/analogue_mez_rosetta.pdb	--params params_analogue/MEZ.params
+ilz	input/analogue_ilz_rosetta.pdb	--params params_analogue/ILZ.params

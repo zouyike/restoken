@@ -1,0 +1,18 @@
+parent rep0: dG=-29.99 closure=1.330
+parent rep1: dG=-30.63 closure=1.330
+parent rep2: dG=-30.02 closure=1.330
+cpr rep0: dG=-27.24 closure=1.329
+cpr rep1: dG=-26.63 closure=1.330
+cpr rep2: dG=-26.44 closure=1.330
+cbu rep0: dG=-26.11 closure=1.330
+cbu rep1: dG=-27.11 closure=1.331
+cbu rep2: dG=-26.17 closure=1.330
+aly rep0: dG=-30.73 closure=1.331
+aly rep1: dG=-29.90 closure=1.330
+aly rep2: dG=-28.33 closure=1.330
+
+=== SUMMARY (mean dG, REU) ===
+parent     dG=  -30.22 +/- 0.29   ddG_vs_parent=  +0.00
+cpr        dG=  -26.77 +/- 0.34   ddG_vs_parent=  +3.44
+cbu        dG=  -26.46 +/- 0.46   ddG_vs_parent=  +3.75
+aly        dG=  -29.65 +/- 1.00   ddG_vs_parent=  +0.56

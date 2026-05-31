@@ -1,0 +1,7 @@
+parent	input/parent_complex_rosetta.pdb	
+csa_native	input/analogue_csa_native_rosetta.pdb	--params params_analogue/ABU.params
+nva	input/analogue_nva_rosetta.pdb	--params params_analogue/NVA.params
+nle	input/analogue_nle_rosetta.pdb	--params params_analogue/NLE.params
+tle	input/analogue_tle_rosetta.pdb	--params params_analogue/TLE.params
+cpg	input/analogue_cpg_rosetta.pdb	--params params_analogue/CPG.params
+chg	input/analogue_chg_rosetta.pdb	--params params_analogue/CHG.params

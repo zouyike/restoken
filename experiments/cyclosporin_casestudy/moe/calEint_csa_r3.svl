@@ -1,0 +1,213 @@
+#svl
+// Created by Shenggan Luo @ 01/24/2025
+// edited by Yike Zou @ 02/04/2025
+// edited by Yike Zou @ 11/10/2025 and google Gemini
+// REVISED by Coding Partner (Gemini) @ 11/11/2025: Corrected pot_Setup option
+
+// This is a self-contained script for preparing and analyzing files
+// in MOE batch mode. It includes necessary functions from LigX.
+//
+// In Linux MOE Run using:
+//       moebatch -script calEint_cycpep.svl
+//
+
+// =========================================================================
+// ==            IMPORTED FUNCTIONS FROM LIGX                           ==
+// =========================================================================
+
+function _LIGX_Execute;
+
+local function _LIGX_Options opt
+    local CycPepMask   = aChain Atoms[] == first Chains[];
+    local cycpep_atoms = Atoms[] | CycPepMask;
+    local other_atoms  = Atoms[] | not CycPepMask;
+    oSetCollection ['Receptor', other_atoms];
+    oSetCollection ['Ligand',   cycpep_atoms];
+
+    local DEFAULTS = [
+        b_StructurePrep: 1,
+        b_StructurePrep_cap: 0,
+        n_StructurePrep_loop: 8,
+        n_StructurePrep_term: 12,
+        b_Protonate3D: 0,
+        b_Protonate3D_flip: 1,
+        b_deleteSolvent: 1,
+        b_tetherReceptor: 1,
+        n_tetherReceptorStrength: 10,
+        n_tetherReceptorFlat: 0.25,
+        b_tetherReceptorH: 1,
+        b_tetherLigand: 0,
+        n_tetherLigandStrength: 10,
+        n_tetherLigandFlat: 0.25,
+        b_tetherLigandH: 1,
+        b_tetherSolvent: 0,
+        n_tetherSolventStrength: 10,
+        n_tetherSolventFlat: 0.25,
+        b_tetherSolventH: 1,
+        b_fixReceptorAtoms: 1,
+        n_flexibleReceptorCutoff: 8,
+        s_fixSelExpr: 'lig',
+        b_freeReceptorH: 1,
+        b_refineComplex: 1,
+        n_refineRMSG: 0.1,
+        b_resetRestraints: 1,
+        b_recordAtomMov: 0,
+        verbose: 0,
+        opt_Protonate3D: []
+    ];
+    if opt == 'std' then return DEFAULTS; endif
+    return DEFAULTS;
+endfunction;
+
+// =========================================================================
+
+pdb_basename = [];
+
+local function update_entry [db_filename, values];
+    local mdb_key = db_Open [db_filename, 'read-write'];
+    if isnull mdb_key then
+        print "Error: Unable to open database file: "; db_filename;
+        return;
+    endif;
+    db_Write [mdb_key, 0, values];
+    db_Close mdb_key;
+endfunction;
+
+local function calculate_Eint [db_filename];
+    if length Atoms[] == 0 then
+        print "Error: No atoms loaded, skip Eint.";
+        return;
+    endif;
+
+    local CycPepMask = aChain Atoms[] == first Chains[];
+    if isnull CycPepMask then
+        print "Error: Could not determine ligand.";
+        return;
+    endif;
+
+    local ligand = Atoms[] | CycPepMask;
+    if isnull ligand then
+        print "Error: No ligand found in structure.";
+        return;
+    endif;
+    ligand_dbmol   = mol_Extract ligand;
+    local receptor = Atoms[] | not CycPepMask;
+    receptor_dbmol = mol_Extract receptor;
+    complex_dbmol  = mol_Extract Atoms[];
+
+    ligand_dbmol(1)(MOL_NAME)   = pdb_basename;
+    receptor_dbmol(1)(MOL_NAME) = pdb_basename;
+    complex_dbmol(1)(MOL_NAME)  = pdb_basename;
+
+    local [Etots, Eseles, Eints] = add [
+        pot_angEnergy ligand, pot_eleEnergy ligand, pot_oopEnergy ligand,
+        pot_resEnergy ligand, pot_solEnergy ligand, pot_stbEnergy ligand,
+        pot_strEnergy ligand, pot_torEnergy ligand, pot_vdwEnergy ligand
+    ];
+
+    local values = [
+        Receptor: receptor_dbmol,
+        Ligand:   ligand_dbmol,
+        Complex:  complex_dbmol,
+        Etot:     Etots,
+        Elig:     Eseles,
+        Eint:     Eints
+    ];
+    update_entry [db_filename, values];
+
+    local outpdb = tok_cat [pdb_basename, '_moeprep.pdb'];
+    local psys   = SystemPush [];
+    local chs    = mol_Create complex_dbmol;
+    aSetSelected [Atoms[], 1];
+    fwrite_PDB [outpdb, Chains[], [title: pdb_basename]];
+    oDestroy chs;
+    SystemPop psys;
+endfunction;
+
+local function process_file [infile];
+    Close [force:1, viewreset:1, delgobj:1];
+
+    pdb_basename = ftail fbase infile;
+    write ['Now processing: {}\n', pdb_basename];
+
+    local read_status;
+    read_status = ReadPDB [infile, [gen_biomt:1]];
+
+    if isnull read_status or length Atoms[] == 0 then
+        print "Error: Failed to read structure or no atoms present: "; infile;
+        return 0;
+    endif;
+
+    local A = Atoms[];
+
+    local chainMask = m_findmatch ['*.A', cName aChain A];
+
+    if not orE chainMask then
+        print "No *.A chain found, falling back to first chain.";
+        chainMask = aChain A == get [Chains[], 1];
+    else
+        print "Using chain *.A.";
+    endif;
+
+    local r1 = min rNumber aResidue (A | chainMask);
+    local rN = max rNumber aResidue (A | chainMask);
+
+    local Nmask = andE [ chainMask, rNumber aResidue A == r1, aName A == 'N' ];
+    local Cmask = andE [ chainMask, rNumber aResidue A == rN, aName A == 'C' ];
+
+    local N_first = A | Nmask;
+    local C_last  = A | Cmask;
+
+    aSetIon [N_first, 0];
+    print "set charge of N of residue 1 of cyclic peptide to 0";
+
+    if orE Nmask and orE Cmask then
+        Bond [N_first, C_last];
+        print "Formed N–C bond to cyclize peptide.";
+    else
+        print "Error: could not find N_first or C_last in selected chain; no bond created.";
+    endif;
+
+    write 'Setting potential energy model to Born Solvation...';
+    pot_Setup [ eleDist: 0, solEnable: 1 ];
+    write 'Done.\n';
+
+    local ligx_options = _LIGX_Options 'std';
+    ligx_options.n_refineRMSG = 0.2;
+
+    write 'Starting QuickPrep...';
+    _LIGX_Execute ligx_options;
+    write 'Done.\n';
+
+    return 1;
+endfunction;
+
+// #########################################################################
+
+db_name = '/scratch/genesis/NCAA_tokenization/experiments/cyclosporin_casestudy/moe/output/csa_batch_r3.mdb';
+db_key = db_Open [db_name, 'create'];
+if isnull db_key then
+    print "Error: Failed to create database: "; db_name;
+    exit [];
+endif;
+
+db_CreateField [db_name, 'Receptor', 'molecule'];
+db_CreateField [db_name, 'Ligand',   'molecule'];
+db_CreateField [db_name, 'Complex',  'molecule'];
+db_CreateField [db_name, 'Etot',     'float'];
+db_CreateField [db_name, 'Elig',     'float'];
+db_CreateField [db_name, 'Eint',     'float'];
+db_Close db_key;
+
+dbv_Open db_name;
+
+for infile in flist ['/scratch/genesis/NCAA_tokenization/experiments/cyclosporin_casestudy/moe/input_r3/', '*.pdb'] loop
+    status = process_file infile;
+    if status == 1 then
+        calculate_Eint db_name;
+    else
+        write ['Skipping file due to processing error: {}\n', infile];
+    endif
+endloop
+
+print "Processing completed successfully!";

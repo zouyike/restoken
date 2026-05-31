@@ -1,0 +1,22 @@
+parent rep0: dG=-30.86 closure=1.329
+parent rep1: dG=-30.86 closure=1.329
+parent rep2: dG=-29.99 closure=1.330
+ahp rep0: dG=-24.95 closure=1.330
+ahp rep1: dG=-30.53 closure=1.330
+ahp rep2: dG=-29.82 closure=1.330
+lez rep0: dG=-28.29 closure=1.330
+lez rep1: dG=-28.88 closure=1.331
+lez rep2: dG=-31.17 closure=1.330
+mez rep0: dG=-30.51 closure=1.330
+mez rep1: dG=-29.45 closure=1.330
+mez rep2: dG=-30.42 closure=1.330
+ilz rep0: dG=-31.59 closure=1.331
+ilz rep1: dG=-30.01 closure=1.330
+ilz rep2: dG=-30.06 closure=1.332
+
+=== SUMMARY (mean dG, REU) ===
+parent     dG=  -30.57 +/- 0.41   ddG_vs_parent=  +0.00
+ahp        dG=  -28.44 +/- 2.48   ddG_vs_parent=  +2.14
+lez        dG=  -29.45 +/- 1.24   ddG_vs_parent=  +1.12
+mez        dG=  -30.13 +/- 0.48   ddG_vs_parent=  +0.45
+ilz        dG=  -30.55 +/- 0.73   ddG_vs_parent=  +0.02

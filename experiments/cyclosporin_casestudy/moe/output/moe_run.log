@@ -1,0 +1,43 @@
+Now processing: chg
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: cpg
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: csa_native
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: nle
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: nva
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: parent
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: tle
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+"Processing completed successfully!"

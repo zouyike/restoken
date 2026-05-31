@@ -1,0 +1,25 @@
+Now processing: aly
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: cbu
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: cpr
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+Now processing: parent
+"Using chain *.A."
+"set charge of N of residue 1 of cyclic peptide to 0"
+"Formed N\xe2\x80\x93C bond to cyclize peptide."
+Setting potential energy model to Born Solvation...Done.
+Starting QuickPrep...Done.
+"Processing completed successfully!"
