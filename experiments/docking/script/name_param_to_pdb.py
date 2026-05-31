@@ -128,9 +128,7 @@ def main():
     for ln in open(inp):
         s = ln.rstrip("\n")
         key = s.split()[0] if s.split() else ""
-        if key == "NAME" and resname:
-            out.append("NAME %s" % resname)
-        elif key == "IO_STRING" and resname:
+        if key == "IO_STRING" and resname:
             f = s.split()
             name1 = f[2] if len(f) > 2 else "X"
             out.append("IO_STRING %s %s" % (resname, name1))
