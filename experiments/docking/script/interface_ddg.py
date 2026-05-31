@@ -17,14 +17,19 @@ Usage:
   interface_ddg.py --complex <complex.pdb> --params-dir <dir> [--params <extra.params>...]
                    [--pep-chain A] [--tgt-chain B] [--repack] [--out-pdb <p>]
 """
-import argparse, glob, os, sys, tempfile
+import argparse, glob, math, os, sys, tempfile
 from pyrosetta import init, Pose
 from pyrosetta.rosetta.core.import_pose import pose_from_file
 from pyrosetta.rosetta.core.chemical import ChemicalManager, ResidueTypeFinder
 from pyrosetta.rosetta.core.conformation import ResidueFactory
 from pyrosetta.rosetta.numeric import xyzVector_double_t as V
-from pyrosetta.rosetta.core.scoring import get_score_function
+from pyrosetta.rosetta.core.scoring import get_score_function, ScoreType
+from pyrosetta.rosetta.core.scoring.constraints import AtomPairConstraint, AngleConstraint
+from pyrosetta.rosetta.core.scoring.func import HarmonicFunc, CircularHarmonicFunc
+from pyrosetta.rosetta.core.id import AtomID
 from pyrosetta.rosetta.protocols.analysis import InterfaceAnalyzerMover
+from pyrosetta.rosetta.protocols.relax import FastRelax
+from pyrosetta.rosetta.protocols.constraint_movers import AddConstraintsToCurrentConformationMover
 
 AA3 = {"ALA","ARG","ASN","ASP","CYS","GLN","GLU","GLY","HIS","ILE","LEU",
        "LYS","MET","PHE","PRO","SER","THR","TRP","TYR","VAL"}
@@ -84,6 +89,10 @@ def main():
     ap.add_argument("--pep-chain", default="A")
     ap.add_argument("--tgt-chain", default="B")
     ap.add_argument("--repack", action="store_true")
+    ap.add_argument("--cyclize", action="store_true",
+                    help="declare the macrolactam closure bond (last UPPER -> first LOWER)")
+    ap.add_argument("--relax", action="store_true", help="FastRelax (bb+sc) before scoring")
+    ap.add_argument("--relax-rounds", type=int, default=1)
     ap.add_argument("--out-pdb", default=None)
     a = ap.parse_args()
 
@@ -102,13 +111,52 @@ def main():
 
     # peptide: residue-by-residue build, then graft onto receptor by jump
     pep = build_peptide_pose(read_chain_atoms(a.complex, a.pep_chain), rts)
+    n_pep = pep.total_residue()
     pose.append_pose_by_jump(pep, n_tgt)   # jump connects tgt -> peptide
     pep_jump = pose.num_jump()
+    first, last = n_tgt + 1, n_tgt + n_pep
 
+    sf = get_score_function()
+
+    if a.cyclize:
+        # macrolactam: last peptide residue's UPPER connect atom bonds to the
+        # first residue's LOWER connect atom (for 7WC this is CG -> MLE N).
+        # N-methyl residues break CUTPOINT/terminus patches, so the closure is
+        # enforced with harmonic bond+angle constraints rather than a cutpoint.
+        rl, rf = pose.residue(last), pose.residue(first)
+        a_last = rl.atom_name(rl.upper_connect_atom()).strip()
+        a_first = rf.atom_name(rf.lower_connect_atom()).strip()
+        d0 = (rl.xyz(a_last) - rf.xyz(a_first)).norm()
+        pose.conformation().declare_chemical_bond(last, a_last, first, a_first)
+        id_l = AtomID(rl.atom_index(a_last), last)
+        id_f = AtomID(rf.atom_index(a_first), first)
+        cb_l = AtomID(rl.atom_index(rl.atom_name(
+            rl.type().atom_base(rl.upper_connect_atom())).strip()), last)
+        ca_f = AtomID(rf.atom_index("CA"), first)
+        pose.add_constraint(AtomPairConstraint(id_l, id_f, HarmonicFunc(1.33, 0.02)))
+        pose.add_constraint(AngleConstraint(cb_l, id_l, id_f, CircularHarmonicFunc(math.radians(116), 0.05)))
+        pose.add_constraint(AngleConstraint(id_l, id_f, ca_f, CircularHarmonicFunc(math.radians(122), 0.05)))
+        sf.set_weight(ScoreType.atom_pair_constraint, 1.0)
+        sf.set_weight(ScoreType.angle_constraint, 1.0)
+        print(f"cyclize          : bond {last}:{a_last} <-> {first}:{a_first}  (crystal d={d0:.2f} A)")
+
+    if a.relax:
+        sf.set_weight(ScoreType.coordinate_constraint, 0.5)
+        AddConstraintsToCurrentConformationMover().apply(pose)
+        fr = FastRelax(sf, a.relax_rounds)
+        fr.apply(pose)
+        if a.cyclize:
+            d1 = (pose.residue(last).xyz(a_last) - pose.residue(first).xyz(a_first)).norm()
+            print(f"closure_after_fr : {d1:.3f} A  (ring held if ~1.33)")
+
+    # interface scoring must not see coordinate/closure constraints (they would
+    # penalise the separated state). The declared chemical bond persists.
+    pose.remove_constraints()
     sf = get_score_function()
     sf(pose)
 
     iam = InterfaceAnalyzerMover(pep_jump)
+    iam.set_scorefunction(sf)
     iam.set_pack_separated(a.repack)
     iam.set_pack_input(a.repack)
     iam.set_compute_packstat(False)
