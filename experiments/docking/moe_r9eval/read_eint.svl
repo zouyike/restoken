@@ -1,0 +1,9 @@
+#svl
+mdb = db_Open ['moe_r9eval/output/r9eval_batch.mdb', 'read'];
+ents = db_Entries mdb;
+for e in ents loop
+    [lig, eint, etot, elig] = db_ReadFields [mdb, e, ['Ligand','Eint','Etot','Elig']];
+    nm = lig(1)(MOL_NAME);
+    write ['ROW name={} Eint={} Etot={} Elig={}\n', nm, eint, etot, elig];
+endloop
+db_Close mdb;
