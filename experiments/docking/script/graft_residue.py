@@ -48,12 +48,16 @@ def fmt_atom(serial, name, resname, chain, resnum, xyz, elem):
             f"{xyz[0]:8.3f}{xyz[1]:8.3f}{xyz[2]:8.3f}  1.00  0.00          {elem:>2}\n")
 
 
-def build_residue(smiles):
+def build_residue(smiles, nconf=1):
     m = Chem.MolFromSmiles(smiles)
     m = Chem.AddHs(m)
-    AllChem.EmbedMolecule(m, randomSeed=0xC0FFEE)
-    AllChem.MMFFOptimizeMolecule(m)
-    conf = m.GetConformer()
+    if nconf <= 1:
+        AllChem.EmbedMolecule(m, randomSeed=0xC0FFEE)
+        cids = [0]
+    else:
+        cids = list(AllChem.EmbedMultipleConfs(
+            m, numConfs=nconf, randomSeed=0xC0FFEE, pruneRmsThresh=0.3))
+    AllChem.MMFFOptimizeMoleculeConfs(m)
 
     # backbone detection
     carboxyl_C = None
@@ -74,12 +78,14 @@ def build_residue(smiles):
             ca = a.GetIdx(); break
     assert ca is not None, "could not find Calpha"
 
-    pos = {i: np.array(conf.GetAtomPosition(i)) for i in range(m.GetNumAtoms())}
     backbone = {amino_N, ca, carboxyl_C, *carboxyl_O}
-    # side-chain heavy atoms = heavy atoms not in backbone
     side = [a.GetIdx() for a in m.GetAtoms()
             if a.GetIdx() not in backbone and a.GetSymbol() != "H"]
-    return dict(mol=m, pos=pos, N=amino_N, CA=ca, C=carboxyl_C, side=side)
+    confs = []
+    for cid in cids:
+        conf = m.GetConformer(cid)
+        confs.append({i: np.array(conf.GetAtomPosition(i)) for i in range(m.GetNumAtoms())})
+    return dict(mol=m, confs=confs, pos=confs[0], N=amino_N, CA=ca, C=carboxyl_C, side=side)
 
 
 def kabsch(P, Q):
@@ -98,6 +104,9 @@ def main():
     ap.add_argument("--new_name", required=True, help="3-letter PDB code for grafted residue")
     ap.add_argument("--smiles", required=True, help="free amino acid SMILES (-NH2, -COOH)")
     ap.add_argument("--tag", required=True)
+    ap.add_argument("--rotamer-scan", type=int, default=1,
+                    help="if >1, embed N conformers, graft each, keep the clash-free "
+                         "pose with maximum buried contact against KRAS")
     args = ap.parse_args()
 
     pep = read_pdb_atoms(PEP)
@@ -106,10 +115,40 @@ def main():
     crys_bb = {a["name"]: np.array([a["x"], a["y"], a["z"]]) for a in target if a["name"] in bb_names}
     assert {"N", "CA", "C"} <= set(crys_bb), f"res {args.resnum} missing backbone"
 
-    res = build_residue(args.smiles)
-    P = np.array([res["pos"][res["N"]], res["pos"][res["CA"]], res["pos"][res["C"]]])
+    res = build_residue(args.smiles, nconf=args.rotamer_scan)
     Q = np.array([crys_bb["N"], crys_bb["CA"], crys_bb["C"]])
-    R, Pc, Qc = kabsch(P, Q)
+
+    # environment for rotamer scoring: KRAS + other peptide residues
+    kras_xyz = np.array([[a["x"], a["y"], a["z"]] for a in read_pdb_atoms(KRAS)])
+    other_pep_xyz = np.array([[a["x"], a["y"], a["z"]] for a in pep
+                              if a["resnum"] != args.resnum])
+    env_xyz = np.vstack([kras_xyz, other_pep_xyz])
+
+    def score_pose(side_pts):
+        """Prefer poses packed in the favorable vdW shell, not compressed.
+        Reject any pose with a heavy-heavy distance below the vdW floor (3.0 A);
+        among the rest, maximize side-chain atoms in the 3.0-4.5 A contact shell."""
+        if not len(side_pts):
+            return (-2, 0.0)
+        d = np.linalg.norm(side_pts[:, None, :] - env_xyz[None, :, :], axis=2)
+        mind = d.min()
+        if mind < 3.0:                       # below heavy-heavy vdW floor -> strained
+            return (-1, mind)
+        contacts = int(((d >= 3.0) & (d < 4.5)).any(axis=1).sum())
+        return (contacts, -mind)
+
+    best = None
+    for ci, pos in enumerate(res["confs"]):
+        P = np.array([pos[res["N"]], pos[res["CA"]], pos[res["C"]]])
+        R, Pc, Qc = kabsch(P, Q)
+        side_pts = np.array([R @ (pos[idx] - Pc) + Qc for idx in res["side"]])
+        sc = score_pose(side_pts)
+        if best is None or sc > best[0]:
+            best = (sc, R, Pc, Qc, pos)
+    bscore, R, Pc, Qc, pos = best
+    if args.rotamer_scan > 1:
+        print(f"rotamer scan: {len(res['confs'])} conformers, "
+              f"best score (contacts, -mindist)={bscore}")
     def xform(v):
         return R @ (v - Pc) + Qc
 
@@ -117,7 +156,7 @@ def main():
     side_atoms = []
     elem_count = {}
     for idx in res["side"]:
-        v = xform(res["pos"][idx])
+        v = xform(pos[idx])
         el = res["mol"].GetAtomWithIdx(idx).GetSymbol()
         elem_count[el] = elem_count.get(el, 0) + 1
         side_atoms.append({"record": "HETATM", "name": f"{el}{elem_count[el]}",
