@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CDXML SYSTEM "http://www.cambridgesoft.com/xml/cdxml.dtd">
+<CDXML CreationProgram="RDKit+Python" BondLength="14.40" LineWidth="0.60" BoldWidth="2" BondSpacing="18" HashSpacing="2.50" MarginWidth="1.60" ChainAngle="120" LabelFont="3" LabelSize="10" LabelFace="96" CaptionFont="3" CaptionSize="10" ShowNonTerminalCarbonLabels="no" ShowTerminalCarbonLabels="no" HideImplicitHydrogens="no" ShowAtomNumber="no" ShowResidueID="no" ShowAtomQuery="yes" ShowAtomStereo="no" ShowAtomEnhancedStereo="yes" ShowBondQuery="yes" ShowBondRxn="yes" ShowBondStereo="no" LabelJustification="Auto" CaptionJustification="Left" FractionalWidths="yes" InterpretChemically="yes" AminoAcidTermini="HOH" ShowSequenceTermini="yes" ShowSequenceBonds="yes" ShowSequenceUnlinkedBranches="no" ResidueWrapCount="40" ResidueBlockCount="10" PrintMargins="36 36 36 36" ChemPropName="" ChemPropFormula="Chemical Formula: " ChemPropExactMass="Exact Mass: " ChemPropMolWt="Molecular Weight: " ChemPropMOverZ="m/z: " ChemPropAnalysis="Elemental Analysis: " ChemPropBoilingPt="Boiling Point: " ChemPropMeltingPt="Melting Point: " ChemPropCritTemp="Critical Temp: " ChemPropCritPres="Critical Pres: " ChemPropCritVol="Critical Vol: " ChemPropGibbs="Gibbs Energy: " ChemPropLogP="Log P: " ChemPropMR="MR: " ChemPropHenry="Henry's Law: " ChemPropEForm="Heat of Form: " ChemProptPSA="tPSA: " ChemPropCLogP="CLogP: " ChemPropCMR="CMR: " ChemPropLogS="LogS: " ChemPropPKa="pKa: " ChemPropID="" ChemPropFragmentLabel="" RxnAutonumberStart="1" RxnAutonumberConditions="no" RxnAutonumberStyle="Roman" RxnAutonumberFormat="(#)" color="0" bgcolor="1" BoundingBox="0 0 640 400">
+  <colortable>
+    <color r="1" g="1" b="1" />
+    <color r="0" g="0" b="0" />
+    <color r="1" g="0" b="0" />
+    <color r="1" g="1" b="0" />
+    <color r="0" g="1" b="0" />
+    <color r="0" g="1" b="1" />
+    <color r="0" g="0" b="1" />
+    <color r="1" g="0" b="1" />
+  </colortable>
+  <fonttable>
+    <font id="3" charset="iso-8859-1" name="Arial" />
+  </fonttable>
+  <page id="1" BoundingBox="0 0 640 400" HeaderPosition="36" FooterPosition="36" PrintTrimMarks="yes" HeightPages="1" WidthPages="1">
+    <fragment id="100" Z="100">
+      <n id="101" p="128.63 117.78" Z="101" AS="N" />
+      <n id="102" p="120.90 122.24" Z="102" AS="N" />
+      <n id="103" p="120.90 131.14" Z="103" AS="N" />
+      <n id="104" p="128.65 135.57" Z="104" AS="N" />
+      <n id="105" p="128.69 144.50" Z="105" AS="N" Element="8" NumHydrogens="0" />
+      <n id="106" p="136.35 131.03" Z="106" AS="N" Element="7" NumHydrogens="0" />
+      <n id="107" p="136.22 122.05" Z="107" AS="N" />
+      <n id="108" p="143.84 117.31" Z="108" AS="N" />
+      <n id="109" p="143.55 108.43" Z="109" AS="N" Element="8" NumHydrogens="0" />
+      <n id="110" p="151.63 121.42" Z="110" AS="N" Element="7" NumHydrogens="0" />
+      <n id="111" p="159.31 116.68" Z="111" AS="N" />
+      <n id="112" p="159.21 107.24" Z="112" AS="N" />
+      <n id="113" p="166.90 102.75" Z="113" AS="N" Element="8" NumHydrogens="0" />
+      <n id="114" p="151.07 102.68" Z="114" AS="N" Element="7" NumHydrogens="1" />
+      <n id="115" p="149.81 93.13" Z="115" AS="N" />
+      <n id="116" p="140.51 90.50" Z="116" AS="N" />
+      <n id="117" p="135.05 97.50" Z="117" AS="N" Element="8" NumHydrogens="0" />
+      <n id="118" p="135.51 81.78" Z="118" AS="N" Element="7" NumHydrogens="0" />
+      <n id="119" p="137.94 72.45" Z="119" AS="N" />
+      <n id="120" p="130.67 66.56" Z="120" AS="N" />
+      <n id="121" p="131.92 57.68" Z="121" AS="N" Element="8" NumHydrogens="0" />
+      <n id="122" p="122.24 69.99" Z="122" AS="N" Element="7" NumHydrogens="1" />
+      <n id="123" p="114.67 64.86" Z="123" AS="N" />
+      <n id="124" p="106.71 69.04" Z="124" AS="N" />
+      <n id="125" p="99.05 64.41" Z="125" AS="N" Element="8" NumHydrogens="0" />
+      <n id="126" p="106.67 77.91" Z="126" AS="N" Element="7" NumHydrogens="1" />
+      <n id="127" p="99.18 82.71" Z="127" AS="N" />
+      <n id="128" p="90.46 78.25" Z="128" AS="N" />
+      <n id="129" p="90.44 69.34" Z="129" AS="N" Element="8" NumHydrogens="0" />
+      <n id="130" p="81.71 82.73" Z="130" AS="N" Element="7" NumHydrogens="0" />
+      <n id="131" p="80.80 91.72" Z="131" AS="N" />
+      <n id="132" p="87.58 95.90" Z="132" AS="N" />
+      <n id="133" p="93.83 91.52" Z="133" AS="N" Element="8" NumHydrogens="0" />
+      <n id="134" p="88.13 104.64" Z="134" AS="N" Element="7" NumHydrogens="0" />
+      <n id="135" p="80.96 109.30" Z="135" AS="N" />
+      <n id="136" p="81.44 118.17" Z="136" AS="N" />
+      <n id="137" p="73.97 123.00" Z="137" AS="N" Element="8" NumHydrogens="0" />
+      <n id="138" p="89.44 122.29" Z="138" AS="N" Element="7" NumHydrogens="0" />
+      <n id="139" p="89.74 131.19" Z="139" AS="N" />
+      <n id="140" p="97.58 135.52" Z="140" AS="N" />
+      <n id="141" p="105.25 130.96" Z="141" AS="N" Element="8" NumHydrogens="0" />
+      <n id="142" p="97.67 144.47" Z="142" AS="N" Element="7" NumHydrogens="0" />
+      <n id="143" p="105.41 148.93" Z="143" AS="N" />
+      <n id="144" p="113.15 144.50" Z="144" AS="N" />
+      <n id="145" p="120.85 148.98" Z="145" AS="N" Element="8" NumHydrogens="0" />
+      <n id="146" p="113.18 135.59" Z="146" AS="N" Element="7" NumHydrogens="1" />
+      <n id="147" p="105.39 157.85" Z="147" AS="N" />
+      <n id="148" p="113.10 162.34" Z="148" AS="N" />
+      <n id="149" p="120.83 157.91" Z="149" AS="N" />
+      <n id="150" p="113.06 171.26" Z="150" AS="N" />
+      <n id="151" p="120.76 175.75" Z="151" AS="N" />
+      <n id="152" p="120.73 184.66" Z="152" AS="N" />
+      <n id="153" p="128.44 189.15" Z="153" AS="N" />
+      <n id="154" p="97.65 162.29" Z="154" AS="N" Element="8" NumHydrogens="1" />
+      <n id="155" p="89.97 148.96" Z="155" AS="N" />
+      <n id="156" p="82.16 135.78" Z="156" AS="N" />
+      <n id="157" p="82.33 144.68" Z="157" AS="N" />
+      <n id="158" p="74.36 131.46" Z="158" AS="N" />
+      <n id="159" p="96.99 117.52" Z="159" AS="N" />
+      <n id="160" p="73.18 105.12" Z="160" AS="N" />
+      <n id="161" p="65.66 109.64" Z="161" AS="N" />
+      <n id="162" p="65.82 118.53" Z="162" AS="N" />
+      <n id="163" p="57.90 105.29" Z="163" AS="N" />
+      <n id="164" p="96.12 108.64" Z="164" AS="N" />
+      <n id="165" p="72.88 95.69" Z="165" AS="N" />
+      <n id="166" p="65.52 90.80" Z="166" AS="N" />
+      <n id="167" p="57.54 94.75" Z="167" AS="N" />
+      <n id="168" p="66.11 81.91" Z="168" AS="N" />
+      <n id="169" p="74.34 77.72" Z="169" AS="N" />
+      <n id="170" p="100.08 91.58" Z="170" AS="N" />
+      <n id="171" p="115.11 55.94" Z="171" AS="N" />
+      <n id="172" p="146.06 68.80" Z="172" AS="N" />
+      <n id="173" p="146.23 59.45" Z="173" AS="N" />
+      <n id="174" p="153.93 54.92" Z="174" AS="N" />
+      <n id="175" p="138.43 54.85" Z="175" AS="N" />
+      <n id="176" p="126.71 82.94" Z="176" AS="N" />
+      <n id="177" p="156.97 87.70" Z="177" AS="N" />
+      <n id="178" p="165.21 91.39" Z="178" AS="N" />
+      <n id="179" p="156.09 78.92" Z="179" AS="N" />
+      <n id="180" p="167.08 121.31" Z="180" AS="N" />
+      <n id="181" p="174.94 117.24" Z="181" AS="N" />
+      <n id="182" p="182.46 122.09" Z="182" AS="N" />
+      <n id="183" p="175.35 108.38" Z="183" AS="N" />
+      <n id="184" p="151.92 130.38" Z="184" AS="N" />
+      <n id="185" p="144.12 135.42" Z="185" AS="N" />
+      <b id="186" Z="186" B="101" E="102" BS="N" />
+      <b id="187" Z="187" B="103" E="102" BS="N" Display="WedgeBegin" />
+      <b id="188" Z="188" B="103" E="104" BS="N" />
+      <b id="189" Z="189" B="104" E="105" BS="N" Order="2" />
+      <b id="190" Z="190" B="104" E="106" BS="N" />
+      <b id="191" Z="191" B="106" E="107" BS="N" />
+      <b id="192" Z="192" B="107" E="108" BS="N" />
+      <b id="193" Z="193" B="108" E="109" BS="N" Order="2" />
+      <b id="194" Z="194" B="108" E="110" BS="N" />
+      <b id="195" Z="195" B="110" E="111" BS="N" />
+      <b id="196" Z="196" B="111" E="112" BS="N" />
+      <b id="197" Z="197" B="112" E="113" BS="N" Order="2" />
+      <b id="198" Z="198" B="112" E="114" BS="N" />
+      <b id="199" Z="199" B="114" E="115" BS="N" />
+      <b id="200" Z="200" B="115" E="116" BS="N" />
+      <b id="201" Z="201" B="116" E="117" BS="N" Order="2" />
+      <b id="202" Z="202" B="116" E="118" BS="N" />
+      <b id="203" Z="203" B="118" E="119" BS="N" />
+      <b id="204" Z="204" B="119" E="120" BS="N" />
+      <b id="205" Z="205" B="120" E="121" BS="N" Order="2" />
+      <b id="206" Z="206" B="120" E="122" BS="N" />
+      <b id="207" Z="207" B="122" E="123" BS="N" />
+      <b id="208" Z="208" B="123" E="124" BS="N" />
+      <b id="209" Z="209" B="124" E="125" BS="N" Order="2" />
+      <b id="210" Z="210" B="124" E="126" BS="N" />
+      <b id="211" Z="211" B="126" E="127" BS="N" />
+      <b id="212" Z="212" B="127" E="128" BS="N" />
+      <b id="213" Z="213" B="128" E="129" BS="N" Order="2" />
+      <b id="214" Z="214" B="128" E="130" BS="N" />
+      <b id="215" Z="215" B="130" E="131" BS="N" />
+      <b id="216" Z="216" B="131" E="132" BS="N" />
+      <b id="217" Z="217" B="132" E="133" BS="N" Order="2" />
+      <b id="218" Z="218" B="132" E="134" BS="N" />
+      <b id="219" Z="219" B="134" E="135" BS="N" />
+      <b id="220" Z="220" B="135" E="136" BS="N" />
+      <b id="221" Z="221" B="136" E="137" BS="N" Order="2" />
+      <b id="222" Z="222" B="136" E="138" BS="N" />
+      <b id="223" Z="223" B="138" E="139" BS="N" />
+      <b id="224" Z="224" B="139" E="140" BS="N" />
+      <b id="225" Z="225" B="140" E="141" BS="N" Order="2" />
+      <b id="226" Z="226" B="140" E="142" BS="N" />
+      <b id="227" Z="227" B="143" E="142" BS="N" Display="WedgedHashBegin" />
+      <b id="228" Z="228" B="143" E="144" BS="N" />
+      <b id="229" Z="229" B="144" E="145" BS="N" Order="2" />
+      <b id="230" Z="230" B="144" E="146" BS="N" />
+      <b id="231" Z="231" B="143" E="147" BS="N" />
+      <b id="232" Z="232" B="147" E="148" BS="N" />
+      <b id="233" Z="233" B="148" E="149" BS="N" Display="WedgedHashBegin" />
+      <b id="234" Z="234" B="148" E="150" BS="N" />
+      <b id="235" Z="235" B="150" E="151" BS="N" />
+      <b id="236" Z="236" B="151" E="152" BS="N" Order="2" />
+      <b id="237" Z="237" B="152" E="153" BS="N" />
+      <b id="238" Z="238" B="147" E="154" BS="N" Display="WedgeBegin" />
+      <b id="239" Z="239" B="142" E="155" BS="N" />
+      <b id="240" Z="240" B="139" E="156" BS="N" Display="WedgedHashBegin" />
+      <b id="241" Z="241" B="156" E="157" BS="N" />
+      <b id="242" Z="242" B="156" E="158" BS="N" />
+      <b id="243" Z="243" B="138" E="159" BS="N" />
+      <b id="244" Z="244" B="135" E="160" BS="N" Display="WedgedHashBegin" />
+      <b id="245" Z="245" B="160" E="161" BS="N" />
+      <b id="246" Z="246" B="161" E="162" BS="N" />
+      <b id="247" Z="247" B="161" E="163" BS="N" />
+      <b id="248" Z="248" B="134" E="164" BS="N" />
+      <b id="249" Z="249" B="131" E="165" BS="N" Display="WedgedHashBegin" />
+      <b id="250" Z="250" B="165" E="166" BS="N" />
+      <b id="251" Z="251" B="166" E="167" BS="N" />
+      <b id="252" Z="252" B="166" E="168" BS="N" />
+      <b id="253" Z="253" B="130" E="169" BS="N" />
+      <b id="254" Z="254" B="127" E="170" BS="N" Display="WedgedHashBegin" />
+      <b id="255" Z="255" B="123" E="171" BS="N" Display="WedgedHashBegin" />
+      <b id="256" Z="256" B="119" E="172" BS="N" Display="WedgedHashBegin" />
+      <b id="257" Z="257" B="172" E="173" BS="N" />
+      <b id="258" Z="258" B="173" E="174" BS="N" />
+      <b id="259" Z="259" B="173" E="175" BS="N" />
+      <b id="260" Z="260" B="118" E="176" BS="N" />
+      <b id="261" Z="261" B="115" E="177" BS="N" Display="WedgedHashBegin" />
+      <b id="262" Z="262" B="177" E="178" BS="N" />
+      <b id="263" Z="263" B="177" E="179" BS="N" />
+      <b id="264" Z="264" B="111" E="180" BS="N" Display="WedgedHashBegin" />
+      <b id="265" Z="265" B="180" E="181" BS="N" />
+      <b id="266" Z="266" B="181" E="182" BS="N" />
+      <b id="267" Z="267" B="181" E="183" BS="N" />
+      <b id="268" Z="268" B="110" E="184" BS="N" />
+      <b id="269" Z="269" B="106" E="185" BS="N" />
+      <b id="270" Z="270" B="146" E="103" BS="N" />
+    </fragment>
+    <t id="271" p="120.00 28.00" Z="271" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">Cyclosporine A (reference drug)  MW=1203 AlogP=3.27</s>
+    </t>
+    <fragment id="272" Z="272">
+      <n id="273" p="337.58 54.85" Z="273" AS="N" />
+      <n id="274" p="337.57 64.80" Z="274" AS="N" />
+      <n id="275" p="337.55 74.75" Z="275" AS="N" />
+      <n id="276" p="337.53 84.69" Z="276" AS="N" />
+      <n id="277" p="346.14 89.68" Z="277" AS="N" Element="7" NumHydrogens="1" />
+      <n id="278" p="346.13 99.63" Z="278" AS="N" />
+      <n id="279" p="337.50 104.59" Z="279" AS="N" Element="8" NumHydrogens="0" />
+      <n id="280" p="354.74 104.62" Z="280" AS="N" />
+      <n id="281" p="363.36 99.66" Z="281" AS="N" />
+      <n id="282" p="371.97 104.64" Z="282" AS="N" />
+      <n id="283" p="380.59 99.68" Z="283" AS="N" />
+      <n id="284" p="389.20 104.67" Z="284" AS="N" />
+      <n id="285" p="354.72 114.56" Z="285" AS="N" Element="7" NumHydrogens="0" />
+      <n id="286" p="346.10 119.52" Z="286" AS="N" />
+      <n id="287" p="363.32 119.55" Z="287" AS="N" />
+      <n id="288" p="371.95 114.60" Z="288" AS="N" Element="8" NumHydrogens="0" />
+      <n id="289" p="363.30 129.51" Z="289" AS="N" />
+      <n id="290" p="371.91 134.49" Z="290" AS="N" />
+      <n id="291" p="380.54 129.53" Z="291" AS="N" />
+      <n id="292" p="389.15 134.52" Z="292" AS="N" />
+      <n id="293" p="397.77 129.55" Z="293" AS="N" />
+      <n id="294" p="354.67 134.47" Z="294" AS="N" Element="7" NumHydrogens="0" />
+      <n id="295" p="346.07 129.47" Z="295" AS="N" />
+      <n id="296" p="354.65 144.42" Z="296" AS="N" />
+      <n id="297" p="363.26 149.41" Z="297" AS="N" Element="8" NumHydrogens="0" />
+      <n id="298" p="346.00 149.40" Z="298" AS="N" />
+      <n id="299" p="346.00 159.34" Z="299" AS="N" />
+      <n id="300" p="354.62 164.31" Z="300" AS="N" />
+      <n id="301" p="354.62 174.26" Z="301" AS="N" />
+      <n id="302" p="363.23 179.24" Z="302" AS="N" />
+      <n id="303" p="337.37 144.40" Z="303" AS="N" Element="7" NumHydrogens="0" />
+      <n id="304" p="337.42 134.45" Z="304" AS="N" />
+      <n id="305" p="328.66 149.35" Z="305" AS="N" />
+      <n id="306" p="320.11 144.30" Z="306" AS="N" Element="8" NumHydrogens="0" />
+      <n id="307" p="328.55 159.32" Z="307" AS="N" />
+      <n id="308" p="337.19 164.35" Z="308" AS="N" />
+      <n id="309" p="337.25 174.29" Z="309" AS="N" />
+      <n id="310" p="345.91 179.20" Z="310" AS="N" />
+      <n id="311" p="345.99 189.15" Z="311" AS="N" />
+      <n id="312" p="319.70 164.30" Z="312" AS="N" Element="7" NumHydrogens="0" />
+      <n id="313" p="319.63 174.24" Z="313" AS="N" />
+      <n id="314" p="310.96 159.08" Z="314" AS="N" />
+      <n id="315" p="311.27 149.15" Z="315" AS="N" Element="8" NumHydrogens="0" />
+      <n id="316" p="301.83 163.85" Z="316" AS="N" />
+      <n id="317" p="301.42 173.82" Z="317" AS="N" />
+      <n id="318" p="293.11 158.10" Z="318" AS="N" Element="7" NumHydrogens="1" />
+      <n id="319" p="283.39 162.02" Z="319" AS="N" />
+      <n id="320" p="282.01 171.99" Z="320" AS="N" Element="8" NumHydrogens="0" />
+      <n id="321" p="275.03 155.13" Z="321" AS="N" />
+      <n id="322" p="265.60 158.46" Z="322" AS="N" />
+      <n id="323" p="277.58 144.98" Z="323" AS="N" Element="7" NumHydrogens="1" />
+      <n id="324" p="272.48 135.15" Z="324" AS="N" />
+      <n id="325" p="278.77 127.61" Z="325" AS="N" Element="8" NumHydrogens="0" />
+      <n id="326" p="262.09 131.92" Z="326" AS="N" />
+      <n id="327" p="253.65 137.53" Z="327" AS="N" />
+      <n id="328" p="253.02 147.19" Z="328" AS="N" />
+      <n id="329" p="243.71 151.04" Z="329" AS="N" />
+      <n id="330" p="242.23 160.79" Z="330" AS="N" />
+      <n id="331" p="260.74 121.46" Z="331" AS="N" Element="7" NumHydrogens="0" />
+      <n id="332" p="251.55 117.44" Z="332" AS="N" />
+      <n id="333" p="268.99 115.44" Z="333" AS="N" />
+      <n id="334" p="277.88 119.69" Z="334" AS="N" Element="8" NumHydrogens="0" />
+      <n id="335" p="268.49 105.15" Z="335" AS="N" />
+      <n id="336" p="259.75 100.23" Z="336" AS="N" />
+      <n id="337" p="251.16 105.18" Z="337" AS="N" />
+      <n id="338" p="259.73 90.22" Z="338" AS="N" />
+      <n id="339" p="277.11 99.88" Z="339" AS="N" Element="7" NumHydrogens="1" />
+      <n id="340" p="277.07 89.81" Z="340" AS="N" />
+      <n id="341" p="268.45 84.85" Z="341" AS="N" Element="8" NumHydrogens="0" />
+      <n id="342" p="285.76 84.76" Z="342" AS="N" />
+      <n id="343" p="285.76 74.77" Z="343" AS="N" />
+      <n id="344" p="294.41 69.78" Z="344" AS="N" />
+      <n id="345" p="294.44 59.82" Z="345" AS="N" />
+      <n id="346" p="303.08 54.85" Z="346" AS="N" />
+      <n id="347" p="294.41 89.70" Z="347" AS="N" Element="7" NumHydrogens="0" />
+      <n id="348" p="294.45 99.64" Z="348" AS="N" />
+      <n id="349" p="303.04 84.69" Z="349" AS="N" />
+      <n id="350" p="303.02 74.73" Z="350" AS="N" Element="8" NumHydrogens="0" />
+      <n id="351" p="311.67 89.65" Z="351" AS="N" />
+      <n id="352" p="320.29 84.67" Z="352" AS="N" Element="7" NumHydrogens="0" />
+      <n id="353" p="320.30 74.72" Z="353" AS="N" />
+      <n id="354" p="328.91 89.66" Z="354" AS="N" />
+      <n id="355" p="328.90 99.60" Z="355" AS="N" Element="8" NumHydrogens="0" />
+      <b id="356" Z="356" B="273" E="274" BS="N" />
+      <b id="357" Z="357" B="274" E="275" BS="N" Order="3" />
+      <b id="358" Z="358" B="276" E="275" BS="N" Display="WedgedHashBegin" />
+      <b id="359" Z="359" B="276" E="277" BS="N" />
+      <b id="360" Z="360" B="277" E="278" BS="N" />
+      <b id="361" Z="361" B="278" E="279" BS="N" Order="2" />
+      <b id="362" Z="362" B="278" E="280" BS="N" />
+      <b id="363" Z="363" B="280" E="281" BS="N" Display="WedgedHashBegin" />
+      <b id="364" Z="364" B="281" E="282" BS="N" />
+      <b id="365" Z="365" B="282" E="283" BS="N" />
+      <b id="366" Z="366" B="283" E="284" BS="N" />
+      <b id="367" Z="367" B="280" E="285" BS="N" />
+      <b id="368" Z="368" B="285" E="286" BS="N" />
+      <b id="369" Z="369" B="285" E="287" BS="N" />
+      <b id="370" Z="370" B="287" E="288" BS="N" Order="2" />
+      <b id="371" Z="371" B="287" E="289" BS="N" />
+      <b id="372" Z="372" B="289" E="290" BS="N" Display="WedgedHashBegin" />
+      <b id="373" Z="373" B="290" E="291" BS="N" />
+      <b id="374" Z="374" B="291" E="292" BS="N" />
+      <b id="375" Z="375" B="292" E="293" BS="N" />
+      <b id="376" Z="376" B="289" E="294" BS="N" />
+      <b id="377" Z="377" B="294" E="295" BS="N" />
+      <b id="378" Z="378" B="294" E="296" BS="N" />
+      <b id="379" Z="379" B="296" E="297" BS="N" Order="2" />
+      <b id="380" Z="380" B="296" E="298" BS="N" />
+      <b id="381" Z="381" B="298" E="299" BS="N" Display="WedgedHashBegin" />
+      <b id="382" Z="382" B="299" E="300" BS="N" />
+      <b id="383" Z="383" B="300" E="301" BS="N" />
+      <b id="384" Z="384" B="301" E="302" BS="N" />
+      <b id="385" Z="385" B="298" E="303" BS="N" />
+      <b id="386" Z="386" B="303" E="304" BS="N" />
+      <b id="387" Z="387" B="303" E="305" BS="N" />
+      <b id="388" Z="388" B="305" E="306" BS="N" Order="2" />
+      <b id="389" Z="389" B="305" E="307" BS="N" />
+      <b id="390" Z="390" B="307" E="308" BS="N" Display="WedgedHashBegin" />
+      <b id="391" Z="391" B="308" E="309" BS="N" />
+      <b id="392" Z="392" B="309" E="310" BS="N" />
+      <b id="393" Z="393" B="310" E="311" BS="N" />
+      <b id="394" Z="394" B="307" E="312" BS="N" />
+      <b id="395" Z="395" B="312" E="313" BS="N" />
+      <b id="396" Z="396" B="312" E="314" BS="N" />
+      <b id="397" Z="397" B="314" E="315" BS="N" Order="2" />
+      <b id="398" Z="398" B="314" E="316" BS="N" />
+      <b id="399" Z="399" B="316" E="317" BS="N" Display="WedgeBegin" />
+      <b id="400" Z="400" B="316" E="318" BS="N" />
+      <b id="401" Z="401" B="318" E="319" BS="N" />
+      <b id="402" Z="402" B="319" E="320" BS="N" Order="2" />
+      <b id="403" Z="403" B="319" E="321" BS="N" />
+      <b id="404" Z="404" B="321" E="322" BS="N" Display="WedgedHashBegin" />
+      <b id="405" Z="405" B="321" E="323" BS="N" />
+      <b id="406" Z="406" B="323" E="324" BS="N" />
+      <b id="407" Z="407" B="324" E="325" BS="N" Order="2" />
+      <b id="408" Z="408" B="324" E="326" BS="N" />
+      <b id="409" Z="409" B="326" E="327" BS="N" Display="WedgedHashBegin" />
+      <b id="410" Z="410" B="327" E="328" BS="N" />
+      <b id="411" Z="411" B="328" E="329" BS="N" />
+      <b id="412" Z="412" B="329" E="330" BS="N" />
+      <b id="413" Z="413" B="326" E="331" BS="N" />
+      <b id="414" Z="414" B="331" E="332" BS="N" />
+      <b id="415" Z="415" B="331" E="333" BS="N" />
+      <b id="416" Z="416" B="333" E="334" BS="N" Order="2" />
+      <b id="417" Z="417" B="333" E="335" BS="N" />
+      <b id="418" Z="418" B="335" E="336" BS="N" Display="WedgedHashBegin" />
+      <b id="419" Z="419" B="336" E="337" BS="N" />
+      <b id="420" Z="420" B="336" E="338" BS="N" />
+      <b id="421" Z="421" B="335" E="339" BS="N" />
+      <b id="422" Z="422" B="339" E="340" BS="N" />
+      <b id="423" Z="423" B="340" E="341" BS="N" Order="2" />
+      <b id="424" Z="424" B="340" E="342" BS="N" />
+      <b id="425" Z="425" B="342" E="343" BS="N" Display="WedgedHashBegin" />
+      <b id="426" Z="426" B="343" E="344" BS="N" />
+      <b id="427" Z="427" B="344" E="345" BS="N" />
+      <b id="428" Z="428" B="345" E="346" BS="N" />
+      <b id="429" Z="429" B="342" E="347" BS="N" />
+      <b id="430" Z="430" B="347" E="348" BS="N" />
+      <b id="431" Z="431" B="347" E="349" BS="N" />
+      <b id="432" Z="432" B="349" E="350" BS="N" Order="2" />
+      <b id="433" Z="433" B="349" E="351" BS="N" />
+      <b id="434" Z="434" B="351" E="352" BS="N" />
+      <b id="435" Z="435" B="352" E="353" BS="N" />
+      <b id="436" Z="436" B="352" E="354" BS="N" />
+      <b id="437" Z="437" B="354" E="355" BS="N" Order="2" />
+      <b id="438" Z="438" B="354" E="276" BS="N" />
+    </fragment>
+    <t id="439" p="320.00 28.00" Z="439" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">A1  pos1 A34-&gt;A60 Abu-&gt;propargylGly  MW=1171 AlogP=4.22</s>
+    </t>
+    <fragment id="440" Z="440">
+      <n id="441" p="557.94 54.85" Z="441" AS="N" />
+      <n id="442" p="559.12 64.08" Z="442" AS="N" />
+      <n id="443" p="551.73 69.60" Z="443" AS="N" />
+      <n id="444" p="552.07 79.24" Z="444" AS="N" />
+      <n id="445" p="543.74 83.18" Z="445" AS="N" />
+      <n id="446" p="536.19 76.92" Z="446" AS="N" />
+      <n id="447" p="537.70 67.90" Z="447" AS="N" Element="8" NumHydrogens="0" />
+      <n id="448" p="527.39 80.01" Z="448" AS="N" Element="7" NumHydrogens="1" />
+      <n id="449" p="519.88 74.11" Z="449" AS="N" />
+      <n id="450" p="520.93 65.12" Z="450" AS="N" />
+      <n id="451" p="511.60 77.71" Z="451" AS="N" />
+      <n id="452" p="504.05 72.59" Z="452" AS="N" Element="8" NumHydrogens="0" />
+      <n id="453" p="511.14 86.28" Z="453" AS="N" Element="7" NumHydrogens="1" />
+      <n id="454" p="503.67 90.79" Z="454" AS="N" />
+      <n id="455" p="504.27 98.52" Z="455" AS="N" />
+      <n id="456" p="495.29 87.15" Z="456" AS="N" />
+      <n id="457" p="494.40 78.09" Z="457" AS="N" Element="8" NumHydrogens="0" />
+      <n id="458" p="487.14 92.77" Z="458" AS="N" Element="7" NumHydrogens="0" />
+      <n id="459" p="479.10 88.47" Z="459" AS="N" />
+      <n id="460" p="486.98 102.72" Z="460" AS="N" />
+      <n id="461" p="478.95 107.02" Z="461" AS="N" />
+      <n id="462" p="471.17 102.37" Z="462" AS="N" />
+      <n id="463" p="463.26 106.88" Z="463" AS="N" />
+      <n id="464" p="455.40 102.32" Z="464" AS="N" />
+      <n id="465" p="494.60 107.96" Z="465" AS="N" />
+      <n id="466" p="501.81 104.40" Z="466" AS="N" Element="8" NumHydrogens="0" />
+      <n id="467" p="494.31 116.83" Z="467" AS="N" Element="7" NumHydrogens="0" />
+      <n id="468" p="502.10 121.56" Z="468" AS="N" />
+      <n id="469" p="486.61 121.09" Z="469" AS="N" />
+      <n id="470" p="478.84 116.43" Z="470" AS="N" />
+      <n id="471" p="470.98 120.86" Z="471" AS="N" />
+      <n id="472" p="470.94 129.93" Z="472" AS="N" />
+      <n id="473" p="463.05 134.42" Z="473" AS="N" />
+      <n id="474" p="486.61 130.09" Z="474" AS="N" />
+      <n id="475" p="478.77 134.66" Z="475" AS="N" Element="8" NumHydrogens="0" />
+      <n id="476" p="494.57 134.58" Z="476" AS="N" Element="7" NumHydrogens="0" />
+      <n id="477" p="502.44 129.96" Z="477" AS="N" />
+      <n id="478" p="494.63 143.63" Z="478" AS="N" />
+      <n id="479" p="486.78 148.17" Z="479" AS="N" />
+      <n id="480" p="478.92 143.58" Z="480" AS="N" />
+      <n id="481" p="471.01 148.07" Z="481" AS="N" />
+      <n id="482" p="463.16 143.46" Z="482" AS="N" />
+      <n id="483" p="502.53 148.16" Z="483" AS="N" />
+      <n id="484" p="510.41 143.59" Z="484" AS="N" Element="8" NumHydrogens="0" />
+      <n id="485" p="502.54 157.25" Z="485" AS="N" Element="7" NumHydrogens="0" />
+      <n id="486" p="494.65 161.79" Z="486" AS="N" />
+      <n id="487" p="510.41 161.80" Z="487" AS="N" />
+      <n id="488" p="510.39 170.90" Z="488" AS="N" />
+      <n id="489" p="518.26 175.47" Z="489" AS="N" />
+      <n id="490" p="518.23 184.58" Z="490" AS="N" />
+      <n id="491" p="526.10 189.15" Z="491" AS="N" />
+      <n id="492" p="518.31 157.27" Z="492" AS="N" />
+      <n id="493" p="526.18 161.84" Z="493" AS="N" Element="8" NumHydrogens="0" />
+      <n id="494" p="518.33 148.17" Z="494" AS="N" Element="7" NumHydrogens="1" />
+      <n id="495" p="526.23 143.62" Z="495" AS="N" />
+      <n id="496" p="526.24 134.52" Z="496" AS="N" />
+      <n id="497" p="534.13 129.99" Z="497" AS="N" />
+      <n id="498" p="534.11 148.17" Z="498" AS="N" />
+      <n id="499" p="534.12 157.28" Z="499" AS="N" Element="8" NumHydrogens="0" />
+      <n id="500" p="541.99 143.59" Z="500" AS="N" Element="7" NumHydrogens="0" />
+      <n id="501" p="549.89 148.13" Z="501" AS="N" />
+      <n id="502" p="541.95 134.45" Z="502" AS="N" />
+      <n id="503" p="549.80 129.79" Z="503" AS="N" />
+      <n id="504" p="549.70 120.71" Z="504" AS="N" Element="8" NumHydrogens="0" />
+      <n id="505" p="557.68 134.20" Z="505" AS="N" Element="7" NumHydrogens="0" />
+      <n id="506" p="557.77 143.34" Z="506" AS="N" />
+      <n id="507" p="565.57 129.58" Z="507" AS="N" />
+      <n id="508" p="573.63 134.53" Z="508" AS="N" />
+      <n id="509" p="582.48 132.39" Z="509" AS="N" />
+      <n id="510" p="584.60 141.26" Z="510" AS="N" />
+      <n id="511" p="575.74 143.40" Z="511" AS="N" />
+      <n id="512" p="565.56 119.83" Z="512" AS="N" />
+      <n id="513" p="573.46 115.34" Z="513" AS="N" Element="8" NumHydrogens="0" />
+      <n id="514" p="557.21 115.00" Z="514" AS="N" Element="7" NumHydrogens="1" />
+      <n id="515" p="556.12 105.13" Z="515" AS="N" />
+      <n id="516" p="563.63 99.87" Z="516" AS="N" />
+      <n id="517" p="571.90 104.02" Z="517" AS="N" />
+      <n id="518" p="563.14 90.90" Z="518" AS="N" />
+      <n id="519" p="546.49 102.14" Z="519" AS="N" />
+      <n id="520" p="540.81 109.21" Z="520" AS="N" Element="8" NumHydrogens="0" />
+      <n id="521" p="541.31 92.96" Z="521" AS="N" Element="7" NumHydrogens="0" />
+      <n id="522" p="532.32 94.18" Z="522" AS="N" />
+      <b id="523" Z="523" B="441" E="442" BS="N" />
+      <b id="524" Z="524" B="442" E="443" BS="N" />
+      <b id="525" Z="525" B="443" E="444" BS="N" />
+      <b id="526" Z="526" B="445" E="444" BS="N" Display="WedgedHashBegin" />
+      <b id="527" Z="527" B="445" E="446" BS="N" />
+      <b id="528" Z="528" B="446" E="447" BS="N" Order="2" />
+      <b id="529" Z="529" B="446" E="448" BS="N" />
+      <b id="530" Z="530" B="448" E="449" BS="N" />
+      <b id="531" Z="531" B="449" E="450" BS="N" Display="WedgedHashBegin" />
+      <b id="532" Z="532" B="449" E="451" BS="N" />
+      <b id="533" Z="533" B="451" E="452" BS="N" Order="2" />
+      <b id="534" Z="534" B="451" E="453" BS="N" />
+      <b id="535" Z="535" B="453" E="454" BS="N" />
+      <b id="536" Z="536" B="454" E="455" BS="N" Display="WedgedHashBegin" />
+      <b id="537" Z="537" B="454" E="456" BS="N" />
+      <b id="538" Z="538" B="456" E="457" BS="N" Order="2" />
+      <b id="539" Z="539" B="456" E="458" BS="N" />
+      <b id="540" Z="540" B="458" E="459" BS="N" />
+      <b id="541" Z="541" B="458" E="460" BS="N" />
+      <b id="542" Z="542" B="460" E="461" BS="N" Display="WedgedHashBegin" />
+      <b id="543" Z="543" B="461" E="462" BS="N" />
+      <b id="544" Z="544" B="462" E="463" BS="N" />
+      <b id="545" Z="545" B="463" E="464" BS="N" />
+      <b id="546" Z="546" B="460" E="465" BS="N" />
+      <b id="547" Z="547" B="465" E="466" BS="N" Order="2" />
+      <b id="548" Z="548" B="465" E="467" BS="N" />
+      <b id="549" Z="549" B="467" E="468" BS="N" />
+      <b id="550" Z="550" B="467" E="469" BS="N" />
+      <b id="551" Z="551" B="469" E="470" BS="N" Display="WedgedHashBegin" />
+      <b id="552" Z="552" B="470" E="471" BS="N" />
+      <b id="553" Z="553" B="471" E="472" BS="N" />
+      <b id="554" Z="554" B="472" E="473" BS="N" />
+      <b id="555" Z="555" B="469" E="474" BS="N" />
+      <b id="556" Z="556" B="474" E="475" BS="N" Order="2" />
+      <b id="557" Z="557" B="474" E="476" BS="N" />
+      <b id="558" Z="558" B="476" E="477" BS="N" />
+      <b id="559" Z="559" B="476" E="478" BS="N" />
+      <b id="560" Z="560" B="478" E="479" BS="N" Display="WedgedHashBegin" />
+      <b id="561" Z="561" B="479" E="480" BS="N" />
+      <b id="562" Z="562" B="480" E="481" BS="N" />
+      <b id="563" Z="563" B="481" E="482" BS="N" />
+      <b id="564" Z="564" B="478" E="483" BS="N" />
+      <b id="565" Z="565" B="483" E="484" BS="N" Order="2" />
+      <b id="566" Z="566" B="483" E="485" BS="N" />
+      <b id="567" Z="567" B="485" E="486" BS="N" />
+      <b id="568" Z="568" B="485" E="487" BS="N" />
+      <b id="569" Z="569" B="487" E="488" BS="N" Display="WedgedHashBegin" />
+      <b id="570" Z="570" B="488" E="489" BS="N" />
+      <b id="571" Z="571" B="489" E="490" BS="N" />
+      <b id="572" Z="572" B="490" E="491" BS="N" />
+      <b id="573" Z="573" B="487" E="492" BS="N" />
+      <b id="574" Z="574" B="492" E="493" BS="N" Order="2" />
+      <b id="575" Z="575" B="492" E="494" BS="N" />
+      <b id="576" Z="576" B="494" E="495" BS="N" />
+      <b id="577" Z="577" B="495" E="496" BS="N" Display="WedgeBegin" />
+      <b id="578" Z="578" B="496" E="497" BS="N" />
+      <b id="579" Z="579" B="495" E="498" BS="N" />
+      <b id="580" Z="580" B="498" E="499" BS="N" Order="2" />
+      <b id="581" Z="581" B="498" E="500" BS="N" />
+      <b id="582" Z="582" B="500" E="501" BS="N" />
+      <b id="583" Z="583" B="500" E="502" BS="N" />
+      <b id="584" Z="584" B="502" E="503" BS="N" />
+      <b id="585" Z="585" B="503" E="504" BS="N" Order="2" />
+      <b id="586" Z="586" B="503" E="505" BS="N" />
+      <b id="587" Z="587" B="505" E="506" BS="N" />
+      <b id="588" Z="588" B="505" E="507" BS="N" />
+      <b id="589" Z="589" B="507" E="508" BS="N" Display="WedgedHashBegin" />
+      <b id="590" Z="590" B="508" E="509" BS="N" />
+      <b id="591" Z="591" B="509" E="510" BS="N" />
+      <b id="592" Z="592" B="510" E="511" BS="N" />
+      <b id="593" Z="593" B="507" E="512" BS="N" />
+      <b id="594" Z="594" B="512" E="513" BS="N" Order="2" />
+      <b id="595" Z="595" B="512" E="514" BS="N" />
+      <b id="596" Z="596" B="514" E="515" BS="N" />
+      <b id="597" Z="597" B="515" E="516" BS="N" Display="WedgedHashBegin" />
+      <b id="598" Z="598" B="516" E="517" BS="N" />
+      <b id="599" Z="599" B="516" E="518" BS="N" />
+      <b id="600" Z="600" B="515" E="519" BS="N" />
+      <b id="601" Z="601" B="519" E="520" BS="N" Order="2" />
+      <b id="602" Z="602" B="519" E="521" BS="N" />
+      <b id="603" Z="603" B="521" E="522" BS="N" />
+      <b id="604" Z="604" B="521" E="445" BS="N" />
+      <b id="605" Z="605" B="511" E="508" BS="N" />
+    </fragment>
+    <t id="606" p="520.00 28.00" Z="606" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">A2  pos3 a31-&gt;A12 MeLeu-&gt;cyclobutylGly  MW=1159 AlogP=4.22</s>
+    </t>
+    <fragment id="607" Z="607">
+      <n id="608" p="80.49 234.85" Z="608" AS="N" />
+      <n id="609" p="89.07 239.86" Z="609" AS="N" />
+      <n id="610" p="89.03 249.82" Z="610" AS="N" />
+      <n id="611" p="97.63 254.81" Z="611" AS="N" />
+      <n id="612" p="97.64 264.78" Z="612" AS="N" />
+      <n id="613" p="89.02 269.79" Z="613" AS="N" />
+      <n id="614" p="80.39 264.85" Z="614" AS="N" Element="8" NumHydrogens="0" />
+      <n id="615" p="89.06 279.78" Z="615" AS="N" Element="7" NumHydrogens="1" />
+      <n id="616" p="80.46 284.82" Z="616" AS="N" />
+      <n id="617" p="71.83 279.59" Z="617" AS="N" />
+      <n id="618" p="67.03 270.87" Z="618" AS="N" />
+      <n id="619" p="61.91 279.39" Z="619" AS="N" />
+      <n id="620" p="80.79 295.28" Z="620" AS="N" />
+      <n id="621" p="89.65 299.63" Z="621" AS="N" Element="8" NumHydrogens="0" />
+      <n id="622" p="72.45 301.34" Z="622" AS="N" Element="7" NumHydrogens="0" />
+      <n id="623" p="63.28 297.34" Z="623" AS="N" />
+      <n id="624" p="73.79 311.83" Z="624" AS="N" />
+      <n id="625" p="65.39 317.55" Z="625" AS="N" />
+      <n id="626" p="56.43 312.13" Z="626" AS="N" />
+      <n id="627" p="47.26 316.32" Z="627" AS="N" />
+      <n id="628" p="39.06 310.36" Z="628" AS="N" />
+      <n id="629" p="84.21 315.06" Z="629" AS="N" />
+      <n id="630" p="90.50 307.55" Z="630" AS="N" Element="8" NumHydrogens="0" />
+      <n id="631" p="89.31 324.88" Z="631" AS="N" Element="7" NumHydrogens="1" />
+      <n id="632" p="86.75 334.99" Z="632" AS="N" />
+      <n id="633" p="77.32 338.27" Z="633" AS="N" />
+      <n id="634" p="95.07 341.91" Z="634" AS="N" />
+      <n id="635" p="93.64 351.86" Z="635" AS="N" Element="8" NumHydrogens="0" />
+      <n id="636" p="104.82 338.03" Z="636" AS="N" Element="7" NumHydrogens="1" />
+      <n id="637" p="113.52 343.81" Z="637" AS="N" />
+      <n id="638" p="113.08 353.78" Z="638" AS="N" />
+      <n id="639" p="122.68 339.07" Z="639" AS="N" />
+      <n id="640" p="123.02 329.15" Z="640" AS="N" Element="8" NumHydrogens="0" />
+      <n id="641" p="131.42 344.31" Z="641" AS="N" Element="7" NumHydrogens="0" />
+      <n id="642" p="131.34 354.25" Z="642" AS="N" />
+      <n id="643" p="140.28 339.35" Z="643" AS="N" />
+      <n id="644" p="148.93 344.37" Z="644" AS="N" />
+      <n id="645" p="148.99 354.31" Z="645" AS="N" />
+      <n id="646" p="157.66 359.21" Z="646" AS="N" />
+      <n id="647" p="157.76 369.15" Z="647" AS="N" />
+      <n id="648" p="140.42 329.37" Z="648" AS="N" />
+      <n id="649" p="131.88 324.31" Z="649" AS="N" Element="8" NumHydrogens="0" />
+      <n id="650" p="149.14 324.43" Z="650" AS="N" Element="7" NumHydrogens="0" />
+      <n id="651" p="149.19 314.49" Z="651" AS="N" />
+      <n id="652" p="157.76 329.43" Z="652" AS="N" />
+      <n id="653" p="157.76 339.37" Z="653" AS="N" />
+      <n id="654" p="166.38 344.33" Z="654" AS="N" />
+      <n id="655" p="166.38 354.27" Z="655" AS="N" />
+      <n id="656" p="174.99 359.24" Z="656" AS="N" />
+      <n id="657" p="166.41 324.45" Z="657" AS="N" />
+      <n id="658" p="175.01 329.44" Z="658" AS="N" Element="8" NumHydrogens="0" />
+      <n id="659" p="166.43 314.50" Z="659" AS="N" Element="7" NumHydrogens="0" />
+      <n id="660" p="157.84 309.51" Z="660" AS="N" />
+      <n id="661" p="175.06 309.54" Z="661" AS="N" />
+      <n id="662" p="183.66 314.53" Z="662" AS="N" />
+      <n id="663" p="183.65 324.47" Z="663" AS="N" />
+      <n id="664" p="192.25 329.45" Z="664" AS="N" />
+      <n id="665" p="192.24 339.39" Z="665" AS="N" />
+      <n id="666" p="175.08 299.60" Z="666" AS="N" />
+      <n id="667" p="183.70 294.65" Z="667" AS="N" Element="8" NumHydrogens="0" />
+      <n id="668" p="166.48 294.61" Z="668" AS="N" Element="7" NumHydrogens="0" />
+      <n id="669" p="157.86 299.57" Z="669" AS="N" />
+      <n id="670" p="166.50 284.67" Z="670" AS="N" />
+      <n id="671" p="175.12 279.71" Z="671" AS="N" />
+      <n id="672" p="183.72 284.70" Z="672" AS="N" />
+      <n id="673" p="192.34 279.74" Z="673" AS="N" />
+      <n id="674" p="200.94 284.72" Z="674" AS="N" />
+      <n id="675" p="157.90 279.68" Z="675" AS="N" />
+      <n id="676" p="149.28 284.64" Z="676" AS="N" Element="8" NumHydrogens="0" />
+      <n id="677" p="157.91 269.74" Z="677" AS="N" Element="7" NumHydrogens="1" />
+      <n id="678" p="149.31 264.76" Z="678" AS="N" />
+      <n id="679" p="149.33 254.82" Z="679" AS="N" />
+      <n id="680" p="140.72 249.83" Z="680" AS="N" />
+      <n id="681" p="140.69 269.72" Z="681" AS="N" />
+      <n id="682" p="140.68 279.66" Z="682" AS="N" Element="8" NumHydrogens="0" />
+      <n id="683" p="132.09 264.73" Z="683" AS="N" Element="7" NumHydrogens="0" />
+      <n id="684" p="132.10 254.79" Z="684" AS="N" />
+      <n id="685" p="123.48 269.70" Z="685" AS="N" />
+      <n id="686" p="114.86 264.74" Z="686" AS="N" />
+      <n id="687" p="114.85 254.79" Z="687" AS="N" Element="8" NumHydrogens="0" />
+      <n id="688" p="106.25 269.72" Z="688" AS="N" Element="7" NumHydrogens="0" />
+      <n id="689" p="106.27 279.66" Z="689" AS="N" />
+      <b id="690" Z="690" B="608" E="609" BS="N" />
+      <b id="691" Z="691" B="609" E="610" BS="N" />
+      <b id="692" Z="692" B="610" E="611" BS="N" />
+      <b id="693" Z="693" B="612" E="611" BS="N" Display="WedgedHashBegin" />
+      <b id="694" Z="694" B="612" E="613" BS="N" />
+      <b id="695" Z="695" B="613" E="614" BS="N" Order="2" />
+      <b id="696" Z="696" B="613" E="615" BS="N" />
+      <b id="697" Z="697" B="615" E="616" BS="N" />
+      <b id="698" Z="698" B="616" E="617" BS="N" Display="WedgedHashBegin" />
+      <b id="699" Z="699" B="617" E="618" BS="N" />
+      <b id="700" Z="700" B="618" E="619" BS="N" />
+      <b id="701" Z="701" B="616" E="620" BS="N" />
+      <b id="702" Z="702" B="620" E="621" BS="N" Order="2" />
+      <b id="703" Z="703" B="620" E="622" BS="N" />
+      <b id="704" Z="704" B="622" E="623" BS="N" />
+      <b id="705" Z="705" B="622" E="624" BS="N" />
+      <b id="706" Z="706" B="624" E="625" BS="N" Display="WedgedHashBegin" />
+      <b id="707" Z="707" B="625" E="626" BS="N" />
+      <b id="708" Z="708" B="626" E="627" BS="N" />
+      <b id="709" Z="709" B="627" E="628" BS="N" />
+      <b id="710" Z="710" B="624" E="629" BS="N" />
+      <b id="711" Z="711" B="629" E="630" BS="N" Order="2" />
+      <b id="712" Z="712" B="629" E="631" BS="N" />
+      <b id="713" Z="713" B="631" E="632" BS="N" />
+      <b id="714" Z="714" B="632" E="633" BS="N" Display="WedgedHashBegin" />
+      <b id="715" Z="715" B="632" E="634" BS="N" />
+      <b id="716" Z="716" B="634" E="635" BS="N" Order="2" />
+      <b id="717" Z="717" B="634" E="636" BS="N" />
+      <b id="718" Z="718" B="636" E="637" BS="N" />
+      <b id="719" Z="719" B="637" E="638" BS="N" Display="WedgeBegin" />
+      <b id="720" Z="720" B="637" E="639" BS="N" />
+      <b id="721" Z="721" B="639" E="640" BS="N" Order="2" />
+      <b id="722" Z="722" B="639" E="641" BS="N" />
+      <b id="723" Z="723" B="641" E="642" BS="N" />
+      <b id="724" Z="724" B="641" E="643" BS="N" />
+      <b id="725" Z="725" B="643" E="644" BS="N" Display="WedgedHashBegin" />
+      <b id="726" Z="726" B="644" E="645" BS="N" />
+      <b id="727" Z="727" B="645" E="646" BS="N" />
+      <b id="728" Z="728" B="646" E="647" BS="N" />
+      <b id="729" Z="729" B="643" E="648" BS="N" />
+      <b id="730" Z="730" B="648" E="649" BS="N" Order="2" />
+      <b id="731" Z="731" B="648" E="650" BS="N" />
+      <b id="732" Z="732" B="650" E="651" BS="N" />
+      <b id="733" Z="733" B="650" E="652" BS="N" />
+      <b id="734" Z="734" B="652" E="653" BS="N" Display="WedgedHashBegin" />
+      <b id="735" Z="735" B="653" E="654" BS="N" />
+      <b id="736" Z="736" B="654" E="655" BS="N" />
+      <b id="737" Z="737" B="655" E="656" BS="N" />
+      <b id="738" Z="738" B="652" E="657" BS="N" />
+      <b id="739" Z="739" B="657" E="658" BS="N" Order="2" />
+      <b id="740" Z="740" B="657" E="659" BS="N" />
+      <b id="741" Z="741" B="659" E="660" BS="N" />
+      <b id="742" Z="742" B="659" E="661" BS="N" />
+      <b id="743" Z="743" B="661" E="662" BS="N" Display="WedgedHashBegin" />
+      <b id="744" Z="744" B="662" E="663" BS="N" />
+      <b id="745" Z="745" B="663" E="664" BS="N" />
+      <b id="746" Z="746" B="664" E="665" BS="N" />
+      <b id="747" Z="747" B="661" E="666" BS="N" />
+      <b id="748" Z="748" B="666" E="667" BS="N" Order="2" />
+      <b id="749" Z="749" B="666" E="668" BS="N" />
+      <b id="750" Z="750" B="668" E="669" BS="N" />
+      <b id="751" Z="751" B="668" E="670" BS="N" />
+      <b id="752" Z="752" B="670" E="671" BS="N" Display="WedgedHashBegin" />
+      <b id="753" Z="753" B="671" E="672" BS="N" />
+      <b id="754" Z="754" B="672" E="673" BS="N" />
+      <b id="755" Z="755" B="673" E="674" BS="N" />
+      <b id="756" Z="756" B="670" E="675" BS="N" />
+      <b id="757" Z="757" B="675" E="676" BS="N" Order="2" />
+      <b id="758" Z="758" B="675" E="677" BS="N" />
+      <b id="759" Z="759" B="677" E="678" BS="N" />
+      <b id="760" Z="760" B="678" E="679" BS="N" Display="WedgedHashBegin" />
+      <b id="761" Z="761" B="679" E="680" BS="N" />
+      <b id="762" Z="762" B="678" E="681" BS="N" />
+      <b id="763" Z="763" B="681" E="682" BS="N" Order="2" />
+      <b id="764" Z="764" B="681" E="683" BS="N" />
+      <b id="765" Z="765" B="683" E="684" BS="N" />
+      <b id="766" Z="766" B="683" E="685" BS="N" />
+      <b id="767" Z="767" B="685" E="686" BS="N" />
+      <b id="768" Z="768" B="686" E="687" BS="N" Order="2" />
+      <b id="769" Z="769" B="686" E="688" BS="N" />
+      <b id="770" Z="770" B="688" E="689" BS="N" />
+      <b id="771" Z="771" B="688" E="612" BS="N" />
+      <b id="772" Z="772" B="619" E="617" BS="N" />
+    </fragment>
+    <t id="773" p="120.00 208.00" Z="773" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">A3  pos4 A08-&gt;A11 Val-&gt;cyclopropylGly  MW=1159 AlogP=4.36</s>
+    </t>
+    <fragment id="774" Z="774">
+      <n id="775" p="302.99 234.85" Z="775" AS="N" />
+      <n id="776" p="294.35 239.81" Z="776" AS="N" />
+      <n id="777" p="294.32 249.78" Z="777" AS="N" />
+      <n id="778" p="285.67 254.77" Z="778" AS="N" />
+      <n id="779" p="285.68 264.77" Z="779" AS="N" />
+      <n id="780" p="276.99 269.85" Z="780" AS="N" />
+      <n id="781" p="268.35 264.90" Z="781" AS="N" Element="8" NumHydrogens="0" />
+      <n id="782" p="277.05 279.94" Z="782" AS="N" Element="7" NumHydrogens="1" />
+      <n id="783" p="268.44 285.25" Z="783" AS="N" />
+      <n id="784" p="259.67 280.35" Z="784" AS="N" />
+      <n id="785" p="251.10 285.33" Z="785" AS="N" />
+      <n id="786" p="259.61 270.34" Z="786" AS="N" />
+      <n id="787" p="268.98 295.59" Z="787" AS="N" />
+      <n id="788" p="277.91 299.84" Z="788" AS="N" Element="8" NumHydrogens="0" />
+      <n id="789" p="260.71 301.65" Z="789" AS="N" Element="7" NumHydrogens="0" />
+      <n id="790" p="251.53 297.64" Z="790" AS="N" />
+      <n id="791" p="262.05 312.13" Z="791" AS="N" />
+      <n id="792" p="253.65 317.73" Z="792" AS="N" />
+      <n id="793" p="253.05 327.39" Z="793" AS="N" />
+      <n id="794" p="243.76 331.26" Z="794" AS="N" />
+      <n id="795" p="242.29 341.01" Z="795" AS="N" />
+      <n id="796" p="272.35 315.35" Z="796" AS="N" />
+      <n id="797" p="278.68 307.76" Z="797" AS="N" Element="8" NumHydrogens="0" />
+      <n id="798" p="277.45 325.21" Z="798" AS="N" Element="7" NumHydrogens="1" />
+      <n id="799" p="275.15 335.62" Z="799" AS="N" />
+      <n id="800" p="265.88 339.68" Z="800" AS="N" />
+      <n id="801" p="257.74 334.22" Z="801" AS="N" />
+      <n id="802" p="283.61 342.12" Z="802" AS="N" />
+      <n id="803" p="282.47 352.09" Z="803" AS="N" Element="8" NumHydrogens="0" />
+      <n id="804" p="293.15 338.02" Z="804" AS="N" Element="7" NumHydrogens="1" />
+      <n id="805" p="301.83 343.71" Z="805" AS="N" />
+      <n id="806" p="301.40 353.68" Z="806" AS="N" />
+      <n id="807" p="310.93 338.99" Z="807" AS="N" />
+      <n id="808" p="311.27 329.06" Z="808" AS="N" Element="8" NumHydrogens="0" />
+      <n id="809" p="319.63 344.24" Z="809" AS="N" Element="7" NumHydrogens="0" />
+      <n id="810" p="319.51 354.19" Z="810" AS="N" />
+      <n id="811" p="328.47 339.30" Z="811" AS="N" />
+      <n id="812" p="337.11 344.34" Z="812" AS="N" />
+      <n id="813" p="337.16 354.29" Z="813" AS="N" />
+      <n id="814" p="345.83 359.20" Z="814" AS="N" />
+      <n id="815" p="345.92 369.15" Z="815" AS="N" />
+      <n id="816" p="328.60 329.33" Z="816" AS="N" />
+      <n id="817" p="320.05 324.27" Z="817" AS="N" Element="8" NumHydrogens="0" />
+      <n id="818" p="337.31 324.39" Z="818" AS="N" Element="7" NumHydrogens="0" />
+      <n id="819" p="337.36 314.44" Z="819" AS="N" />
+      <n id="820" p="345.94 329.39" Z="820" AS="N" />
+      <n id="821" p="345.93 339.33" Z="821" AS="N" />
+      <n id="822" p="354.56 344.31" Z="822" AS="N" />
+      <n id="823" p="354.56 354.25" Z="823" AS="N" />
+      <n id="824" p="363.18 359.23" Z="824" AS="N" />
+      <n id="825" p="354.58 324.41" Z="825" AS="N" />
+      <n id="826" p="363.20 329.40" Z="826" AS="N" Element="8" NumHydrogens="0" />
+      <n id="827" p="354.61 314.46" Z="827" AS="N" Element="7" NumHydrogens="0" />
+      <n id="828" p="346.01 309.46" Z="828" AS="N" />
+      <n id="829" p="363.24 309.49" Z="829" AS="N" />
+      <n id="830" p="371.85 314.48" Z="830" AS="N" />
+      <n id="831" p="380.48 309.52" Z="831" AS="N" />
+      <n id="832" p="389.09 314.50" Z="832" AS="N" />
+      <n id="833" p="397.71 309.54" Z="833" AS="N" />
+      <n id="834" p="363.26 299.54" Z="834" AS="N" />
+      <n id="835" p="371.89 294.58" Z="835" AS="N" Element="8" NumHydrogens="0" />
+      <n id="836" p="354.66 294.55" Z="836" AS="N" Element="7" NumHydrogens="0" />
+      <n id="837" p="346.03 299.51" Z="837" AS="N" />
+      <n id="838" p="354.67 284.60" Z="838" AS="N" />
+      <n id="839" p="363.30 279.64" Z="839" AS="N" />
+      <n id="840" p="371.91 284.63" Z="840" AS="N" />
+      <n id="841" p="380.53 279.67" Z="841" AS="N" />
+      <n id="842" p="389.14 284.65" Z="842" AS="N" />
+      <n id="843" p="346.06 279.61" Z="843" AS="N" />
+      <n id="844" p="337.44 284.57" Z="844" AS="N" Element="8" NumHydrogens="0" />
+      <n id="845" p="346.08 269.66" Z="845" AS="N" Element="7" NumHydrogens="1" />
+      <n id="846" p="337.47 264.67" Z="846" AS="N" />
+      <n id="847" p="337.48 254.72" Z="847" AS="N" />
+      <n id="848" p="328.88 249.73" Z="848" AS="N" />
+      <n id="849" p="328.84 269.64" Z="849" AS="N" />
+      <n id="850" p="328.83 279.59" Z="850" AS="N" Element="8" NumHydrogens="0" />
+      <n id="851" p="320.22 264.65" Z="851" AS="N" Element="7" NumHydrogens="0" />
+      <n id="852" p="320.23 254.70" Z="852" AS="N" />
+      <n id="853" p="311.60 269.63" Z="853" AS="N" />
+      <n id="854" p="302.96 264.68" Z="854" AS="N" />
+      <n id="855" p="302.94 254.72" Z="855" AS="N" Element="8" NumHydrogens="0" />
+      <n id="856" p="294.34 269.70" Z="856" AS="N" Element="7" NumHydrogens="0" />
+      <n id="857" p="294.38 279.64" Z="857" AS="N" />
+      <b id="858" Z="858" B="775" E="776" BS="N" />
+      <b id="859" Z="859" B="776" E="777" BS="N" />
+      <b id="860" Z="860" B="777" E="778" BS="N" />
+      <b id="861" Z="861" B="779" E="778" BS="N" Display="WedgedHashBegin" />
+      <b id="862" Z="862" B="779" E="780" BS="N" />
+      <b id="863" Z="863" B="780" E="781" BS="N" Order="2" />
+      <b id="864" Z="864" B="780" E="782" BS="N" />
+      <b id="865" Z="865" B="782" E="783" BS="N" />
+      <b id="866" Z="866" B="783" E="784" BS="N" Display="WedgedHashBegin" />
+      <b id="867" Z="867" B="784" E="785" BS="N" />
+      <b id="868" Z="868" B="784" E="786" BS="N" />
+      <b id="869" Z="869" B="783" E="787" BS="N" />
+      <b id="870" Z="870" B="787" E="788" BS="N" Order="2" />
+      <b id="871" Z="871" B="787" E="789" BS="N" />
+      <b id="872" Z="872" B="789" E="790" BS="N" />
+      <b id="873" Z="873" B="789" E="791" BS="N" />
+      <b id="874" Z="874" B="791" E="792" BS="N" Display="WedgedHashBegin" />
+      <b id="875" Z="875" B="792" E="793" BS="N" />
+      <b id="876" Z="876" B="793" E="794" BS="N" />
+      <b id="877" Z="877" B="794" E="795" BS="N" />
+      <b id="878" Z="878" B="791" E="796" BS="N" />
+      <b id="879" Z="879" B="796" E="797" BS="N" Order="2" />
+      <b id="880" Z="880" B="796" E="798" BS="N" />
+      <b id="881" Z="881" B="798" E="799" BS="N" />
+      <b id="882" Z="882" B="799" E="800" BS="N" Display="WedgedHashBegin" />
+      <b id="883" Z="883" B="800" E="801" BS="N" />
+      <b id="884" Z="884" B="799" E="802" BS="N" />
+      <b id="885" Z="885" B="802" E="803" BS="N" Order="2" />
+      <b id="886" Z="886" B="802" E="804" BS="N" />
+      <b id="887" Z="887" B="804" E="805" BS="N" />
+      <b id="888" Z="888" B="805" E="806" BS="N" Display="WedgeBegin" />
+      <b id="889" Z="889" B="805" E="807" BS="N" />
+      <b id="890" Z="890" B="807" E="808" BS="N" Order="2" />
+      <b id="891" Z="891" B="807" E="809" BS="N" />
+      <b id="892" Z="892" B="809" E="810" BS="N" />
+      <b id="893" Z="893" B="809" E="811" BS="N" />
+      <b id="894" Z="894" B="811" E="812" BS="N" Display="WedgedHashBegin" />
+      <b id="895" Z="895" B="812" E="813" BS="N" />
+      <b id="896" Z="896" B="813" E="814" BS="N" />
+      <b id="897" Z="897" B="814" E="815" BS="N" />
+      <b id="898" Z="898" B="811" E="816" BS="N" />
+      <b id="899" Z="899" B="816" E="817" BS="N" Order="2" />
+      <b id="900" Z="900" B="816" E="818" BS="N" />
+      <b id="901" Z="901" B="818" E="819" BS="N" />
+      <b id="902" Z="902" B="818" E="820" BS="N" />
+      <b id="903" Z="903" B="820" E="821" BS="N" Display="WedgedHashBegin" />
+      <b id="904" Z="904" B="821" E="822" BS="N" />
+      <b id="905" Z="905" B="822" E="823" BS="N" />
+      <b id="906" Z="906" B="823" E="824" BS="N" />
+      <b id="907" Z="907" B="820" E="825" BS="N" />
+      <b id="908" Z="908" B="825" E="826" BS="N" Order="2" />
+      <b id="909" Z="909" B="825" E="827" BS="N" />
+      <b id="910" Z="910" B="827" E="828" BS="N" />
+      <b id="911" Z="911" B="827" E="829" BS="N" />
+      <b id="912" Z="912" B="829" E="830" BS="N" Display="WedgedHashBegin" />
+      <b id="913" Z="913" B="830" E="831" BS="N" />
+      <b id="914" Z="914" B="831" E="832" BS="N" />
+      <b id="915" Z="915" B="832" E="833" BS="N" />
+      <b id="916" Z="916" B="829" E="834" BS="N" />
+      <b id="917" Z="917" B="834" E="835" BS="N" Order="2" />
+      <b id="918" Z="918" B="834" E="836" BS="N" />
+      <b id="919" Z="919" B="836" E="837" BS="N" />
+      <b id="920" Z="920" B="836" E="838" BS="N" />
+      <b id="921" Z="921" B="838" E="839" BS="N" Display="WedgedHashBegin" />
+      <b id="922" Z="922" B="839" E="840" BS="N" />
+      <b id="923" Z="923" B="840" E="841" BS="N" />
+      <b id="924" Z="924" B="841" E="842" BS="N" />
+      <b id="925" Z="925" B="838" E="843" BS="N" />
+      <b id="926" Z="926" B="843" E="844" BS="N" Order="2" />
+      <b id="927" Z="927" B="843" E="845" BS="N" />
+      <b id="928" Z="928" B="845" E="846" BS="N" />
+      <b id="929" Z="929" B="846" E="847" BS="N" Display="WedgedHashBegin" />
+      <b id="930" Z="930" B="847" E="848" BS="N" />
+      <b id="931" Z="931" B="846" E="849" BS="N" />
+      <b id="932" Z="932" B="849" E="850" BS="N" Order="2" />
+      <b id="933" Z="933" B="849" E="851" BS="N" />
+      <b id="934" Z="934" B="851" E="852" BS="N" />
+      <b id="935" Z="935" B="851" E="853" BS="N" />
+      <b id="936" Z="936" B="853" E="854" BS="N" />
+      <b id="937" Z="937" B="854" E="855" BS="N" Order="2" />
+      <b id="938" Z="938" B="854" E="856" BS="N" />
+      <b id="939" Z="939" B="856" E="857" BS="N" />
+      <b id="940" Z="940" B="856" E="779" BS="N" />
+    </fragment>
+    <t id="941" p="320.00 208.00" Z="941" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">A4  pos6 A07-&gt;A34 Ala-&gt;Abu  MW=1175 AlogP=5.00</s>
+    </t>
+    <fragment id="942" Z="942">
+      <n id="943" p="592.80 308.69" Z="943" AS="N" />
+      <n id="944" p="584.61 313.19" Z="944" AS="N" />
+      <n id="945" p="576.62 308.33" Z="945" AS="N" />
+      <n id="946" p="568.44 312.80" Z="946" AS="N" />
+      <n id="947" p="560.33 307.99" Z="947" AS="N" />
+      <n id="948" p="560.34 298.22" Z="948" AS="N" />
+      <n id="949" p="568.49 293.68" Z="949" AS="N" Element="8" NumHydrogens="0" />
+      <n id="950" p="551.86 293.26" Z="950" AS="N" Element="7" NumHydrogens="1" />
+      <n id="951" p="550.99 283.16" Z="951" AS="N" />
+      <n id="952" p="558.95 278.15" Z="952" AS="N" />
+      <n id="953" p="567.27 282.88" Z="953" AS="N" />
+      <n id="954" p="558.91 268.99" Z="954" AS="N" />
+      <n id="955" p="540.98 279.76" Z="955" AS="N" />
+      <n id="956" p="535.05 287.13" Z="956" AS="N" Element="8" NumHydrogens="0" />
+      <n id="957" p="535.36 269.93" Z="957" AS="N" Element="7" NumHydrogens="0" />
+      <n id="958" p="526.14 271.46" Z="958" AS="N" />
+      <n id="959" p="537.44 259.12" Z="959" AS="N" />
+      <n id="960" p="545.90 254.08" Z="960" AS="N" />
+      <n id="961" p="545.11 243.34" Z="961" AS="N" />
+      <n id="962" p="539.69 235.72" Z="962" AS="N" />
+      <n id="963" p="549.01 234.85" Z="963" AS="N" />
+      <n id="964" p="529.35 253.29" Z="964" AS="N" />
+      <n id="965" p="530.30 243.95" Z="965" AS="N" Element="8" NumHydrogens="0" />
+      <n id="966" p="520.58 256.98" Z="966" AS="N" Element="7" NumHydrogens="1" />
+      <n id="967" p="512.69 251.28" Z="967" AS="N" />
+      <n id="968" p="513.41 242.06" Z="968" AS="N" />
+      <n id="969" p="504.42 255.19" Z="969" AS="N" />
+      <n id="970" p="496.53 250.20" Z="970" AS="N" Element="8" NumHydrogens="0" />
+      <n id="971" p="504.14 263.78" Z="971" AS="N" Element="7" NumHydrogens="1" />
+      <n id="972" p="496.56 268.21" Z="972" AS="N" />
+      <n id="973" p="496.99 275.86" Z="973" AS="N" />
+      <n id="974" p="488.04 264.41" Z="974" AS="N" />
+      <n id="975" p="487.19 255.10" Z="975" AS="N" Element="8" NumHydrogens="0" />
+      <n id="976" p="479.68 270.19" Z="976" AS="N" Element="7" NumHydrogens="0" />
+      <n id="977" p="471.42 265.81" Z="977" AS="N" />
+      <n id="978" p="479.58 280.43" Z="978" AS="N" />
+      <n id="979" p="471.38 284.89" Z="979" AS="N" />
+      <n id="980" p="463.38 280.14" Z="980" AS="N" />
+      <n id="981" p="455.27 284.78" Z="981" AS="N" />
+      <n id="982" p="447.20 280.10" Z="982" AS="N" />
+      <n id="983" p="487.45 285.73" Z="983" AS="N" />
+      <n id="984" p="494.70 281.99" Z="984" AS="N" Element="8" NumHydrogens="0" />
+      <n id="985" p="487.27 294.77" Z="985" AS="N" Element="7" NumHydrogens="0" />
+      <n id="986" p="495.34 299.54" Z="986" AS="N" />
+      <n id="987" p="479.36 299.19" Z="987" AS="N" />
+      <n id="988" p="471.38 294.41" Z="988" AS="N" />
+      <n id="989" p="463.28 298.95" Z="989" AS="N" />
+      <n id="990" p="463.22 308.27" Z="990" AS="N" />
+      <n id="991" p="455.10 312.88" Z="991" AS="N" />
+      <n id="992" p="479.34 308.42" Z="992" AS="N" />
+      <n id="993" p="471.28 313.07" Z="993" AS="N" Element="8" NumHydrogens="0" />
+      <n id="994" p="487.47 313.07" Z="994" AS="N" Element="7" NumHydrogens="0" />
+      <n id="995" p="495.57 308.38" Z="995" AS="N" />
+      <n id="996" p="487.48 322.37" Z="996" AS="N" />
+      <n id="997" p="479.38 327.02" Z="997" AS="N" />
+      <n id="998" p="471.31 322.31" Z="998" AS="N" />
+      <n id="999" p="463.19 326.95" Z="999" AS="N" />
+      <n id="1000" p="455.12 322.24" Z="1000" AS="N" />
+      <n id="1001" p="495.56 327.05" Z="1001" AS="N" />
+      <n id="1002" p="503.67 322.38" Z="1002" AS="N" Element="8" NumHydrogens="0" />
+      <n id="1003" p="495.55 336.38" Z="1003" AS="N" Element="7" NumHydrogens="0" />
+      <n id="1004" p="487.44 341.03" Z="1004" AS="N" />
+      <n id="1005" p="503.63 341.07" Z="1005" AS="N" />
+      <n id="1006" p="503.60 350.41" Z="1006" AS="N" />
+      <n id="1007" p="511.68 355.11" Z="1007" AS="N" />
+      <n id="1008" p="511.65 364.45" Z="1008" AS="N" />
+      <n id="1009" p="519.73 369.15" Z="1009" AS="N" />
+      <n id="1010" p="511.74 336.42" Z="1010" AS="N" />
+      <n id="1011" p="519.82 341.11" Z="1011" AS="N" Element="8" NumHydrogens="0" />
+      <n id="1012" p="511.76 327.07" Z="1012" AS="N" Element="7" NumHydrogens="1" />
+      <n id="1013" p="519.87 322.41" Z="1013" AS="N" />
+      <n id="1014" p="519.89 313.07" Z="1014" AS="N" />
+      <n id="1015" p="528.00 308.42" Z="1015" AS="N" />
+      <n id="1016" p="527.96 327.10" Z="1016" AS="N" />
+      <n id="1017" p="527.95 336.45" Z="1017" AS="N" Element="8" NumHydrogens="0" />
+      <n id="1018" p="536.07 322.43" Z="1018" AS="N" Element="7" NumHydrogens="0" />
+      <n id="1019" p="544.16 327.11" Z="1019" AS="N" />
+      <n id="1020" p="536.06 313.05" Z="1020" AS="N" />
+      <n id="1021" p="544.14 308.28" Z="1021" AS="N" />
+      <n id="1022" p="544.06 298.96" Z="1022" AS="N" Element="8" NumHydrogens="0" />
+      <n id="1023" p="552.23 312.81" Z="1023" AS="N" Element="7" NumHydrogens="0" />
+      <n id="1024" p="552.34 322.20" Z="1024" AS="N" />
+      <b id="1025" Z="1025" B="943" E="944" BS="N" />
+      <b id="1026" Z="1026" B="944" E="945" BS="N" />
+      <b id="1027" Z="1027" B="945" E="946" BS="N" />
+      <b id="1028" Z="1028" B="947" E="946" BS="N" Display="WedgedHashBegin" />
+      <b id="1029" Z="1029" B="947" E="948" BS="N" />
+      <b id="1030" Z="1030" B="948" E="949" BS="N" Order="2" />
+      <b id="1031" Z="1031" B="948" E="950" BS="N" />
+      <b id="1032" Z="1032" B="950" E="951" BS="N" />
+      <b id="1033" Z="1033" B="951" E="952" BS="N" Display="WedgedHashBegin" />
+      <b id="1034" Z="1034" B="952" E="953" BS="N" />
+      <b id="1035" Z="1035" B="952" E="954" BS="N" />
+      <b id="1036" Z="1036" B="951" E="955" BS="N" />
+      <b id="1037" Z="1037" B="955" E="956" BS="N" Order="2" />
+      <b id="1038" Z="1038" B="955" E="957" BS="N" />
+      <b id="1039" Z="1039" B="957" E="958" BS="N" />
+      <b id="1040" Z="1040" B="957" E="959" BS="N" />
+      <b id="1041" Z="1041" B="959" E="960" BS="N" Display="WedgedHashBegin" />
+      <b id="1042" Z="1042" B="960" E="961" BS="N" />
+      <b id="1043" Z="1043" B="961" E="962" BS="N" />
+      <b id="1044" Z="1044" B="962" E="963" BS="N" />
+      <b id="1045" Z="1045" B="959" E="964" BS="N" />
+      <b id="1046" Z="1046" B="964" E="965" BS="N" Order="2" />
+      <b id="1047" Z="1047" B="964" E="966" BS="N" />
+      <b id="1048" Z="1048" B="966" E="967" BS="N" />
+      <b id="1049" Z="1049" B="967" E="968" BS="N" Display="WedgedHashBegin" />
+      <b id="1050" Z="1050" B="967" E="969" BS="N" />
+      <b id="1051" Z="1051" B="969" E="970" BS="N" Order="2" />
+      <b id="1052" Z="1052" B="969" E="971" BS="N" />
+      <b id="1053" Z="1053" B="971" E="972" BS="N" />
+      <b id="1054" Z="1054" B="972" E="973" BS="N" Display="WedgedHashBegin" />
+      <b id="1055" Z="1055" B="972" E="974" BS="N" />
+      <b id="1056" Z="1056" B="974" E="975" BS="N" Order="2" />
+      <b id="1057" Z="1057" B="974" E="976" BS="N" />
+      <b id="1058" Z="1058" B="976" E="977" BS="N" />
+      <b id="1059" Z="1059" B="976" E="978" BS="N" />
+      <b id="1060" Z="1060" B="978" E="979" BS="N" Display="WedgedHashBegin" />
+      <b id="1061" Z="1061" B="979" E="980" BS="N" />
+      <b id="1062" Z="1062" B="980" E="981" BS="N" />
+      <b id="1063" Z="1063" B="981" E="982" BS="N" />
+      <b id="1064" Z="1064" B="978" E="983" BS="N" />
+      <b id="1065" Z="1065" B="983" E="984" BS="N" Order="2" />
+      <b id="1066" Z="1066" B="983" E="985" BS="N" />
+      <b id="1067" Z="1067" B="985" E="986" BS="N" />
+      <b id="1068" Z="1068" B="985" E="987" BS="N" />
+      <b id="1069" Z="1069" B="987" E="988" BS="N" Display="WedgedHashBegin" />
+      <b id="1070" Z="1070" B="988" E="989" BS="N" />
+      <b id="1071" Z="1071" B="989" E="990" BS="N" />
+      <b id="1072" Z="1072" B="990" E="991" BS="N" />
+      <b id="1073" Z="1073" B="987" E="992" BS="N" />
+      <b id="1074" Z="1074" B="992" E="993" BS="N" Order="2" />
+      <b id="1075" Z="1075" B="992" E="994" BS="N" />
+      <b id="1076" Z="1076" B="994" E="995" BS="N" />
+      <b id="1077" Z="1077" B="994" E="996" BS="N" />
+      <b id="1078" Z="1078" B="996" E="997" BS="N" Display="WedgedHashBegin" />
+      <b id="1079" Z="1079" B="997" E="998" BS="N" />
+      <b id="1080" Z="1080" B="998" E="999" BS="N" />
+      <b id="1081" Z="1081" B="999" E="1000" BS="N" />
+      <b id="1082" Z="1082" B="996" E="1001" BS="N" />
+      <b id="1083" Z="1083" B="1001" E="1002" BS="N" Order="2" />
+      <b id="1084" Z="1084" B="1001" E="1003" BS="N" />
+      <b id="1085" Z="1085" B="1003" E="1004" BS="N" />
+      <b id="1086" Z="1086" B="1003" E="1005" BS="N" />
+      <b id="1087" Z="1087" B="1005" E="1006" BS="N" Display="WedgedHashBegin" />
+      <b id="1088" Z="1088" B="1006" E="1007" BS="N" />
+      <b id="1089" Z="1089" B="1007" E="1008" BS="N" />
+      <b id="1090" Z="1090" B="1008" E="1009" BS="N" />
+      <b id="1091" Z="1091" B="1005" E="1010" BS="N" />
+      <b id="1092" Z="1092" B="1010" E="1011" BS="N" Order="2" />
+      <b id="1093" Z="1093" B="1010" E="1012" BS="N" />
+      <b id="1094" Z="1094" B="1012" E="1013" BS="N" />
+      <b id="1095" Z="1095" B="1013" E="1014" BS="N" Display="WedgeBegin" />
+      <b id="1096" Z="1096" B="1014" E="1015" BS="N" />
+      <b id="1097" Z="1097" B="1013" E="1016" BS="N" />
+      <b id="1098" Z="1098" B="1016" E="1017" BS="N" Order="2" />
+      <b id="1099" Z="1099" B="1016" E="1018" BS="N" />
+      <b id="1100" Z="1100" B="1018" E="1019" BS="N" />
+      <b id="1101" Z="1101" B="1018" E="1020" BS="N" />
+      <b id="1102" Z="1102" B="1020" E="1021" BS="N" />
+      <b id="1103" Z="1103" B="1021" E="1022" BS="N" Order="2" />
+      <b id="1104" Z="1104" B="1021" E="1023" BS="N" />
+      <b id="1105" Z="1105" B="1023" E="1024" BS="N" />
+      <b id="1106" Z="1106" B="1023" E="947" BS="N" />
+      <b id="1107" Z="1107" B="963" E="961" BS="N" />
+    </fragment>
+    <t id="1108" p="520.00 208.00" Z="1108" Justification="Center" CaptionJustification="Center" Warning="Chemical Interpretation is not possible for this label" LineHeight="auto">
+      <s font="3" size="8" face="1" color="0">A5  pos5 a31-&gt;A48 MeLeu-&gt;Me-cyclopropyl  MW=1159 AlogP=4.22</s>
+    </t>
+  </page>
+</CDXML>
