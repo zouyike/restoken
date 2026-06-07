@@ -144,12 +144,100 @@ _EXOTIC_THRESHOLDS = {
     "high_flex": 8,
 }
 
+# Canonical amino acid side-chain heteroatom budgets (N, O).
+# Blocks within budget+1 for N or budget+3 for O are not flagged.
+_CANONICAL_SC_BUDGET = {
+    'R': (3, 0),  # Arg: guanidinium
+    'H': (2, 0),  # His: imidazole
+    'W': (1, 0),  # Trp: indole
+    'K': (1, 0),  # Lys: amine
+    'N': (1, 1),  # Asn: amide
+    'Q': (1, 1),  # Gln: amide
+    'D': (0, 2),  # Asp: carboxyl
+    'E': (0, 2),  # Glu: carboxyl
+    'S': (0, 1),  # Ser: hydroxyl
+    'T': (0, 1),  # Thr: hydroxyl
+    'Y': (0, 1),  # Tyr: phenol
+    'C': (0, 0),
+    'M': (0, 0),
+}
+
 # Flags indicating synthesis difficulty (used for exclude_exotic filtering).
 # high_flex is informational only — flexibility doesn't make synthesis harder.
 SYNTHESIS_EXOTIC_FLAGS = frozenset({
     "halogenated", "multi_charge", "high_mw", "poly_ring",
-    "high_heteroatom", "many_oxygens", "many_nitrogens", "has_phosphorus",
+    "high_heteroatom", "excess_oxygen", "excess_nitrogen",
+    "has_phosphorus", "geminal_hetero", "strained_aminal",
 })
+
+
+def _has_geminal_heteroatoms(mol) -> bool:
+    """Check if any sp3 carbon has 2+ heteroatoms attached via single bonds.
+
+    Excludes:
+      - Ring-internal patterns (e.g., N-C-N in proline-like heterocycles)
+      - Carbons with a double bond to a heteroatom (guanidinium, amidine,
+        carbamate, urea — common pharmacophoric groups, not exotic)
+    """
+    ri = mol.GetRingInfo()
+    for atom in mol.GetAtoms():
+        if atom.GetAtomicNum() != 6:
+            continue
+        has_double_to_hetero = False
+        hetero_single = []
+        for nb in atom.GetNeighbors():
+            if nb.GetAtomicNum() in (1, 6):
+                continue
+            bond = mol.GetBondBetweenAtoms(atom.GetIdx(), nb.GetIdx())
+            if bond and bond.GetBondTypeAsDouble() > 1.0:
+                has_double_to_hetero = True
+                break
+            if bond and bond.GetBondTypeAsDouble() == 1.0:
+                hetero_single.append(nb.GetIdx())
+        if has_double_to_hetero:
+            continue
+        if len(hetero_single) >= 2:
+            atom_in_ring = ri.NumAtomRings(atom.GetIdx()) > 0
+            all_in_same_ring = atom_in_ring and all(
+                ri.NumAtomRings(h) > 0 for h in hetero_single
+            )
+            if not all_in_same_ring:
+                return True
+    return False
+
+
+def _has_strained_ring_aminal(mol) -> bool:
+    """Check for a carbon in a small ring (3- or 4-membered) bonded to 2+ ring
+    heteroatoms via single bonds — a strained cyclic aminal / N,O-acetal.
+
+    These motifs (e.g. 1,3-diazetidine, oxazetidine) are hydrolytically
+    unstable: ring strain plus the labile N-C-N / N-C-O carbon makes them
+    synthetically impractical. Distinct from geminal_hetero, which explicitly
+    passes ring-internal patterns to allow stable proline-like (5+ membered)
+    heterocycles.
+    """
+    ri = mol.GetRingInfo()
+    small_rings = [set(r) for r in ri.AtomRings() if len(r) <= 4]
+    if not small_rings:
+        return False
+    for atom in mol.GetAtoms():
+        if atom.GetAtomicNum() != 6:
+            continue
+        idx = atom.GetIdx()
+        if not any(idx in r for r in small_rings):
+            continue
+        ring_hetero = 0
+        for nb in atom.GetNeighbors():
+            if nb.GetAtomicNum() in (1, 6):
+                continue
+            bond = mol.GetBondBetweenAtoms(idx, nb.GetIdx())
+            if not bond or bond.GetBondTypeAsDouble() != 1.0:
+                continue
+            if any(idx in r and nb.GetIdx() in r for r in small_rings):
+                ring_hetero += 1
+        if ring_hetero >= 2:
+            return True
+    return False
 
 
 def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
@@ -157,14 +245,15 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
 
     Flags (any triggered = exotic):
         high_heteroatom — heteroatom/heavy ratio > 0.5
-        poly_ring — 3+ ring systems in the monomer
+        poly_ring — more than 3 ring systems in the monomer
         high_mw — molecular weight > 300
-        high_flex — rotatable bonds > 7
+        high_flex — rotatable bonds > 7 (informational only)
         halogenated — contains F/Cl/Br/I
-        many_oxygens — more than 3 oxygen atoms
-        many_nitrogens — more than 3 nitrogen atoms
+        excess_oxygen — side-chain O exceeds canonical budget + 3
+        excess_nitrogen — side-chain N exceeds canonical budget + 1
         has_phosphorus — any phosphorus atom
         multi_charge — |charge| >= 2
+        geminal_hetero — carbon with 2+ heteroatoms via single bonds (non-ring)
     """
     flags = set()
 
@@ -196,7 +285,7 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
         flags.add("high_mw")
 
     n_rings = rdMolDescriptors.CalcNumRings(mol)
-    if n_rings >= _EXOTIC_THRESHOLDS["poly_ring"]:
+    if n_rings > _EXOTIC_THRESHOLDS["poly_ring"]:
         flags.add("poly_ring")
 
     n_heavy = mol.GetNumHeavyAtoms()
@@ -204,16 +293,29 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     if n_heavy > 0 and (n_hetero / n_heavy) > _EXOTIC_THRESHOLDS["high_heteroatom"]:
         flags.add("high_heteroatom")
 
-    # Side-chain atom counts (subtract 2N + 2O backbone contribution)
-    sc_O = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 8) - 2
-    sc_N = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 7) - 2
+    # Side-chain heteroatom counts (subtract 2N + 2O backbone/cap contribution)
+    total_O = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 8)
+    total_N = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 7)
+    sc_O = total_O - 2
+    sc_N = total_N - 2
     n_P = sum(1 for a in mol.GetAtoms() if a.GetAtomicNum() == 15)
-    if sc_O > 3:
-        flags.add("many_oxygens")
-    if sc_N > 3:
-        flags.add("many_nitrogens")
+
+    # Budget-aware thresholds: canonical AA analogs get more headroom
+    budget_N, budget_O = _CANONICAL_SC_BUDGET.get(block.aa_class, (0, 0))
+    if sc_N > budget_N + 1:
+        flags.add("excess_nitrogen")
+    if sc_O > budget_O + 3:
+        flags.add("excess_oxygen")
     if n_P > 0:
         flags.add("has_phosphorus")
+
+    # Geminal heteroatoms: 2+ heteroatoms single-bonded to same carbon (non-ring)
+    if _has_geminal_heteroatoms(mol):
+        flags.add("geminal_hetero")
+
+    # Strained cyclic aminal/acetal: aminal carbon inside a 3- or 4-membered ring
+    if _has_strained_ring_aminal(mol):
+        flags.add("strained_aminal")
 
     return flags
 
