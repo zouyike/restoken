@@ -167,7 +167,7 @@ _CANONICAL_SC_BUDGET = {
 SYNTHESIS_EXOTIC_FLAGS = frozenset({
     "halogenated", "multi_charge", "high_mw", "poly_ring",
     "high_heteroatom", "excess_oxygen", "excess_nitrogen",
-    "has_phosphorus", "geminal_hetero", "strained_aminal",
+    "has_phosphorus", "geminal_hetero", "strained_aminal", "aminal",
 })
 
 
@@ -240,6 +240,29 @@ def _has_strained_ring_aminal(mol) -> bool:
     return False
 
 
+@lru_cache(maxsize=1)
+def _aminal_pattern():
+    from rdkit import Chem
+    # sp3 carbon (CX4, four single bonds) single-bonded to two nitrogens.
+    return Chem.MolFromSmarts("[#7]-[CX4](-[#7])")
+
+
+def _has_aminal(mol) -> bool:
+    """Check for any aminal carbon: an sp3 carbon single-bonded to two nitrogen
+    atoms (N-C-N), regardless of ring size or ring membership.
+
+    Aminals are the diamine analog of acetals; the N-C-N carbon is
+    hydrolytically labile and these blocks are synthetically impractical. The
+    CX4 constraint (four single bonds) excludes sp2 amidine / guanidinium / urea
+    carbons (C=N or C=O) — stable pharmacophores, not aminals — so Arg-type
+    guanidinium blocks are never flagged. Broader than strained_aminal (which is
+    limited to <=4-membered rings): per directive, ALL aminal-bearing NCAAs are
+    exotic.
+    """
+    patt = _aminal_pattern()
+    return patt is not None and mol.HasSubstructMatch(patt)
+
+
 def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     """Compute exotic flags for a block from SMILES structure.
 
@@ -254,6 +277,8 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
         has_phosphorus — any phosphorus atom
         multi_charge — |charge| >= 2
         geminal_hetero — carbon with 2+ heteroatoms via single bonds (non-ring)
+        strained_aminal — aminal/acetal carbon inside a 3- or 4-membered ring
+        aminal — any sp3 carbon single-bonded to two nitrogens (N-C-N)
     """
     flags = set()
 
@@ -316,6 +341,10 @@ def compute_exotic_flags(block: Block, raw_entry: dict) -> set[str]:
     # Strained cyclic aminal/acetal: aminal carbon inside a 3- or 4-membered ring
     if _has_strained_ring_aminal(mol):
         flags.add("strained_aminal")
+
+    # Aminal: any sp3 carbon single-bonded to two nitrogens (N-C-N), ring or not.
+    if _has_aminal(mol):
+        flags.add("aminal")
 
     return flags
 
