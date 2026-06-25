@@ -1,6 +1,6 @@
 {
   "version": "v11",
-  "source": "/scratch/zouyike/NCAA_TokenV11/results/residue/residue_tokens.csv",
+  "source": "data/residue_tokens.csv",
   "n_blocks": 400,
   "notes": "LLM-safe view. No SMILES/SELFIES/NUMBERS. Use ONLY listed IDs. Do NOT invent blocks.",
   "blocks": [

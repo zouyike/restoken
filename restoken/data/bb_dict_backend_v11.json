@@ -1,6 +1,6 @@
 {
   "version": "v11",
-  "source": "/scratch/zouyike/NCAA_TokenV11/shards/000000_000199/3d_confs/residue_tokens.csv",
+  "source": "data/residue_tokens.csv",
   "n_blocks": 400,
   "blocks": [
     {
