@@ -1,6 +1,6 @@
 # ResToken
 
-**Residue-semantic tokenization for LLM-based noncanonical cyclic peptide design.**
+**Residue-semantic tokenization for LLM-based cyclic peptide design.**
 
 ResToken is a curated library of 400 NCAA (noncanonical amino acid) building blocks encoded as semantic tokens, designed for use with large language models (LLMs) in cyclic peptide design.
 
