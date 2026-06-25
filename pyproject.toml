@@ -16,7 +16,7 @@ dependencies = []
 
 [project.optional-dependencies]
 rdkit = ["rdkit"]
-benchmark = ["openai", "google-generativeai", "anthropic", "transformers", "torch"]
+benchmark = ["openai", "google-generativeai", "transformers", "torch"]
 
 [tool.setuptools.packages.find]
 include = ["restoken*"]

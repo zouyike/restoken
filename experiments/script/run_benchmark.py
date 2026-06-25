@@ -103,65 +103,6 @@ class GeminiBackend:
             return f"[ERROR] {json.dumps(result)[:500]}"
 
 
-class AnthropicBackend:
-    """Anthropic Messages API via Claude.ai OAuth."""
-
-    def __init__(self, model="claude-sonnet-4-6"):
-        import urllib.request
-        self.model = model
-        creds_path = os.path.expanduser("~/.claude/.credentials.json")
-        with open(creds_path) as f:
-            creds = json.load(f)
-        self.api_key = creds["claudeAiOauth"]["accessToken"]
-        self.name = model
-
-    def generate(self, prompt, temperature=1.0, max_tokens=16384):
-        import urllib.request, urllib.error, time
-        url = "https://api.anthropic.com/v1/messages"
-        body = json.dumps({
-            "model": self.model,
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        }).encode()
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.api_key}",
-            "anthropic-version": "2023-06-01",
-        }
-        proxy_url = os.environ.get("HTTPS_PROXY",
-                                    os.environ.get("https_proxy", "http://127.0.0.1:48890"))
-        opener = urllib.request.build_opener(
-            urllib.request.ProxyHandler({"https": proxy_url, "http": proxy_url}))
-        for attempt in range(8):
-            req = urllib.request.Request(url, data=body, headers=headers, method="POST")
-            try:
-                with opener.open(req, timeout=180) as resp:
-                    result = json.loads(resp.read())
-                return result["content"][0]["text"]
-            except urllib.error.HTTPError as e:
-                if e.code == 429:
-                    wait = min(60 * (attempt + 1), 300)
-                    print(f"    Rate limited, waiting {wait}s (attempt {attempt+1}/8)...")
-                    time.sleep(wait)
-                    continue
-                if e.code == 401:
-                    self._refresh_token()
-                    headers["Authorization"] = f"Bearer {self.api_key}"
-                    continue
-                body_text = e.read().decode()[:300]
-                return f"[ERROR] HTTP {e.code}: {body_text}"
-            except (KeyError, IndexError):
-                return f"[ERROR] {json.dumps(result)[:500]}"
-        return "[ERROR] Rate limited after 8 retries"
-
-    def _refresh_token(self):
-        creds_path = os.path.expanduser("~/.claude/.credentials.json")
-        with open(creds_path) as f:
-            creds = json.load(f)
-        self.api_key = creds["claudeAiOauth"]["accessToken"]
-
-
 class OpenAIBackend:
     """OpenAI Chat Completions API."""
 
@@ -973,7 +914,7 @@ def main():
     parser = argparse.ArgumentParser(description="ResToken W2 Benchmark Runner")
     parser.add_argument("--experiment", required=True,
                         choices=["exp1", "exp2", "exp3"])
-    parser.add_argument("--backend", required=True, choices=["gemini", "hf", "openai", "anthropic"])
+    parser.add_argument("--backend", required=True, choices=["gemini", "hf", "openai"])
     parser.add_argument("--model", required=True,
                         help="Model name (e.g., gemini-2.5-pro, Qwen/Qwen2.5-7B-Instruct)")
     parser.add_argument("--representation", default="restoken",
@@ -1000,8 +941,6 @@ def main():
         backend = GeminiBackend(args.model)
     elif args.backend == "openai":
         backend = OpenAIBackend(args.model)
-    elif args.backend == "anthropic":
-        backend = AnthropicBackend(args.model)
     elif args.backend == "hf":
         backend = HFLocalBackend(args.model, load_in_4bit=args.load_in_4bit)
 

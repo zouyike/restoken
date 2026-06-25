@@ -43,7 +43,7 @@ plt.rcParams.update({
     "axes.spines.right": False,
 })
 
-# Exclude txgemma (complete failure) and sonnet (pending) from main figures
+# Exclude txgemma (complete failure) from main figures
 MODELS = [
     "gemini-2.5-pro",
     "gemini-2.5-flash",
