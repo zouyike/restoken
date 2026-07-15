@@ -14,3 +14,10 @@
 - Parameters: removed figure-specific section breaks; retained two document sections; scaled all 9 inline figures proportionally to 3.12-inch column width.
 - Result: 9/9 distinct image relationships resolve to nonempty media; 9/9 figure widths are 3.12 inches; 3 tables and 9 OMML nodes retained.
 - Conclusion: v3 uses stable AAAI two-column flow; relationship-level image validation is now a mandatory build gate.
+
+### 2026-07-15 | aaai_reproducibility_checklist_v2
+
+- Objective: complete the AAAI reproducibility checklist against the live anonymous ResToken manuscript.
+- Parameters: 31 evidence-based responses; yes=13, partial=8, no=2, NA=8.
+- Result: all placeholders replaced; DOCX parse/ZIP checks passed; guarded update landed in the canonical Drive file with byte-identical readback.
+- Conclusion: code/data availability is strong; incomplete reporting remains for seeds, development sweeps, full compute environment, and exhaustive implementation cross-references.
