@@ -16,7 +16,7 @@ from docx.enum.section import WD_SECTION
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_BREAK, WD_LINE_SPACING
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from docx.shared import Inches, Pt
+from docx.shared import Emu, Inches, Pt
 from docx.styles.style import _ParagraphStyle
 from docxcompose.composer import Composer
 
@@ -216,6 +216,26 @@ def add_full_width_object_sections(doc: DocumentType) -> None:
         i += 1
 
 
+def fit_figures_to_column(doc: DocumentType, max_width_inches: float = 3.12) -> None:
+    """Keep every inline figure visible in AAAI's stable two-column layout."""
+    limit = Inches(max_width_inches)
+    for shape in doc.inline_shapes:
+        if shape.width > limit:
+            ratio = limit / shape.width
+            shape.height = Emu(int(shape.height * ratio))
+            shape.width = limit
+
+
+def validate_media_relationships(doc: DocumentType, expected: int) -> None:
+    """Require distinct, resolvable image relationships—not drawing-node counts."""
+    embeds = doc._element.xpath(".//a:blip/@r:embed")
+    assert len(embeds) == expected, (len(embeds), expected)
+    assert len(set(embeds)) == expected, "figures do not have distinct relationships"
+    for rid in embeds:
+        rel = doc.part.rels[rid]
+        assert rel.target_part.blob, f"empty or unresolved image: {rid}"
+
+
 def scrub_package_metadata(path: Path) -> None:
     """Force anonymous OOXML metadata after libraries finish saving."""
     with zipfile.ZipFile(path, "r") as zin:
@@ -276,7 +296,7 @@ def main() -> None:
     # Title block is full width; abstract and body are two columns.
     set_cols(doc._element.body.sectPr, 2)
     add_first_section_break(doc.paragraphs[2], doc)
-    add_full_width_object_sections(doc)
+    fit_figures_to_column(doc)
     for i, section in enumerate(doc.sections):
         set_page_geometry(section, i == 0)
 
@@ -309,7 +329,7 @@ def main() -> None:
     assert check.paragraphs[0].text.startswith("ResToken:")
     assert check.paragraphs[1].text == "Anonymous Submission"
     assert "Yike Zou" not in "\n".join(p.text for p in check.paragraphs)
-    assert len(check.inline_shapes) >= 1
+    validate_media_relationships(check, expected=9)
 
 
 if __name__ == "__main__":
