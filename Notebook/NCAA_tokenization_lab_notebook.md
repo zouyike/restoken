@@ -21,3 +21,20 @@
 - Parameters: 31 evidence-based responses; yes=13, partial=8, no=2, NA=8.
 - Result: all placeholders replaced; DOCX parse/ZIP checks passed; guarded update landed in the canonical Drive file with byte-identical readback.
 - Conclusion: code/data availability is strong; incomplete reporting remains for seeds, development sweeps, full compute environment, and exhaustive implementation cross-references.
+### 2026-07-19 | aaai_helmbert_positioning
+- Objective: position ResToken relative to the newly published HELM-BERT model in the current AAAI manuscript.
+- Parameters: one Discussion sentence; HELM-BERT inserted as reference 17; prior references 17-20 and in-text markers shifted to 18-21.
+- Result: 99 paragraphs, 3 tables, 9 media files, and 16 drawings preserved; guarded Drive readback matched the uploaded SHA-256 checksum.
+- Conclusion: ResToken is framed as a complementary design interface, while HELM-BERT is a learned predictive representation.
+### 2026-07-20 | aaai_helmify_positioning
+- Objective: position HELMify relative to ResToken in the current AAAI manuscript.
+- Parameters: one Discussion sentence; HELMify inserted as reference 18; prior references 18-21 and in-text markers shifted to 19-22.
+- Result: 100 paragraphs, 3 tables, 9 media files, and 16 drawings preserved; guarded Drive readback matched the uploaded SHA-256 checksum.
+- Conclusion: HELMify is cited as a complementary monomer-registration method, not a direct generation benchmark.
+
+### 2026-07-28 | aaai27_anonymity_and_page_compliance
+
+- Objective: remove desk-rejection risks from the AAAI-27 manuscript, SI, and reproducibility checklist.
+- Parameters: removed author-owned URLs and neutralized metadata; condensed main text and Methods; kept full case-study detail in SI; removed the page-8 TOC graphic.
+- Result: main PDF is 8 US-Letter pages, with paper content ending on page 7 and page 8 containing references only; anonymity scans found 0 identifying names, emails, or author-owned repository links.
+- Conclusion: versioned compliant DOCX/PDF files are ready in the submission Drive folder; OpenReview remains unchanged pending explicit approval.
