@@ -178,3 +178,23 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - **HARNESS SMOKE TEST: PASS.** Job 390194 (`rt_smoke`, gpu3, 1 GPU) COMPLETED in 54 s wall, 44 s in the training step: 30 optimizer steps over 2 epochs, `train_loss 1.207`, 11.43 samples/s, adapter + tokenizer + loss curve written to `output/smoke_restoken/Qwen-Qwen2.5-0.5B/`, exit code 0, empty `.err`. This retires the risk I flagged earlier that transformers 5.5.0 paired with trl 0.24.0 had never been shown to complete an `SFTTrainer` step here - it does, in the `ai` env, via the unmodified CycSeqSeek generator.
 - Result: success on setup and smoke. The real grid is NOT launched - corpus sizes and the eval harness (held-out constraint profiles, novelty, diversity, permeability scoring) still need to be built.
 - Next, in order: (1) build the eval harness, since without it a trained adapter produces no measurement; (2) mint corpora at 100 / 1k / 10k; (3) launch the Qwen3.5-9B 12-run grid on gpu_cpu; (4) then the 0.5B grid and the two single-corpus arms.
+
+### 2026-09-04 | adopt_cycseqseek_five_model_ensemble
+
+- Objective: Yike asked which models the CycSeqSeek program uses and whether all of them can be used for the representation fine-tune.
+- Canonical list, `CycSeqSeek/pipeline/script/sft_pipeline.py:48-54` `DEFAULT_MODELS_HF`, with per-model GPU counts from `DPO_MODEL_GPUS` and the env rule from `train_different_models_pbs_gen.py:1274-1276`:
+  | Model | GPUs | Env | Tokenizer family |
+  |---|---|---|---|
+  | `Qwen/Qwen2.5-0.5B` | 1 | ai | Qwen BPE, small |
+  | `unsloth/Meta-Llama-3.1-8B-bnb-4bit` | 2 | ai | Llama BPE |
+  | `unsloth/gemma-3-12b-it-bnb-4bit` | 4 | **llama4** | Gemma SentencePiece |
+  | `google/txgemma-9b-chat` | 2 | ai | Gemma SP, therapeutics-pretrained |
+  | `unsloth/Qwen3.5-9B` | 2 | ai | Qwen BPE, large |
+- **Decision: adopt all five verbatim.** All five are already in the local HF cache; all five already have an encoded GPU count, conda env and compatibility path in the shared trainer, so adopting the list costs zero new engineering. It also keeps results comparable with the RNF126 / PDL1 / KRAS campaigns and with the planned cross-target model evaluation. Scientifically it is a better list than mine: four tokenizer families, a 0.5B-to-12B span, and one therapeutics-pretrained member.
+- **Three corrections to the picks I locked an hour earlier:**
+  1. `google/txgemma-9b-predict` -> **`google/txgemma-9b-chat`**. `-chat` is the variant the pipeline uses, is the best performer on RNF126 (R34: 102 EX, 17.8% AF3 hit rate), and is half the disk (18 GB / 4 shards vs 35 GB / 8). No paper number depends on the variant, since the paper's benchmark used Gemini / GPT-4o / Qwen3.5-9B / Gemma-3-12B and no txgemma.
+  2. **Added `unsloth/Meta-Llama-3.1-8B-bnb-4bit`** - a fourth tokenizer family for 5.4 GB. I had omitted Llama entirely.
+  3. My experiment README wrongly implied every model trains in the `ai` env. The generator sets `conda_env_for_model = "llama4"` for any `gemma-3` model and derives GPU count via `_detect_gpus`. Both are handled automatically; setting them by hand would be an error. README corrected.
+- Grid becomes 5 models x 3 notations x 4 corpus sizes = **60 LoRA runs**. Affordable: gpu_cpu (gpu3-4, 16x 4090D 48 GB) was fully idle, and a rough estimate of 1-2 GPU-hours per 10k-sample 9B run puts the whole grid near one night of wall clock. Running the full corpus-size sweep on all five is strictly better than a single-point model-agnosticism check, because it yields five sample-efficiency curves instead of one plus three dots.
+- Verification launched, not yet returned: jobs 390195-390199 train all five on the 60-molecule smoke corpus, so every model's path is proven before the 60-run grid. Job names `tr_1`..`tr_5` (generator's own neutral naming, no target leakage).
+- Result: partial - list adopted and README corrected; five-model smoke in flight; the eval harness is still the blocking gap before any grid can produce a measurement.
