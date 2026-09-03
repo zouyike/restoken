@@ -277,3 +277,27 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - Low-data spread across models at n=100 is much wider than at n=1000, and is not monotone in size: Llama-3.1-8B **0.90**, TxGemma-9B **0.33**, Qwen2.5-0.5B **0.20**. TxGemma being the therapeutics-pretrained model and still sitting at 0.33 while a general 8B reaches 0.90 is worth watching - it is the opposite of what "chemistry pretraining helps" would predict. Only one cell each, so **not sure**; revisit when all five models have an n=100 ResToken cell.
 - Constraint satisfaction still 0.00-0.01 on every cell. Unchanged diagnosis, unchanged three candidate explanations.
 - Result: partial. HELM arm 10/15 adapters and 0/15 evals, SMILES 10/15 adapters and 2/15 evals.
+
+### 2026-09-04 | HELM FIXED + the headline finding — NEGATIVE RESULT (worth reporting)
+
+- The bracket fix worked. HELM validity went from **0.00 on every cell** to **0.44-1.00**. The v2 arm (390322-390336) is 14/15 adapters, 10/15 evals.
+- **Three-way validity, 34/45 cells, 200 held-out prompts each:**
+  | model | corpus | ResToken | HELM | SMILES |
+  |---|---|---|---|---|
+  | Qwen2.5-0.5B | 100 | 0.20 | **0.44** | 0.01 |
+  | Qwen2.5-0.5B | 1,000 | 0.93 | **0.95** | 0.52 |
+  | Qwen2.5-0.5B | 10,000 | 1.00 | - | 0.97 |
+  | Llama-3.1-8B | 100 | **0.90** | 0.52 | 0.14 |
+  | Llama-3.1-8B | 1,000 | 1.00 | 1.00 | 0.86 |
+  | TxGemma-9B | 100 | 0.33 | **0.53** | 0.35 |
+  | TxGemma-9B | 1,000 | 1.00 | 1.00 | 0.97 |
+  | Qwen3.5-9B | 100 | 0.20 | 0.14 | **0.28** |
+  | Qwen3.5-9B | 1,000 | 0.97 | 1.00 | 0.91 |
+  | Gemma-3-12B | 100 | 0.01 | - | 0.04 |
+  | Gemma-3-12B | 1,000 | 1.00 | 0.99 | - |
+- **THE HEADLINE, and it goes against the paper's framing.** At n=1000 all three notations are essentially tied: ResToken 0.93-1.00, HELM 0.95-1.00, SMILES 0.52-0.97, and by n=10000 even SMILES reaches 0.97 on the 0.5B model. The paper's zero-shot separation (ResToken 90.4%, HELM 84.5%, SMILES 18.1%) **does not survive fine-tuning**. Supervision erases the representation advantage. This is the "SMILES catches up" branch of the pre-registered prediction, and HELM catching up too was not something I flagged in advance.
+- At n=100 the ordering is unstable and no notation wins: HELM leads on Qwen0.5B (0.44 vs 0.20) and TxGemma (0.53 vs 0.33), ResToken leads decisively on Llama-8B (0.90 vs 0.52), SMILES leads on Qwen3.5-9B (0.28 vs 0.20). With 200 prompts per cell that spread is not noise, but it is also not a ranking - it says the low-data regime is dominated by model-specific interaction rather than by notation.
+- Honest reading for the paper: the defensible claim shrinks to **"ResToken is a better zero-shot interface"**, which is what the paper already measures, and the fine-tune result is an *ablation that bounds the claim* rather than a strengthening of it. Reporting it is the right call - it pre-empts the exact reviewer question ("does this survive training?") with a measured answer instead of silence. Tagged NEGATIVE RESULT because it removes a claim the paper might otherwise have been tempted to make.
+- **Not sure / needs verification**: n=10000 HELM cells are still training, and 11 of 45 cells are missing, so the convergence claim rests on the n=1000 row plus two n=10000 points. Do not write it up until the grid is complete.
+- Harness improvement forced by one cell: `n100_helm/gemma-3-12b` returned validity 0.00 with `parsed: False` on all 200 prompts and no stored text, which is an unfalsifiable zero - indistinguishable from a parser miss. The eval now records `raw_generation` (300 chars) whenever parsing fails, and that cell was requeued (390373) to capture the evidence.
+- Constraint satisfaction remains 0.00 on every HELM cell too, matching ResToken. Whatever suppresses property conditioning is notation-independent, which makes the "metric too strict / tuple degenerate" explanations more likely than "this notation cannot express it".
