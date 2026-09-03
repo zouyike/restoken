@@ -100,3 +100,15 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - Compute: Qwen3.5-9B or Gemma-3-12B (both already in the paper), LoRA bf16 on gpu_cpu 4090D 48 GB; envs `ai`, `gemma3_env`, `llama4` all carry torch+transformers+trl+peft+unsloth. Estimated ~8 GPU-hours plus eval - compute is not the constraint, harness time is.
 - Honest prediction, both outcomes publishable: SMILES should improve sharply from its 18.1% zero-shot validity because fine-tuning fixes syntax, so the headline gap will shrink. If ResToken still leads, the claim is far stronger than the zero-shot one. If SMILES converges, the finding becomes "ResToken's advantage is a low-data / zero-shot advantage that supervision erases", which is a clean representation result with a scaling curve. Not sure which will happen - that is the point of running it.
 - Risk I will not hide: this raises ICLR odds from roughly 10-15% to maybe 25-30% by my estimate (speculative, no data behind those numbers), it does not fix the venue-fit problem that ICLR 2027 has no Datasets & Benchmarks track, and it competes for the same 21 days as the mandatory LaTeX rebuild.
+
+### 2026-09-04 | iclr_submission_folder_delivered
+
+- Objective: put the ICLR 2027 hard-requirements checklist and the fine-tuning addition plan into the Drive submission tree Yike named.
+- Destination: the `ICLR` folder **already existed** (Yike created it), Drive fileId `1XdCD4yo4mOBVAfqHnkhz2dk5l9hPQWvz`, empty before this push. Parent chain resolved by API: `ICLR` -> `submission` (`1NCeQbS-dspu1QBGnyJAEQkwgVWg0IsvR`) -> `manuscript` (`1R-4F6SYHNVKYgirMMmBK9-rHh0pCsYny`) -> `邹一可_2026_LLM for NCAA tokenization` (`1FWDMwwICNSJ89sGx4glkwfgAdkIgMNs_`) -> `邹一可_2026_全自动环肽药物生成平台` (`1XfjCdDe649akObr07kJmLipyG4CjTGlH`), matching the path Yike gave. No duplicate folder created.
+- Route: `_gdrive_route.py check` returned OFFLINE for both Windows mirrors, so the transfer went through the Drive API rather than the `D:\GoogleDrive` X1 mirror.
+- Files (written locally first at `manuscript/submission/ICLR/`, then uploaded; md5 verified identical on readback):
+  - `ICLR2027_hard_requirements.md` (4,784 B, md5 b95c039c0d4c5189...) - the eight desk-reject gates with verbatim quotes, our status per gate, what is excluded from the 9 pages, why gate 1 killed AAAI, and the preflight command.
+  - `ResToken_ICLR2027_addition_plan.md` (5,824 B, md5 7156bf9e5e06d212...) - the representation-controlled fine-tuning design, free-corpus argument, the two mandatory anti-circularity / anti-memorisation rules, compute, both predicted outcomes, risks, sequencing with a 09-18 go/no-go.
+  - `README.md` (1,501 B, md5 6ecba71770208a9a...) - folder index plus the two open decisions that belong to Yike (reciprocal-reviewing registration; whether the fine-tune makes the 09-18 abstract).
+- Result: success. Drive readback md5 matches local for all three files.
+- Still open, not decided by me: reciprocal-reviewing registration (commits Yike to 3 ICLR reviews and spends his one no-eligible-reviewer submission for the year), and go/no-go on the fine-tune. Nothing launched.
