@@ -198,3 +198,30 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - Grid becomes 5 models x 3 notations x 4 corpus sizes = **60 LoRA runs**. Affordable: gpu_cpu (gpu3-4, 16x 4090D 48 GB) was fully idle, and a rough estimate of 1-2 GPU-hours per 10k-sample 9B run puts the whole grid near one night of wall clock. Running the full corpus-size sweep on all five is strictly better than a single-point model-agnosticism check, because it yields five sample-efficiency curves instead of one plus three dots.
 - Verification launched, not yet returned: jobs 390195-390199 train all five on the 60-molecule smoke corpus, so every model's path is proven before the 60-run grid. Job names `tr_1`..`tr_5` (generator's own neutral naming, no target leakage).
 - Result: partial - list adopted and README corrected; five-model smoke in flight; the eval harness is still the blocking gap before any grid can produce a measurement.
+
+### 2026-09-04 | restoken_arm_launched_all_five
+
+- Objective: run all five CycSeqSeek models on the **ResToken notation arm** of the representation fine-tune, at every corpus size.
+- **Five-model smoke test: 5/5 PASS.** Jobs 390195-390199 on the 60-molecule smoke corpus, all COMPLETED exit 0 with an adapter written:
+  | Model | Job | Elapsed | GPUs |
+  |---|---|---|---|
+  | `Qwen/Qwen2.5-0.5B` | 390196 | 00:00:41 | 1 |
+  | `unsloth/Meta-Llama-3.1-8B-bnb-4bit` | 390198 | 00:00:49 | 2 |
+  | `unsloth/Qwen3.5-9B` | 390199 | 00:00:45 | 2 |
+  | `google/txgemma-9b-chat` | 390195 | 00:02:24 | 2 |
+  | `unsloth/gemma-3-12b-it-bnb-4bit` | 390197 | 00:04:39 | 4 (DeepSpeed, `llama4` env) |
+  gemma-3-12b is the slow one (DeepSpeed on 4 GPUs) and emits a harmless `OSError [Errno 16] Device or resource busy: '.nfs...'` from unsloth's temp `rmtree` plus a Triton-cache-on-NFS warning; neither is fatal and the adapter (274 MB) is written. Every model's path is now proven before the real grid, so nothing in the grid should fail for environment reasons.
+- Corpora built (`build_representation_corpus.py`, seeds 107 / 1007 / 10007, lengths 5-8), each emitting all three notations from the identical molecule set:
+  | Corpus | molecules | sampled | rejected invalid | rejected unassemblable |
+  |---|---|---|---|---|
+  | n100 | 100 | 101 | 0 | 1 |
+  | n1000 | 1,000 | 1,016 | 0 | 16 |
+  | n10000 | 10,000 | 10,177 | 0 | 177 |
+  RDKit assembly failure is ~1.7% and is the only rejection mode; validator rejection is 0 because sampling draws from the library itself, so IDs and lengths are valid by construction.
+- **Hyperparameter decision, deliberately conservative: identical settings across every cell.** `--target_epoches 2`, and **no** `--small_dataset` anywhere. The `--small_dataset` flag would have changed batch size from 8 to 4 for the small corpora, which would have made batch size co-vary with corpus size and contaminated the sample-efficiency curve. Data amount is now the only variable across sizes, and notation the only variable across arms. Consequence to keep in mind: at n=100, batch 8 and 2 epochs is only ~25 optimizer steps with 5 warmup, so that point may be undertrained rather than genuinely data-limited. If the n=100 cell looks flat across notations, add a train-to-convergence variant before drawing any conclusion. Not sure yet which it will be.
+- Launched: 15 jobs, **390200-390214**, = 5 models x 3 corpus sizes, ResToken arm only.
+  - n100: 390200-390204, n1000: 390205-390209, n10000: 390210-390214.
+  - Job id to model/cell map recorded in `jobs/restoken_arm_jobids.txt`.
+  - Watching in-session with a background poller rather than installing a cron watchdog, per the rule that a live watch is the watch.
+- The n=0 point of the curve needs no training: it is the paper's existing zero-shot number.
+- **Not done, and it is still the blocking gap**: the eval harness. These 15 adapters will exist with nothing to measure them against. Also not run yet: the HELM and SMILES arms, which are the comparison the whole experiment exists for. Both arms are one command away on the same corpora (`--input_json input/n<N>/corpus_{helm,smiles}.json`), and were not launched because the request was specifically the ResToken arm.
