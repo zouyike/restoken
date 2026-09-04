@@ -361,3 +361,21 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - n=100 remains uninterpretable as a ranking and should be presented as such: the ordering flips per model (HELM best on Qwen0.5B and TxGemma, ResToken best on Llama-8B at 0.90, SMILES best on Qwen3.5-9B) and Gemma-3-12B collapses to 0.00-0.04 on all three. The earlier caveat stands - at 25 optimizer steps this row measures undertraining, not data efficiency. A train-to-convergence variant at n=100 is the one experiment that would make this row mean something.
 - TxGemma, the therapeutics-pretrained model, shows **no advantage anywhere**, including on SMILES where its pretraining should help most (0.35 / 0.97 / 0.99, versus Llama-3.1-8B at 0.14 / 0.86 / 0.99). It is not worse either. Chemistry pretraining simply does not register on this task. Recorded as a NEGATIVE RESULT: it was the sharpest prediction the design made and it did not land.
 - Constraint satisfaction is 0.00-0.02 on all 43 cells, in all three notations, at all three corpus sizes. Notation-independent and data-independent, which points at the metric (seven-field exact match) or tuple degeneracy rather than at any model or notation limitation. Per-field tolerance bands remain unbuilt and are the single highest-value follow-up.
+
+### 2026-09-04 | FINAL 45/45 — what the experiment does and does not license
+
+- Grid complete: 45/45 adapters, **45/45 evals**. `curves.json` and `fig_sample_efficiency_validity.png` written (unified palette: ResToken #002060, SMILES #B36B3C, HELM #2E7F7A). Last two cells: Gemma-3-12B SMILES n1000 = 0.66, n10000 = 0.99.
+- **Final mean validity across all five models:**
+  | corpus | ResToken | HELM | SMILES |
+  |---|---|---|---|
+  | 100 | 0.33 | 0.33 | 0.16 |
+  | 1,000 | 0.98 | 0.99 | 0.78 |
+  | 10,000 | 1.00 | 1.00 | 0.99 |
+- Across all 45 cells: novelty mean 0.96, diversity mean 0.96 (both minima 0.00 come from the two collapsed Gemma-3-12B n=100 cells), constraint satisfaction mean 0.001 and **max 0.010** over the 30 cells where it is measurable.
+- **What the experiment licenses.** On *library validity under supervision*, ResToken is not better than HELM at any corpus size, and its advantage over SMILES vanishes by 10,000 examples. That is a clean, measured, negative result for a "better learning target" claim.
+- **What it does NOT license, and this matters for how it gets written up.** Validity is one axis of three that the paper claims, and this experiment only tested that one:
+  1. **Frozen-position compliance (100% in the paper) was not tested here.** ResToken's closed vocabulary is what makes an EDIT/FROZEN instruction mechanically checkable; there is no reason to expect a fine-tuned SMILES model to respect a frozen position, and we have no measurement either way.
+  2. **Property-directed steering was not tested here.** Constraint satisfaction came out at ~0 for *all three* notations, so this experiment is uninformative about steering rather than negative about it - the metric failed before the notations could be separated.
+  3. **Synthesizability by construction is a design guarantee, not a metric.** A valid ResToken string maps to 400 defined blocks, so every generation is buildable. A valid SMILES string can be an arbitrary molecule no one can synthesise. Fine-tuning to 0.99 RDKit-validity does not confer that property, and no validity number can measure it.
+- So the defensible claim after this experiment: **ResToken is a better zero-shot interface and a stronger safety guarantee, not a better representation for learning.** The two are different claims and the paper should make only the first.
+- **Uncertainties that are NOT resolved and must be stated in any write-up.** (a) The n=100 row is undertrained rather than data-limited: batch 8 x 2 epochs is roughly 25 optimizer steps, and Gemma-3-12B collapses to 0.00-0.04 on all three notations there. A train-to-convergence variant is required before that row can carry any interpretation. (b) Constraint satisfaction never exceeded 0.010 anywhere, so the property-conditioning half of the design produced no usable signal at all; per-field tolerance bands are needed to tell "metric too strict" from "genuinely not learned". (c) Only one seed per cell, so no error bars.
