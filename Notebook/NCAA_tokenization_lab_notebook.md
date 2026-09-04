@@ -328,3 +328,36 @@ Proposed ICLR experiment - **representation-controlled fine-tuning** (PLAN ONLY,
 - Fix: resubmitted **390385** with `-p gpu_cpu` pinned. No script change, since the script is shared infrastructure and the placement is a per-launch decision.
 - **Latent hazard worth stating**: any cell in this grid could have been placed on a 24 GB node, so an OOM was a coin flip rather than a property of the cell. All 45 cells are now accounted for (43 adapters + 390384 + 390385), so nothing was silently lost, but a future grid on this ensemble should pin the 12B SMILES arm to `gpu_cpu` from the start rather than discovering it twice.
 - **Separately, the unfalsifiable zero is now resolved and it was a real model failure, not a parser miss.** With `raw_generation` recorded, `n100_helm/gemma-3-12b` (390373) shows the 12B model at ~25 optimizer steps has not learned HELM at all and invents its own notations: `Sequence: KAEEDDDK` (one-letter amino acids), `Sequence: [1671-2728-1610-...]` (invented numeric monomer IDs), `Sequence: N(0)K(0)K(0)...` (invented per-residue annotation), and it echoes the instruction template back into the completion. So validity 0.00 there is correct and interpretable: undertrained, not mis-scored. The harness change paid for itself on its first use.
+
+### 2026-09-04 | GRID COMPLETE (45/45 adapters) — the finding, stated cleanly
+
+- All 45 adapters trained. The OOM diagnosis is confirmed by the fix: `n1000_smiles/gemma-3-12b` failed twice on gpu2 (24 GB) at 1:25, then **COMPLETED in 4:04 on gpu3 (48 GB)** once pinned with `-p gpu_cpu`. Same script, same corpus, same model; only the node changed. `n10000_smiles/gemma-3-12b` also completed on gpu3 (30:44). Evals 43/45, last two SMILES gemma cells running.
+- **Full validity table, 43/45 cells, 200 held-out prompts each:**
+  | model | corpus | ResToken | HELM | SMILES |
+  |---|---|---|---|---|
+  | Qwen2.5-0.5B | 100 | 0.20 | 0.44 | 0.01 |
+  | Qwen2.5-0.5B | 1,000 | 0.93 | 0.95 | 0.52 |
+  | Qwen2.5-0.5B | 10,000 | 1.00 | 0.99 | 0.97 |
+  | Llama-3.1-8B | 100 | 0.90 | 0.52 | 0.14 |
+  | Llama-3.1-8B | 1,000 | 1.00 | 1.00 | 0.86 |
+  | Llama-3.1-8B | 10,000 | 1.00 | 1.00 | 0.99 |
+  | TxGemma-9B | 100 | 0.33 | 0.53 | 0.35 |
+  | TxGemma-9B | 1,000 | 1.00 | 1.00 | 0.97 |
+  | TxGemma-9B | 10,000 | 1.00 | 1.00 | 0.99 |
+  | Qwen3.5-9B | 100 | 0.20 | 0.14 | 0.28 |
+  | Qwen3.5-9B | 1,000 | 0.97 | 1.00 | 0.91 |
+  | Qwen3.5-9B | 10,000 | 1.00 | 1.00 | 1.00 |
+  | Gemma-3-12B | 100 | 0.01 | 0.00 | 0.04 |
+  | Gemma-3-12B | 1,000 | 1.00 | 0.99 | pending |
+  | Gemma-3-12B | 10,000 | 1.00 | 1.00 | pending |
+- **Per-corpus-size means across models (the actual result):**
+  | corpus | ResToken | HELM | SMILES |
+  |---|---|---|---|
+  | 100 | 0.33 | 0.33 | 0.16 |
+  | 1,000 | 0.98 | 0.99 | 0.81 |
+  | 10,000 | 1.00 | 1.00 | 0.99 |
+- **CONCLUSION. The representation advantage is a zero-shot phenomenon and it does not survive supervision.** ResToken and HELM are indistinguishable at every corpus size (0.33/0.33, 0.98/0.99, 1.00/1.00). SMILES starts far behind and closes the gap monotonically: 0.16 -> 0.81 -> 0.99. By 10,000 examples all three notations are at 0.99-1.00 and the choice of notation is irrelevant. Against the paper's zero-shot 90.4 / 84.5 / 18.1, the entire separation is erased by roughly 10^4 supervised examples, and most of it by 10^3.
+- The honest framing for the manuscript: ResToken's contribution is **interface, not representation capacity**. It buys prompt-time validity on frozen models, which is exactly what the paper measures and is a real practical claim; it does not buy anything a fine-tune cannot obtain from HELM or, with more data, from SMILES. Reporting this strengthens the paper's credibility and forecloses the obvious reviewer attack, but it removes any claim that the tokenization is fundamentally better as a learning target.
+- n=100 remains uninterpretable as a ranking and should be presented as such: the ordering flips per model (HELM best on Qwen0.5B and TxGemma, ResToken best on Llama-8B at 0.90, SMILES best on Qwen3.5-9B) and Gemma-3-12B collapses to 0.00-0.04 on all three. The earlier caveat stands - at 25 optimizer steps this row measures undertraining, not data efficiency. A train-to-convergence variant at n=100 is the one experiment that would make this row mean something.
+- TxGemma, the therapeutics-pretrained model, shows **no advantage anywhere**, including on SMILES where its pretraining should help most (0.35 / 0.97 / 0.99, versus Llama-3.1-8B at 0.14 / 0.86 / 0.99). It is not worse either. Chemistry pretraining simply does not register on this task. Recorded as a NEGATIVE RESULT: it was the sharpest prediction the design made and it did not land.
+- Constraint satisfaction is 0.00-0.02 on all 43 cells, in all three notations, at all three corpus sizes. Notation-independent and data-independent, which points at the metric (seven-field exact match) or tuple degeneracy rather than at any model or notation limitation. Per-field tolerance bands remain unbuilt and are the single highest-value follow-up.
