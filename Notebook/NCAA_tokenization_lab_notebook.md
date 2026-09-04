@@ -427,3 +427,29 @@ Plan to actually test the claim, in dependency order. Nothing launched.
 - Because the seen-case baseline is at ceiling, the held-out zero cannot be dismissed as "the model never learned the task". That is what makes the comparison interpretable, and it is why `spec_match_seen` was included.
 - **The decisive number is still missing**: no `restoken_semantic` cell has been scored yet. If the semantic arm also reads 0.00 on held-out specs, then surfacing the properties buys nothing and ResToken is an interface, full stop. If it is materially above zero against an ID baseline pinned at exactly 0.00, that is a representation advantage measured under a zero-leakage split - the claim the manuscript has never had.
 - Nothing may be concluded yet. Two semantic cells (0.5B, Llama-8B) are in the eval queue and the Qwen3.5-9B semantic adapter is still training.
+
+### 2026-09-04 | E1/E2/E3 RESULT: the semantic form DOES beat HELM — and the cost is measurable
+
+- 9/9 spec adapters, 7/9 evals (Qwen3.5-9B semantic and helm cells still scoring). **The prediction landed.**
+  | arm | model | spec_match **HELD-OUT** | spec_match seen | length_ok | all residues in library |
+  |---|---|---|---|---|---|
+  | **restoken_semantic** | Qwen2.5-0.5B | **0.58** | 1.00 | 1.00 | 0.80 |
+  | **restoken_semantic** | Llama-3.1-8B | **0.66** | 1.00 | 1.00 | 0.83 |
+  | restoken_id | Qwen2.5-0.5B | 0.00 | 0.97 | 1.00 | 1.00 |
+  | restoken_id | Llama-3.1-8B | 0.00 | 1.00 | 1.00 | 1.00 |
+  | restoken_id | Qwen3.5-9B | 0.00 | 1.00 | 1.00 | 1.00 |
+  | helm | Qwen2.5-0.5B | 0.00 | 1.00 | 1.00 | 1.00 |
+  | helm | Llama-3.1-8B | 0.00 | 1.00 | 1.00 | 1.00 |
+- **This is the representation claim, and it is the first version of it that is actually measured.** With properties on the surface, a fine-tuned model satisfies a property spec that can ONLY be met by one of the 78 held-out blocks, 58-66% of the time. Both ID-based notations - including current ResToken - score **exactly 0.00**, on 161 held-out positions each, while sitting at 0.97-1.00 on control specs. The split has zero property-tuple leakage and every individual property value is present in training, so this is compositional generalisation, not memorisation.
+- **The cost is real and must be reported with the win.** Attributing the 0.58/0.66 rather than asserting it (per-position, 161 held-out positions per cell):
+  | | Qwen2.5-0.5B | Llama-3.1-8B |
+  |---|---|---|
+  | 4 requested fields matched | 0.93 | 0.98 |
+  | residue exists in the library | 0.63 | 0.68 |
+  | BOTH (= spec_match_heldout) | 0.58 | 0.66 |
+  | spec satisfied but residue **INVENTED** | **0.34** | **0.32** |
+  | unparseable token | 0.00 | 0.00 |
+  So the semantic arm nearly always satisfies the requested properties (0.93-0.98 on the four fields) and its ceiling is set almost entirely by **inventing property combinations that do not exist in the 400-block library** - about a third of held-out attempts. The ID arms can never invent, because an ID either resolves or it does not; that is exactly why they are pinned at 1.00 on `in_library` and at 0.00 on addressability.
+- **The honest dichotomy, which is a better result than a plain win.** Opaque IDs (HELM, current ResToken) guarantee synthesizability and cannot address anything outside the training vocabulary. Semantic tokens can address unseen chemistry compositionally but forfeit the guarantee. Neither dominates; they trade addressability against closure. That framing is defensible, novel for this paper, and directly actionable: a decode-time constrained sampler that projects an emitted property tuple onto the nearest existing library block would recover most of the lost 32-34% and give both properties at once. That is the obvious next experiment.
+- Contradicts nothing in the earlier grid; it explains it. The 45-cell metrics grid compared two spellings of the SAME opaque-ID encoding and correctly found no difference. Surfacing the semantics is what creates a difference, and only a held-out-block test can see it.
+- **Uncertainties, stated plainly.** (a) Two of nine cells are still scoring, both on Qwen3.5-9B, so the model-agnosticism of the effect is not yet established - though the effect is already present on two very different tokenizer families and a 16x parameter range. (b) One seed per cell, no error bars; the ID arms' 0.00 needs none, but 0.58 vs 0.66 should not be over-read as a model ranking. (c) `spec_match_seen` at 1.00 for the semantic arm means the control case is at ceiling, so the held-out number is not confounded by general task failure. (d) The invented-combination rate is itself a finding that needs its own check: are the invented tuples chemically plausible or nonsense? Not yet examined.
