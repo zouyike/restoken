@@ -1,5 +1,7 @@
 # ResToken
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24562329.svg)](https://doi.org/10.5281/zenodo.24562329)
+
 **Residue-semantic tokenization for LLM-based cyclic peptide design.**
 
 ResToken is a curated library of 400 noncanonical amino acid (NCAA) building blocks encoded as compact semantic tokens, designed for large language model (LLM) cyclic peptide design.
@@ -61,6 +63,7 @@ All benchmark scripts, prompt templates, assembled macrocycle SMILES, and evalua
 
 ### Large Model Checkpoints & External Data
 
+- **Zenodo archive (v1.0.0 snapshot + fine-tuned checkpoints)**: permanently archived under DOI [`10.5281/zenodo.24562329`](https://doi.org/10.5281/zenodo.24562329) (concept DOI: [`10.5281/zenodo.24562328`](https://doi.org/10.5281/zenodo.24562328)), containing `restoken-v1.0.0.tar.gz` and four fine-tuned permeability predictor checkpoints (`perm_model_peptideclm_random.pt`, `perm_model_peptideclm_cluster.pt`, `perm_model_peptideclm2_random.pt`, `perm_model_peptideclm2_cluster.pt`).
 - **CycPeptMPDB v1.2** (accessed 2026-06-01; 7,451 total cyclic peptides, 6,889 PAMPA-labelled unique RDKit-valid entries after filtering): download `CycPeptMPDB_Peptide_All.csv` from http://cycpeptmpdb.com/ and place under `experiments/permeability_validation/data/`.
 - **Pretrained backbones**: PeptideCLM (`aaronfeller/PeptideCLM-23M-all`) and PeptideCLM-2 (`aaronfeller/peptideclm-2-hybrid-small`) are publicly hosted on Hugging Face.
 - **Fine-tuned permeability predictor checkpoints** (`perm_model.pt`, 169 MB, and leakage-free split checkpoints): archived in the Zenodo release accompanying the manuscript (exceeding GitHub's 100 MB single-file limit).
