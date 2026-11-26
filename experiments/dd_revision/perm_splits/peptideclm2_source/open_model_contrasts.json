@@ -1,0 +1,79 @@
+[
+  {
+    "model": "Llama-3.3-70B",
+    "n_permeable": 219,
+    "n_unconstrained": 409,
+    "median_permeable": -5.714198589324951,
+    "median_unconstrained": -5.795629501342773,
+    "delta_median": 0.08143091201782227,
+    "cliffs_delta": 0.1519353362137299,
+    "p_one_sided": 0.0008444005335595131,
+    "median_diff_95ci": [
+      0.032136380672454834,
+      0.1367761015892029
+    ]
+  },
+  {
+    "model": "Mistral-Nemo-12B",
+    "n_permeable": 1,
+    "n_unconstrained": 3,
+    "median_permeable": -6.419045448303223,
+    "median_unconstrained": -5.762493133544922
+  },
+  {
+    "model": "Mistral-Small-24B",
+    "n_permeable": 187,
+    "n_unconstrained": 92,
+    "median_permeable": -5.774813652038574,
+    "median_unconstrained": -5.7038254737854,
+    "delta_median": -0.07098817825317383,
+    "cliffs_delta": -0.14845384794233898,
+    "p_one_sided": 0.978116335180163,
+    "median_diff_95ci": [
+      -0.1586645722389221,
+      0.09357880353927615
+    ]
+  },
+  {
+    "model": "Qwen3-32B",
+    "n_permeable": 293,
+    "n_unconstrained": 227,
+    "median_permeable": -5.839386940002441,
+    "median_unconstrained": -6.034256935119629,
+    "delta_median": 0.1948699951171875,
+    "cliffs_delta": 0.2719099096390071,
+    "p_one_sided": 5.161217921299218e-08,
+    "median_diff_95ci": [
+      0.11569404602050781,
+      0.3035490274429325
+    ]
+  },
+  {
+    "model": "gemma-3-12b-it",
+    "n_permeable": 254,
+    "n_unconstrained": 55,
+    "median_permeable": -5.52644157409668,
+    "median_unconstrained": -6.261046409606934,
+    "delta_median": 0.7346048355102539,
+    "cliffs_delta": 0.8594130279169649,
+    "p_one_sided": 8.277375707223879e-24,
+    "median_diff_95ci": [
+      0.5018341422080994,
+      0.8844094514846803
+    ]
+  },
+  {
+    "model": "gemma-3-4b-it",
+    "n_permeable": 179,
+    "n_unconstrained": 105,
+    "median_permeable": -5.899412155151367,
+    "median_unconstrained": -5.974181652069092,
+    "delta_median": 0.07476949691772461,
+    "cliffs_delta": -0.012928970470869912,
+    "p_one_sided": 0.5724450804786013,
+    "median_diff_95ci": [
+      -0.13739470243453977,
+      0.26129103899002076
+    ]
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "metadata": {
+    "models": [
+      "gemini-2.5-flash",
+      "gemini-2.5-pro"
+    ],
+    "representations": [
+      "restoken",
+      "smiles",
+      "helm"
+    ],
+    "profiles": [
+      "unconstrained",
+      "permeable",
+      "charged_binder",
+      "rigid_scaffold"
+    ],
+    "random_baselines": {
+      "permeable": 0.0207,
+      "charged_binder": 0.0182,
+      "rigid_scaffold": 0.0081
+    }
+  },
+  "results": {
+    "gemini-2.5-flash|restoken|unconstrained": {
+      "model": "gemini-2.5-flash",
+      "representation": "restoken",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 1000,
+      "parse_rate": 1.0,
+      "n_valid": 997,
+      "validity_rate": 0.997,
+      "n_constraint_pass": 997,
+      "constraint_pass_rate": 1.0,
+      "n_unique": 989,
+      "uniqueness": 0.9919759277833501,
+      "avg_diversity": 0.9907376976764732
+    },
+    "gemini-2.5-flash|restoken|permeable": {
+      "model": "gemini-2.5-flash",
+      "representation": "restoken",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 396,
+      "parse_rate": 0.792,
+      "n_valid": 394,
+      "validity_rate": 0.9949494949494949,
+      "n_constraint_pass": 308,
+      "constraint_pass_rate": 0.7817258883248731,
+      "n_unique": 369,
+      "uniqueness": 0.9365482233502538,
+      "avg_diversity": 0.9014626733810407
+    },
+    "gemini-2.5-flash|restoken|charged_binder": {
+      "model": "gemini-2.5-flash",
+      "representation": "restoken",
+      "profile": "charged_binder",
+      "n_requested": 500,
+      "n_parsed": 299,
+      "parse_rate": 0.598,
+      "n_valid": 298,
+      "validity_rate": 0.9966555183946488,
+      "n_constraint_pass": 73,
+      "constraint_pass_rate": 0.24496644295302014,
+      "n_unique": 298,
+      "uniqueness": 1.0,
+      "avg_diversity": 0.9188942486085343
+    },
+    "gemini-2.5-flash|restoken|rigid_scaffold": {
+      "model": "gemini-2.5-flash",
+      "representation": "restoken",
+      "profile": "rigid_scaffold",
+      "n_requested": 500,
+      "n_parsed": 299,
+      "parse_rate": 0.598,
+      "n_valid": 299,
+      "validity_rate": 1.0,
+      "n_constraint_pass": 269,
+      "constraint_pass_rate": 0.8996655518394648,
+      "n_unique": 298,
+      "uniqueness": 0.9966555183946488,
+      "avg_diversity": 0.8939617583582599
+    },
+    "gemini-2.5-flash|smiles|unconstrained": {
+      "model": "gemini-2.5-flash",
+      "representation": "smiles",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 350,
+      "parse_rate": 0.35
+    },
+    "gemini-2.5-flash|smiles|permeable": {
+      "model": "gemini-2.5-flash",
+      "representation": "smiles",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 546,
+      "parse_rate": 1.092
+    },
+    "gemini-2.5-flash|helm|unconstrained": {
+      "model": "gemini-2.5-flash",
+      "representation": "helm",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 1000,
+      "parse_rate": 1.0
+    },
+    "gemini-2.5-flash|helm|permeable": {
+      "model": "gemini-2.5-flash",
+      "representation": "helm",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 332,
+      "parse_rate": 0.664
+    },
+    "gemini-2.5-pro|restoken|unconstrained": {
+      "model": "gemini-2.5-pro",
+      "representation": "restoken",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 950,
+      "parse_rate": 0.95,
+      "n_valid": 950,
+      "validity_rate": 1.0,
+      "n_constraint_pass": 950,
+      "constraint_pass_rate": 1.0,
+      "n_unique": 929,
+      "uniqueness": 0.9778947368421053,
+      "avg_diversity": 0.9895573645661109
+    },
+    "gemini-2.5-pro|restoken|permeable": {
+      "model": "gemini-2.5-pro",
+      "representation": "restoken",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 500,
+      "parse_rate": 1.0,
+      "n_valid": 500,
+      "validity_rate": 1.0,
+      "n_constraint_pass": 302,
+      "constraint_pass_rate": 0.604,
+      "n_unique": 459,
+      "uniqueness": 0.918,
+      "avg_diversity": 0.9121843171405853
+    },
+    "gemini-2.5-pro|restoken|charged_binder": {
+      "model": "gemini-2.5-pro",
+      "representation": "restoken",
+      "profile": "charged_binder",
+      "n_requested": 500,
+      "n_parsed": 500,
+      "parse_rate": 1.0,
+      "n_valid": 500,
+      "validity_rate": 1.0,
+      "n_constraint_pass": 236,
+      "constraint_pass_rate": 0.472,
+      "n_unique": 497,
+      "uniqueness": 0.994,
+      "avg_diversity": 0.925194485462707
+    },
+    "gemini-2.5-pro|restoken|rigid_scaffold": {
+      "model": "gemini-2.5-pro",
+      "representation": "restoken",
+      "profile": "rigid_scaffold",
+      "n_requested": 500,
+      "n_parsed": 500,
+      "parse_rate": 1.0,
+      "n_valid": 499,
+      "validity_rate": 0.998,
+      "n_constraint_pass": 431,
+      "constraint_pass_rate": 0.8637274549098196,
+      "n_unique": 493,
+      "uniqueness": 0.9879759519038076,
+      "avg_diversity": 0.9027120013125844
+    },
+    "gemini-2.5-pro|smiles|unconstrained": {
+      "model": "gemini-2.5-pro",
+      "representation": "smiles",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 495,
+      "parse_rate": 0.495
+    },
+    "gemini-2.5-pro|smiles|permeable": {
+      "model": "gemini-2.5-pro",
+      "representation": "smiles",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 298,
+      "parse_rate": 0.596
+    },
+    "gemini-2.5-pro|helm|unconstrained": {
+      "model": "gemini-2.5-pro",
+      "representation": "helm",
+      "profile": "unconstrained",
+      "n_requested": 1000,
+      "n_parsed": 900,
+      "parse_rate": 0.9
+    },
+    "gemini-2.5-pro|helm|permeable": {
+      "model": "gemini-2.5-pro",
+      "representation": "helm",
+      "profile": "permeable",
+      "n_requested": 500,
+      "n_parsed": 500,
+      "parse_rate": 1.0
+    }
+  },
+  "enrichment": {
+    "gemini-2.5-flash|permeable": 37.764535667868266,
+    "gemini-2.5-flash|charged_binder": 13.459694667748359,
+    "gemini-2.5-flash|rigid_scaffold": 111.06982121474876,
+    "gemini-2.5-pro|permeable": 29.178743961352655,
+    "gemini-2.5-pro|charged_binder": 25.93406593406593,
+    "gemini-2.5-pro|rigid_scaffold": 106.63301912466909
+  }
+}

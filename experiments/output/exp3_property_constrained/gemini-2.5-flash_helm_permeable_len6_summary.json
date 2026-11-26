@@ -1,0 +1,15 @@
+{
+  "n_parsed": 115,
+  "format_valid": 1.0,
+  "monomers_valid": 0.7217391304347827,
+  "length_valid": 0.991304347826087,
+  "cyclization_valid": 1.0,
+  "overall_valid": 0.7130434782608696,
+  "n_valid": 82,
+  "n_unique": 82,
+  "uniqueness": 1.0,
+  "model": "gemini-2.5-flash",
+  "representation": "helm",
+  "profile": "permeable",
+  "n_requested": 100
+}

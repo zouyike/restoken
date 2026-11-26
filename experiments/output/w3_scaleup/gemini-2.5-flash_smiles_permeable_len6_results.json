@@ -1,0 +1,8 @@
+{
+  "model": "gemini-2.5-flash",
+  "representation": "smiles",
+  "profile": "permeable",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 546
+}

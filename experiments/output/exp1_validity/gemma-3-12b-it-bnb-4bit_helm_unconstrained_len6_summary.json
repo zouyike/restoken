@@ -1,0 +1,17 @@
+{
+  "n_parsed": 239,
+  "format_valid": 1.0,
+  "monomers_valid": 0.7280334728033473,
+  "length_valid": 0.9874476987447699,
+  "cyclization_valid": 1.0,
+  "overall_valid": 0.7280334728033473,
+  "n_valid": 174,
+  "n_unique": 128,
+  "uniqueness": 0.735632183908046,
+  "diversity": {},
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "representation": "helm",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

@@ -1,0 +1,8 @@
+{
+  "model": "gemini-2.5-pro",
+  "representation": "smiles",
+  "profile": "unconstrained",
+  "length": 6,
+  "n_requested": 1000,
+  "n_parsed": 495
+}

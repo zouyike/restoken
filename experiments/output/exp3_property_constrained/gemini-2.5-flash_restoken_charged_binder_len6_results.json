@@ -1,0 +1,1487 @@
+[
+  {
+    "raw": "A98-A98-A11-A11-A11-A13",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A11",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E04",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A16",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 23
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-i01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S12",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 18
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-U02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S25",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S27",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q05",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N15",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N26",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K21",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N48",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N49",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K41",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K42",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A13",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A11",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E04",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A16",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 23
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-i01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S12",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 18
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-U02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S25",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S27",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q05",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N15",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N26",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K21",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N48",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N49",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K41",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K42",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A13",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A14",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A11",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E04",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A16",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-A17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 23
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-i01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-E10",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 19
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-W03",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S12",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 18
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-U02",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S17",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S25",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 3,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-S27",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-Q05",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N15",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N26",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K21",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 20
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N48",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-N49",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K41",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 22
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  },
+  {
+    "raw": "A98-A98-A11-A11-A11-K42",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": true,
+    "length_valid": true,
+    "properties": {
+      "charge": 2,
+      "hbd": 0,
+      "hba": 2,
+      "rot": 21
+    },
+    "overall_valid": true,
+    "constraint_satisfied": false
+  }
+]

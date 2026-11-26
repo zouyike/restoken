@@ -1,0 +1,778 @@
+[
+  {
+    "raw": "K01-K01-F01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-N01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-N01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-F01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-H01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-F01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-H01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-K01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-F01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-H01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-F01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-H01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-F01-K01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-H01-K01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-F01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-H01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-F01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-H01-K01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-N01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-N01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-F01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-H01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-N01-F01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-N01-H01-K01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-F01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-H01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-F01-K01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-H01-K01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-F01-N01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-H01-N01-K01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-F01-K01-H01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01",
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-H01-K01-F01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01",
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-K01-F01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-K01-H01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-N01-F01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-N01-H01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-K01-N01-H01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01",
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-K01-N01-F01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01",
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-F01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-H01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-F01-K01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-H01-K01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-F01-K01-H01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01",
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-H01-K01-F01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01",
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-F01-N01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-H01-N01-K01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-F01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-K01-H01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-N01-F01-K01-H01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01",
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-N01-H01-K01-F01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01",
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-F01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-N01-K01-H01-K01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-F01-N01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "K01-K01-H01-N01-N01-K01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-F01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "F01"
+    ],
+    "overall_valid": false
+  },
+  {
+    "raw": "N01-K01-K01-H01-N01-N01",
+    "n_tokens": 6,
+    "format_valid": true,
+    "id_valid": false,
+    "length_valid": true,
+    "properties": {},
+    "bad_ids": [
+      "H01"
+    ],
+    "overall_valid": false
+  }
+]

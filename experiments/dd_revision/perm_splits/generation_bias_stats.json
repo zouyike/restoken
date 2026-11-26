@@ -1,0 +1,470 @@
+[
+  {
+    "suite": "Task1_unconstrained",
+    "model": "Qwen3.5-9B",
+    "n_valid_seqs": 198,
+    "n_unique_seqs": 193,
+    "n_unique_blocks_used": 283,
+    "library_coverage_pct": 70.75,
+    "shannon_entropy_bits": 7.161,
+    "normalized_entropy": 0.828,
+    "top10_block_share_pct": 34.09,
+    "alpha_pct": 75.3,
+    "beta_pct": 12.0,
+    "gamma_pct": 12.7,
+    "top5_blocks": [
+      [
+        "I02",
+        95
+      ],
+      [
+        "I03",
+        51
+      ],
+      [
+        "I01",
+        50
+      ],
+      [
+        "A01",
+        50
+      ],
+      [
+        "I04",
+        46
+      ]
+    ]
+  },
+  {
+    "suite": "Task1_unconstrained",
+    "model": "gemini-2.5-flash",
+    "n_valid_seqs": 199,
+    "n_unique_seqs": 199,
+    "n_unique_blocks_used": 398,
+    "library_coverage_pct": 99.5,
+    "shannon_entropy_bits": 8.578,
+    "normalized_entropy": 0.992,
+    "top10_block_share_pct": 3.43,
+    "alpha_pct": 61.8,
+    "beta_pct": 24.6,
+    "gamma_pct": 13.6,
+    "top5_blocks": [
+      [
+        "A16",
+        5
+      ],
+      [
+        "A90",
+        4
+      ],
+      [
+        "Q02",
+        4
+      ],
+      [
+        "S17",
+        4
+      ],
+      [
+        "N07",
+        4
+      ]
+    ]
+  },
+  {
+    "suite": "Task1_unconstrained",
+    "model": "gemini-2.5-pro",
+    "n_valid_seqs": 197,
+    "n_unique_seqs": 197,
+    "n_unique_blocks_used": 395,
+    "library_coverage_pct": 98.75,
+    "shannon_entropy_bits": 8.534,
+    "normalized_entropy": 0.987,
+    "top10_block_share_pct": 4.57,
+    "alpha_pct": 60.2,
+    "beta_pct": 27.3,
+    "gamma_pct": 12.5,
+    "top5_blocks": [
+      [
+        "K31",
+        8
+      ],
+      [
+        "E01",
+        6
+      ],
+      [
+        "A11",
+        5
+      ],
+      [
+        "a05",
+        5
+      ],
+      [
+        "A188",
+        5
+      ]
+    ]
+  },
+  {
+    "suite": "Task1_unconstrained",
+    "model": "gemma-3-12b-it-bnb-4bit",
+    "n_valid_seqs": 143,
+    "n_unique_seqs": 80,
+    "n_unique_blocks_used": 314,
+    "library_coverage_pct": 78.5,
+    "shannon_entropy_bits": 8.144,
+    "normalized_entropy": 0.942,
+    "top10_block_share_pct": 4.66,
+    "alpha_pct": 78.7,
+    "beta_pct": 13.2,
+    "gamma_pct": 8.2,
+    "top5_blocks": [
+      [
+        "A01",
+        4
+      ],
+      [
+        "A02",
+        4
+      ],
+      [
+        "A03",
+        4
+      ],
+      [
+        "A04",
+        4
+      ],
+      [
+        "A05",
+        4
+      ]
+    ]
+  },
+  {
+    "suite": "Task1_unconstrained",
+    "model": "gpt-4o",
+    "n_valid_seqs": 157,
+    "n_unique_seqs": 91,
+    "n_unique_blocks_used": 312,
+    "library_coverage_pct": 78.0,
+    "shannon_entropy_bits": 8.137,
+    "normalized_entropy": 0.941,
+    "top10_block_share_pct": 4.25,
+    "alpha_pct": 86.7,
+    "beta_pct": 3.4,
+    "gamma_pct": 9.9,
+    "top5_blocks": [
+      [
+        "A01",
+        4
+      ],
+      [
+        "A02",
+        4
+      ],
+      [
+        "A03",
+        4
+      ],
+      [
+        "A04",
+        4
+      ],
+      [
+        "A05",
+        4
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_random",
+    "model": "charged_binder",
+    "n_valid_seqs": 1000,
+    "n_unique_seqs": 1000,
+    "n_unique_blocks_used": 389,
+    "library_coverage_pct": 97.25,
+    "shannon_entropy_bits": 8.047,
+    "normalized_entropy": 0.931,
+    "top10_block_share_pct": 16.38,
+    "alpha_pct": 63.2,
+    "beta_pct": 27.1,
+    "gamma_pct": 9.6,
+    "top5_blocks": [
+      [
+        "N33",
+        109
+      ],
+      [
+        "U12",
+        109
+      ],
+      [
+        "e06",
+        103
+      ],
+      [
+        "e08",
+        103
+      ],
+      [
+        "N20",
+        99
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_random",
+    "model": "permeable",
+    "n_valid_seqs": 984,
+    "n_unique_seqs": 984,
+    "n_unique_blocks_used": 352,
+    "library_coverage_pct": 88.0,
+    "shannon_entropy_bits": 8.009,
+    "normalized_entropy": 0.927,
+    "top10_block_share_pct": 14.24,
+    "alpha_pct": 69.6,
+    "beta_pct": 20.7,
+    "gamma_pct": 9.7,
+    "top5_blocks": [
+      [
+        "a09",
+        97
+      ],
+      [
+        "a11",
+        90
+      ],
+      [
+        "a25",
+        87
+      ],
+      [
+        "a04",
+        87
+      ],
+      [
+        "a05",
+        84
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_random",
+    "model": "rigid_scaffold",
+    "n_valid_seqs": 995,
+    "n_unique_seqs": 995,
+    "n_unique_blocks_used": 380,
+    "library_coverage_pct": 95.0,
+    "shannon_entropy_bits": 7.827,
+    "normalized_entropy": 0.906,
+    "top10_block_share_pct": 18.06,
+    "alpha_pct": 41.0,
+    "beta_pct": 52.0,
+    "gamma_pct": 7.0,
+    "top5_blocks": [
+      [
+        "n02",
+        158
+      ],
+      [
+        "k02",
+        142
+      ],
+      [
+        "N03",
+        110
+      ],
+      [
+        "K36",
+        105
+      ],
+      [
+        "n01",
+        101
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_random",
+    "model": "unconstrained",
+    "n_valid_seqs": 981,
+    "n_unique_seqs": 981,
+    "n_unique_blocks_used": 399,
+    "library_coverage_pct": 99.75,
+    "shannon_entropy_bits": 8.594,
+    "normalized_entropy": 0.994,
+    "top10_block_share_pct": 4.11,
+    "alpha_pct": 62.9,
+    "beta_pct": 24.6,
+    "gamma_pct": 12.5,
+    "top5_blocks": [
+      [
+        "K38",
+        28
+      ],
+      [
+        "A188",
+        24
+      ],
+      [
+        "I10",
+        24
+      ],
+      [
+        "E06",
+        24
+      ],
+      [
+        "Q02",
+        24
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_restoken",
+    "model": "charged_binder",
+    "n_valid_seqs": 795,
+    "n_unique_seqs": 795,
+    "n_unique_blocks_used": 287,
+    "library_coverage_pct": 71.75,
+    "shannon_entropy_bits": 6.619,
+    "normalized_entropy": 0.766,
+    "top10_block_share_pct": 31.89,
+    "alpha_pct": 68.3,
+    "beta_pct": 28.6,
+    "gamma_pct": 3.1,
+    "top5_blocks": [
+      [
+        "A100",
+        250
+      ],
+      [
+        "A07",
+        208
+      ],
+      [
+        "A02",
+        163
+      ],
+      [
+        "K06",
+        151
+      ],
+      [
+        "A01",
+        146
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_restoken",
+    "model": "permeable",
+    "n_valid_seqs": 724,
+    "n_unique_seqs": 724,
+    "n_unique_blocks_used": 241,
+    "library_coverage_pct": 60.25,
+    "shannon_entropy_bits": 6.302,
+    "normalized_entropy": 0.729,
+    "top10_block_share_pct": 38.95,
+    "alpha_pct": 92.7,
+    "beta_pct": 5.5,
+    "gamma_pct": 1.9,
+    "top5_blocks": [
+      [
+        "a06",
+        261
+      ],
+      [
+        "a05",
+        253
+      ],
+      [
+        "A07",
+        207
+      ],
+      [
+        "a07",
+        171
+      ],
+      [
+        "a08",
+        140
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_restoken",
+    "model": "rigid_scaffold",
+    "n_valid_seqs": 775,
+    "n_unique_seqs": 775,
+    "n_unique_blocks_used": 189,
+    "library_coverage_pct": 47.25,
+    "shannon_entropy_bits": 5.886,
+    "normalized_entropy": 0.681,
+    "top10_block_share_pct": 42.47,
+    "alpha_pct": 32.5,
+    "beta_pct": 60.7,
+    "gamma_pct": 6.7,
+    "top5_blocks": [
+      [
+        "N03",
+        260
+      ],
+      [
+        "k01",
+        236
+      ],
+      [
+        "Q01",
+        232
+      ],
+      [
+        "N04",
+        201
+      ],
+      [
+        "K36",
+        199
+      ]
+    ]
+  },
+  {
+    "suite": "perm_eval_restoken",
+    "model": "unconstrained",
+    "n_valid_seqs": 1875,
+    "n_unique_seqs": 1875,
+    "n_unique_blocks_used": 399,
+    "library_coverage_pct": 99.75,
+    "shannon_entropy_bits": 8.525,
+    "normalized_entropy": 0.986,
+    "top10_block_share_pct": 4.76,
+    "alpha_pct": 55.1,
+    "beta_pct": 29.3,
+    "gamma_pct": 15.6,
+    "top5_blocks": [
+      [
+        "K08",
+        62
+      ],
+      [
+        "a01",
+        55
+      ],
+      [
+        "I02",
+        55
+      ],
+      [
+        "I03",
+        55
+      ],
+      [
+        "I01",
+        53
+      ]
+    ]
+  }
+]

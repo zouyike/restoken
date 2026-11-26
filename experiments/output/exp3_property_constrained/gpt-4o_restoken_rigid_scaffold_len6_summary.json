@@ -1,0 +1,16 @@
+{
+  "n_parsed": 24,
+  "format_valid": 1.0,
+  "id_valid": 1.0,
+  "length_valid": 0.8333333333333334,
+  "overall_valid": 0.8333333333333334,
+  "n_valid": 20,
+  "n_unique": 20,
+  "uniqueness": 1.0,
+  "model": "gpt-4o",
+  "representation": "restoken",
+  "profile": "rigid_scaffold",
+  "n_requested": 100,
+  "constraint_satisfaction": 0.7,
+  "n_constraint_pass": 14
+}

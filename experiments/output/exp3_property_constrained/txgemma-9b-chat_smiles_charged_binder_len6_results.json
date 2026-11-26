@@ -1,0 +1,13 @@
+[
+  {
+    "raw": "C(=O)CC1(OC(=O)C=CC2C=CC=CC=2",
+    "format_valid": true,
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "n_rings": 0,
+    "n_amide": 0,
+    "mw": 0,
+    "n_atoms": 0,
+    "overall_valid": false
+  }
+]

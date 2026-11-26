@@ -1,0 +1,18 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 184,
+  "length_valid": 181,
+  "monomer_parse_valid": 69,
+  "library_match_iso": 66,
+  "library_match_flat": 67,
+  "assembly_valid_any": 69,
+  "task_valid_closed_set": 66,
+  "rate_monomer_parse": 0.375,
+  "rate_library_match_iso": 0.358695652173913,
+  "rate_assembly_any": 0.375,
+  "rate_task_closed_set": 0.358695652173913,
+  "rate_task_closed_set_over_req": 0.33,
+  "model": "Qwen3-32B",
+  "representation": "monomer_smiles",
+  "n_blocks": 400
+}

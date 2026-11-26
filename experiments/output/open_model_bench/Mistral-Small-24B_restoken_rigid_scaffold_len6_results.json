@@ -1,0 +1,15 @@
+{
+  "model": "Mistral-Small-24B",
+  "representation": "restoken",
+  "profile": "rigid_scaffold",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 454,
+  "n_valid": 318,
+  "validity_rate": 0.7004405286343612,
+  "n_constraint_pass": 16,
+  "constraint_pass_rate": 0.050314465408805034,
+  "n_unique": 317,
+  "uniqueness": 0.9968553459119497,
+  "avg_diversity": 0.9007878535458732
+}

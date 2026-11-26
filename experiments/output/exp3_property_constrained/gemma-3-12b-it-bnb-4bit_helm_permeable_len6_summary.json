@@ -1,0 +1,15 @@
+{
+  "n_parsed": 50,
+  "format_valid": 1.0,
+  "monomers_valid": 1.0,
+  "length_valid": 1.0,
+  "cyclization_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 50,
+  "n_unique": 50,
+  "uniqueness": 1.0,
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "representation": "helm",
+  "profile": "permeable",
+  "n_requested": 100
+}

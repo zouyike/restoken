@@ -1,0 +1,10 @@
+{
+  "model": "txgemma-9b-chat",
+  "n_parents": 10,
+  "n_variants_requested": 20,
+  "n_total_variants": 0,
+  "length_match": 0.0,
+  "frozen_compliance": 0.0,
+  "edit_compliance": 0.0,
+  "id_valid": 0.0
+}

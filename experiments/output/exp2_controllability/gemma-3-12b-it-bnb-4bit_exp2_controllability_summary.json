@@ -1,0 +1,10 @@
+{
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "n_parents": 10,
+  "n_variants_requested": 20,
+  "n_total_variants": 200,
+  "length_match": 1.0,
+  "frozen_compliance": 1.0,
+  "edit_compliance": 0.61,
+  "id_valid": 0.91
+}

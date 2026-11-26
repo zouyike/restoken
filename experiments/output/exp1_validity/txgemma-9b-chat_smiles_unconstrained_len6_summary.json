@@ -1,0 +1,9 @@
+{
+  "n_parsed": 0,
+  "diversity": {},
+  "model": "txgemma-9b-chat",
+  "representation": "smiles",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

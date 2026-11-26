@@ -1,0 +1,11 @@
+{
+  "n_parsed": 0,
+  "n_valid": 0,
+  "uniqueness": 0,
+  "n_unique": 0,
+  "model": "txgemma-9b-chat",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

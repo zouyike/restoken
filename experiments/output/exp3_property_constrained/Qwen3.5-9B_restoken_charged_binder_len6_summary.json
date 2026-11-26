@@ -1,0 +1,16 @@
+{
+  "n_parsed": 78,
+  "format_valid": 1.0,
+  "id_valid": 1.0,
+  "length_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 78,
+  "n_unique": 78,
+  "uniqueness": 1.0,
+  "model": "Qwen3.5-9B",
+  "representation": "restoken",
+  "profile": "charged_binder",
+  "n_requested": 100,
+  "constraint_satisfaction": 0.0,
+  "n_constraint_pass": 0
+}

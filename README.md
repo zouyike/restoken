@@ -2,19 +2,26 @@
 
 **Residue-semantic tokenization for LLM-based cyclic peptide design.**
 
-ResToken is a curated library of 400 NCAA (noncanonical amino acid) building blocks encoded as semantic tokens, designed for use with large language models (LLMs) in cyclic peptide design.
+ResToken is a curated library of 400 noncanonical amino acid (NCAA) building blocks encoded as compact semantic tokens, designed for large language model (LLM) cyclic peptide design.
 
 ## Key Features
 
-- **400 building blocks** spanning alpha (250), beta (101), and gamma (49) backbone types
-- **Semantic properties** — each token encodes chirality, charge, backbone type, N-modification, bulk, polarity, flexibility, and functional class
-- **Dual-dictionary architecture** — LLM-safe dictionary (semantic properties only) + backend dictionary (full SMILES, SELFIES, InChIKey)
-- **Constraint validator** — 7 configurable checks guarantee chemically legal sequences
-- **SMILES reconstructor** — convert token sequences to full molecular structures (RDKit-validated)
+- **400 building blocks** spanning alpha (250), beta (101), and gamma (49) backbones; L (292), D (86), and achiral (22) stereochemistry; 353 unmodified (`NO`, uppercase prefix) and 47 N-modified blocks (`NCY` 38, `NXX` 6, `NME` 3; lowercase prefix).
+- **8 semantic properties** exposed to the LLM: functional class, chirality, charge label, backbone type, N-modification status, side-chain bulk, polarity, and flexibility (169 unique 8-property profiles across 400 blocks).
+- **Dual-dictionary architecture**: LLM-facing semantic dictionary (`restoken/data/bb_dict_llm_v11.json`) separated from the structural backend dictionary (`restoken/data/bb_dict_backend_v11.json`, containing amide-capped AA-SMILES, SELFIES, InChIKey, and computed descriptors).
+- **Constraint validator and cyclic assembler**: `SequenceValidator` (7 configurable rules) and `CyclicPeptideAssembler` (RDKit molecular-graph macrocyclization and 3D conformer generation).
 
-## Installation
+## Installation & Environment
+
+Tested with Python 3.11 (compatible with Python >= 3.10). Exact pinned package versions used for all reported results are provided in `requirements.txt` and `environment.yml`.
 
 ```bash
+# Option 1: Conda environment (recommended for full reproduction)
+conda env create -f environment.yml
+conda activate restoken
+
+# Option 2: Pip editable install with pinned dependencies
+pip install -r requirements.txt
 pip install -e .
 ```
 
@@ -23,172 +30,41 @@ pip install -e .
 ```python
 from restoken.src.library import BlockLibrary
 from restoken.src.validator import SequenceValidator
-from restoken.src.reconstructor import SMILESReconstructor
-
-# Load the 400-block library
-lib = BlockLibrary()
-
-# Look up a block
-block = lib.get("A01")
-print(f"{block.id}: {block.mc_type} backbone, {block.chirality} chirality, {block.aa_smiles}")
-
-# Validate a sequence
-validator = SequenceValidator()
-result = validator.validate(["A01", "N15", "s01", "K08", "E09", "U04"])
-
-# Reconstruct SMILES
-recon = SMILESReconstructor()
-info = recon.reconstruct(["A01", "N15", "s01", "K08", "E09", "U04"])
-print(info["residue_smiles"])
-```
-
-## Library Statistics
-
-| Property | Alpha | Beta | Gamma | Total |
-|---|---|---|---|---|
-| Count | 250 | 101 | 49 | **400** |
-| L-chirality | 219 | 44 | 29 | 292 |
-| D-chirality | 19 | 51 | 16 | 86 |
-| Neutral | 215 | 85 | 47 | 347 |
-| N-cyclic | 38 | 4 | 3 | 45 |
-| Functional classes | 18 | 20 | 10 | 21 |
-
-## Benchmark
-
-Zero-shot generation across 5 LLMs (Gemini 2.5 Pro/Flash, GPT-4o, Qwen 3.5 9B, Gemma 3 12B):
-
-- **Validity:** ResToken 90.4% vs SMILES 69.0% vs HELM 84.5%
-- **Frozen compliance:** 100% across all models
-- **Constraint satisfaction:** up to 141x enrichment over random baseline
-
-See `experiments/` for the full benchmark suite.
-
-## Cyclic Peptide Assembly
-
-Convert any ResToken sequence to a macrocyclic peptide SMILES and render 2D structures:
-
-```python
 from restoken.src.cyclic_assembler import CyclicPeptideAssembler
 
+lib = BlockLibrary()
+block = lib.get("A01")
+print(block.id, block.mc_type, block.chirality, block.aa_smiles)
+
+validator = SequenceValidator()
+print(validator.validate(["A01", "N15", "s01", "K08", "E09", "U04"]))
+
 asm = CyclicPeptideAssembler()
-
-# Assemble to SMILES
 smiles = asm.assemble("A09-a31-N03-a01-A05-A06")
-
-# Render 2D structure
-asm.render("A09-a31-N03-a01-A05-A06", "peptide.png")
-
-# Render multiple peptides in a grid
-sequences = ["A01-A09-A03-A07-A05-A06", "A09-a31-N03-a01-A05-A06"]
-asm.render_grid(sequences, "grid.png", cols=2)
-
-# Get aggregate properties
-props = asm.get_properties("A09-a31-N03-a01-A05-A06")
-# {'n_residues': 6, 'net_charge': 0, 'total_hbd': 0, ...}
+print(smiles)
 ```
 
-3D conformer generation (ETKDG with macrocycle torsion sampling + MMFF optimization):
+## Reproducing Manuscript Results
 
-```python
-# Generate 3D structure (SDF, PDB, or MOL)
-result = asm.generate_3d("A09-a31-N03-a01-A05-A06", "peptide.sdf")
-# {'smiles': '...', 'energy': 94.4, 'n_heavy_atoms': 50, ...}
+All benchmark scripts, prompt templates, assembled macrocycle SMILES, and evaluation outputs are organized under `experiments/`:
 
-result = asm.generate_3d("A09-a31-N03-a01-A05-A06", "peptide.pdb", n_confs=100)
-```
-
-CLI usage:
-```bash
-# Render 2D structure
-python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 -o output.png
-
-# Generate 3D conformer
-python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --mode-3d -o output.sdf
-
-# SMILES only
-python -m restoken.src.cyclic_assembler A09-a31-N03-a01-A05-A06 --smiles-only
-```
-
-Supports all 400 block types: alpha/beta/gamma backbones, L/D/achiral chirality, N-methylation (NME), and N-cyclic rings (NCY, proline-like).
-
-## Guideline-Based Generation
-
-Generate cyclic peptides from design guideline files (Markdown with JSON config). Three built-in guidelines cover distinct therapeutic modalities:
-
-| Guideline file | Mode(s) | Design goal |
+| Manuscript Section / Figure | Script | Outputs |
 |---|---|---|
-| `cell_penetrating_cyclic_peptide.md` | `cpp_like` | Arg-rich CPP for endosomal escape |
-| `cell_permeable_cyclic_peptide.md` | `passive_permeable` | Hydrophobic/chameleonic, oral bioavailability |
-| `antibiotic_cyclic_peptide.md` | `cationic_amphipathic`, `broad_spectrum` | Membrane-disrupting antimicrobials |
+| Table 1 & Fig. 2 (Library statistics & chemical space) | `experiments/script/chemical_space_analysis.py`, `experiments/script/plot_figures.py` | `restoken/data/bb_dict_*_v11.json` |
+| Table 2–3 & Fig. 3 (Tasks 1–3 benchmarks & statistics) | `experiments/script/run_benchmark.py`, `experiments/script/w2_summary.py`, `experiments/script/w3_statistical_analysis.py` | `experiments/output/exp1_validity/`, `exp2_controllability/`, `exp3_property_constrained/` |
+| Fig. 4 (Property-specified design demos) | `restoken/examples/alogp_design_demo.py`, `restoken/examples/cpp_design_demo.py` | `restoken/examples/` |
+| Fig. 5 (Independent permeability validation on CycPeptMPDB v1.2) | `experiments/permeability_validation/script/prep_data.py`, `train_perm.py`, `assemble_smiles.py`, `score_generations.py`, `applicability_domain.py` | `experiments/permeability_validation/data/assembled_smiles.csv`, `output/generation_scores.csv`, `output/comparison_stats.json`, `output/applicability_domain.json` |
+| Fig. 6 (Cross-model open-weight LLM replication) | `experiments/script/launch_open_model_bench.py`, `experiments/permeability_validation/script/open_model_score.py` | `experiments/output/open_model_bench/`, `experiments/permeability_validation/output/open_model_scores.csv`, `open_model_perm_stats.json` |
+| Leakage-free splits (Butina cluster & literature source), simple baselines (1-NN, Ridge, RF), PeptideCLM-2 comparison, and library degeneracy/bias analysis | `experiments/dd_revision/perm_splits/prepare_splits_and_baselines.py`, `train_and_score_split.py` | `experiments/dd_revision/perm_splits/` |
+| Fair representation controls (Monomer-SMILES, 8-property matched HELM, TxGemma-9B-Chat) | `experiments/dd_revision/rep_fairness/run_fairness_bench.py` | `experiments/dd_revision/rep_fairness/` |
+| Fine-tuning representation & held-out block addressability grids | `experiments/finetune_representation/` | `experiments/finetune_representation/output/` |
 
-```python
-from restoken.src.guideline_generator import GuidelineGenerator
+### Large Model Checkpoints & External Data
 
-# Cell-penetrating (Arg-rich, cationic)
-gen = GuidelineGenerator("restoken/guidelines/cell_penetrating_cyclic_peptide.md")
-candidates = gen.generate(n=50, mode="cpp_like", ring_size=8, seed=42)
-
-# Cell-permeable (passive, low polarity)
-gen = GuidelineGenerator("restoken/guidelines/cell_permeable_cyclic_peptide.md")
-candidates = gen.generate(n=50, mode="passive_permeable", ring_size=7, seed=42)
-
-# Antibiotic (cationic amphipathic)
-gen = GuidelineGenerator("restoken/guidelines/antibiotic_cyclic_peptide.md")
-candidates = gen.generate(n=50, mode="cationic_amphipathic", ring_size=9, seed=42)
-```
-
-CLI usage:
-```bash
-# Generate candidates
-python -m restoken.src.guideline_generator generate restoken/guidelines/cell_penetrating_cyclic_peptide.md \
-    -n 50 --mode cpp_like --ring-size 8 -o candidates.csv
-
-# Score a sequence
-python -m restoken.src.guideline_generator score restoken/guidelines/cell_penetrating_cyclic_peptide.md \
-    "K06-A09-N20-A10-K08-A05-A97" --mode cpp_like
-
-# Show block classification
-python -m restoken.src.guideline_generator classify restoken/guidelines/cell_penetrating_cyclic_peptide.md
-
-# Build LLM prompt
-python -m restoken.src.guideline_generator prompt restoken/guidelines/cell_penetrating_cyclic_peptide.md \
-    --mode cpp_like -n 20
-```
-
-Custom guidelines: create a new `.md` file in `restoken/guidelines/` following the structure of the included examples. Or skip the file entirely with `GuidelineGenerator.from_params()`.
-
-## Design Demos
-
-### Demo 1: LLM-guided AlogP design
-
-Uses an LLM (Gemini) to generate lipophilic cyclic peptides. See `restoken/examples/alogp_design_demo.py`:
-
-```bash
-export GEMINI_API_KEY=your_key
-python restoken/examples/alogp_design_demo.py --alogp_min 1.5 --alogp_max 3.25
-```
-
-### Demo 2: Guideline-based CPP design
-
-Generates cell-penetrating cyclic peptides via constrained sampling (no API key needed). See `restoken/examples/cpp_design_demo.py`:
-
-```bash
-python restoken/examples/cpp_design_demo.py --ring-size 7 -n 100 --top 6
-```
-
-Pipeline:
-1. **Prompt** an LLM with the ResToken dictionary + property constraints (e.g., AlogP 1.5–3.25)
-2. **Validate** — block IDs checked against the 400-block library (no hallucinated monomers)
-3. **Assemble** — sequences converted to macrocyclic SMILES via RDKit molecular graph operations
-4. **Filter** — compute AlogP/MW/TPSA from the SMILES, select hits
-5. **Render** — 2D ChemDraw-style structures of the final candidates
-
-## Citation
-
-```
-[Manuscript in preparation]
-```
+- **CycPeptMPDB v1.2** (accessed 2026-06-01; 7,451 total cyclic peptides, 6,889 PAMPA-labelled unique RDKit-valid entries after filtering): download `CycPeptMPDB_Peptide_All.csv` from http://cycpeptmpdb.com/ and place under `experiments/permeability_validation/data/`.
+- **Pretrained backbones**: PeptideCLM (`aaronfeller/PeptideCLM-23M-all`) and PeptideCLM-2 (`aaronfeller/peptideclm-2-hybrid-small`) are publicly hosted on Hugging Face.
+- **Fine-tuned permeability predictor checkpoints** (`perm_model.pt`, 169 MB, and leakage-free split checkpoints): archived in the Zenodo release accompanying the manuscript (exceeding GitHub's 100 MB single-file limit).
 
 ## License
 
-MIT
+MIT License. See `LICENSE`.

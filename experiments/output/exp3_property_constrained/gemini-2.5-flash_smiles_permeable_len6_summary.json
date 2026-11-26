@@ -1,0 +1,15 @@
+{
+  "n_parsed": 190,
+  "format_valid": 1.0,
+  "chemical_valid": 0.0,
+  "has_macrocycle": 0.0,
+  "avg_amide_bonds": 0.0,
+  "overall_valid": 0.0,
+  "n_valid": 0,
+  "n_unique": 0,
+  "uniqueness": 0.0,
+  "model": "gemini-2.5-flash",
+  "representation": "smiles",
+  "profile": "permeable",
+  "n_requested": 100
+}

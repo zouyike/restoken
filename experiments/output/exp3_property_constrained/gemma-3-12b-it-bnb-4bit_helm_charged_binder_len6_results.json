@@ -1,0 +1,2552 @@
+[
+  {
+    "raw": "PEPTIDE1{[A01].[A100].[A100].[A01].[A100].[A01]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A01",
+      "A100",
+      "A100",
+      "A01",
+      "A100",
+      "A01"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A03].[A100].[A100].[A03].[A100].[A03]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A03",
+      "A100",
+      "A100",
+      "A03",
+      "A100",
+      "A03"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A04].[A100].[A100].[A04].[A100].[A04]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A04",
+      "A100",
+      "A100",
+      "A04",
+      "A100",
+      "A04"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A09].[A100].[A100].[A09].[A100].[A09]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A09",
+      "A100",
+      "A100",
+      "A09",
+      "A100",
+      "A09"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A10].[A100].[A100].[A10].[A100].[A10]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A10",
+      "A100",
+      "A100",
+      "A10",
+      "A100",
+      "A10"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A02].[A100].[A100].[A02].[A100].[A02]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A02",
+      "A100",
+      "A100",
+      "A02",
+      "A100",
+      "A02"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A05].[A100].[A100].[A05].[A100].[A05]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A05",
+      "A100",
+      "A100",
+      "A05",
+      "A100",
+      "A05"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A06].[A100].[A100].[A06].[A100].[A06]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A06",
+      "A100",
+      "A100",
+      "A06",
+      "A100",
+      "A06"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A11].[A100].[A100].[A11].[A100].[A11]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A11",
+      "A100",
+      "A100",
+      "A11",
+      "A100",
+      "A11"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A12].[A100].[A100].[A12].[A100].[A12]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A12",
+      "A100",
+      "A100",
+      "A12",
+      "A100",
+      "A12"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A07].[A100].[A100].[A07].[A100].[A07]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A07",
+      "A100",
+      "A100",
+      "A07",
+      "A100",
+      "A07"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A08].[A100].[A100].[A08].[A100].[A08]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A08",
+      "A100",
+      "A100",
+      "A08",
+      "A100",
+      "A08"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A101].[A100].[A100].[A101].[A100].[A101]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A101",
+      "A100",
+      "A100",
+      "A101",
+      "A100",
+      "A101"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A102].[A100].[A100].[A102].[A100].[A102]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A102",
+      "A100",
+      "A100",
+      "A102",
+      "A100",
+      "A102"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A103].[A100].[A100].[A103].[A100].[A103]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A103",
+      "A100",
+      "A100",
+      "A103",
+      "A100",
+      "A103"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A104].[A100].[A100].[A104].[A100].[A104]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A104",
+      "A100",
+      "A100",
+      "A104",
+      "A100",
+      "A104"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A105].[A100].[A100].[A105].[A100].[A105]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A105",
+      "A100",
+      "A100",
+      "A105",
+      "A100",
+      "A105"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A106].[A100].[A100].[A106].[A100].[A106]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A106",
+      "A100",
+      "A100",
+      "A106",
+      "A100",
+      "A106"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A107].[A100].[A100].[A107].[A100].[A107]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A107",
+      "A100",
+      "A100",
+      "A107",
+      "A100",
+      "A107"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A115].[A100].[A100].[A115].[A100].[A115]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A115",
+      "A100",
+      "A100",
+      "A115",
+      "A100",
+      "A115"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A116].[A100].[A100].[A116].[A100].[A116]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A116",
+      "A100",
+      "A100",
+      "A116",
+      "A100",
+      "A116"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A117].[A100].[A100].[A117].[A100].[A117]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A117",
+      "A100",
+      "A100",
+      "A117",
+      "A100",
+      "A117"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A118].[A100].[A100].[A118].[A100].[A118]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A118",
+      "A100",
+      "A100",
+      "A118",
+      "A100",
+      "A118"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A119].[A100].[A100].[A119].[A100].[A119]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A119",
+      "A100",
+      "A100",
+      "A119",
+      "A100",
+      "A119"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A120].[A100].[A100].[A120].[A100].[A120]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A120",
+      "A100",
+      "A100",
+      "A120",
+      "A100",
+      "A120"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A121].[A100].[A100].[A121].[A100].[A121]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A121",
+      "A100",
+      "A100",
+      "A121",
+      "A100",
+      "A121"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A122].[A100].[A100].[A122].[A100].[A122]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A122",
+      "A100",
+      "A100",
+      "A122",
+      "A100",
+      "A122"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A123].[A100].[A100].[A123].[A100].[A123]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A123",
+      "A100",
+      "A100",
+      "A123",
+      "A100",
+      "A123"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A124].[A100].[A100].[A124].[A100].[A124]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A124",
+      "A100",
+      "A100",
+      "A124",
+      "A100",
+      "A124"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A125].[A100].[A100].[A125].[A100].[A125]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A125",
+      "A100",
+      "A100",
+      "A125",
+      "A100",
+      "A125"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A126].[A100].[A100].[A126].[A100].[A126]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A126",
+      "A100",
+      "A100",
+      "A126",
+      "A100",
+      "A126"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A127].[A100].[A100].[A127].[A100].[A127]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A127",
+      "A100",
+      "A100",
+      "A127",
+      "A100",
+      "A127"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A128].[A100].[A100].[A128].[A100].[A128]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A128",
+      "A100",
+      "A100",
+      "A128",
+      "A100",
+      "A128"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A129].[A100].[A100].[A129].[A100].[A129]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A129",
+      "A100",
+      "A100",
+      "A129",
+      "A100",
+      "A129"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A130].[A100].[A100].[A130].[A100].[A130]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A130",
+      "A100",
+      "A100",
+      "A130",
+      "A100",
+      "A130"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A131].[A100].[A100].[A131].[A100].[A131]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A131",
+      "A100",
+      "A100",
+      "A131",
+      "A100",
+      "A131"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A133].[A100].[A100].[A133].[A100].[A133]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A133",
+      "A100",
+      "A100",
+      "A133",
+      "A100",
+      "A133"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A134].[A100].[A100].[A134].[A100].[A134]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A134",
+      "A100",
+      "A100",
+      "A134",
+      "A100",
+      "A134"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A135].[A100].[A100].[A135].[A100].[A135]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A135",
+      "A100",
+      "A100",
+      "A135",
+      "A100",
+      "A135"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A136].[A100].[A100].[A136].[A100].[A136]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A136",
+      "A100",
+      "A100",
+      "A136",
+      "A100",
+      "A136"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A137].[A100].[A100].[A137].[A100].[A137]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A137",
+      "A100",
+      "A100",
+      "A137",
+      "A100",
+      "A137"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A138].[A100].[A100].[A138].[A100].[A138]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A138",
+      "A100",
+      "A100",
+      "A138",
+      "A100",
+      "A138"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A139].[A100].[A100].[A139].[A100].[A139]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A139",
+      "A100",
+      "A100",
+      "A139",
+      "A100",
+      "A139"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A140].[A100].[A100].[A140].[A100].[A140]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A140",
+      "A100",
+      "A100",
+      "A140",
+      "A100",
+      "A140"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A141].[A100].[A100].[A141].[A100].[A141]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A141",
+      "A100",
+      "A100",
+      "A141",
+      "A100",
+      "A141"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A142].[A100].[A100].[A142].[A100].[A142]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A142",
+      "A100",
+      "A100",
+      "A142",
+      "A100",
+      "A142"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A143].[A100].[A100].[A143].[A100].[A143]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A143",
+      "A100",
+      "A100",
+      "A143",
+      "A100",
+      "A143"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A144].[A100].[A100].[A144].[A100].[A144]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A144",
+      "A100",
+      "A100",
+      "A144",
+      "A100",
+      "A144"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A145].[A100].[A100].[A145].[A100].[A145]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A145",
+      "A100",
+      "A100",
+      "A145",
+      "A100",
+      "A145"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A146].[A100].[A100].[A146].[A100].[A146]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A146",
+      "A100",
+      "A100",
+      "A146",
+      "A100",
+      "A146"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A147].[A100].[A100].[A147].[A100].[A147]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A147",
+      "A100",
+      "A100",
+      "A147",
+      "A100",
+      "A147"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A148].[A100].[A100].[A148].[A100].[A148]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A148",
+      "A100",
+      "A100",
+      "A148",
+      "A100",
+      "A148"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A149].[A100].[A100].[A149].[A100].[A149]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A149",
+      "A100",
+      "A100",
+      "A149",
+      "A100",
+      "A149"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A150].[A100].[A100].[A150].[A100].[A150]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A150",
+      "A100",
+      "A100",
+      "A150",
+      "A100",
+      "A150"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A151].[A100].[A100].[A151].[A100].[A151]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A151",
+      "A100",
+      "A100",
+      "A151",
+      "A100",
+      "A151"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A152].[A100].[A100].[A152].[A100].[A152]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A152",
+      "A100",
+      "A100",
+      "A152",
+      "A100",
+      "A152"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A153].[A100].[A100].[A153].[A100].[A153]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A153",
+      "A100",
+      "A100",
+      "A153",
+      "A100",
+      "A153"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A154].[A100].[A100].[A154].[A100].[A154]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A154",
+      "A100",
+      "A100",
+      "A154",
+      "A100",
+      "A154"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A155].[A100].[A100].[A155].[A100].[A155]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A155",
+      "A100",
+      "A100",
+      "A155",
+      "A100",
+      "A155"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A156].[A100].[A100].[A156].[A100].[A156]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A156",
+      "A100",
+      "A100",
+      "A156",
+      "A100",
+      "A156"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A157].[A100].[A100].[A157].[A100].[A157]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A157",
+      "A100",
+      "A100",
+      "A157",
+      "A100",
+      "A157"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A158].[A100].[A100].[A158].[A100].[A158]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A158",
+      "A100",
+      "A100",
+      "A158",
+      "A100",
+      "A158"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A159].[A100].[A100].[A159].[A100].[A159]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A159",
+      "A100",
+      "A100",
+      "A159",
+      "A100",
+      "A159"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A162].[A100].[A100].[A162].[A100].[A162]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A162",
+      "A100",
+      "A100",
+      "A162",
+      "A100",
+      "A162"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A163].[A100].[A100].[A163].[A100].[A163]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A163",
+      "A100",
+      "A100",
+      "A163",
+      "A100",
+      "A163"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A164].[A100].[A100].[A164].[A100].[A164]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A164",
+      "A100",
+      "A100",
+      "A164",
+      "A100",
+      "A164"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A165].[A100].[A100].[A165].[A100].[A165]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A165",
+      "A100",
+      "A100",
+      "A165",
+      "A100",
+      "A165"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A166].[A100].[A100].[A166].[A100].[A166]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A166",
+      "A100",
+      "A100",
+      "A166",
+      "A100",
+      "A166"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A167].[A100].[A100].[A167].[A100].[A167]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A167",
+      "A100",
+      "A100",
+      "A167",
+      "A100",
+      "A167"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A168].[A100].[A100].[A168].[A100].[A168]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A168",
+      "A100",
+      "A100",
+      "A168",
+      "A100",
+      "A168"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A169].[A100].[A100].[A169].[A100].[A169]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A169",
+      "A100",
+      "A100",
+      "A169",
+      "A100",
+      "A169"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A170].[A100].[A100].[A170].[A100].[A170]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A170",
+      "A100",
+      "A100",
+      "A170",
+      "A100",
+      "A170"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A171].[A100].[A100].[A171].[A100].[A171]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A171",
+      "A100",
+      "A100",
+      "A171",
+      "A100",
+      "A171"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A172].[A100].[A100].[A172].[A100].[A172]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A172",
+      "A100",
+      "A100",
+      "A172",
+      "A100",
+      "A172"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A173].[A100].[A100].[A173].[A100].[A173]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A173",
+      "A100",
+      "A100",
+      "A173",
+      "A100",
+      "A173"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A174].[A100].[A100].[A174].[A100].[A174]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A174",
+      "A100",
+      "A100",
+      "A174",
+      "A100",
+      "A174"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A175].[A100].[A100].[A175].[A100].[A175]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A175",
+      "A100",
+      "A100",
+      "A175",
+      "A100",
+      "A175"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A176].[A100].[A100].[A176].[A100].[A176]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A176",
+      "A100",
+      "A100",
+      "A176",
+      "A100",
+      "A176"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A177].[A100].[A100].[A177].[A100].[A177]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A177",
+      "A100",
+      "A100",
+      "A177",
+      "A100",
+      "A177"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A178].[A100].[A100].[A178].[A100].[A178]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A178",
+      "A100",
+      "A100",
+      "A178",
+      "A100",
+      "A178"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A179].[A100].[A100].[A179].[A100].[A179]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A179",
+      "A100",
+      "A100",
+      "A179",
+      "A100",
+      "A179"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A186].[A100].[A100].[A186].[A100].[A186]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A186",
+      "A100",
+      "A100",
+      "A186",
+      "A100",
+      "A186"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A187].[A100].[A100].[A187].[A100].[A187]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A187",
+      "A100",
+      "A100",
+      "A187",
+      "A100",
+      "A187"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A188].[A100].[A100].[A188].[A100].[A188]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A188",
+      "A100",
+      "A100",
+      "A188",
+      "A100",
+      "A188"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  },
+  {
+    "raw": "PEPTIDE1{[A190].[A100].[A100].[A190].[A100].[A190]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A190",
+      "A100",
+      "A100",
+      "A190",
+      "A100",
+      "A190"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A190",
+      "A190",
+      "A190"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A191].[A100].[A100].[A191].[A100].[A191]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A191",
+      "A100",
+      "A100",
+      "A191",
+      "A100",
+      "A191"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A191",
+      "A191",
+      "A191"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A192].[A100].[A100].[A192].[A100].[A192]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A192",
+      "A100",
+      "A100",
+      "A192",
+      "A100",
+      "A192"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A192",
+      "A192",
+      "A192"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A193].[A100].[A100].[A193].[A100].[A193]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A193",
+      "A100",
+      "A100",
+      "A193",
+      "A100",
+      "A193"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A193",
+      "A193",
+      "A193"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A194].[A100].[A100].[A194].[A100].[A194]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A194",
+      "A100",
+      "A100",
+      "A194",
+      "A100",
+      "A194"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A194",
+      "A194",
+      "A194"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A195].[A100].[A100].[A195].[A100].[A195]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A195",
+      "A100",
+      "A100",
+      "A195",
+      "A100",
+      "A195"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A195",
+      "A195",
+      "A195"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A196].[A100].[A100].[A196].[A100].[A196]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A196",
+      "A100",
+      "A100",
+      "A196",
+      "A100",
+      "A196"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A196",
+      "A196",
+      "A196"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A197].[A100].[A100].[A197].[A100].[A197]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A197",
+      "A100",
+      "A100",
+      "A197",
+      "A100",
+      "A197"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A197",
+      "A197",
+      "A197"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A198].[A100].[A100].[A198].[A100].[A198]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A198",
+      "A100",
+      "A100",
+      "A198",
+      "A100",
+      "A198"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A198",
+      "A198",
+      "A198"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A199].[A100].[A100].[A199].[A100].[A199]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A199",
+      "A100",
+      "A100",
+      "A199",
+      "A100",
+      "A199"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A199",
+      "A199",
+      "A199"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A200].[A100].[A100].[A200].[A100].[A200]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A200",
+      "A100",
+      "A100",
+      "A200",
+      "A100",
+      "A200"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A200",
+      "A200",
+      "A200"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A201].[A100].[A100].[A201].[A100].[A201]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A201",
+      "A100",
+      "A100",
+      "A201",
+      "A100",
+      "A201"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A201",
+      "A201",
+      "A201"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A202].[A100].[A100].[A202].[A100].[A202]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A202",
+      "A100",
+      "A100",
+      "A202",
+      "A100",
+      "A202"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A202",
+      "A202",
+      "A202"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A203].[A100].[A100].[A203].[A100].[A203]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A203",
+      "A100",
+      "A100",
+      "A203",
+      "A100",
+      "A203"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A203",
+      "A203",
+      "A203"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A204].[A100].[A100].[A204].[A100].[A204]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A204",
+      "A100",
+      "A100",
+      "A204",
+      "A100",
+      "A204"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A204",
+      "A204",
+      "A204"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A205].[A100].[A100].[A205].[A100].[A205]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A205",
+      "A100",
+      "A100",
+      "A205",
+      "A100",
+      "A205"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A205",
+      "A205",
+      "A205"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A206].[A100].[A100].[A206].[A100].[A206]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A206",
+      "A100",
+      "A100",
+      "A206",
+      "A100",
+      "A206"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A206",
+      "A206",
+      "A206"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A207].[A100].[A100].[A207].[A100].[A207]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A207",
+      "A100",
+      "A100",
+      "A207",
+      "A100",
+      "A207"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A207",
+      "A207",
+      "A207"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A208].[A100].[A100].[A208].[A100].[A208]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A208",
+      "A100",
+      "A100",
+      "A208",
+      "A100",
+      "A208"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A208",
+      "A208",
+      "A208"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A209].[A100].[A100].[A209].[A100].[A209]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A209",
+      "A100",
+      "A100",
+      "A209",
+      "A100",
+      "A209"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A209",
+      "A209",
+      "A209"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A210].[A100].[A100].[A210].[A100].[A210]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A210",
+      "A100",
+      "A100",
+      "A210",
+      "A100",
+      "A210"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A210",
+      "A210",
+      "A210"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A211].[A100].[A100].[A211].[A100].[A211]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A211",
+      "A100",
+      "A100",
+      "A211",
+      "A100",
+      "A211"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A211",
+      "A211",
+      "A211"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A212].[A100].[A100].[A212].[A100].[A212]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A212",
+      "A100",
+      "A100",
+      "A212",
+      "A100",
+      "A212"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A212",
+      "A212",
+      "A212"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A213].[A100].[A100].[A213].[A100].[A213]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A213",
+      "A100",
+      "A100",
+      "A213",
+      "A100",
+      "A213"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A213",
+      "A213",
+      "A213"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A214].[A100].[A100].[A214].[A100].[A214]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A214",
+      "A100",
+      "A100",
+      "A214",
+      "A100",
+      "A214"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A214",
+      "A214",
+      "A214"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A215].[A100].[A100].[A215].[A100].[A215]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A215",
+      "A100",
+      "A100",
+      "A215",
+      "A100",
+      "A215"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A215",
+      "A215",
+      "A215"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A216].[A100].[A100].[A216].[A100].[A216]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A216",
+      "A100",
+      "A100",
+      "A216",
+      "A100",
+      "A216"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A216",
+      "A216",
+      "A216"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A217].[A100].[A100].[A217].[A100].[A217]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A217",
+      "A100",
+      "A100",
+      "A217",
+      "A100",
+      "A217"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A217",
+      "A217",
+      "A217"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A218].[A100].[A100].[A218].[A100].[A218]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A218",
+      "A100",
+      "A100",
+      "A218",
+      "A100",
+      "A218"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A218",
+      "A218",
+      "A218"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A219].[A100].[A100].[A219].[A100].[A219]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A219",
+      "A100",
+      "A100",
+      "A219",
+      "A100",
+      "A219"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A219",
+      "A219",
+      "A219"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A220].[A100].[A100].[A220].[A100].[A220]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A220",
+      "A100",
+      "A100",
+      "A220",
+      "A100",
+      "A220"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A220",
+      "A220",
+      "A220"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A221].[A100].[A100].[A221].[A100].[A221]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A221",
+      "A100",
+      "A100",
+      "A221",
+      "A100",
+      "A221"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A221",
+      "A221",
+      "A221"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A222].[A100].[A100].[A222].[A100].[A222]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A222",
+      "A100",
+      "A100",
+      "A222",
+      "A100",
+      "A222"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A222",
+      "A222",
+      "A222"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A223].[A100].[A100].[A223].[A100].[A223]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A223",
+      "A100",
+      "A100",
+      "A223",
+      "A100",
+      "A223"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A223",
+      "A223",
+      "A223"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A224].[A100].[A100].[A224].[A100].[A224]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A224",
+      "A100",
+      "A100",
+      "A224",
+      "A100",
+      "A224"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A224",
+      "A224",
+      "A224"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A225].[A100].[A100].[A225].[A100].[A225]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A225",
+      "A100",
+      "A100",
+      "A225",
+      "A100",
+      "A225"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A225",
+      "A225",
+      "A225"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A226].[A100].[A100].[A226].[A100].[A226]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A226",
+      "A100",
+      "A100",
+      "A226",
+      "A100",
+      "A226"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A226",
+      "A226",
+      "A226"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A227].[A100].[A100].[A227].[A100].[A227]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A227",
+      "A100",
+      "A100",
+      "A227",
+      "A100",
+      "A227"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A227",
+      "A227",
+      "A227"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A228].[A100].[A100].[A228].[A100].[A228]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A228",
+      "A100",
+      "A100",
+      "A228",
+      "A100",
+      "A228"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A228",
+      "A228",
+      "A228"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A229].[A100].[A100].[A229].[A100].[A229]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A229",
+      "A100",
+      "A100",
+      "A229",
+      "A100",
+      "A229"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A229",
+      "A229",
+      "A229"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A230].[A100].[A100].[A230].[A100].[A230]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A230",
+      "A100",
+      "A100",
+      "A230",
+      "A100",
+      "A230"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A230",
+      "A230",
+      "A230"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A231].[A100].[A100].[A231].[A100].[A231]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A231",
+      "A100",
+      "A100",
+      "A231",
+      "A100",
+      "A231"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A231",
+      "A231",
+      "A231"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A232].[A100].[A100].[A232].[A100].[A232]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A232",
+      "A100",
+      "A100",
+      "A232",
+      "A100",
+      "A232"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A232",
+      "A232",
+      "A232"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A233].[A100].[A100].[A233].[A100].[A233]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A233",
+      "A100",
+      "A100",
+      "A233",
+      "A100",
+      "A233"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A233",
+      "A233",
+      "A233"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A234].[A100].[A100].[A234].[A100].[A234]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A234",
+      "A100",
+      "A100",
+      "A234",
+      "A100",
+      "A234"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A234",
+      "A234",
+      "A234"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A235].[A100].[A100].[A235].[A100].[A235]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A235",
+      "A100",
+      "A100",
+      "A235",
+      "A100",
+      "A235"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A235",
+      "A235",
+      "A235"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A236].[A100].[A100].[A236].[A100].[A236]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A236",
+      "A100",
+      "A100",
+      "A236",
+      "A100",
+      "A236"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A236",
+      "A236",
+      "A236"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A237].[A100].[A100].[A237].[A100].[A237]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A237",
+      "A100",
+      "A100",
+      "A237",
+      "A100",
+      "A237"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A237",
+      "A237",
+      "A237"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A238].[A100].[A100].[A238].[A100].[A238]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A238",
+      "A100",
+      "A100",
+      "A238",
+      "A100",
+      "A238"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A238",
+      "A238",
+      "A238"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A239].[A100].[A100].[A239].[A100].[A239]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A239",
+      "A100",
+      "A100",
+      "A239",
+      "A100",
+      "A239"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A239",
+      "A239",
+      "A239"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  },
+  {
+    "raw": "PEPTIDE1{[A240].[A100].[A100].[A240].[A100].[A240]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2",
+    "format_valid": true,
+    "monomers": [
+      "A240",
+      "A100",
+      "A100",
+      "A240",
+      "A100",
+      "A240"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": false,
+    "bad_monomers": [
+      "A240",
+      "A240",
+      "A240"
+    ],
+    "cyclization_valid": true,
+    "overall_valid": false
+  }
+]

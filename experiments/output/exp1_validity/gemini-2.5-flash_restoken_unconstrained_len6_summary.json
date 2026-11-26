@@ -1,0 +1,15 @@
+{
+  "n_parsed": 215,
+  "format_valid": 1.0,
+  "id_valid": 0.986046511627907,
+  "length_valid": 0.9395348837209302,
+  "overall_valid": 0.9255813953488372,
+  "n_valid": 199,
+  "n_unique": 199,
+  "uniqueness": 1.0,
+  "model": "gemini-2.5-flash",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

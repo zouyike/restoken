@@ -1,0 +1,17 @@
+{
+  "n_parsed": 53,
+  "format_valid": 1.0,
+  "monomers_valid": 0.9245283018867925,
+  "length_valid": 1.0,
+  "cyclization_valid": 1.0,
+  "overall_valid": 0.9245283018867925,
+  "n_valid": 49,
+  "n_unique": 46,
+  "uniqueness": 0.9387755102040817,
+  "diversity": {},
+  "model": "Qwen3.5-9B",
+  "representation": "helm",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

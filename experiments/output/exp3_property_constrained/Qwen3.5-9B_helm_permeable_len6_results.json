@@ -1,0 +1,19 @@
+[
+  {
+    "raw": "PEPTIDE1{[A01].[A164].[E07].[K08].[I05].[K04]}$PEPTIDE1,PEPTIDE1,1:R1-6:R2$$$V2.0",
+    "format_valid": true,
+    "monomers": [
+      "A01",
+      "A164",
+      "E07",
+      "K08",
+      "I05",
+      "K04"
+    ],
+    "n_monomers": 6,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true
+  }
+]

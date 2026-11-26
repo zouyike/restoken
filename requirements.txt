@@ -1,0 +1,16 @@
+# Pinned Python dependencies for reproducing ResToken results (Python >= 3.10)
+# Core library, chemistry reconstruction, and statistical analysis
+rdkit==2026.3.1
+numpy==1.26.4
+pandas==3.0.0
+scipy==1.17.0
+scikit-learn==1.8.0
+matplotlib==3.10.8
+
+# Permeability predictor fine-tuning (PeptideCLM / PeptideCLM-2) and local LLM inference
+torch==2.5.1
+transformers==4.48.1
+accelerate==1.6.0
+bitsandbytes==0.49.2
+huggingface-hub>=0.26.0
+safetensors>=0.4.5

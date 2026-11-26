@@ -1,0 +1,16 @@
+{
+  "profile": "rigid_scaffold",
+  "length": 6,
+  "target_n": 1000,
+  "generated": 1000,
+  "attempts": 123202,
+  "acceptance_rate": 0.0081167513514391,
+  "unique": 1000,
+  "elapsed_s": 1.8470218181610107,
+  "diversity": {
+    "mean_tanimoto": 0.2729500246526515,
+    "std_tanimoto": 0.06304949492644388,
+    "mean_distance": 0.7270499753473485,
+    "n_fps": 1000
+  }
+}

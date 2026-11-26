@@ -1,0 +1,15 @@
+{
+  "n_parsed": 10,
+  "format_valid": 1.0,
+  "chemical_valid": 0.0,
+  "has_macrocycle": 0.0,
+  "avg_amide_bonds": 0.0,
+  "overall_valid": 0.0,
+  "n_valid": 0,
+  "n_unique": 0,
+  "uniqueness": 0.0,
+  "model": "Qwen3.5-9B",
+  "representation": "smiles",
+  "profile": "rigid_scaffold",
+  "n_requested": 100
+}

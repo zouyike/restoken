@@ -1,0 +1,15 @@
+{
+  "n_parsed": 1,
+  "format_valid": 1.0,
+  "monomers_valid": 1.0,
+  "length_valid": 1.0,
+  "cyclization_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 1,
+  "n_unique": 1,
+  "uniqueness": 1.0,
+  "model": "Qwen3.5-9B",
+  "representation": "helm",
+  "profile": "charged_binder",
+  "n_requested": 100
+}

@@ -1,0 +1,7 @@
+{
+  "n_parsed": 0,
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "representation": "helm",
+  "profile": "rigid_scaffold",
+  "n_requested": 100
+}

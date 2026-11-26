@@ -1,0 +1,15 @@
+{
+  "n_parsed": 167,
+  "format_valid": 1.0,
+  "id_valid": 0.8562874251497006,
+  "length_valid": 1.0,
+  "overall_valid": 0.8562874251497006,
+  "n_valid": 143,
+  "n_unique": 80,
+  "uniqueness": 0.5594405594405595,
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "model": "Llama-3.3-70B",
+    "n_permeable": 219,
+    "n_unconstrained": 409,
+    "median_permeable": -6.190651893615723,
+    "median_unconstrained": -5.920963764190674,
+    "delta_median": -0.26968812942504883,
+    "cliffs_delta": -0.33278628127407306,
+    "p_one_sided": 0.9999999999969774,
+    "median_diff_95ci": [
+      -0.4210651397705078,
+      -0.1529226303100586
+    ]
+  },
+  {
+    "model": "Mistral-Nemo-12B",
+    "n_permeable": 1,
+    "n_unconstrained": 3,
+    "median_permeable": -7.109325408935547,
+    "median_unconstrained": -5.892847061157227
+  },
+  {
+    "model": "Mistral-Small-24B",
+    "n_permeable": 187,
+    "n_unconstrained": 92,
+    "median_permeable": -6.259425163269043,
+    "median_unconstrained": -5.669194221496582,
+    "delta_median": -0.5902309417724609,
+    "cliffs_delta": -0.6486863520111602,
+    "p_one_sided": 1.0,
+    "median_diff_95ci": [
+      -0.7599139213562012,
+      -0.45070122480392455
+    ]
+  },
+  {
+    "model": "Qwen3-32B",
+    "n_permeable": 293,
+    "n_unconstrained": 227,
+    "median_permeable": -6.30341100692749,
+    "median_unconstrained": -6.030287265777588,
+    "delta_median": -0.27312374114990234,
+    "cliffs_delta": -0.3305167566267234,
+    "p_one_sided": 0.9999999999505008,
+    "median_diff_95ci": [
+      -0.4169675350189209,
+      -0.17448626756668087
+    ]
+  },
+  {
+    "model": "gemma-3-12b-it",
+    "n_permeable": 254,
+    "n_unconstrained": 55,
+    "median_permeable": -5.9918060302734375,
+    "median_unconstrained": -6.269692420959473,
+    "delta_median": 0.27788639068603516,
+    "cliffs_delta": 0.5380100214745884,
+    "p_one_sided": 1.9906545234801484e-10,
+    "median_diff_95ci": [
+      0.20106495618820192,
+      0.4991174221038818
+    ]
+  },
+  {
+    "model": "gemma-3-4b-it",
+    "n_permeable": 179,
+    "n_unconstrained": 105,
+    "median_permeable": -6.188960075378418,
+    "median_unconstrained": -6.237187385559082,
+    "delta_median": 0.04822731018066406,
+    "cliffs_delta": 0.11540303272146847,
+    "p_one_sided": 0.05235147623227616,
+    "median_diff_95ci": [
+      -0.02756977081298828,
+      0.17325448989868164
+    ]
+  }
+]

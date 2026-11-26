@@ -1,0 +1,11 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 200,
+  "parse_valid": 121,
+  "task_valid": 0,
+  "parse_rate": 0.605,
+  "task_rate": 0.0,
+  "model": "txgemma-9b-chat",
+  "representation": "smiles",
+  "n_blocks": 100
+}

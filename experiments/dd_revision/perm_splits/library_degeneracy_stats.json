@@ -1,0 +1,168 @@
+{
+  "n_blocks": 400,
+  "n_mod_counts": {
+    "NO": 353,
+    "NCY": 38,
+    "NXX": 6,
+    "NME": 3
+  },
+  "lowercase_by_nmod": {
+    "lower=False|NO": 353,
+    "lower=True|NCY": 38,
+    "lower=True|NXX": 6,
+    "lower=True|NME": 3
+  },
+  "n_unique_8prop_profiles": 169,
+  "n_singleton_profiles": 83,
+  "n_colliding_profiles": 86,
+  "n_blocks_in_colliding_profiles": 317,
+  "frac_blocks_in_colliding_profiles": 0.7925,
+  "max_cluster_size": 25,
+  "intra_cluster_tanimoto_mean": 0.5195171650802377,
+  "intra_cluster_tanimoto_median": 0.5,
+  "intra_cluster_tanimoto_p10": 0.35054054054054057,
+  "intra_cluster_tanimoto_p90": 0.7142857142857143,
+  "background_pairwise_tanimoto_mean": 0.2948530984183447,
+  "background_pairwise_tanimoto_median": 0.2727272727272727,
+  "top_10_colliding_clusters": [
+    {
+      "profile": "I|L|neu|alpha|NO|large|low|low",
+      "size": 25,
+      "ids_sample": [
+        "A13",
+        "A14",
+        "A15",
+        "A19",
+        "A20",
+        "A21"
+      ],
+      "mean_tanimoto": 0.5406447163565707,
+      "min_tanimoto": 0.3409090909090909
+    },
+    {
+      "profile": "F|L|neu|alpha|NO|large|low|med",
+      "size": 19,
+      "ids_sample": [
+        "A09",
+        "A10",
+        "A139",
+        "A68",
+        "A69",
+        "A70"
+      ],
+      "mean_tanimoto": 0.5885660358768736,
+      "min_tanimoto": 0.42857142857142855
+    },
+    {
+      "profile": "I|L|neu|alpha|NO|large|low|med",
+      "size": 16,
+      "ids_sample": [
+        "A01",
+        "A04",
+        "A37",
+        "A46",
+        "A49",
+        "A50"
+      ],
+      "mean_tanimoto": 0.5332124836184138,
+      "min_tanimoto": 0.32558139534883723
+    },
+    {
+      "profile": "I|L|neu|gamma|NO|small|low|low",
+      "size": 10,
+      "ids_sample": [
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10"
+      ],
+      "mean_tanimoto": 0.3984329773092375,
+      "min_tanimoto": 0.22916666666666666
+    },
+    {
+      "profile": "P|L|neu|alpha|NCY|large|low|low",
+      "size": 10,
+      "ids_sample": [
+        "a05",
+        "a06",
+        "a07",
+        "a08",
+        "a09",
+        "a10"
+      ],
+      "mean_tanimoto": 0.42890415732608256,
+      "min_tanimoto": 0.28
+    },
+    {
+      "profile": "A|L|neu|alpha|NO|small|low|low",
+      "size": 8,
+      "ids_sample": [
+        "A07",
+        "A108",
+        "A112",
+        "A40",
+        "A42",
+        "A43"
+      ],
+      "mean_tanimoto": 0.4913500003482541,
+      "min_tanimoto": 0.4
+    },
+    {
+      "profile": "H|L|neu|alpha|NO|large|low|med",
+      "size": 8,
+      "ids_sample": [
+        "A115",
+        "A116",
+        "A119",
+        "A120",
+        "A121",
+        "A122"
+      ],
+      "mean_tanimoto": 0.5203496039594528,
+      "min_tanimoto": 0.4222222222222222
+    },
+    {
+      "profile": "T|L|neu|alpha|NO|large|high|high",
+      "size": 6,
+      "ids_sample": [
+        "A153",
+        "A154",
+        "A155",
+        "A156",
+        "A160",
+        "A161"
+      ],
+      "mean_tanimoto": 0.45099462078903024,
+      "min_tanimoto": 0.3181818181818182
+    },
+    {
+      "profile": "F|D|neu|gamma|NO|large|low|med",
+      "size": 6,
+      "ids_sample": [
+        "U01",
+        "U04",
+        "U05",
+        "U06",
+        "U11",
+        "U13"
+      ],
+      "mean_tanimoto": 0.39960285595331796,
+      "min_tanimoto": 0.24561403508771928
+    },
+    {
+      "profile": "T|L|neu|alpha|NO|med|low|med",
+      "size": 5,
+      "ids_sample": [
+        "A103",
+        "A104",
+        "A110",
+        "A146",
+        "A148"
+      ],
+      "mean_tanimoto": 0.5159660797160798,
+      "min_tanimoto": 0.3783783783783784
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "n_parsed": 98,
+  "format_valid": 1.0,
+  "id_valid": 1.0,
+  "length_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 98,
+  "n_unique": 98,
+  "uniqueness": 1.0,
+  "model": "gemini-2.5-pro",
+  "representation": "restoken",
+  "profile": "permeable",
+  "n_requested": 100,
+  "constraint_satisfaction": 1.0,
+  "n_constraint_pass": 98
+}

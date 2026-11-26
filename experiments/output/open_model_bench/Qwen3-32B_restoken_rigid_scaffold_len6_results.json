@@ -1,0 +1,15 @@
+{
+  "model": "Qwen3-32B",
+  "representation": "restoken",
+  "profile": "rigid_scaffold",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 500,
+  "n_valid": 421,
+  "validity_rate": 0.842,
+  "n_constraint_pass": 0,
+  "constraint_pass_rate": 0.0,
+  "n_unique": 316,
+  "uniqueness": 0.7505938242280285,
+  "avg_diversity": 0.6998248036382699
+}

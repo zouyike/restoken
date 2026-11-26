@@ -1,0 +1,15 @@
+{
+  "model": "gemma-3-4b-it",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 502,
+  "n_valid": 438,
+  "validity_rate": 0.876,
+  "n_constraint_pass": 438,
+  "constraint_pass_rate": 1.0,
+  "n_unique": 109,
+  "uniqueness": 0.24885844748858446,
+  "avg_diversity": 0.8086991026466605
+}

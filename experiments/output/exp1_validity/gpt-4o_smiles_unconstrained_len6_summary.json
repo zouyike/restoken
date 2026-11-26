@@ -1,0 +1,18 @@
+{
+  "n_parsed": 186,
+  "format_valid": 1.0,
+  "chemical_valid": 0.45161290322580644,
+  "has_macrocycle": 0.1774193548387097,
+  "avg_amide_bonds": 1.5,
+  "overall_valid": 0.45161290322580644,
+  "n_valid": 84,
+  "n_unique": 84,
+  "uniqueness": 1.0,
+  "diversity": {},
+  "model": "gpt-4o",
+  "representation": "smiles",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6,
+  "task_valid": 0.1774193548387097
+}

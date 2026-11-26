@@ -1,0 +1,15 @@
+{
+  "model": "gemini-2.5-pro",
+  "representation": "restoken",
+  "profile": "permeable",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 500,
+  "n_valid": 500,
+  "validity_rate": 1.0,
+  "n_constraint_pass": 302,
+  "constraint_pass_rate": 0.604,
+  "n_unique": 459,
+  "uniqueness": 0.918,
+  "avg_diversity": 0.9121843171405853
+}

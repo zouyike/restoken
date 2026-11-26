@@ -1,0 +1,12 @@
+{
+  "model": "Qwen3.5-9B",
+  "representation": "helm_8prop",
+  "n_blocks": 400,
+  "n_requested": 200,
+  "n_parsed_lines": 200,
+  "overall_valid": 199,
+  "overall_and_cyc_valid": 199,
+  "strict_peptide1_valid": 8,
+  "validity_rate": 0.995,
+  "strict_peptide1_rate": 0.04
+}

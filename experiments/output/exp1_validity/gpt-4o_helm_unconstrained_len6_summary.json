@@ -1,0 +1,17 @@
+{
+  "n_parsed": 195,
+  "format_valid": 1.0,
+  "monomers_valid": 0.8051282051282052,
+  "length_valid": 1.0,
+  "cyclization_valid": 1.0,
+  "overall_valid": 0.8051282051282052,
+  "n_valid": 157,
+  "n_unique": 95,
+  "uniqueness": 0.6050955414012739,
+  "diversity": {},
+  "model": "gpt-4o",
+  "representation": "helm",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

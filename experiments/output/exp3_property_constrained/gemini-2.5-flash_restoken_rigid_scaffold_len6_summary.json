@@ -1,0 +1,16 @@
+{
+  "n_parsed": 107,
+  "format_valid": 1.0,
+  "id_valid": 1.0,
+  "length_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 107,
+  "n_unique": 107,
+  "uniqueness": 1.0,
+  "model": "gemini-2.5-flash",
+  "representation": "restoken",
+  "profile": "rigid_scaffold",
+  "n_requested": 100,
+  "constraint_satisfaction": 0.0,
+  "n_constraint_pass": 0
+}

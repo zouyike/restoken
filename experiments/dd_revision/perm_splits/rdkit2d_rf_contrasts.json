@@ -1,0 +1,174 @@
+{
+  "phys": {
+    "random_charged_binder": {
+      "n": 1000,
+      "mw_med": 885.6,
+      "clogp_med": -5.3,
+      "tpsa_med": 350.4,
+      "hbd_med": 14.0,
+      "hba_med": 15.0,
+      "rot_med": 10.0
+    },
+    "random_permeable": {
+      "n": 984,
+      "mw_med": 821.9,
+      "clogp_med": 1.24,
+      "tpsa_med": 219.2,
+      "hbd_med": 5.0,
+      "hba_med": 10.0,
+      "rot_med": 6.0
+    },
+    "random_rigid_scaffold": {
+      "n": 995,
+      "mw_med": 750.8,
+      "clogp_med": -1.85,
+      "tpsa_med": 236.6,
+      "hbd_med": 7.0,
+      "hba_med": 10.0,
+      "rot_med": 4.0
+    },
+    "random_unconstrained": {
+      "n": 981,
+      "mw_med": 841.9,
+      "clogp_med": -1.18,
+      "tpsa_med": 276.5,
+      "hbd_med": 9.0,
+      "hba_med": 12.0,
+      "rot_med": 9.0
+    },
+    "restoken_charged_binder": {
+      "n": 795,
+      "mw_med": 752.9,
+      "clogp_med": -3.04,
+      "tpsa_med": 272.4,
+      "hbd_med": 8.0,
+      "hba_med": 8.0,
+      "rot_med": 11.0
+    },
+    "restoken_permeable": {
+      "n": 724,
+      "mw_med": 752.7,
+      "clogp_med": 1.64,
+      "tpsa_med": 169.1,
+      "hbd_med": 4.0,
+      "hba_med": 7.0,
+      "rot_med": 4.0
+    },
+    "restoken_rigid_scaffold": {
+      "n": 775,
+      "mw_med": 638.8,
+      "clogp_med": -0.13,
+      "tpsa_med": 174.6,
+      "hbd_med": 5.0,
+      "hba_med": 6.0,
+      "rot_med": 1.0
+    },
+    "restoken_unconstrained": {
+      "n": 1875,
+      "mw_med": 826.8,
+      "clogp_med": -2.12,
+      "tpsa_med": 279.2,
+      "hbd_med": 8.0,
+      "hba_med": 12.0,
+      "rot_med": 8.0
+    }
+  },
+  "contrasts": {
+    "random": {
+      "gem_perm_vs_unc": {
+        "delta": 0.813,
+        "p": 5.2480799604962315e-99
+      },
+      "gem_perm_vs_rnd_perm": {
+        "delta": 0.244,
+        "p": 9.013743242988574e-12
+      },
+      "open_models": {
+        "Llama-3.3-70B": {
+          "delta": 1.244,
+          "p": 3.210238487034096e-52
+        },
+        "Mistral-Small-24B": {
+          "delta": 0.267,
+          "p": 0.07247403110124837
+        },
+        "Qwen3-32B": {
+          "delta": 0.577,
+          "p": 3.2089077129453403e-11
+        },
+        "gemma-3-12b-it": {
+          "delta": 0.646,
+          "p": 0.0006820546844766237
+        },
+        "gemma-3-4b-it": {
+          "delta": -0.405,
+          "p": 0.5101498735874863
+        }
+      }
+    },
+    "cluster": {
+      "gem_perm_vs_unc": {
+        "delta": 0.719,
+        "p": 2.513788580439502e-86
+      },
+      "gem_perm_vs_rnd_perm": {
+        "delta": 0.221,
+        "p": 2.2470895587444487e-09
+      },
+      "open_models": {
+        "Llama-3.3-70B": {
+          "delta": 1.731,
+          "p": 1.4696841737441022e-52
+        },
+        "Mistral-Small-24B": {
+          "delta": 0.066,
+          "p": 0.15376802193731187
+        },
+        "Qwen3-32B": {
+          "delta": 0.223,
+          "p": 0.00012338575980515225
+        },
+        "gemma-3-12b-it": {
+          "delta": 0.596,
+          "p": 0.001015389027324541
+        },
+        "gemma-3-4b-it": {
+          "delta": -0.093,
+          "p": 0.6222226465173455
+        }
+      }
+    },
+    "source": {
+      "gem_perm_vs_unc": {
+        "delta": 0.099,
+        "p": 0.04487132297589176
+      },
+      "gem_perm_vs_rnd_perm": {
+        "delta": -0.088,
+        "p": 0.9999987894323242
+      },
+      "open_models": {
+        "Llama-3.3-70B": {
+          "delta": 0.524,
+          "p": 1.9666233988052986e-20
+        },
+        "Mistral-Small-24B": {
+          "delta": -0.221,
+          "p": 0.9651862697685466
+        },
+        "Qwen3-32B": {
+          "delta": 0.555,
+          "p": 3.274801572490898e-09
+        },
+        "gemma-3-12b-it": {
+          "delta": -0.029,
+          "p": 0.32442414205667214
+        },
+        "gemma-3-4b-it": {
+          "delta": -0.006,
+          "p": 0.27944667303267734
+        }
+      }
+    }
+  }
+}

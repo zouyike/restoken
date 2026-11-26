@@ -1,0 +1,15 @@
+{
+  "n_parsed": 256,
+  "format_valid": 1.0,
+  "id_valid": 0.7734375,
+  "length_valid": 0.8828125,
+  "overall_valid": 0.7734375,
+  "n_valid": 198,
+  "n_unique": 193,
+  "uniqueness": 0.9747474747474747,
+  "model": "Qwen3.5-9B",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6
+}

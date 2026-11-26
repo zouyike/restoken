@@ -1,0 +1,11 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 0,
+  "overall_valid": 0,
+  "overall_and_cyc_valid": 0,
+  "validity_rate": 0.0,
+  "validity_and_cyc_rate": 0.0,
+  "model": "txgemma-9b-chat",
+  "representation": "helm_8prop",
+  "n_blocks": 100
+}

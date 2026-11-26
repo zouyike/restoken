@@ -1,0 +1,15 @@
+{
+  "model": "Mistral-Nemo-12B",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 101,
+  "n_valid": 4,
+  "validity_rate": 0.039603960396039604,
+  "n_constraint_pass": 4,
+  "constraint_pass_rate": 1.0,
+  "n_unique": 3,
+  "uniqueness": 0.75,
+  "avg_diversity": 0.683982683982684
+}

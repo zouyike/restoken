@@ -1,0 +1,243 @@
+{
+  "n_blocks": 400,
+  "n_peptides": {
+    "random_all": 5000,
+    "constrained_safe": 3000,
+    "canonical_only": 3000
+  },
+  "random_all": {
+    "MW": {
+      "min": 572.332233128,
+      "max": 1609.6562117960887,
+      "mean": 990.2737538582207,
+      "median": 982.5316612
+    },
+    "cLogP": {
+      "min": -23.895000000000014,
+      "max": 12.122639999999988,
+      "mean": -2.1593698040000033,
+      "median": -1.7781999999999913
+    },
+    "TPSA": {
+      "min": 148.23,
+      "max": 920.1800000000004,
+      "mean": 346.88883400000105,
+      "median": 329.7899999999999
+    },
+    "HBD": {
+      "min": 3,
+      "max": 38,
+      "mean": 11.3986
+    },
+    "RotBonds": {
+      "min": 0,
+      "max": 29,
+      "mean": 10.704
+    },
+    "Fsp3": {
+      "min": 0.1935483870967742,
+      "max": 0.8823529411764706,
+      "mean": 0.628003008971591
+    }
+  },
+  "constrained_safe": {
+    "MW": {
+      "min": 516.269632872,
+      "max": 1362.6782250560896,
+      "mean": 922.9483329687421,
+      "median": 918.5771140520901
+    },
+    "cLogP": {
+      "min": -8.537000000000015,
+      "max": 10.2185,
+      "mean": 0.9245038000000031,
+      "median": 1.0244200000000099
+    },
+    "TPSA": {
+      "min": 148.23,
+      "max": 456.13999999999993,
+      "mean": 263.1038066666666,
+      "median": 260.10999999999996
+    },
+    "HBD": {
+      "min": 3,
+      "max": 16,
+      "mean": 8.206333333333333
+    },
+    "RotBonds": {
+      "min": 0,
+      "max": 24,
+      "mean": 9.969333333333333
+    },
+    "Fsp3": {
+      "min": 0.2926829268292683,
+      "max": 0.8823529411764706,
+      "mean": 0.6471203014496073
+    }
+  },
+  "canonical_only": {
+    "MW": {
+      "min": 593.27102984,
+      "max": 1616.4326798559985,
+      "mean": 1037.6224355235524,
+      "median": 1035.58734438809
+    },
+    "cLogP": {
+      "min": -19.893999999999977,
+      "max": 13.644199999999978,
+      "mean": -1.3338277133333338,
+      "median": -1.1272600000000117
+    },
+    "TPSA": {
+      "min": 174.6,
+      "max": 882.3700000000003,
+      "mean": 359.19523999999916,
+      "median": 343.37999999999994
+    },
+    "HBD": {
+      "min": 6,
+      "max": 33,
+      "mean": 12.072
+    },
+    "RotBonds": {
+      "min": 1,
+      "max": 43,
+      "mean": 13.486
+    },
+    "Fsp3": {
+      "min": 0.24285714285714285,
+      "max": 0.8823529411764706,
+      "mean": 0.6193501527970836
+    }
+  },
+  "known_drugs": [
+    {
+      "name": "Daptomycin-core",
+      "MW": 1620.7
+    },
+    {
+      "name": "Lorlatinib",
+      "MW": 434.21180432400007,
+      "cLogP": 3.7195800000000014,
+      "TPSA": 91.71000000000001,
+      "HBD": 1,
+      "HBA": 6,
+      "RotBonds": 3,
+      "Fsp3": 0.4,
+      "NumRings": 4,
+      "HeavyAtoms": 32,
+      "NumHeteroAtoms": 7
+    },
+    {
+      "name": "Voclosporin",
+      "MW": 1214.6
+    },
+    {
+      "name": "Romidepsin",
+      "MW": 540.207626872,
+      "cLogP": 1.4296000000000006,
+      "TPSA": 142.7,
+      "HBD": 4,
+      "HBA": 8,
+      "RotBonds": 2,
+      "Fsp3": 0.625,
+      "NumRings": 2,
+      "HeavyAtoms": 36,
+      "NumHeteroAtoms": 12
+    },
+    {
+      "name": "Zilucoplan",
+      "MW": 3562.0
+    },
+    {
+      "name": "Pasireotide",
+      "MW": 1046.501423692,
+      "cLogP": 3.3685000000000107,
+      "TPSA": 281.2,
+      "HBD": 9,
+      "HBA": 11,
+      "RotBonds": 17,
+      "Fsp3": 0.3275862068965517,
+      "NumRings": 8,
+      "HeavyAtoms": 77,
+      "NumHeteroAtoms": 19
+    },
+    {
+      "name": "Linaclotide",
+      "MW": 1526.7
+    },
+    {
+      "name": "Griselimycin",
+      "MW": 1112.720918512,
+      "cLogP": 2.2607000000000053,
+      "TPSA": 255.76999999999998,
+      "HBD": 3,
+      "HBA": 12,
+      "RotBonds": 12,
+      "Fsp3": 0.8070175438596491,
+      "NumRings": 4,
+      "HeavyAtoms": 79,
+      "NumHeteroAtoms": 22
+    },
+    {
+      "name": "Lanreotide",
+      "MW": 1095.4670294079997,
+      "cLogP": 0.8215999999999999,
+      "TPSA": 355.08,
+      "HBD": 13,
+      "HBA": 14,
+      "RotBonds": 17,
+      "Fsp3": 0.4074074074074074,
+      "NumRings": 6,
+      "HeavyAtoms": 77,
+      "NumHeteroAtoms": 23
+    },
+    {
+      "name": "Octreotide",
+      "MW": 1018.4404803120002,
+      "cLogP": -0.8053999999999939,
+      "TPSA": 332.22,
+      "HBD": 13,
+      "HBA": 14,
+      "RotBonds": 17,
+      "Fsp3": 0.4489795918367347,
+      "NumRings": 5,
+      "HeavyAtoms": 71,
+      "NumHeteroAtoms": 22
+    },
+    {
+      "name": "Bremelanotide",
+      "MW": 1024.524284376,
+      "cLogP": -0.6490000000000122,
+      "TPSA": 378.9699999999999,
+      "HBD": 13,
+      "HBA": 11,
+      "RotBonds": 17,
+      "Fsp3": 0.46,
+      "NumRings": 5,
+      "HeavyAtoms": 74,
+      "NumHeteroAtoms": 24
+    },
+    {
+      "name": "Setmelanotide",
+      "MW": 1116.485807756,
+      "cLogP": -3.1754000000000193,
+      "TPSA": 449.15999999999997,
+      "HBD": 15,
+      "HBA": 14,
+      "RotBonds": 18,
+      "Fsp3": 0.42857142857142855,
+      "NumRings": 5,
+      "HeavyAtoms": 78,
+      "NumHeteroAtoms": 29
+    },
+    {
+      "name": "Pegcetacoplan",
+      "MW": 1750.0
+    },
+    {
+      "name": "Alisporivir",
+      "MW": 1216.6
+    }
+  ]
+}

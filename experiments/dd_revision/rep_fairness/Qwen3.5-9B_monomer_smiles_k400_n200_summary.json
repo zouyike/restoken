@@ -1,0 +1,18 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 188,
+  "length_valid": 188,
+  "monomer_parse_valid": 154,
+  "library_match_iso": 144,
+  "library_match_flat": 146,
+  "assembly_valid_any": 151,
+  "task_valid_closed_set": 144,
+  "rate_monomer_parse": 0.8191489361702128,
+  "rate_library_match_iso": 0.7659574468085106,
+  "rate_assembly_any": 0.8031914893617021,
+  "rate_task_closed_set": 0.7659574468085106,
+  "rate_task_closed_set_over_req": 0.72,
+  "model": "Qwen3.5-9B",
+  "representation": "monomer_smiles",
+  "n_blocks": 400
+}

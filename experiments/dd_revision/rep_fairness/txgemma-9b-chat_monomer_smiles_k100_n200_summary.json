@@ -1,0 +1,18 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 117,
+  "length_valid": 114,
+  "monomer_parse_valid": 33,
+  "library_match_iso": 13,
+  "library_match_flat": 15,
+  "assembly_valid_any": 27,
+  "task_valid_closed_set": 13,
+  "rate_monomer_parse": 0.28205128205128205,
+  "rate_library_match_iso": 0.1111111111111111,
+  "rate_assembly_any": 0.23076923076923078,
+  "rate_task_closed_set": 0.1111111111111111,
+  "rate_task_closed_set_over_req": 0.065,
+  "model": "txgemma-9b-chat",
+  "representation": "monomer_smiles",
+  "n_blocks": 100
+}

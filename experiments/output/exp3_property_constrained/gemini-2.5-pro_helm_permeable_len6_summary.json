@@ -1,0 +1,15 @@
+{
+  "n_parsed": 100,
+  "format_valid": 1.0,
+  "monomers_valid": 1.0,
+  "length_valid": 1.0,
+  "cyclization_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 100,
+  "n_unique": 100,
+  "uniqueness": 1.0,
+  "model": "gemini-2.5-pro",
+  "representation": "helm",
+  "profile": "permeable",
+  "n_requested": 100
+}

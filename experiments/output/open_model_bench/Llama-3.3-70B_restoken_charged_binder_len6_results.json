@@ -1,0 +1,14 @@
+{
+  "model": "Llama-3.3-70B",
+  "representation": "restoken",
+  "profile": "charged_binder",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 370,
+  "n_valid": 0,
+  "validity_rate": 0.0,
+  "n_constraint_pass": 0,
+  "constraint_pass_rate": 0.0,
+  "n_unique": 0,
+  "uniqueness": 0.0
+}

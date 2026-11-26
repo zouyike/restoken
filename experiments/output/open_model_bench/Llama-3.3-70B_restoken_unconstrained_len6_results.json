@@ -1,0 +1,15 @@
+{
+  "model": "Llama-3.3-70B",
+  "representation": "restoken",
+  "profile": "unconstrained",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 571,
+  "n_valid": 132,
+  "validity_rate": 0.264,
+  "n_constraint_pass": 132,
+  "constraint_pass_rate": 1.0,
+  "n_unique": 128,
+  "uniqueness": 0.9696969696969697,
+  "avg_diversity": 0.7479054117095327
+}

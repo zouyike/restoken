@@ -1,0 +1,18 @@
+{
+  "n_parsed": 395,
+  "format_valid": 1.0,
+  "chemical_valid": 0.369620253164557,
+  "has_macrocycle": 0.007594936708860759,
+  "avg_amide_bonds": 2.1,
+  "overall_valid": 0.369620253164557,
+  "n_valid": 146,
+  "n_unique": 107,
+  "uniqueness": 0.7328767123287672,
+  "diversity": {},
+  "model": "gemini-2.5-flash",
+  "representation": "smiles",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6,
+  "task_valid": 0.007594936708860759
+}

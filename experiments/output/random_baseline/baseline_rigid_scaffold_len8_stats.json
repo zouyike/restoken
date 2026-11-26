@@ -1,0 +1,11 @@
+{
+  "profile": "rigid_scaffold",
+  "length": 8,
+  "target_n": 1000,
+  "generated": 0,
+  "attempts": 1000000,
+  "acceptance_rate": 0.0,
+  "unique": 0,
+  "elapsed_s": 16.386762619018555,
+  "diversity": {}
+}

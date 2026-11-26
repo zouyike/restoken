@@ -1,0 +1,7 @@
+{
+  "n_parsed": 0,
+  "model": "txgemma-9b-chat",
+  "representation": "helm",
+  "profile": "rigid_scaffold",
+  "n_requested": 100
+}

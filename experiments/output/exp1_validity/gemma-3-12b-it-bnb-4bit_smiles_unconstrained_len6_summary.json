@@ -1,0 +1,18 @@
+{
+  "n_parsed": 256,
+  "format_valid": 1.0,
+  "chemical_valid": 0.921875,
+  "has_macrocycle": 0.0,
+  "avg_amide_bonds": 5.0,
+  "overall_valid": 0.921875,
+  "n_valid": 236,
+  "n_unique": 74,
+  "uniqueness": 0.3135593220338983,
+  "diversity": {},
+  "model": "gemma-3-12b-it-bnb-4bit",
+  "representation": "smiles",
+  "profile": "unconstrained",
+  "n_requested": 200,
+  "length": 6,
+  "task_valid": 0.0
+}

@@ -1,0 +1,16 @@
+{
+  "profile": "charged_binder",
+  "length": 6,
+  "target_n": 1000,
+  "generated": 1000,
+  "attempts": 54894,
+  "acceptance_rate": 0.01821692716872518,
+  "unique": 1000,
+  "elapsed_s": 0.8091495037078857,
+  "diversity": {
+    "mean_tanimoto": 0.27631251112519967,
+    "std_tanimoto": 0.06498114073584839,
+    "mean_distance": 0.7236874888748004,
+    "n_fps": 1000
+  }
+}

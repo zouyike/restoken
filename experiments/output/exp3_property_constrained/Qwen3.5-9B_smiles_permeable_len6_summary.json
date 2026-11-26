@@ -1,0 +1,15 @@
+{
+  "n_parsed": 53,
+  "format_valid": 1.0,
+  "chemical_valid": 1.0,
+  "has_macrocycle": 0.0,
+  "avg_amide_bonds": 4.0,
+  "overall_valid": 1.0,
+  "n_valid": 53,
+  "n_unique": 1,
+  "uniqueness": 0.018867924528301886,
+  "model": "Qwen3.5-9B",
+  "representation": "smiles",
+  "profile": "permeable",
+  "n_requested": 100
+}

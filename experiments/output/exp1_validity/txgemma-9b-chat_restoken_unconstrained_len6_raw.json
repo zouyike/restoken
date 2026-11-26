@@ -1,0 +1,22 @@
+[
+  {
+    "batch": 1,
+    "raw": "'\n&lt;E\n\nIt appears to be empty.",
+    "elapsed": 13.757645606994629
+  },
+  {
+    "batch": 2,
+    "raw": "\"Hello\n\n&nbsp;A0-22\n\n&nbsp;",
+    "elapsed": 5.488621711730957
+  },
+  {
+    "batch": 3,
+    "raw": "'\n&pbend\n",
+    "elapsed": 5.0800323486328125
+  },
+  {
+    "batch": 4,
+    "raw": "\n\n\n\n&nbsp; &quot;\n\nPlease provide the '\n\nPlease provide\n",
+    "elapsed": 5.498476266860962
+  }
+]

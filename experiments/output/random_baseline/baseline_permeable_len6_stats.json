@@ -1,0 +1,16 @@
+{
+  "profile": "permeable",
+  "length": 6,
+  "target_n": 1000,
+  "generated": 1000,
+  "attempts": 48237,
+  "acceptance_rate": 0.02073097414847524,
+  "unique": 1000,
+  "elapsed_s": 0.7267100811004639,
+  "diversity": {
+    "mean_tanimoto": 0.27531127076301437,
+    "std_tanimoto": 0.0603461633988761,
+    "mean_distance": 0.7246887292369857,
+    "n_fps": 1000
+  }
+}

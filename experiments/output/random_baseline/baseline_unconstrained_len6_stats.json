@@ -1,0 +1,16 @@
+{
+  "profile": "unconstrained",
+  "length": 6,
+  "target_n": 1000,
+  "generated": 1000,
+  "attempts": 1000,
+  "acceptance_rate": 1.0,
+  "unique": 1000,
+  "elapsed_s": 0.01539301872253418,
+  "diversity": {
+    "mean_tanimoto": 0.23841803857963736,
+    "std_tanimoto": 0.05353729220976383,
+    "mean_distance": 0.7615819614203626,
+    "n_fps": 1000
+  }
+}

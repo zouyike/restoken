@@ -1,0 +1,15 @@
+{
+  "model": "gemma-3-12b-it",
+  "representation": "restoken",
+  "profile": "charged_binder",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 465,
+  "n_valid": 437,
+  "validity_rate": 0.9397849462365592,
+  "n_constraint_pass": 0,
+  "constraint_pass_rate": 0.0,
+  "n_unique": 38,
+  "uniqueness": 0.08695652173913043,
+  "avg_diversity": 0.31335276967930537
+}

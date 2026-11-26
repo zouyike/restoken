@@ -1,0 +1,15 @@
+{
+  "model": "gemini-2.5-flash",
+  "representation": "restoken",
+  "profile": "permeable",
+  "length": 6,
+  "n_requested": 500,
+  "n_parsed": 396,
+  "n_valid": 394,
+  "validity_rate": 0.9949494949494949,
+  "n_constraint_pass": 308,
+  "constraint_pass_rate": 0.7817258883248731,
+  "n_unique": 369,
+  "uniqueness": 0.9365482233502538,
+  "avg_diversity": 0.9014626733810407
+}

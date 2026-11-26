@@ -1,0 +1,10 @@
+{
+  "model": "Qwen3.5-9B",
+  "n_parents": 10,
+  "n_variants_requested": 20,
+  "n_total_variants": 200,
+  "length_match": 1.0,
+  "frozen_compliance": 0.2,
+  "edit_compliance": 0.41,
+  "id_valid": 1.0
+}

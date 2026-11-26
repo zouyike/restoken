@@ -1,0 +1,9 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 200,
+  "overall_valid": 197,
+  "validity_rate": 0.985,
+  "model": "txgemma-9b-chat",
+  "representation": "restoken",
+  "n_blocks": 100
+}

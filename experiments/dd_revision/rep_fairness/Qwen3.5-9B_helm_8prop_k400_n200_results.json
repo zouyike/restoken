@@ -1,0 +1,74 @@
+[
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  },
+  {
+    "raw": "PEPTIDE1{[A01].[A02].[A03].[A04].[A05].[A06]}$PEPTIDE1,PEPTIDE1,6:R2-1:R1$$$V2.0",
+    "format_valid": true,
+    "length_valid": true,
+    "monomers_valid": true,
+    "cyclization_valid": true,
+    "overall_valid": true,
+    "n_monomers": 6
+  }
+]

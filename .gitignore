@@ -10,5 +10,18 @@ build/
 manuscript/
 Lab_Notebook/
 references/
-experiments/output/
 experiments/jobs/
+
+# Large model weights, Slurm logs, and third-party external datasets
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.log
+*.out
+experiments/permeability_validation/model/
+experiments/permeability_validation/data/CycPeptMPDB_Peptide_All.csv
+experiments/dd_revision/models/
+experiments/dd_revision/perm_splits/jobs/
+experiments/dd_revision/rep_fairness/jobs/
+*watchdog*.py

@@ -1,0 +1,16 @@
+{
+  "n_parsed": 92,
+  "format_valid": 1.0,
+  "id_valid": 1.0,
+  "length_valid": 1.0,
+  "overall_valid": 1.0,
+  "n_valid": 92,
+  "n_unique": 90,
+  "uniqueness": 0.9782608695652174,
+  "model": "gpt-4o",
+  "representation": "restoken",
+  "profile": "permeable",
+  "n_requested": 100,
+  "constraint_satisfaction": 0.30434782608695654,
+  "n_constraint_pass": 28
+}

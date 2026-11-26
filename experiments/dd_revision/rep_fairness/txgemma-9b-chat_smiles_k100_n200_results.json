@@ -1,0 +1,1202 @@
+[
+  {
+    "raw": "C(O)(=O)C=CC1C=CC=CC=1.CC1C=CC(S(O)(=O)=O)=CC=1.CC1C=CC(S(O)(=O)=O)=CC=1.O=C1C2C(=CC=C(C3NC4(C5NC(=O)C(C4)C3=O)CCC5)C=2)NC(=O)N1.CC(O)C(=O)OC(C)(C)C.C([C@@H]1[C@H](N)C(=O)N2C(C[C@@H](N3CCCCC3)N2)=C1)(C)(C)C.CNC(=O)[C@H](O)[C@H](NC(=O)OC(C)(C)C)C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=CC=1.CNC(=O)[C@H](CCCC)NC(=O)C(C)=C.CNC(=O)[C@H](CCCC)NC(=O)C(C)=C.CNC(=O)[C@H](CCCC)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=CC=1.CNC(=O)[C@H](CC(O)=O)NC(=O)C(C)=C.CNC(=O)[C@H](CC(O)=O)NC(=O)C(C)=C.CNC(=O)[C@H](CC(O)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(O)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(O)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(O)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(O)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=O)C1C=CC=C(C(C)(C)C)C=1.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@H](C(=O)NCCC(C(C)(C)C)=O)NC(=O)C(C)=C.CNC(=O)[C@@H](NC(C)=",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(=O)C(O)=CC(NCC(O)=O)=C(O)C3=O)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC(CN4CCOCC4)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(O)C(N)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(Cl)C=C(Cl)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(Cl)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC(CN4CCOCC4)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3Cl)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=C(Cl)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(CN4CCOCC4)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC(CN4CCOCC4)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(Cl)C(N)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3Cl)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3CN4CCOCC4)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(CN4CCOCC4)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(Cl)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3CN4CCOCC4)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=C(C)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC(C#N)=C(O)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC(CN4CCOCC4)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC=C(Cl)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=C(CN4CCOCC4)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3CN4CCOCC4)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(C)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(Cl)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(Cl)C=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3Cl)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(O)=CC=C(N)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=CC(CN4CCOCC4)=CC=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=C(CN4CCOCC4)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C(N)=CC=CC=3Cl)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(=O)C(C1NC2C=CC(NC3C=C(N)C=C(C)C=3)=CC=2C=1)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)CCCCCCC(N)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC(C(O)=O)CNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC1(C)CCCC1(N)CNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CCCCCC(N)(=O)CNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@@H](N)C1C(=CC=CC=1)C1(N)CCCC1",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@@H](N)C1C(=CC=CC=1)C=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@H](N)C1C(=CC=CC=1)C=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC(O)C(O)CNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC(C)C(NC1C=CC=CC=1)NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)CCCCCC(N)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC1C=CC(N)=CC=1NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC1(N)CCCC1C1(N)CCCC1NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@@H](N)C1C(=CC=CC=1)C(N)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC(C)N1CCCC1C1(N)CCCC1NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@@H](N)C1C(=CC=CC=1)C(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CN(C(=O)CC(N)=O)C(=O)CC(N)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@H](N)C1C=CC=C(C)C=1NC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CN(C(=O)CC(C)=O)C(=O)CC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC1C=C(C)C(CN)=C(C)C=1NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CC1C(N)=CC=CC=1NC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "CNC(C)=O[C@@H](N)C1C(=CC=CC=1)C(N)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C1(N=C=NC2CCCCC2)CCCCC1",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C1(N=C=NC2CCCNC2)CCCCC1",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C1(N=C=NC2CCCNC2)CCCCC1",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C(N)(=O)[C@H](N)CCCCNC(C)=O",
+    "chemical_valid": true,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B01CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B02CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B07CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B08CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B12CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B13CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B17CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B18CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B21CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B23CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B26CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B29CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B30CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B33CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B38CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B43CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B46CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B49CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B53CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B55CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B58CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B61CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B63CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B66CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B71CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "B74CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C01CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C02CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C07CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C08CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C11CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C12CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C13CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C14CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C15CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C16CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C19CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C20CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C23CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C24CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C27CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C28CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C30CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C31CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C33CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C34CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C36CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C38CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C39CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C40CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C43CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C44CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C46CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C47CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C48CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C50CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C52CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C54CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C55CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C56CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C58CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C59CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C60CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C61CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C62CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C63CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C64CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C65CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C66CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  },
+  {
+    "raw": "C67CCCCCNC(C)=O",
+    "chemical_valid": false,
+    "has_macrocycle": false,
+    "task_valid": false
+  }
+]

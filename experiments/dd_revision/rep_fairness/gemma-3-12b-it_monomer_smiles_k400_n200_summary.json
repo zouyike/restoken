@@ -1,0 +1,18 @@
+{
+  "n_requested": 200,
+  "n_parsed_lines": 142,
+  "length_valid": 91,
+  "monomer_parse_valid": 77,
+  "library_match_iso": 47,
+  "library_match_flat": 52,
+  "assembly_valid_any": 76,
+  "task_valid_closed_set": 47,
+  "rate_monomer_parse": 0.5422535211267606,
+  "rate_library_match_iso": 0.33098591549295775,
+  "rate_assembly_any": 0.5352112676056338,
+  "rate_task_closed_set": 0.33098591549295775,
+  "rate_task_closed_set_over_req": 0.235,
+  "model": "gemma-3-12b-it",
+  "representation": "monomer_smiles",
+  "n_blocks": 400
+}
